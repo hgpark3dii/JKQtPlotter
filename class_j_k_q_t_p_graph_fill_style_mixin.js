@@ -4,7 +4,7 @@ var class_j_k_q_t_p_graph_fill_style_mixin =
     [ "~JKQTPGraphFillStyleMixin", "class_j_k_q_t_p_graph_fill_style_mixin.html#a2eb14667a3f9a4c8d84dc04448f7d020", null ],
     [ "getFillBrush", "class_j_k_q_t_p_graph_fill_style_mixin.html#a7ae38dc75f5a319cb5d233e4d11b490d", null ],
     [ "getFillColor", "class_j_k_q_t_p_graph_fill_style_mixin.html#adfd0ff899b261d2d578d24d223136a7c", null ],
-    [ "getFillGradient", "class_j_k_q_t_p_graph_fill_style_mixin.html#ab35976f64ec8022b12a93efa13714f2a", null ],
+    [ "getFillGradient", "class_j_k_q_t_p_graph_fill_style_mixin.html#a0d4ccca36c1c0f92c069309ae60bac75", null ],
     [ "getFillStyle", "class_j_k_q_t_p_graph_fill_style_mixin.html#ae751dc1575d09c7e5764594a6ac18738", null ],
     [ "getFillTexture", "class_j_k_q_t_p_graph_fill_style_mixin.html#ad60abd654128b6233e12ddd2db95ac97", null ],
     [ "getFillTextureImage", "class_j_k_q_t_p_graph_fill_style_mixin.html#a7aa6aa6d6f8bc19b3dd66db3bf54cd08", null ],

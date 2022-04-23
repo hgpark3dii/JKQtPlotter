@@ -8,7 +8,7 @@ var class_j_k_q_t_f_pimage_plot =
     [ "getColorMin", "class_j_k_q_t_f_pimage_plot.html#aac95eb4ee59fe71a1e1db2ceca03e899", null ],
     [ "getDrawColorBar", "class_j_k_q_t_f_pimage_plot.html#aec541c1369add6b19fea9bf356987955", null ],
     [ "getHeight", "class_j_k_q_t_f_pimage_plot.html#a44b69ef5d5f62d2a162b6f3f26df27ba", null ],
-    [ "getImage", "class_j_k_q_t_f_pimage_plot.html#aabf9f2e7fcb28b0eacc0eb3d21cf066f", null ],
+    [ "getImage", "class_j_k_q_t_f_pimage_plot.html#a54cf1940ef1724c6c293595c6103d37e", null ],
     [ "getImageFormat", "class_j_k_q_t_f_pimage_plot.html#ad5d3a870fcc673b60af1b6cc89e0850a", null ],
     [ "getPalette", "class_j_k_q_t_f_pimage_plot.html#a53491defe5f3b7bc4944dcef2bd77822", null ],
     [ "getRotation", "class_j_k_q_t_f_pimage_plot.html#a06f0afc627a491d893c01cbfca62a7ba", null ],

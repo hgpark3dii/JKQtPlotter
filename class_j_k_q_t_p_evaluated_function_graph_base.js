@@ -1,6 +1,5 @@
 var class_j_k_q_t_p_evaluated_function_graph_base =
 [
-    [ "PlotFunctorSpec", "struct_j_k_q_t_p_evaluated_function_graph_base_1_1_plot_functor_spec.html", "struct_j_k_q_t_p_evaluated_function_graph_base_1_1_plot_functor_spec" ],
     [ "JKQTPEvaluatedFunctionGraphBase", "class_j_k_q_t_p_evaluated_function_graph_base.html#a0a66a3430b7ab047f6f26ad761e1b397", null ],
     [ "JKQTPEvaluatedFunctionGraphBase", "class_j_k_q_t_p_evaluated_function_graph_base.html#aa7e5b16307a7521b42edd74ba5695f67", null ],
     [ "~JKQTPEvaluatedFunctionGraphBase", "class_j_k_q_t_p_evaluated_function_graph_base.html#a6dab5726f8f5a9551c15cc12153cbdd3", null ],
@@ -10,8 +9,8 @@ var class_j_k_q_t_p_evaluated_function_graph_base =
     [ "drawSamplePoints", "class_j_k_q_t_p_evaluated_function_graph_base.html#ad07f30c3974c3f38527d7d7c8d99feb9", null ],
     [ "getDataCleanupMaxAllowedAngleDegree", "class_j_k_q_t_p_evaluated_function_graph_base.html#a8ac8a29cc8415bc9cbfea6f69b391a1e", null ],
     [ "getDisplaySamplePoints", "class_j_k_q_t_p_evaluated_function_graph_base.html#a04cd9d6e519aa8882bafc29fe5b4162f", null ],
-    [ "getInternalParams", "class_j_k_q_t_p_evaluated_function_graph_base.html#a8e9fc84ca5fcca67438514a8e93de959", null ],
-    [ "getInternalParams", "class_j_k_q_t_p_evaluated_function_graph_base.html#a23d26364d80934952eaaf19ddb460cc5", null ],
+    [ "getInternalParams", "class_j_k_q_t_p_evaluated_function_graph_base.html#aafc29261e23a19f6fdc8f4cc6578e847", null ],
+    [ "getInternalParams", "class_j_k_q_t_p_evaluated_function_graph_base.html#a016ddd05faae9642b12044e22752d5c1", null ],
     [ "getMaxRefinementDegree", "class_j_k_q_t_p_evaluated_function_graph_base.html#a3b57a05e97caf1b2e0d49c55f3f00fb4", null ],
     [ "getMinPixelPerSample", "class_j_k_q_t_p_evaluated_function_graph_base.html#a389734aaf98bf35daa150a4f2be26dec", null ],
     [ "getMinSamples", "class_j_k_q_t_p_evaluated_function_graph_base.html#a4f4bed1ffb144d1e8f48c3cc76483057", null ],

@@ -1,7 +1,7 @@
 var class_j_k_q_t_graphs_base_style =
 [
     [ "JKQTGraphsBaseStyle", "class_j_k_q_t_graphs_base_style.html#a43c5d146c3632b3f458adcfcf45bd983", null ],
-    [ "getGraphStyleByType", "class_j_k_q_t_graphs_base_style.html#ac035e0eb0e7aa7948ed55efb7796f42f", null ],
+    [ "getGraphStyleByType", "class_j_k_q_t_graphs_base_style.html#a4a65182b2ea409561eb1fbddfbe3694d", null ],
     [ "loadSettings", "class_j_k_q_t_graphs_base_style.html#a806ce0e279044384ea3f88abb96f0596", null ],
     [ "saveSettings", "class_j_k_q_t_graphs_base_style.html#a9644625b62daa1d902c8bf41ea967380", null ],
     [ "annotationStyle", "class_j_k_q_t_graphs_base_style.html#a080af804a077cfecdfed25353a01437f", null ],

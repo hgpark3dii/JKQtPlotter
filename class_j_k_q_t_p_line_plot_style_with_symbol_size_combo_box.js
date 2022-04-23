@@ -1,6 +1,5 @@
 var class_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box =
 [
-    [ "styleData", "struct_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box_1_1style_data.html", "struct_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box_1_1style_data" ],
     [ "JKQTPLinePlotStyleWithSymbolSizeComboBox", "class_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box.html#a743f07e95cb0d6b5728158c3a95c986e", null ],
     [ "addSymbol", "class_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box.html#ae8aa55990038b24c79189fb8dfe176c0", null ],
     [ "addUsedSymbol", "class_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box.html#ab58b77039dccc36b0c40c63322063a37", null ],

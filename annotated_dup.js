@@ -105,7 +105,7 @@ var annotated_dup =
     [ "JKQTPGraphSymbolStyleMixin", "class_j_k_q_t_p_graph_symbol_style_mixin.html", "class_j_k_q_t_p_graph_symbol_style_mixin" ],
     [ "JKQTPGraphTextStyleMixin", "class_j_k_q_t_p_graph_text_style_mixin.html", "class_j_k_q_t_p_graph_text_style_mixin" ],
     [ "JKQTPGraphViolinplotStyleMixin", "class_j_k_q_t_p_graph_violinplot_style_mixin.html", "class_j_k_q_t_p_graph_violinplot_style_mixin" ],
-    [ "JKQTPGridPrintingItem", "namespace_3global_scope_4.html#struct_j_k_q_t_p_grid_printing_item", "namespace_3global_scope_4_struct_j_k_q_t_p_grid_printing_item" ],
+    [ "JKQTPGridPrintingItem", "group__jkqtpplottersupprt.html#struct_j_k_q_t_p_grid_printing_item", "group__jkqtpplottersupprt_struct_j_k_q_t_p_grid_printing_item" ],
     [ "JKQTPGridStyle", "class_j_k_q_t_p_grid_style.html", "class_j_k_q_t_p_grid_style" ],
     [ "JKQTPHighResTimer", "class_j_k_q_t_p_high_res_timer.html", "class_j_k_q_t_p_high_res_timer" ],
     [ "JKQTPHorizontalAxis", "class_j_k_q_t_p_horizontal_axis.html", "class_j_k_q_t_p_horizontal_axis" ],

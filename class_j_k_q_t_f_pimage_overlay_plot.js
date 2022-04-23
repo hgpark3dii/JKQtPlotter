@@ -9,7 +9,7 @@ var class_j_k_q_t_f_pimage_overlay_plot =
     [ "drawGraph", "class_j_k_q_t_f_pimage_overlay_plot.html#ae836ac8a75001c08bc6a5a5aded8d2a6", null ],
     [ "getColor", "class_j_k_q_t_f_pimage_overlay_plot.html#a82270df4ed00d03a5c4813359d4e8af2", null ],
     [ "getHeight", "class_j_k_q_t_f_pimage_overlay_plot.html#a4e85f3e24073140c7476a4b796b92c97", null ],
-    [ "getImage", "class_j_k_q_t_f_pimage_overlay_plot.html#aabc4cb3d57f959cddbec8075850d0474", null ],
+    [ "getImage", "class_j_k_q_t_f_pimage_overlay_plot.html#a8ea9f033d550aa65b365ee30242cd40f", null ],
     [ "getRotation", "class_j_k_q_t_f_pimage_overlay_plot.html#a75a3c0f620f28a476827226559c97709", null ],
     [ "getShowAsSymbols", "class_j_k_q_t_f_pimage_overlay_plot.html#a26e888d994e16f00a4f04acb9eb5b206", null ],
     [ "getWidth", "class_j_k_q_t_f_pimage_overlay_plot.html#a8bd6d30b59fe915d196ae523626186c2", null ],

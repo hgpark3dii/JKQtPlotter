@@ -1,5 +1,6 @@
 var class_j_k_q_t_p_column_iterator =
 [
+    [ "const_reference", "class_j_k_q_t_p_column_iterator.html#ad62c5961a7cb95a756925d2a45b9e3bf", null ],
     [ "difference_type", "class_j_k_q_t_p_column_iterator.html#a3c52e919dda9f6a77426120ab403fa6a", null ],
     [ "iterator_category", "class_j_k_q_t_p_column_iterator.html#aaa5267bf8c0e2cf97760d3fbf186e769", null ],
     [ "pointer", "class_j_k_q_t_p_column_iterator.html#a7932943b967487efdc02402084921195", null ],
@@ -10,8 +11,8 @@ var class_j_k_q_t_p_column_iterator =
     [ "JKQTPColumnIterator", "class_j_k_q_t_p_column_iterator.html#aba2b017074e85b74102bd9fff6085617", null ],
     [ "JKQTPColumnIterator", "class_j_k_q_t_p_column_iterator.html#a4259309c0296afa6c70ea8ce0b969be1", null ],
     [ "JKQTPColumnIterator", "class_j_k_q_t_p_column_iterator.html#a59d932fd9f52677097ad91d11ab54047", null ],
-    [ "getColumn", "class_j_k_q_t_p_column_iterator.html#ace73c5378b4771d378b3a6bf5cf0e51e", null ],
-    [ "getColumn", "class_j_k_q_t_p_column_iterator.html#a2e993f85ad98a454d97f64f3fa11e3d9", null ],
+    [ "getColumn", "class_j_k_q_t_p_column_iterator.html#aa9176d1a9566a94dcc4df065d35880af", null ],
+    [ "getColumn", "class_j_k_q_t_p_column_iterator.html#a2c6e5a0e75f619b18b3e9022ccafa8ec", null ],
     [ "getImageColumns", "class_j_k_q_t_p_column_iterator.html#abff94bc779530dc44839e339f7e9d856", null ],
     [ "getImagePosition", "class_j_k_q_t_p_column_iterator.html#a961bbcc728d2e5c6b62adfd2182c0ac3", null ],
     [ "getImagePositionX", "class_j_k_q_t_p_column_iterator.html#a4950caa30980f60cd13c7f349031df97", null ],
@@ -34,8 +35,8 @@ var class_j_k_q_t_p_column_iterator =
     [ "operator-=", "class_j_k_q_t_p_column_iterator.html#a4c7815ff3aea1a308cdd1475616b40a4", null ],
     [ "operator<", "class_j_k_q_t_p_column_iterator.html#a3e861ceb2907e6b8c9df1c4c56ba907f", null ],
     [ "operator<=", "class_j_k_q_t_p_column_iterator.html#ad41022dc7b663f689af07531ca920056", null ],
-    [ "operator=", "class_j_k_q_t_p_column_iterator.html#adb916a97ac6532a5c658655e15ce5c6f", null ],
-    [ "operator=", "class_j_k_q_t_p_column_iterator.html#a58094351e132dcc242c73d2375d55523", null ],
+    [ "operator=", "class_j_k_q_t_p_column_iterator.html#ad655ed75c654ea8a630c8de35d23147f", null ],
+    [ "operator=", "class_j_k_q_t_p_column_iterator.html#aaa26eae5b9ce83ba230058aedfa61952", null ],
     [ "operator==", "class_j_k_q_t_p_column_iterator.html#a38e8022e4e45db1619b8238479388478", null ],
     [ "operator>", "class_j_k_q_t_p_column_iterator.html#aa5893d06e667cb4e521cdeb3c47dab3c", null ],
     [ "operator>=", "class_j_k_q_t_p_column_iterator.html#a370f7f30585936c5765a94cd73843542", null ],
@@ -46,6 +47,5 @@ var class_j_k_q_t_p_column_iterator =
     [ "operator+", "class_j_k_q_t_p_column_iterator.html#a55f28956451ed19cb121868973af013e", null ],
     [ "operator-", "class_j_k_q_t_p_column_iterator.html#a22ce6f7bc3c844a4d9f9a43a9fd8ed6a", null ],
     [ "col_", "class_j_k_q_t_p_column_iterator.html#a8913117c4b3ab6fc4a782ba8c345c4f4", null ],
-    [ "const_reference", "class_j_k_q_t_p_column_iterator.html#a68aae45fe0feee0402998c4f9c1bb620", null ],
     [ "pos_", "class_j_k_q_t_p_column_iterator.html#a97bfa89da5f65ebc48259fcb7de12dc8", null ]
 ];

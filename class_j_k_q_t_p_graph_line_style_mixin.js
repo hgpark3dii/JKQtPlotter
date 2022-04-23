@@ -9,7 +9,7 @@ var class_j_k_q_t_p_graph_line_style_mixin =
     [ "getLineCapStyle", "class_j_k_q_t_p_graph_line_style_mixin.html#a8cf7c41dbad5829e9e3623e0312ed679", null ],
     [ "getLineColor", "class_j_k_q_t_p_graph_line_style_mixin.html#aed33c43f16960c215d97bf27492ca75d", null ],
     [ "getLineDashOffset", "class_j_k_q_t_p_graph_line_style_mixin.html#aaff7b7149757f1f27099e5fc6fff5b94", null ],
-    [ "getLineDashPattern", "class_j_k_q_t_p_graph_line_style_mixin.html#aaf2a0eb26df6664d3f45b63a61a54b81", null ],
+    [ "getLineDashPattern", "class_j_k_q_t_p_graph_line_style_mixin.html#a44da9f9c28326dc73a0cf33ece65043c", null ],
     [ "getLineJoinStyle", "class_j_k_q_t_p_graph_line_style_mixin.html#ae011e0c3659fc7d561237dace28d3871", null ],
     [ "getLinePen", "class_j_k_q_t_p_graph_line_style_mixin.html#a3cea16eb17c848fc95a5b66d4ad0ee56", null ],
     [ "getLinePenForRects", "class_j_k_q_t_p_graph_line_style_mixin.html#a35a20cf06337ced65a9a29bd6cedc0e7", null ],

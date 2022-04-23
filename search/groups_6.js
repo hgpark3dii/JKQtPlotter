@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enums_20for_20jkqtplotter_20_28including_20string_20conversion_29_8377',['Enums for JKQTPlotter (including String Conversion)',['../group__jkqtptools__enums.html',1,'']]]
+  ['enums_20for_20jkqtplotter_20_28including_20string_20conversion_29_0',['Enums for JKQTPlotter (including String Conversion)',['../group__jkqtptools__enums.html',1,'']]]
 ];

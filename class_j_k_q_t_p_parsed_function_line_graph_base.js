@@ -1,11 +1,5 @@
 var class_j_k_q_t_p_parsed_function_line_graph_base =
 [
-    [ "ParsedFunctionLineGraphFunctionData", "class_j_k_q_t_p_parsed_function_line_graph_base.html#struct_j_k_q_t_p_parsed_function_line_graph_base_1_1_parsed_function_line_graph_function_data", [
-      [ "dependentVariableName", "class_j_k_q_t_p_parsed_function_line_graph_base.html#aaa6c4ac51900d4cc6ef24dd404122e97", null ],
-      [ "node", "class_j_k_q_t_p_parsed_function_line_graph_base.html#a60b38e83f11c97234ca3aea39260c482", null ],
-      [ "parser", "class_j_k_q_t_p_parsed_function_line_graph_base.html#ae4396b45f169af6efb5295c5074cda5c", null ],
-      [ "varcount", "class_j_k_q_t_p_parsed_function_line_graph_base.html#a8a3ccf0f0fb4c1e6a2f72a4dbe94f24f", null ]
-    ] ],
     [ "JKQTPParsedFunctionLineGraphBase", "class_j_k_q_t_p_parsed_function_line_graph_base.html#a432e1ffbe2f7eae139b0068c31467fb6", null ],
     [ "JKQTPParsedFunctionLineGraphBase", "class_j_k_q_t_p_parsed_function_line_graph_base.html#abf2f7a06242a4961e1da3b5d36afd2da", null ],
     [ "JKQTPParsedFunctionLineGraphBase", "class_j_k_q_t_p_parsed_function_line_graph_base.html#ab0c41d0a448e29d883142174560af15e", null ],

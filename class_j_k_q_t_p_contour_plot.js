@@ -17,7 +17,7 @@ var class_j_k_q_t_p_contour_plot =
     [ "createContourLevelsLog", "class_j_k_q_t_p_contour_plot.html#a905ee94f79467e9abd62bb043ce5f691", null ],
     [ "draw", "class_j_k_q_t_p_contour_plot.html#a9d4af593d0ceaf58ad16dc3bfd31a001", null ],
     [ "getContourColoringMode", "class_j_k_q_t_p_contour_plot.html#a508c7e066b5e5dad2a29855ecb0251a9", null ],
-    [ "getContourLevels", "class_j_k_q_t_p_contour_plot.html#a327e64d838f3c9b53576dc353d0ee03c", null ],
+    [ "getContourLevels", "class_j_k_q_t_p_contour_plot.html#a9cdf05eaf17acd818de39e75e373c855", null ],
     [ "getIgnoreOnPlane", "class_j_k_q_t_p_contour_plot.html#a83521016998281c3c41af1111c4efbd0", null ],
     [ "getModifierMinMax", "class_j_k_q_t_p_contour_plot.html#adee9622a96aa243047556400943513fe", null ],
     [ "getModifierPixelValue", "class_j_k_q_t_p_contour_plot.html#a73f33ec2532555fc66c3600523ac4d16", null ],

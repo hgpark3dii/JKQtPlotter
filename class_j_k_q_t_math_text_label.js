@@ -2,7 +2,7 @@ var class_j_k_q_t_math_text_label =
 [
     [ "JKQTMathTextLabel", "class_j_k_q_t_math_text_label.html#a88942d80e1cdd7087e76d5f932b7003e", null ],
     [ "~JKQTMathTextLabel", "class_j_k_q_t_math_text_label.html#a2dedc591918ca3f077bc51f085c2e142", null ],
-    [ "getMathText", "class_j_k_q_t_math_text_label.html#a2f23346360e6798dc1929ae9445686ee", null ],
+    [ "getMathText", "class_j_k_q_t_math_text_label.html#aebfd8dc515597e84f5ea603c53a71d84", null ],
     [ "internalPaint", "class_j_k_q_t_math_text_label.html#a1e30a8331efce290fb072249e765e810", null ],
     [ "paintEvent", "class_j_k_q_t_math_text_label.html#a265aadf4bd45b2a6ee2d72622acdc668", null ],
     [ "setMath", "class_j_k_q_t_math_text_label.html#a8a83c17f342191ccf2c7256b811e9a15", null ],

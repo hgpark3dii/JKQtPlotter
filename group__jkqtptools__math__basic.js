@@ -1,5 +1,10 @@
 var group__jkqtptools__math__basic =
 [
+    [ "JKQTPPolynomialFunctor", "struct_j_k_q_t_p_polynomial_functor.html", [
+      [ "JKQTPPolynomialFunctor", "struct_j_k_q_t_p_polynomial_functor.html#a0b344444a2b80d28f796c8d0d6b664d8", null ],
+      [ "operator()", "struct_j_k_q_t_p_polynomial_functor.html#a4de8feae7de2eaad923bdfd1f39dbddd", null ],
+      [ "P", "struct_j_k_q_t_p_polynomial_functor.html#a73e1042ddf065577ad15a26d1874d123", null ]
+    ] ],
     [ "JKQTP_DOUBLE_EPSILON", "group__jkqtptools__math__basic.html#ga6c6600f3d0204c8aa59653be8974de42", null ],
     [ "JKQTP_DOUBLE_NAN", "group__jkqtptools__math__basic.html#ga884e648a3a6aad51289d2a6d15bc932a", null ],
     [ "JKQTP_EPSILON", "group__jkqtptools__math__basic.html#ga464180292f33555cb0c678cc3c57f9a7", null ],
@@ -22,7 +27,7 @@ var group__jkqtptools__math__basic =
     [ "jkqtp_distance", "group__jkqtptools__math__basic.html#ga59d62917317a272d744613fe5294677d", null ],
     [ "jkqtp_floorTo", "group__jkqtptools__math__basic.html#gad79a939bbb936b711f0eabe5171e2f74", null ],
     [ "jkqtp_gaussdist", "group__jkqtptools__math__basic.html#ga0c2ac6f473c7e1b64259a7adf983878a", null ],
-    [ "jkqtp_generatePolynomialModel", "group__jkqtptools__math__basic.html#gaf31e50999381fbbd25903be3fa3947b5", null ],
+    [ "jkqtp_generatePolynomialModel", "group__jkqtptools__math__basic.html#gac89dcd46e963bd5fe04b21665bfe3e10", null ],
     [ "jkqtp_identity", "group__jkqtptools__math__basic.html#gaf65c45af31289372105c13b5970aa7a2", null ],
     [ "jkqtp_inverseProp", "group__jkqtptools__math__basic.html#ga3e426fca61e3af502d5ea80fd7e29d8c", null ],
     [ "jkqtp_inversePropSave", "group__jkqtptools__math__basic.html#gaa6d799314d24d48d0deda117af42e9c9", null ],

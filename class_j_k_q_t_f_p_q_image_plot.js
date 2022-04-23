@@ -3,7 +3,7 @@ var class_j_k_q_t_f_p_q_image_plot =
     [ "JKQTFPQImagePlot", "class_j_k_q_t_f_p_q_image_plot.html#a4493cc69783b04571cc11b2bd8f75e0f", null ],
     [ "JKQTFPQImagePlot", "class_j_k_q_t_f_p_q_image_plot.html#abc7c8e3a6aa7f5c80f84561f07058efb", null ],
     [ "drawGraph", "class_j_k_q_t_f_p_q_image_plot.html#a5ef604b0c4064eb62a38e505d1f7c528", null ],
-    [ "getImage", "class_j_k_q_t_f_p_q_image_plot.html#ae4bdd587683c26e066d444e1f1ab5254", null ],
+    [ "getImage", "class_j_k_q_t_f_p_q_image_plot.html#a4e86794ce5d5f2bfb294a9278e6cea58", null ],
     [ "getXmax", "class_j_k_q_t_f_p_q_image_plot.html#a6aa77f545c8c21e2a1d043591eb69fed", null ],
     [ "getXmin", "class_j_k_q_t_f_p_q_image_plot.html#ae45e9734f2c2baff8d6a54b7898f8f0c", null ],
     [ "getYmax", "class_j_k_q_t_f_p_q_image_plot.html#a46c7b55ad8aa1c1439029ecf13da9341", null ],

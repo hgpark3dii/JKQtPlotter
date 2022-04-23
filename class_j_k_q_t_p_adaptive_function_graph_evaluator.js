@@ -3,7 +3,7 @@ var class_j_k_q_t_p_adaptive_function_graph_evaluator =
     [ "InternalList", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a34d55d34d1795aa0d11e0a0f15101c65", null ],
     [ "JKQTPAdaptiveFunctionGraphEvaluator", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a539365a0e6645e1b73501d80fc727483", null ],
     [ "JKQTPAdaptiveFunctionGraphEvaluator", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a2748ff8b3792b75a6bbca65ba19d23f5", null ],
-    [ "evaluate", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#aa2ca928bd53cded84e1722eff22a4787", null ],
+    [ "evaluate", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a710444e020bf4b38857f4df1ae85614e", null ],
     [ "refine", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a64132501d4b91aa4adeaa6a9b14389ee", null ],
     [ "fx", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a3b709ee1905ddc10715a5af7bab13126", null ],
     [ "fxy", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a88734b71ff0de923025a07f62b2e4a48", null ],

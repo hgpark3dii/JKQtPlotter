@@ -10,7 +10,7 @@ var class_j_k_q_t_p_x_y_function_line_graph_base =
     [ "getKeyLabelColor", "class_j_k_q_t_p_x_y_function_line_graph_base.html#a92e6278d098eaec928d34b19f9686bdb", null ],
     [ "getTMax", "class_j_k_q_t_p_x_y_function_line_graph_base.html#a06528c92296921b7b26eaf319a34ccf8", null ],
     [ "getTMin", "class_j_k_q_t_p_x_y_function_line_graph_base.html#ab02b94922d422827715d32da173cc234", null ],
-    [ "getTRange", "class_j_k_q_t_p_x_y_function_line_graph_base.html#a95bb3282e03497933e6218faa7aa3358", null ],
+    [ "getTRange", "class_j_k_q_t_p_x_y_function_line_graph_base.html#aa47ba0dc722aeda22188837e88f153de", null ],
     [ "setTMax", "class_j_k_q_t_p_x_y_function_line_graph_base.html#a1cc28319ce44053f4d7f7388172ca6e6", null ],
     [ "setTMin", "class_j_k_q_t_p_x_y_function_line_graph_base.html#afd9cdc523de5233483bcadc6a775cc8b", null ],
     [ "setTRange", "class_j_k_q_t_p_x_y_function_line_graph_base.html#ac57e7b44240ddcf332290c1bc59fc902", null ],

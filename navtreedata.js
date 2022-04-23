@@ -1,24 +1,26 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -130,33 +132,33 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_j_k_q_t_c_make_link_example.html",
-"class_j_k_q_t_base_plotter.html#a16a1b93b0937f5036e2e4497793c60b3",
-"class_j_k_q_t_base_plotter.html#a9ef93f40da8274bb030ed9f422df67e8",
-"class_j_k_q_t_f_p_line_plot.html#a605bd846342767510467ac1694bb66f3",
-"class_j_k_q_t_f_p_y_range_plot.html#ae983d47a17e1e38a16557d0621876177",
-"class_j_k_q_t_fast_plotter.html#ab076aa06f24049a47f7e53766a988b7d",
-"class_j_k_q_t_math_text.html#abebfc9f1fbf64d5ea08ac3b930faca8d",
-"class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a64132501d4b91aa4adeaa6a9b14389ee",
-"class_j_k_q_t_p_c_a_label_type_combo_box.html#a8b6352bcb4afa2336cdf446479379b4f",
-"class_j_k_q_t_p_column_contour_plot.html#ac0d06e24c774ca47c9fb87a661e5888b",
-"class_j_k_q_t_p_coordinate_axis.html#a8b78c12935f8b34f9f689efd88d48be0",
-"class_j_k_q_t_p_datastore.html#af3935a74961cd4cbb6486042216dc5fc",
-"class_j_k_q_t_p_functor_line_graph_base.html#a54839fbc43deffbd05aa204322b5443d",
-"class_j_k_q_t_p_geo_rectangle.html#a509cba23816b871f2db06bdefe4d038e",
-"class_j_k_q_t_p_graph_error_style_mixin.html#a70182bebf49cca5cae3de715362bc9a5",
-"class_j_k_q_t_p_graph_violinplot_style_mixin.html#afac4d8df8f0b436f7e243e873f7536eb",
-"class_j_k_q_t_p_math_image_base.html#a36141589ac4ae1c42abf5c1ed38cc011",
-"class_j_k_q_t_p_parsed_function_line_graph_base.html#a3d9dcc4603b1b8abe6a63331db5d614c",
-"class_j_k_q_t_p_r_g_b_math_image.html#afc64347b3a03a3aaad922640afcb0009",
-"class_j_k_q_t_p_x_graph_error_data.html#a834bddd7eeadd418349558dfb8cfb902",
-"class_j_k_q_t_p_y_graph_errors.html#ab3dcdb15ebcc69133e2293dcd535a8e2",
-"class_j_k_q_t_plotter.html#af8465863a7aaf2e72c79ae03a7dfbdb5",
-"class_test_widget_param_scatter_plots.html#a02cfabaeb5830c65c5dc406a5460e8af",
-"group__jkqtfastplotter.html#ggaa94a0bca376a39f32a47dbd6f08fc594a12170f49df159c522ca569cad37ca0b5",
-"group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a5cebea49d99841391c3c37737496c617",
-"group__jkqtptools__drawing.html#ggabd0e8edf2acdfce37eccab000e445c62a1fd70edb616058cb71121d7f268db22d",
-"group__jkqtptools__math__statistics__regression.html#ga6f80dbd6d93295db2cd71bb231546ce3",
-"struct_j_k_q_t_p_math_parser_1_1jkmp_variable.html#a6a28699f308a8ac890ef8af7753d6f00"
+"class_j_k_q_t_base_plotter.html#a1dc74a2bfc9aff5a6c25083de6de53cb",
+"class_j_k_q_t_base_plotter.html#aa514e80ef43c2563a8b20af97bc544f1",
+"class_j_k_q_t_f_p_line_plot.html#a92f24f77f1163d5861b04716c309becb",
+"class_j_k_q_t_f_pimage_overlay_plot.html#a282858ecd162907d51cf445386004f11a2eb50b7b0350830c31beaf3d32e433c6",
+"class_j_k_q_t_fast_plotter.html#aba72d7a68b82a056dc58c5dfa9253020",
+"class_j_k_q_t_math_text.html#adac903588365458f2ae16676d1c165fc",
+"class_j_k_q_t_p_auto_output_timer.html#aeb2385de4fc2c29958f2e375c2cb10c3",
+"class_j_k_q_t_p_boxplot_horizontal_graph.html",
+"class_j_k_q_t_p_column_const_iterator.html#a7bc6aa1fa009c8e18391035b01949ae6",
+"class_j_k_q_t_p_coordinate_axis.html#a50a6cfde9b3a560934a430346f30a929",
+"class_j_k_q_t_p_datastore.html#ab2d9a8645b757022356f0027308e43a7",
+"class_j_k_q_t_p_filled_curve_y_error_graph.html#adf5fb384e1baed57d6db25e93db21c09",
+"class_j_k_q_t_p_geo_polygon.html#a24e15dbd0e11c71da075b15b1e2a2352",
+"class_j_k_q_t_p_graph_decorated_line_style_mixin.html#a596a97b84c8d66befe0ce59a0e88f5c0",
+"class_j_k_q_t_p_graph_violinplot_style_mixin.html#a4250cd619995a895e99b0336ade036da",
+"class_j_k_q_t_p_key_style.html#ab2ea873180e5a7da68d92d8829597401",
+"class_j_k_q_t_p_overlay_image.html#a1bcf4087e01368d91dd87df3ad1c066e",
+"class_j_k_q_t_p_r_g_b_math_image.html#a92d30aad957d2278a13fe81f50f44eb3",
+"class_j_k_q_t_p_violinplot_element_base.html#a151543356262ae2d7875f98e561997a5",
+"class_j_k_q_t_p_x_y_parametrized_error_scatter_graph.html#a7b955323727ef595ff7bc24f8651c07d",
+"class_j_k_q_t_plotter.html#a7e7d52269a46ae2a50d50ef700030566",
+"class_test_user_interaction.html#a6c84b96e25eb130ffa305361b9b38c6d",
+"group__jkmp.html#a5b1ff4fb042a2eb38919ad7c647cc18d",
+"group__jkqtplotter__imagelots__tools.html#ggaae2f1de8b42bb1734243b4201f4aa72da929dc97a1432dbba59833445cb4be980",
+"group__jkqtptools__debugging.html#ga7936d9f251e6ae31b13fba2bfec93432",
+"group__jkqtptools__math__statistics__adaptors.html#ga5a689fb0697b5fc82f722f870c9a494c",
+"struct_j_k_q_t_math_text_1_1_m_tenvironment.html#aafc2df20a1f6a477436fe6dcc2c810fe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

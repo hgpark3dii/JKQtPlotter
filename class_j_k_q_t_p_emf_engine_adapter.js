@@ -1,7 +1,7 @@
 var class_j_k_q_t_p_emf_engine_adapter =
 [
     [ "JKQTPEmfEngineAdapter", "class_j_k_q_t_p_emf_engine_adapter.html#ae392f39c9e1db8181f9f08c555622f9b", null ],
-    [ "createPaintdevice", "class_j_k_q_t_p_emf_engine_adapter.html#ad6c635fb9095187ea7327ce8f341c1c9", null ],
+    [ "createPaintdevice", "class_j_k_q_t_p_emf_engine_adapter.html#aef2ae7353df72df10334a7ab3eaf7146", null ],
     [ "getFileExtension", "class_j_k_q_t_p_emf_engine_adapter.html#a1a2d7506150d97d3993c59372c0600fc", null ],
     [ "getFilter", "class_j_k_q_t_p_emf_engine_adapter.html#a65fa8cc27b51c9f15a7cd82ebb9229d0", null ],
     [ "getFormatID", "class_j_k_q_t_p_emf_engine_adapter.html#a59587b426e6cca1e3f4135ce81833cd3", null ],

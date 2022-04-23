@@ -1,7 +1,7 @@
 var group__jkqtptools =
 [
     [ "Additional Tools for Qt", "group__jkqtptools__qt.html", "group__jkqtptools__qt" ],
-    [ "Additional Widgets for Qt", "group__jkqtptools__qtwidgets.html", null ],
+    [ "Additional Widgets for Qt", "group__jkqtptools__qtwidgets.html", "group__jkqtptools__qtwidgets" ],
     [ "Code Structuring Tools", "group__jkqtptools__codestructuring.html", "group__jkqtptools__codestructuring" ],
     [ "Debugging Tools", "group__jkqtptools__debugging.html", "group__jkqtptools__debugging" ],
     [ "Diverse Algorithms", "group__jkqtptools__algorithms.html", "group__jkqtptools__algorithms" ],

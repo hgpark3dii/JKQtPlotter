@@ -8,7 +8,7 @@ var class_j_k_q_t_p_y_function_line_graph =
     [ "JKQTPYFunctionLineGraph", "class_j_k_q_t_p_y_function_line_graph.html#aa37850fc193fe9e58b28b75b2a4d686d", null ],
     [ "JKQTPYFunctionLineGraph", "class_j_k_q_t_p_y_function_line_graph.html#a5ea4513431f0cf9c27cc605beed53dfb", null ],
     [ "JKQTPYFunctionLineGraph", "class_j_k_q_t_p_y_function_line_graph.html#ab4320d418fb967bd58726b16d550f747", null ],
-    [ "buildErrorFunctorSpec", "class_j_k_q_t_p_y_function_line_graph.html#a2d414dff08d223b4150408ced5ec1697", null ],
+    [ "buildErrorFunctorSpec", "class_j_k_q_t_p_y_function_line_graph.html#a2add23232aaac92ad0ad7ffecb92ffcb", null ],
     [ "buildPlotFunctorSpec", "class_j_k_q_t_p_y_function_line_graph.html#a63a48826ac4ea47318b172cd8c1ab010", null ],
     [ "draw", "class_j_k_q_t_p_y_function_line_graph.html#a258161f97f56fa0788e78ec242a45092", null ]
 ];

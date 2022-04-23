@@ -5,7 +5,7 @@ var hierarchy =
     ] ],
     [ "JKQTMathText::FontDefinition", "struct_j_k_q_t_math_text_1_1_font_definition.html", null ],
     [ "JKQTPPlotElement::HitTestLocation", "struct_j_k_q_t_p_plot_element_1_1_hit_test_location.html", null ],
-    [ "JKQTPMathParser::jkmpFunctionDescriptor", "class_j_k_q_t_p_math_parser.html#struct_j_k_q_t_p_math_parser_1_1jkmp_function_descriptor", null ],
+    [ "JKQTPMathParser::jkmpFunctionDescriptor", "group__jkmp.html#struct_j_k_q_t_p_math_parser_1_1jkmp_function_descriptor", null ],
     [ "JKQTPMathParser::jkmpNode", "class_j_k_q_t_p_math_parser_1_1jkmp_node.html", [
       [ "JKQTPMathParser::jkmpBinaryArithmeticNode", "class_j_k_q_t_p_math_parser_1_1jkmp_binary_arithmetic_node.html", null ],
       [ "JKQTPMathParser::jkmpBinaryBoolNode", "class_j_k_q_t_p_math_parser_1_1jkmp_binary_bool_node.html", null ],
@@ -18,7 +18,7 @@ var hierarchy =
       [ "JKQTPMathParser::jkmpVariableNode", "class_j_k_q_t_p_math_parser_1_1jkmp_variable_node.html", null ]
     ] ],
     [ "JKQTPMathParser::jkmpResult", "struct_j_k_q_t_p_math_parser_1_1jkmp_result.html", null ],
-    [ "JKQTPMathParser::jkmpTempVariable", "class_j_k_q_t_p_math_parser.html#struct_j_k_q_t_p_math_parser_1_1jkmp_temp_variable", null ],
+    [ "JKQTPMathParser::jkmpTempVariable", "group__jkmp.html#struct_j_k_q_t_p_math_parser_1_1jkmp_temp_variable", null ],
     [ "JKQTPMathParser::jkmpVariable", "struct_j_k_q_t_p_math_parser_1_1jkmp_variable.html", null ],
     [ "JKQTBasePlotterStyle", "class_j_k_q_t_base_plotter_style.html", null ],
     [ "JKQTGraphsBaseStyle", "class_j_k_q_t_graphs_base_style.html", null ],
@@ -186,7 +186,7 @@ var hierarchy =
     [ "JKQTPGraphTextStyleMixin", "class_j_k_q_t_p_graph_text_style_mixin.html", [
       [ "JKQTPGeoText", "class_j_k_q_t_p_geo_text.html", null ]
     ] ],
-    [ "JKQTPGridPrintingItem", "namespace_3global_scope_4.html#struct_j_k_q_t_p_grid_printing_item", null ],
+    [ "JKQTPGridPrintingItem", "group__jkqtpplottersupprt.html#struct_j_k_q_t_p_grid_printing_item", null ],
     [ "JKQTPGridStyle", "class_j_k_q_t_p_grid_style.html", null ],
     [ "JKQTPHighResTimer", "class_j_k_q_t_p_high_res_timer.html", null ],
     [ "JKQTPImageTools", "struct_j_k_q_t_p_image_tools.html", null ],
@@ -231,7 +231,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "JKQTMathText::MTnodeSize", "struct_j_k_q_t_math_text_1_1_m_tnode_size.html", null ],
-    [ "JKQTPParsedFunctionLineGraphBase::ParsedFunctionLineGraphFunctionData", "class_j_k_q_t_p_parsed_function_line_graph_base.html#struct_j_k_q_t_p_parsed_function_line_graph_base_1_1_parsed_function_line_graph_function_data", null ],
+    [ "JKQTPParsedFunctionLineGraphBase::ParsedFunctionLineGraphFunctionData", "group__jkqtplotter__functiongraphs.html#struct_j_k_q_t_p_parsed_function_line_graph_base_1_1_parsed_function_line_graph_function_data", null ],
     [ "JKQTPEvaluatedFunctionGraphBase::PlotFunctorSpec", "struct_j_k_q_t_p_evaluated_function_graph_base_1_1_plot_functor_spec.html", null ],
     [ "QAbstractTableModel", null, [
       [ "JKQTPDatastoreModel", "class_j_k_q_t_p_datastore_model.html", null ],
@@ -272,8 +272,6 @@ var hierarchy =
       [ "ContourPlotAnimator", "class_contour_plot_animator.html", null ],
       [ "JKQTBasePlotter", "class_j_k_q_t_base_plotter.html", null ],
       [ "JKQTFPPlot", "class_j_k_q_t_f_p_plot.html", [
-        [ "JKQTFPimageOverlayPlot", "class_j_k_q_t_f_pimage_overlay_plot.html", null ],
-        [ "JKQTFPimagePlot", "class_j_k_q_t_f_pimage_plot.html", null ],
         [ "JKQTFPLinePlot", "class_j_k_q_t_f_p_line_plot.html", [
           [ "JKQTFPVBarPlot", "class_j_k_q_t_f_p_v_bar_plot.html", null ],
           [ "JKQTFPVCrossPlot", "class_j_k_q_t_f_p_v_cross_plot.html", null ]
@@ -283,7 +281,9 @@ var hierarchy =
         [ "JKQTFPQScaleBarXPlot", "class_j_k_q_t_f_p_q_scale_bar_x_plot.html", null ],
         [ "JKQTFPRGBImageOverlayPlot", "class_j_k_q_t_f_p_r_g_b_image_overlay_plot.html", null ],
         [ "JKQTFPXRangePlot", "class_j_k_q_t_f_p_x_range_plot.html", null ],
-        [ "JKQTFPYRangePlot", "class_j_k_q_t_f_p_y_range_plot.html", null ]
+        [ "JKQTFPYRangePlot", "class_j_k_q_t_f_p_y_range_plot.html", null ],
+        [ "JKQTFPimageOverlayPlot", "class_j_k_q_t_f_pimage_overlay_plot.html", null ],
+        [ "JKQTFPimagePlot", "class_j_k_q_t_f_pimage_plot.html", null ]
       ] ],
       [ "JKQTMathText", "class_j_k_q_t_math_text.html", null ],
       [ "JKQTPCoordinateAxis", "class_j_k_q_t_p_coordinate_axis.html", [
@@ -363,6 +363,9 @@ var hierarchy =
     [ "QTableView", null, [
       [ "JKQTPEnhancedTableView", "class_j_k_q_t_p_enhanced_table_view.html", null ]
     ] ],
+    [ "QTabWidget", null, [
+      [ "TestMain", "class_test_main.html", null ]
+    ] ],
     [ "QToolBar", null, [
       [ "JKVanishQToolBar", "class_j_k_vanish_q_tool_bar.html", null ]
     ] ],
@@ -386,7 +389,7 @@ var hierarchy =
       [ "TestWidgetRGBImages", "class_test_widget_r_g_b_images.html", null ]
     ] ],
     [ "JKQTPLinePlotStyleWithSymbolSizeComboBox::styleData", "struct_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box_1_1style_data.html", null ],
-    [ "JKQTMathText::MTsymbolNode::SymbolProps", "class_j_k_q_t_math_text_1_1_m_tsymbol_node.html#struct_j_k_q_t_math_text_1_1_m_tsymbol_node_1_1_symbol_props", null ],
+    [ "JKQTMathText::MTsymbolNode::SymbolProps", "group__jkqtmathtext.html#struct_j_k_q_t_math_text_1_1_m_tsymbol_node_1_1_symbol_props", null ],
     [ "JKQTMathText::tbrData", "struct_j_k_q_t_math_text_1_1tbr_data.html", null ],
     [ "JKQTMathText::tbrDataH", "struct_j_k_q_t_math_text_1_1tbr_data_h.html", null ],
     [ "JKQTBasePlotter::textSizeData", "struct_j_k_q_t_base_plotter_1_1text_size_data.html", null ],

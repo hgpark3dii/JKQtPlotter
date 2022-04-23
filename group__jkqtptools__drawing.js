@@ -1,5 +1,13 @@
 var group__jkqtptools__drawing =
 [
+    [ "JKQTPEnhancedPainter", "class_j_k_q_t_p_enhanced_painter.html", [
+      [ "JKQTPEnhancedPainter", "class_j_k_q_t_p_enhanced_painter.html#a71602469019acad64755c2938fc6a41d", null ],
+      [ "JKQTPEnhancedPainter", "class_j_k_q_t_p_enhanced_painter.html#a0da34b2b1ac4f84690636880b6c10ad1", null ],
+      [ "initQEnhacedPainter", "class_j_k_q_t_p_enhanced_painter.html#ad8a2efb65f9f2a46a802cb76cd87b13d", null ]
+    ] ],
+    [ "JKQTPlotterDrawingTools", "struct_j_k_q_t_plotter_drawing_tools.html", [
+      [ "ABS_MIN_LINEWIDTH", "struct_j_k_q_t_plotter_drawing_tools.html#ab2f73282b1b10407fa55fdb2883d70e1", null ]
+    ] ],
     [ "JKQTPGraphSymbols", "group__jkqtptools__drawing.html#ga212568ec3a08aa8d047bdd11283e2b3e", [
       [ "JKQTPNoSymbol", "group__jkqtptools__drawing.html#gga212568ec3a08aa8d047bdd11283e2b3ea5ed6d60f133d1f4f712dba322dff7525", null ],
       [ "JKQTPDot", "group__jkqtptools__drawing.html#gga212568ec3a08aa8d047bdd11283e2b3ea742c246430bd362c0aa5c4ffdb92e85a", null ],
@@ -110,13 +118,13 @@ var group__jkqtptools__drawing =
     [ "JKQTPPlotSymbol", "group__jkqtptools__drawing.html#ga577ea31744dbcdf6b005ffad038d1cb6", null ],
     [ "JKQTPPlotSymbol", "group__jkqtptools__drawing.html#ga0a9af6dee754f83daca4ba43718e9345", null ],
     [ "jkqtpRotateRect", "group__jkqtptools__drawing.html#gae9410c33b360d17330be5a8891fc9bd8", null ],
-    [ "JKQTPSimplyfyLineSegemnts", "group__jkqtptools__drawing.html#gaf83fc556fad1bd06b0356bbb17c2774f", null ],
-    [ "JKQTPSplitEllipseIntoPoints", "group__jkqtptools__drawing.html#ga44a6eae6bec503661a08c0dd07ad3792", null ],
-    [ "JKQTPSplitEllipseIntoPoints", "group__jkqtptools__drawing.html#gad0163889e12f5be58eee7142e5e3aff2", null ],
-    [ "JKQTPSplitLineIntoPoints", "group__jkqtptools__drawing.html#ga6daecdf0e00a3123b9ac7a390a16844e", null ],
-    [ "JKQTPSplitLineIntoPoints", "group__jkqtptools__drawing.html#gae7fd6372f2d3d686560e4efc6e9bf384", null ],
-    [ "JKQTPSplitPolylineIntoPoints", "group__jkqtptools__drawing.html#gade3d090789f0087e75a345175ad66db0", null ],
-    [ "JKQTPUnifyLinesToPolygons", "group__jkqtptools__drawing.html#ga368b605156c2217ce46b37832a32a91b", null ],
+    [ "JKQTPSimplyfyLineSegemnts", "group__jkqtptools__drawing.html#ga45fa6bfc357eb2c5a2206cacacd2de97", null ],
+    [ "JKQTPSplitEllipseIntoPoints", "group__jkqtptools__drawing.html#ga6e4dfc2ab2bdae61e02ce5c0e73b328a", null ],
+    [ "JKQTPSplitEllipseIntoPoints", "group__jkqtptools__drawing.html#ga1df27090b8cf6c1ae9313ee9e8824397", null ],
+    [ "JKQTPSplitLineIntoPoints", "group__jkqtptools__drawing.html#gab19cd278b3c4f201304ba56d6051b858", null ],
+    [ "JKQTPSplitLineIntoPoints", "group__jkqtptools__drawing.html#ga634bea3d8121643ad2597e03df10f524", null ],
+    [ "JKQTPSplitPolylineIntoPoints", "group__jkqtptools__drawing.html#ga781e051d47c2ca112dd434a1634edc2b", null ],
+    [ "JKQTPUnifyLinesToPolygons", "group__jkqtptools__drawing.html#ga10b44f813c96e4bcd688ac769842e031", null ],
     [ "String2JKQTPGraphSymbols", "group__jkqtptools__drawing.html#gaa2bd5c2bac86735a6885464182a7a2f0", null ],
     [ "String2JKQTPLineDecoratorStyle", "group__jkqtptools__drawing.html#gad1b00ff55f388b562baa9053b38a254c", null ]
 ];

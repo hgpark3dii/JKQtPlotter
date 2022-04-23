@@ -1,5 +1,29 @@
 var group__jkqtpplottersupprt =
 [
+    [ "JKQTPGridPrintingItem", "group__jkqtpplottersupprt.html#struct_j_k_q_t_p_grid_printing_item", [
+      [ "plotter", "group__jkqtpplottersupprt.html#aee5e0991c60029993c626f98d236bc21", null ],
+      [ "x", "group__jkqtpplottersupprt.html#a43ffe3149168f0cbd3db1ca96ce6eaed", null ],
+      [ "y", "group__jkqtpplottersupprt.html#a42d1f0273a920efe47991094e8817671", null ]
+    ] ],
+    [ "JKQTPPaintDeviceAdapter", "class_j_k_q_t_p_paint_device_adapter.html", [
+      [ "~JKQTPPaintDeviceAdapter", "class_j_k_q_t_p_paint_device_adapter.html#a67e3a79f82a548311378457dc76f3234", null ],
+      [ "createPaintdevice", "class_j_k_q_t_p_paint_device_adapter.html#ac859838104f8ab69578d722e35c9fe82", null ],
+      [ "createPaintdeviceMM", "class_j_k_q_t_p_paint_device_adapter.html#add9ef7371a72f0dd45e8b2a82883cbd7", null ],
+      [ "getFileExtension", "class_j_k_q_t_p_paint_device_adapter.html#a8bfc80e46759c357a5828b55c998370f", null ],
+      [ "getFilter", "class_j_k_q_t_p_paint_device_adapter.html#a1beee27f1a4072ecf3d09061dc76b369", null ],
+      [ "getFormatID", "class_j_k_q_t_p_paint_device_adapter.html#a77c586b60165321555f10e582e42973f", null ],
+      [ "getFormatName", "class_j_k_q_t_p_paint_device_adapter.html#a3034dcb3342b2501576b33f302cbadae", null ],
+      [ "getPrintSizeXInMM", "class_j_k_q_t_p_paint_device_adapter.html#a172f74d48293029dfef6e5d8f2b268c8", null ],
+      [ "getPrintSizeYInMM", "class_j_k_q_t_p_paint_device_adapter.html#a74f182b3d4215497a59add328273394b", null ],
+      [ "getSetAbsolutePaperSize", "class_j_k_q_t_p_paint_device_adapter.html#a9bf96dcdd15a9ea13f9e8f285de1779f", null ],
+      [ "isPrinter", "class_j_k_q_t_p_paint_device_adapter.html#ae0807463779c87c32390b589007f6e33", null ],
+      [ "useLatexParser", "class_j_k_q_t_p_paint_device_adapter.html#a9d931572971e9da9ddee2b223a14af2a", null ]
+    ] ],
+    [ "JKQTPSaveDataAdapter", "class_j_k_q_t_p_save_data_adapter.html", [
+      [ "~JKQTPSaveDataAdapter", "class_j_k_q_t_p_save_data_adapter.html#ad32e3c743ed9439181c3d5eca6bb7a9c", null ],
+      [ "getFilter", "class_j_k_q_t_p_save_data_adapter.html#af7ccb608f1dcc15caf50ae9c4ad33a77", null ],
+      [ "saveJKQTPData", "class_j_k_q_t_p_save_data_adapter.html#af5cf39194f845acec94eba249d5a7391", null ]
+    ] ],
     [ "JKQTPLOTTER_LIB_EXPORT", "group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488", null ],
     [ "JKQTPMouseDoubleClickActionsHashMap", "group__jkqtpplottersupprt.html#ga165742edb759ef5f4db13df33037affa", null ],
     [ "JKQTPMouseDoubleClickActionsHashMapIterator", "group__jkqtpplottersupprt.html#ga1c12366f4b4a2a7022f8f594f1ff646b", null ],
@@ -86,13 +110,13 @@ var group__jkqtpplottersupprt =
       [ "jkqtpmwaPanByWheel", "group__jkqtpplottersupprt.html#gga6617afa61313feda8c490932016ff58fa41f3b3f9abe99373630d56d5649adc77", null ]
     ] ],
     [ "JKQTPPlotStyleType", "group__jkqtpplottersupprt.html#gaf0d90444170dd9b4daeabdede17615c4", [
-      [ "Default", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a7a1920d61156abc05a60135aefe8bc67", null ],
-      [ "Barchart", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a68a7f798b01ef4749ee1474fab784648", null ],
-      [ "Boxplot", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4ae85cad18fa9478297872ee353830ed33", null ],
-      [ "Filled", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4ad9d586f8c792f8f661052af42536323c", null ],
-      [ "Impulses", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a82c3c1ab28fb2f206ff98ba172437f1b", null ],
-      [ "Geometric", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4aadf9f772a73f364e4ce6c52b9fae740d", null ],
-      [ "Annotation", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a55f6611cb342565cf0f5002400f53a95", null ]
+      [ "JKQTPPlotStyleType::Default", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "JKQTPPlotStyleType::Barchart", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a68a7f798b01ef4749ee1474fab784648", null ],
+      [ "JKQTPPlotStyleType::Boxplot", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4ae85cad18fa9478297872ee353830ed33", null ],
+      [ "JKQTPPlotStyleType::Filled", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4ad9d586f8c792f8f661052af42536323c", null ],
+      [ "JKQTPPlotStyleType::Impulses", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a82c3c1ab28fb2f206ff98ba172437f1b", null ],
+      [ "JKQTPPlotStyleType::Geometric", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4aadf9f772a73f364e4ce6c52b9fae740d", null ],
+      [ "JKQTPPlotStyleType::Annotation", "group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a55f6611cb342565cf0f5002400f53a95", null ]
     ] ],
     [ "JKQTPUserActionMarkerType", "group__jkqtpplottersupprt.html#ga6562bedae430e91546399ae1a70cb860", [
       [ "jkqtpuamtCircle", "group__jkqtpplottersupprt.html#gga6562bedae430e91546399ae1a70cb860a55afdd9635a7987235e5dbfa6549c482", null ],

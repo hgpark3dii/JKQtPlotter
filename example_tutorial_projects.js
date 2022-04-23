@@ -126,19 +126,6 @@ var example_tutorial_projects =
       ] ]
     ] ],
     [ "Example (JKQTPlotter): Laying out Several Plots", "_j_k_q_t_plotter_multi_plot_layout.html", null ],
-    [ "Tutorial (JKQTPlotter): Styling a JKQtPlotter", "_j_k_q_t_plotter_styling.html", [
-      [ "Basic Description", "_j_k_q_t_plotter_styling.html#autotoc_md89", null ],
-      [ "Altering the Default Style", "_j_k_q_t_plotter_styling.html#autotoc_md90", [
-        [ "Global/System-wide Settings", "_j_k_q_t_plotter_styling.html#autotoc_md91", null ],
-        [ "Apply a new Style to an Existing JKQTPlotter", "_j_k_q_t_plotter_styling.html#autotoc_md92", null ]
-      ] ],
-      [ "Some Example Styles", "_j_k_q_t_plotter_styling.html#autotoc_md93", null ]
-    ] ],
-    [ "Example (JKQTPlotter): Image Plots with Custom Palettes", "_j_k_q_t_plotter_image_plot_user_palette.html", [
-      [ "Build Palettes Programmatically", "_j_k_q_t_plotter_image_plot_user_palette.html#autotoc_md80", null ],
-      [ "Load Palettes from Files", "_j_k_q_t_plotter_image_plot_user_palette.html#autotoc_md81", null ],
-      [ "Main Program of the Example (GUI)", "_j_k_q_t_plotter_image_plot_user_palette.html#autotoc_md82", null ]
-    ] ],
     [ "Tutorial (JKQTPDatastore): Basic Usage of JKQTPDatastore", "_j_k_q_t_plotter_basic_j_k_q_t_p_datastore.html", [
       [ "Copying Data from External COntainers into JKQTPDatastore", "_j_k_q_t_plotter_basic_j_k_q_t_p_datastore.html#autotoc_md16", [
         [ "Copy Data from a Vector into a column of the JKQTPDatastore", "_j_k_q_t_plotter_basic_j_k_q_t_p_datastore.html#autotoc_md17", null ],
@@ -203,7 +190,6 @@ var example_tutorial_projects =
       [ "Kernel Density Estimates (KDE)", "_j_k_q_t_plotter_basic_j_k_q_t_p_datastore_statistics2_d.html#autotoc_md60", null ],
       [ "Screenshot of the full Program", "_j_k_q_t_plotter_basic_j_k_q_t_p_datastore_statistics2_d.html#autotoc_md61", null ]
     ] ],
-    [ "Example (JKQTPlotter): Laying out Several Plots", "_j_k_q_t_plotter_multi_plot_layout.html", null ],
     [ "Example (JKQTPlotter): Plotting a Statistical Distribution of Data", "_j_k_q_t_plotter_distribution_plot.html", null ],
     [ "Example (JKQTPlotter): Mandelbrot Set Explorer", "_j_k_q_t_plotter_mandelbrot.html", [
       [ "Introduction and Usage", "_j_k_q_t_plotter_mandelbrot.html#autotoc_md83", null ],
