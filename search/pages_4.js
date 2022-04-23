@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_8588',['README',['../md__home_travis_build_jkriege2__j_k_qt_plotter_lib_jkqtmathtext_resources_xits__r_e_a_d_m_e.html',1,'']]]
+  ['licensing_20terms_20for_20jkqtplotter_8471',['Licensing Terms for JKQTPlotter',['../licensepage.html',1,'']]]
 ];

@@ -3,8 +3,6 @@ var class_j_k_q_t_p_column_const_iterator =
     [ "const_reference", "class_j_k_q_t_p_column_const_iterator.html#aae504f9719707767db2e8605e426be18", null ],
     [ "difference_type", "class_j_k_q_t_p_column_const_iterator.html#a8dc2056d24b2961cdb756826d3c0dd4a", null ],
     [ "iterator_category", "class_j_k_q_t_p_column_const_iterator.html#ac367d4b013f61f0832502791a7a47dae", null ],
-    [ "pointer", "class_j_k_q_t_p_column_const_iterator.html#a7311024b1e61016654073d40b55153d4", null ],
-    [ "reference", "class_j_k_q_t_p_column_const_iterator.html#a3037b61d7c0ef9417498c58b9af48026", null ],
     [ "self_type", "class_j_k_q_t_p_column_const_iterator.html#afe256f15deb5abaca2e09fabdd370a76", null ],
     [ "value_type", "class_j_k_q_t_p_column_const_iterator.html#a7bc6aa1fa009c8e18391035b01949ae6", null ],
     [ "JKQTPColumnConstIterator", "class_j_k_q_t_p_column_const_iterator.html#abff994e61cff4655b51a82eff552b123", null ],
@@ -49,5 +47,7 @@ var class_j_k_q_t_p_column_const_iterator =
     [ "operator+", "class_j_k_q_t_p_column_const_iterator.html#a55f28956451ed19cb121868973af013e", null ],
     [ "operator-", "class_j_k_q_t_p_column_const_iterator.html#a22ce6f7bc3c844a4d9f9a43a9fd8ed6a", null ],
     [ "col_", "class_j_k_q_t_p_column_const_iterator.html#abb9c0b4fd7383e67ed3a0a7129082b68", null ],
-    [ "pos_", "class_j_k_q_t_p_column_const_iterator.html#a9d7bc035834bd16eaba390b492c5ed42", null ]
+    [ "pointer", "class_j_k_q_t_p_column_const_iterator.html#ac68e0c6223c50cdfefcb5b93225bd95f", null ],
+    [ "pos_", "class_j_k_q_t_p_column_const_iterator.html#a9d7bc035834bd16eaba390b492c5ed42", null ],
+    [ "reference", "class_j_k_q_t_p_column_const_iterator.html#af203a79599c74efed1bcafbff622e671", null ]
 ];

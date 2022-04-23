@@ -23,8 +23,6 @@ var class_j_k_q_t_p_x_y_graph =
     [ "setXYColumns", "class_j_k_q_t_p_x_y_graph.html#aedb7dbdb3df43d84ed05ad198185d06c", null ],
     [ "setXYColumns", "class_j_k_q_t_p_x_y_graph.html#a2d4db03821c396beb74a5a7a15f64da5", null ],
     [ "setXYColumns", "class_j_k_q_t_p_x_y_graph.html#a972ee50c53accadade8880b3bd1110cc", null ],
-    [ "setXYColumns", "class_j_k_q_t_p_x_y_graph.html#ae7d67446426b71335243367faf65dc6e", null ],
-    [ "setXYColumns", "class_j_k_q_t_p_x_y_graph.html#a5c785e90cb9606b41397d42b5ced2e88", null ],
     [ "setYColumn", "class_j_k_q_t_p_x_y_graph.html#a462e07fa2a17157b7346d2d993ff2721", null ],
     [ "setYColumn", "class_j_k_q_t_p_x_y_graph.html#aeab8bd7c9118d450a20421f5987d75f5", null ],
     [ "usesColumn", "class_j_k_q_t_p_x_y_graph.html#ac8cf4dab6f880b7f5ca3fd32503c23d1", null ],

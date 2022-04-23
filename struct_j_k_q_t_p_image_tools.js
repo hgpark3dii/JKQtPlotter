@@ -5,7 +5,7 @@ var struct_j_k_q_t_p_image_tools =
     [ "array2image", "struct_j_k_q_t_p_image_tools.html#af096d9448f74499f8a019ae80fb6399e", null ],
     [ "array2image", "struct_j_k_q_t_p_image_tools.html#a4ac28194accce75259977edc9eaeaef1", null ],
     [ "getDefaultLUTs", "struct_j_k_q_t_p_image_tools.html#afc4701b20819aaa11ecf6d3ff93ba3c0", null ],
-    [ "getLUTforPalette", "struct_j_k_q_t_p_image_tools.html#af95e0172e73cedc1398c480dddc5ff50", null ],
+    [ "getLUTforPalette", "struct_j_k_q_t_p_image_tools.html#a88fcf4d15250e3ad6840b4b0735df2f8", null ],
     [ "GetPaletteIcon", "struct_j_k_q_t_p_image_tools.html#ac6d03ce98d2c84c8268d8b55e316d448", null ],
     [ "GetPaletteIcon", "struct_j_k_q_t_p_image_tools.html#a6dbeee16decb7a71b37d2ad6a4f50524", null ],
     [ "GetPaletteImage", "struct_j_k_q_t_p_image_tools.html#a156b7a420e1971d0a51a84c50fe81e19", null ],
@@ -21,7 +21,7 @@ var struct_j_k_q_t_p_image_tools =
     [ "String2JKQTPMathImageColorPalette", "struct_j_k_q_t_p_image_tools.html#a971bae64a802f7f580690f07b5c72167", null ],
     [ "global_jkqtpimagetools_lutstore", "struct_j_k_q_t_p_image_tools.html#ae666c1e272c28a5392293d7bab1b94a6", null ],
     [ "global_next_userpalette", "struct_j_k_q_t_p_image_tools.html#ad3ed99bff0339dc4d1fe0fac755dd563", null ],
-    [ "LUTSIZE", "struct_j_k_q_t_p_image_tools.html#ae0bf98fa4c6b14f0a5426c741d8094a4", null ],
-    [ "PALETTE_ICON_WIDTH", "group__jkqtptools__qt.html#gadff44153c21d7d9b1d3645c08510af7c", null ],
-    [ "PALETTE_IMAGEICON_HEIGHT", "group__jkqtptools__qt.html#ga94e808013f54024f502784a3ba50d3c4", null ]
+    [ "LUTSIZE", "struct_j_k_q_t_p_image_tools.html#a20f81a5b8e116620d6434064cfd050c4", null ],
+    [ "PALETTE_ICON_WIDTH", "group__jkqtptools__qt.html#gace948ea8e502796d7426a4f75ec0da60", null ],
+    [ "PALETTE_IMAGEICON_HEIGHT", "group__jkqtptools__qt.html#gad7b74931c6697877aa0e0d89c89adf7d", null ]
 ];

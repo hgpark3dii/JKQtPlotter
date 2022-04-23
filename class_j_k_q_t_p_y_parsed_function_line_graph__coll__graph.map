@@ -1,6 +1,6 @@
 <map id="JKQTPYParsedFunctionLineGraph" name="JKQTPYParsedFunctionLineGraph">
-<area shape="rect" id="node1" title="This implements line plots where the data is taken from a user supplied function &#160;The function is def..." alt="" coords="5308,692,5541,739"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_p_parsed_function_line_graph_base.html" title="extends JKQTPEvaluatedFunctionWithErrorsGraphDrawingBase with the capabilities to define functions fr..." alt="" coords="4947,701,5259,730"/>
+<area shape="rect" id="node1" title="This implements line plots where the data is taken from a user supplied function &#160;The function is def..." alt="" coords="5304,692,5537,739"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_p_parsed_function_line_graph_base.html" title="extends JKQTPEvaluatedFunctionWithErrorsGraphDrawingBase with the capabilities to define functions fr..." alt="" coords="4943,701,5255,730"/>
 <area shape="rect" id="node3" href="$class_j_k_q_t_p_evaluated_function_with_errors_graph_drawing_base.html" title="This class extends JKQTPEvaluatedFunctionWithErrorsGraphBase with functions to draw the graphs and se..." alt="" coords="4527,447,4777,493"/>
 <area shape="rect" id="node4" href="$class_j_k_q_t_p_evaluated_function_with_errors_graph_base.html" title="extends JKQTPEvaluatedFunctionGraphBase with some basic properties (e.g. function parameters) for a s..." alt="" coords="4119,367,4369,413"/>
 <area shape="rect" id="node5" href="$class_j_k_q_t_p_evaluated_function_graph_base.html" title="Base class for graph classes that evaluate a mathematical function (e.g. defined as a C&#45;function),..." alt="" coords="3737,277,4041,306"/>

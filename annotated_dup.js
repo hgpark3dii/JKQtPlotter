@@ -1,6 +1,5 @@
 var annotated_dup =
 [
-    [ "sfdnormalize", "namespacesfdnormalize.html", "namespacesfdnormalize" ],
     [ "ContourPlotAnimator", "class_contour_plot_animator.html", "class_contour_plot_animator" ],
     [ "FormWithJKQTPlotter", "class_form_with_j_k_q_t_plotter.html", "class_form_with_j_k_q_t_plotter" ],
     [ "JKQTAnnotationsSpecificStyleProperties", "class_j_k_q_t_annotations_specific_style_properties.html", "class_j_k_q_t_annotations_specific_style_properties" ],

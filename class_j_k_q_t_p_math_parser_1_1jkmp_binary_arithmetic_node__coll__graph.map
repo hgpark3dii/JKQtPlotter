@@ -1,5 +1,5 @@
 <map id="JKQTPMathParser::jkmpBinaryArithmeticNode" name="JKQTPMathParser::jkmpBinaryArithmeticNode">
-<area shape="rect" id="node1" title="This class represents a binary arithmetic operation: add (+), subtract (&#45;), multiply (*),..." alt="" coords="2507,282,2767,329"/>
+<area shape="rect" id="node1" title="This class represents a binary arithmetic operation: add (+), subtract (&#45;), multiply (*),..." alt="" coords="2512,282,2772,329"/>
 <area shape="rect" id="node2" href="$class_j_k_q_t_p_math_parser_1_1jkmp_node.html" title="This class is the abstract base class for nodes. All allowed node types must inherit from jkmpNode." alt="" coords="2171,291,2421,320"/>
 <area shape="rect" id="node3" href="$class_j_k_q_t_p_math_parser.html" title="A simple function parser to parse (build memory tree representation) and evaluate simple mathematical..." alt="" coords="1904,291,2065,320"/>
 <area shape="rect" id="node4" title=" " alt="" coords="1071,450,1368,497"/>

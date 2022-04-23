@@ -260,9 +260,6 @@ var hierarchy =
     [ "QElapsedTimer", null, [
       [ "JKQTPAutoOutputTimer", "class_j_k_q_t_p_auto_output_timer.html", null ]
     ] ],
-    [ "QGLWidget", null, [
-      [ "JKQTFastPlotter", "class_j_k_q_t_fast_plotter.html", null ]
-    ] ],
     [ "QLabel", null, [
       [ "JKQTMathTextLabel", "class_j_k_q_t_math_text_label.html", null ]
     ] ],
@@ -354,6 +351,9 @@ var hierarchy =
         [ "JKQTPViolinplotElementBase", "class_j_k_q_t_p_violinplot_element_base.html", null ]
       ] ]
     ] ],
+    [ "QOpenGLWidget", null, [
+      [ "JKQTFastPlotter", "class_j_k_q_t_fast_plotter.html", null ]
+    ] ],
     [ "QPainter", null, [
       [ "JKQTPEnhancedPainter", "class_j_k_q_t_p_enhanced_painter.html", null ]
     ] ],
@@ -385,7 +385,6 @@ var hierarchy =
       [ "TestWidgetPeaksPlots", "class_test_widget_peaks_plots.html", null ],
       [ "TestWidgetRGBImages", "class_test_widget_r_g_b_images.html", null ]
     ] ],
-    [ "sfdnormalize.RegexpProcessor", "classsfdnormalize_1_1_regexp_processor.html", null ],
     [ "JKQTPLinePlotStyleWithSymbolSizeComboBox::styleData", "struct_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box_1_1style_data.html", null ],
     [ "JKQTMathText::MTsymbolNode::SymbolProps", "class_j_k_q_t_math_text_1_1_m_tsymbol_node.html#struct_j_k_q_t_math_text_1_1_m_tsymbol_node_1_1_symbol_props", null ],
     [ "JKQTMathText::tbrData", "struct_j_k_q_t_math_text_1_1tbr_data.html", null ],

@@ -1,26 +1,24 @@
 /*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
 
- The MIT License (MIT)
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
- Copyright (C) 1997-2020 by Dimitri van Heesch
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
+@licend  The above is the entire license notice
+for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -28,6 +26,21 @@ var NAVTREE =
     [ "JKQTPlotter - A Qt Plotting Library", "index.html", [
       [ "Main Features", "index.html#jkqtp_main_features", null ],
       [ "Table Of Contents", "index.html#jkqtplottertic", null ]
+    ] ],
+    [ "Contributor Covenant Code of Conduct", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
+      [ "Our Pledge", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md1", null ],
+      [ "Our Standards", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md2", null ],
+      [ "Our Responsibilities", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md3", null ],
+      [ "Scope", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md4", null ],
+      [ "Enforcement", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md5", null ],
+      [ "Attribution", "md__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md6", null ]
+    ] ],
+    [ "Contributing", "md__c_o_n_t_r_i_b_u_t_i_n_g.html", [
+      [ "Pull Request Process", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md8", null ],
+      [ "Our Standards", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md9", null ],
+      [ "Our Responsibilities", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md10", null ],
+      [ "Scope", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md11", null ],
+      [ "Enforcement", "md__c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md12", null ]
     ] ],
     [ "Build Instructions", "page_buildinstructions.html", [
       [ "Build using CMake", "page_buildinstructions.html#page_buildinstructions_CMAKE", [
@@ -56,6 +69,10 @@ var NAVTREE =
         [ "trunk: Overview", "page_whatsnew.html#page_whatsnew_TRUNK_OVERVIEW", null ],
         [ "trunk: Download", "page_whatsnew.html#page_whatsnew_TRUNK_DOWNLOAD", null ]
       ] ],
+      [ "V4.0.0: Qt6 compatibility & diverse improvements + bugfixes", "page_whatsnew.html#page_whatsnew_V4_0_0", [
+        [ "V4.0.0: Overview", "page_whatsnew.html#page_whatsnew_V4_0_0_OVERVIEW", null ],
+        [ "V4.0.0: Download", "page_whatsnew.html#page_whatsnew_V4_0_0_DOWNLOAD", null ]
+      ] ],
       [ "v2019.11: Major rework of the library", "page_whatsnew.html#page_whatsnew_V2019_11", [
         [ "v2019.11: Overview", "page_whatsnew.html#page_whatsnew_V2019_11_OVERVIEW", null ],
         [ "v2019.11: Download", "page_whatsnew.html#page_whatsnew_V2019_11_DOWNLOAD", null ]
@@ -69,27 +86,27 @@ var NAVTREE =
         [ "v2015.10: Download", "page_whatsnew.html#page_whatsnew_V2015_10_DOWNLOAD", null ]
       ] ]
     ] ],
-    [ "JKQTPlotter - A Qt Plotting Library", "md_qtmarketplace_metadata_jkqtplotter_decsription.html", [
-      [ "Main Features", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md1", null ],
-      [ "Building", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md2", null ],
-      [ "Screenhhots", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md3", [
-        [ "Plotting", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md4", null ],
-        [ "LaTeX-Rendering", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md5", null ]
-      ] ],
-      [ "Build-In User-Interaction", "md_qtmarketplace_metadata_jkqtplotter_decsription.html#autotoc_md6", null ]
+    [ "JKQTPlotter: Screenshots", "md_screenshots__r_e_a_d_m_e.html", [
+      [ "Scatter Plots and Boxplots", "md_screenshots__r_e_a_d_m_e.html#autotoc_md129", null ],
+      [ "Different Types of Barcharts", "md_screenshots__r_e_a_d_m_e.html#autotoc_md130", null ],
+      [ "Image Plots", "md_screenshots__r_e_a_d_m_e.html#autotoc_md131", null ],
+      [ "Plotting a user-defined (parsed) function", "md_screenshots__r_e_a_d_m_e.html#autotoc_md132", null ],
+      [ "Axis-Label styles in LogLog-Plot", "md_screenshots__r_e_a_d_m_e.html#autotoc_md133", null ],
+      [ "Parametrized Scatter Plots and Data Viewer", "md_screenshots__r_e_a_d_m_e.html#autotoc_md134", null ],
+      [ "Barcharts", "md_screenshots__r_e_a_d_m_e.html#autotoc_md135", null ],
+      [ "Screenshots of included LaTeX renderer", "md_screenshots__r_e_a_d_m_e.html#autotoc_md136", null ],
+      [ "QuickFit 3.0 Screenshots", "md_screenshots__r_e_a_d_m_e.html#autotoc_md137", null ]
     ] ],
-    [ "README", "md__home_travis_build_jkriege2__j_k_qt_plotter_lib_jkqtmathtext_resources_xits__r_e_a_d_m_e.html", [
-      [ "The XITS font project", "md__home_travis_build_jkriege2__j_k_qt_plotter_lib_jkqtmathtext_resources_xits__r_e_a_d_m_e.html#autotoc_md7", [
-        [ "Contributing", "md__home_travis_build_jkriege2__j_k_qt_plotter_lib_jkqtmathtext_resources_xits__r_e_a_d_m_e.html#autotoc_md8", null ]
-      ] ]
+    [ "Security Policy", "md__s_e_c_u_r_i_t_y.html", [
+      [ "Supported Versions", "md__s_e_c_u_r_i_t_y.html#autotoc_md139", null ],
+      [ "Reporting a Vulnerability", "md__s_e_c_u_r_i_t_y.html#autotoc_md140", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -132,14 +149,14 @@ var NAVTREEINDEX =
 "class_j_k_q_t_p_parsed_function_line_graph_base.html#a3d9dcc4603b1b8abe6a63331db5d614c",
 "class_j_k_q_t_p_r_g_b_math_image.html#afc64347b3a03a3aaad922640afcb0009",
 "class_j_k_q_t_p_x_graph_error_data.html#a834bddd7eeadd418349558dfb8cfb902",
-"class_j_k_q_t_p_y_graph_errors.html",
-"class_j_k_q_t_plotter.html#af7459d68403e3548785d7844986f60b3",
-"class_test_widget_log_graphs.html#ae6b8f7df6eff0d36f7893e4b3f6be404",
-"group__jkqtfastplotter.html#gaa6fb10f6ffcbaa769b10bcf2fa69c276",
-"group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a3048b23391149f6c1916e7d8df92fe7a",
-"group__jkqtptools__drawing.html#gga212568ec3a08aa8d047bdd11283e2b3eaebcc00ef00384fe8ac6d03f11d6a7c47",
-"group__jkqtptools__math__statistics__regression.html",
-"struct_j_k_q_t_p_plot_element_1_1_hit_test_location.html#a4455efe0f8a0ce9a737295ff15174b20"
+"class_j_k_q_t_p_y_graph_errors.html#ab3dcdb15ebcc69133e2293dcd535a8e2",
+"class_j_k_q_t_plotter.html#af8465863a7aaf2e72c79ae03a7dfbdb5",
+"class_test_widget_param_scatter_plots.html#a02cfabaeb5830c65c5dc406a5460e8af",
+"group__jkqtfastplotter.html#ggaa94a0bca376a39f32a47dbd6f08fc594a12170f49df159c522ca569cad37ca0b5",
+"group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a5cebea49d99841391c3c37737496c617",
+"group__jkqtptools__drawing.html#ggabd0e8edf2acdfce37eccab000e445c62a1fd70edb616058cb71121d7f268db22d",
+"group__jkqtptools__math__statistics__regression.html#ga6f80dbd6d93295db2cd71bb231546ce3",
+"struct_j_k_q_t_p_math_parser_1_1jkmp_variable.html#a6a28699f308a8ac890ef8af7753d6f00"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
