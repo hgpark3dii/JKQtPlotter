@@ -10,6 +10,5 @@ var searchData=
   ['otheraxiswidth_7',['otherAxisWidth',['../class_j_k_q_t_p_vertical_independent_axis.html#adc5824122f8d7b7518fef3c43da9d1ea',1,'JKQTPVerticalIndependentAxis::otherAxisWidth()'],['../class_j_k_q_t_p_horizontal_independent_axis.html#a3394687e2217538d326d137b5841c22a',1,'JKQTPHorizontalIndependentAxis::otherAxisWidth()']]],
   ['outliers_8',['outliers',['../struct_j_k_q_t_p_stat5_number_statistics.html#a4f5981dc1357c7338884395807b8dc2a',1,'JKQTPStat5NumberStatistics']]],
   ['overallheight_9',['overallHeight',['../struct_j_k_q_t_math_text_1_1_m_tnode_size.html#a0411ba9256ad90b567c5f48878e66cc5',1,'JKQTMathText::MTnodeSize']]],
-  ['overline_10',['overline',['../struct_j_k_q_t_math_text_1_1_m_tenvironment.html#adedfea9608b72628318d3ab12e749b5c',1,'JKQTMathText::MTenvironment']]],
-  ['ovrl_11',['ovrl',['../class_test_main.html#a33189493f061bd7761c1280cbb5e65d2',1,'TestMain']]]
+  ['overline_10',['overline',['../struct_j_k_q_t_math_text_1_1_m_tenvironment.html#adedfea9608b72628318d3ab12e749b5c',1,'JKQTMathText::MTenvironment']]]
 ];

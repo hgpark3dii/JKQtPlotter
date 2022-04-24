@@ -121,39 +121,31 @@ $(document).ready(function(){initNavTree('_j_k_q_t_plotter_speed_test.html','');
 <p >For this example we also don't use axis autoscaling, but set the axes explicitly: </p><div class="fragment"><div class="line"><span class="comment">// 6. scale the plot so the graph is contained</span></div>
 <div class="line">setX(X[0], X[NDATA-1]);</div>
 <div class="line">setY(-2,2);</div>
-</div><!-- fragment --><p >Finally a slot is started with a one-shot timer. In that slot, the data is shifted one place to the left and the graph is updated. The slot also calculated the current framerate and displays it in the window title. Finally a single-shot timer with 1ms delay is used to call the slot again (i.e. continuously): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_speed_test_plot.html#a5d3de1d65ae2c1eb4578de868b43f33f">SpeedTestPlot::plotNewData</a>()</div>
+</div><!-- fragment --><p >Finally a slot is started with a one-shot timer. In that slot, the data is shifted one place to the left and the graph is updated. The slot also calculated the current framerate and displays it in the window title. Finally a single-shot timer with 1ms delay is used to call the slot again (i.e. continuously): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> SpeedTestPlot::plotNewData()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// move old data to the left</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;NDATA-1; i++) {</div>
-<div class="line">        <a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[i]=<a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[i+1];</div>
-<div class="line">        <a class="code hl_variable" href="class_speed_test_plot.html#a5305c5be04cb3bd6a0788d786155d14d">Y</a>[i]=<a class="code hl_variable" href="class_speed_test_plot.html#a5305c5be04cb3bd6a0788d786155d14d">Y</a>[i+1];</div>
-<div class="line">        <a class="code hl_variable" href="class_speed_test_plot.html#a9ce7ec8f5c77476df07aceb95cc8c83d">Y2</a>[i]=<a class="code hl_variable" href="class_speed_test_plot.html#a9ce7ec8f5c77476df07aceb95cc8c83d">Y2</a>[i+1];</div>
+<div class="line">        X[i]=X[i+1];</div>
+<div class="line">        Y[i]=Y[i+1];</div>
+<div class="line">        Y2[i]=Y2[i+1];</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// add one new data point</span></div>
-<div class="line">    <a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[NDATA-1]=<a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[NDATA-2]+<a class="code hl_variable" href="class_speed_test_plot.html#aff532d54531cf5db539e5a825750baa3">dx</a>;</div>
-<div class="line">    <a class="code hl_variable" href="class_speed_test_plot.html#a5305c5be04cb3bd6a0788d786155d14d">Y</a>[NDATA-1]=sin(<a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[NDATA-1])+<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::rand())/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(RAND_MAX + 1u)-0.5;</div>
-<div class="line">    <a class="code hl_variable" href="class_speed_test_plot.html#a9ce7ec8f5c77476df07aceb95cc8c83d">Y2</a>[NDATA-1]=cos(<a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[NDATA-1])+<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::rand())/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(RAND_MAX + 1u)-0.5;</div>
+<div class="line">    X[NDATA-1]=X[NDATA-2]+dx;</div>
+<div class="line">    Y[NDATA-1]=sin(X[NDATA-1])+<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::rand())/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(RAND_MAX + 1u)-0.5;</div>
+<div class="line">    Y2[NDATA-1]=cos(X[NDATA-1])+<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::rand())/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(RAND_MAX + 1u)-0.5;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// set new x-range and replot</span></div>
-<div class="line">    <a class="code hl_slot" href="class_j_k_q_t_plotter.html#a09adcf0afc9e0b2847262c850e18aa5d">setX</a>(<a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[0], <a class="code hl_variable" href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">X</a>[NDATA-1]);</div>
-<div class="line">    <a class="code hl_slot" href="class_j_k_q_t_plotter.html#aebce042360ddc51b50472760ed272f7d">redrawPlot</a>();</div>
+<div class="line">    setX(X[0], X[NDATA-1]);</div>
+<div class="line">    redrawPlot();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// calculate and update FPS-rate in window title</span></div>
-<div class="line">    <span class="keyword">auto</span> tlastalst=<a class="code hl_variable" href="class_speed_test_plot.html#a39cadaf9f397c66c2103607fd358c91d">t_lastplot</a>;</div>
-<div class="line">    <a class="code hl_variable" href="class_speed_test_plot.html#a39cadaf9f397c66c2103607fd358c91d">t_lastplot</a>=std::chrono::system_clock::now();</div>
-<div class="line">    <span class="keywordtype">double</span> delta_secs=<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(<a class="code hl_variable" href="class_speed_test_plot.html#a39cadaf9f397c66c2103607fd358c91d">t_lastplot</a>-tlastalst).count())/1000.0;</div>
+<div class="line">    <span class="keyword">auto</span> tlastalst=t_lastplot;</div>
+<div class="line">    t_lastplot=std::chrono::system_clock::now();</div>
+<div class="line">    <span class="keywordtype">double</span> delta_secs=<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(t_lastplot-tlastalst).count())/1000.0;</div>
 <div class="line">    setWindowTitle(QString(<span class="stringliteral">&quot;Live Data Speed Test: %2 datapoint, %1 fps&quot;</span>).arg(1/delta_secs).arg(NDATA));</div>
 <div class="line">    <span class="comment">// enqueue call for next data value</span></div>
-<div class="line">    QTimer::singleShot(1, <span class="keyword">this</span>, SLOT(<a class="code hl_slot" href="class_speed_test_plot.html#a5d3de1d65ae2c1eb4578de868b43f33f">plotNewData</a>()));</div>
+<div class="line">    QTimer::singleShot(1, <span class="keyword">this</span>, SLOT(plotNewData()));</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_a09adcf0afc9e0b2847262c850e18aa5d"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a09adcf0afc9e0b2847262c850e18aa5d">JKQTPlotter::setX</a></div><div class="ttdeci">void setX(double xminn, double xmaxx)</div><div class="ttdoc">sets the x-range of the plot (minimum and maximum x-value on the x-axis)</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1191</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_aebce042360ddc51b50472760ed272f7d"><div class="ttname"><a href="class_j_k_q_t_plotter.html#aebce042360ddc51b50472760ed272f7d">JKQTPlotter::redrawPlot</a></div><div class="ttdeci">void redrawPlot()</div><div class="ttdoc">update the plot and the overlays</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_a39cadaf9f397c66c2103607fd358c91d"><div class="ttname"><a href="class_speed_test_plot.html#a39cadaf9f397c66c2103607fd358c91d">SpeedTestPlot::t_lastplot</a></div><div class="ttdeci">std::chrono::system_clock::time_point t_lastplot</div><div class="ttdef"><b>Definition:</b> speedtestplot.h:17</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_a5305c5be04cb3bd6a0788d786155d14d"><div class="ttname"><a href="class_speed_test_plot.html#a5305c5be04cb3bd6a0788d786155d14d">SpeedTestPlot::Y</a></div><div class="ttdeci">std::array&lt; double, NDATA &gt; Y</div><div class="ttdef"><b>Definition:</b> speedtestplot.h:14</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_a58acab317fc7a318a6230f40cbeb4d8b"><div class="ttname"><a href="class_speed_test_plot.html#a58acab317fc7a318a6230f40cbeb4d8b">SpeedTestPlot::X</a></div><div class="ttdeci">std::array&lt; double, NDATA &gt; X</div><div class="ttdef"><b>Definition:</b> speedtestplot.h:14</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_a5d3de1d65ae2c1eb4578de868b43f33f"><div class="ttname"><a href="class_speed_test_plot.html#a5d3de1d65ae2c1eb4578de868b43f33f">SpeedTestPlot::plotNewData</a></div><div class="ttdeci">void plotNewData()</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_a9ce7ec8f5c77476df07aceb95cc8c83d"><div class="ttname"><a href="class_speed_test_plot.html#a9ce7ec8f5c77476df07aceb95cc8c83d">SpeedTestPlot::Y2</a></div><div class="ttdeci">std::array&lt; double, NDATA &gt; Y2</div><div class="ttdef"><b>Definition:</b> speedtestplot.h:14</div></div>
-<div class="ttc" id="aclass_speed_test_plot_html_aff532d54531cf5db539e5a825750baa3"><div class="ttname"><a href="class_speed_test_plot.html#aff532d54531cf5db539e5a825750baa3">SpeedTestPlot::dx</a></div><div class="ttdeci">const double dx</div><div class="ttdef"><b>Definition:</b> speedtestplot.h:15</div></div>
 </div><!-- fragment --><p >The result looks like this:</p>
 <p ><img src="https://raw.githubusercontent.com/jkriege2/JKQtPlotter/master/screenshots/speed.png" alt="speed1" class="inline"/></p>
 <p >There are different facor affecting the replot speed:</p><ol type="1">
@@ -214,7 +206,7 @@ $(document).ready(function(){initNavTree('_j_k_q_t_plotter_speed_test.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="example_tutorial_projects.html">Example &amp; Tutorial Projects</a></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:02 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

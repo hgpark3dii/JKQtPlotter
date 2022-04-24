@@ -159,28 +159,28 @@ $(document).ready(function(){initNavTree('jkqtpgeometrytools_8h_source.html','')
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    /** \brief class constructor</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">     *  \param fx function \f$ f_x(t) \f$</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">     *  \param fy function \f$ f_y(t) \f$</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">     *  \param minSamples the minimum number of points to evaluate the function at</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">     *  \param maxRefinementDegree the maximum number of recursive refinement steps</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">     *  \param fx_ function \f$ f_x(t) \f$</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">     *  \param fy_ function \f$ f_y(t) \f$</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">     *  \param minSamples_ the minimum number of points to evaluate the function at</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">     *  \param maxRefinementDegree_ the maximum number of recursive refinement steps</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">     *                             each step bisects the interval \f$ [a, b] \f$ into two halfes. So the maximum number</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">     *                             of points plotted at all are thus:</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">     *                               \f[ \mbox{minSamples} \cdot 2^{\mbox{maxRefinementDegree}} \f]</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">     *  \param slopeTolerance the tolerance for the difference of two subsequent slopes</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">     *  \param minPixelPerSample create one sample at least every \a minPixelPerSample pixels</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">     *  \param slopeTolerance_ the tolerance for the difference of two subsequent slopes</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">     *  \param minPixelPerSample_ create one sample at least every \a minPixelPerSample pixels</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a539365a0e6645e1b73501d80fc727483">   63</a></span>    <a class="code hl_function" href="class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a539365a0e6645e1b73501d80fc727483">JKQTPAdaptiveFunctionGraphEvaluator</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">double</span>(<span class="keywordtype">double</span>)&gt;&amp; fx_, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">double</span>(<span class="keywordtype">double</span>)&gt;&amp; fy_, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minSamples_=10, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxRefinementDegree_=5, <span class="keywordtype">double</span> slopeTolerance_=0.005, <span class="keywordtype">double</span> minPixelPerSample_=32);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"></span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">    /** \brief class constructor</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">     *</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">     *  \param fxy function \f$ [x,y]=f_{xy}(t) \f$</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">     *  \param minSamples the minimum number of points to evaluate the function at</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">     *  \param maxRefinementDegree the maximum number of recursive refinement steps</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">     *  \param fxy_ function \f$ [x,y]=f_{xy}(t) \f$</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">     *  \param minSamples_ the minimum number of points to evaluate the function at</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">     *  \param maxRefinementDegree_ the maximum number of recursive refinement steps</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">     *                             each step bisects the interval \f$ [a, b] \f$ into two halfes. So the maximum number</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">     *                             of points plotted at all are thus:</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">     *                               \f[ \mbox{minSamples} \cdot 2^{\mbox{maxRefinementDegree}} \f]</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">     *  \param slopeTolerance the tolerance for the difference of two subsequent slopes</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">     *  \param minPixelPerSample create one sample at least every \a minPixelPerSample pixels</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">     *  \param slopeTolerance_ the tolerance for the difference of two subsequent slopes</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">     *  \param minPixelPerSample_ create one sample at least every \a minPixelPerSample pixels</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a2748ff8b3792b75a6bbca65ba19d23f5">   76</a></span>    <a class="code hl_function" href="class_j_k_q_t_p_adaptive_function_graph_evaluator.html#a2748ff8b3792b75a6bbca65ba19d23f5">JKQTPAdaptiveFunctionGraphEvaluator</a>(<span class="keyword">const</span> std::function&lt;QPointF(<span class="keywordtype">double</span>)&gt;&amp; fxy_, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minSamples_=10, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxRefinementDegree_=5, <span class="keywordtype">double</span> slopeTolerance_=0.005, <span class="keywordtype">double</span> minPixelPerSample_=32);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span> </div>
@@ -371,7 +371,7 @@ $(document).ready(function(){initNavTree('jkqtpgeometrytools_8h_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_9c1c7b82103a20ec9a416a3dfc619ab1.html">jkqtcommon</a></li><li class="navelem"><b>jkqtpgeometrytools.h</b></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:01 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

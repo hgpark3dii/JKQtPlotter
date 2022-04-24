@@ -194,9 +194,7 @@ var hierarchy =
     [ "JKQTPlotterDrawingTools", "struct_j_k_q_t_plotter_drawing_tools.html", null ],
     [ "JKQTPlotterStyle", "class_j_k_q_t_plotter_style.html", null ],
     [ "JKQTPMathParser", "class_j_k_q_t_p_math_parser.html", null ],
-    [ "JKQTPPaintDeviceAdapter", "class_j_k_q_t_p_paint_device_adapter.html", [
-      [ "JKQTPEmfEngineAdapter", "class_j_k_q_t_p_emf_engine_adapter.html", null ]
-    ] ],
+    [ "JKQTPPaintDeviceAdapter", "class_j_k_q_t_p_paint_device_adapter.html", null ],
     [ "JKQTBasePlotter::JKQTPPen", "class_j_k_q_t_base_plotter_1_1_j_k_q_t_p_pen.html", null ],
     [ "JKQTPPolynomialFunctor", "struct_j_k_q_t_p_polynomial_functor.html", null ],
     [ "JKQTPSaveDataAdapter", "class_j_k_q_t_p_save_data_adapter.html", null ],
@@ -251,9 +249,6 @@ var hierarchy =
       [ "JKQTPSpecialLineTypeComboBox", "class_j_k_q_t_p_special_line_type_combo_box.html", null ],
       [ "JKQTPSymbolComboBox", "class_j_k_q_t_p_symbol_combo_box.html", null ]
     ] ],
-    [ "QDialog", null, [
-      [ "TestMultiplotUI", "class_test_multiplot_u_i.html", null ]
-    ] ],
     [ "QDoubleSpinBox", null, [
       [ "JKQTPEnhancedDoubleSpinBox", "class_j_k_q_t_p_enhanced_double_spin_box.html", null ]
     ] ],
@@ -263,13 +258,7 @@ var hierarchy =
     [ "QLabel", null, [
       [ "JKQTMathTextLabel", "class_j_k_q_t_math_text_label.html", null ]
     ] ],
-    [ "QMainWindow", null, [
-      [ "MandelbrotMainWindow", "class_mandelbrot_main_window.html", null ],
-      [ "TestStyling", "class_test_styling.html", null ],
-      [ "TestUserInteraction", "class_test_user_interaction.html", null ]
-    ] ],
     [ "QObject", null, [
-      [ "ContourPlotAnimator", "class_contour_plot_animator.html", null ],
       [ "JKQTBasePlotter", "class_j_k_q_t_base_plotter.html", null ],
       [ "JKQTFPPlot", "class_j_k_q_t_f_p_plot.html", [
         [ "JKQTFPLinePlot", "class_j_k_q_t_f_p_line_plot.html", [
@@ -363,30 +352,11 @@ var hierarchy =
     [ "QTableView", null, [
       [ "JKQTPEnhancedTableView", "class_j_k_q_t_p_enhanced_table_view.html", null ]
     ] ],
-    [ "QTabWidget", null, [
-      [ "TestMain", "class_test_main.html", null ]
-    ] ],
     [ "QToolBar", null, [
       [ "JKVanishQToolBar", "class_j_k_vanish_q_tool_bar.html", null ]
     ] ],
     [ "QWidget", null, [
-      [ "FormWithJKQTPlotter", "class_form_with_j_k_q_t_plotter.html", null ],
-      [ "JKQTPlotter", "class_j_k_q_t_plotter.html", [
-        [ "SpeedTestPlot", "class_speed_test_plot.html", null ]
-      ] ],
-      [ "TestForm", "class_test_form.html", null ],
-      [ "TestMain", "class_test_main.html", null ],
-      [ "TestWidgetBarcharts", "class_test_widget_barcharts.html", null ],
-      [ "TestWidgetContourPlots", "class_test_widget_contour_plots.html", null ],
-      [ "TestWidgetEmptyPlot", "class_test_widget_empty_plot.html", null ],
-      [ "TestWidgetFunctionPlots", "class_test_widget_function_plots.html", null ],
-      [ "TestWidgetGeometry", "class_test_widget_geometry.html", null ],
-      [ "TestWidgetGraphs", "class_test_widget_graphs.html", null ],
-      [ "TestWidgetImages", "class_test_widget_images.html", null ],
-      [ "TestWidgetLogGraphs", "class_test_widget_log_graphs.html", null ],
-      [ "TestWidgetParamScatterPlots", "class_test_widget_param_scatter_plots.html", null ],
-      [ "TestWidgetPeaksPlots", "class_test_widget_peaks_plots.html", null ],
-      [ "TestWidgetRGBImages", "class_test_widget_r_g_b_images.html", null ]
+      [ "JKQTPlotter", "class_j_k_q_t_plotter.html", null ]
     ] ],
     [ "JKQTPLinePlotStyleWithSymbolSizeComboBox::styleData", "struct_j_k_q_t_p_line_plot_style_with_symbol_size_combo_box_1_1style_data.html", null ],
     [ "JKQTMathText::MTsymbolNode::SymbolProps", "group__jkqtmathtext.html#struct_j_k_q_t_math_text_1_1_m_tsymbol_node_1_1_symbol_props", null ],

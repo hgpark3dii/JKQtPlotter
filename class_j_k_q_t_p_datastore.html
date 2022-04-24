@@ -130,14 +130,8 @@ $(document).ready(function(){initNavTree('class_j_k_q_t_p_datastore.html',''); i
 <div class="dynheader">
 Collaboration diagram for JKQTPDatastore:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_j_k_q_t_p_datastore__coll__graph.png" border="0" usemap="#a_j_k_q_t_p_datastore_coll__map" alt="Collaboration graph"/></div>
-<map name="a_j_k_q_t_p_datastore_coll__map" id="a_j_k_q_t_p_datastore_coll__map">
-<area shape="rect" title="This class manages data columns (with entries of type double ), used by JKQTPlotter/JKQTBasePlotter t..." alt="" coords="54,5,202,35"/>
-<area shape="rect" href="class_j_k_q_t_p_column.html" title="internally stores information about one data column. See JKQTPDatastore for more information." alt="" coords="5,100,136,129"/>
-<area shape="rect" title=" " alt="" coords="41,195,327,224"/>
-<area shape="rect" title=" " alt="" coords="349,100,536,129"/>
-<area shape="rect" title=" " alt="" coords="423,5,462,35"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_j_k_q_t_p_datastore__coll__graph.svg" width="500" height="230"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -612,8 +606,8 @@ Column Generation/Deletion</h2>
 <li><a class="el" href="class_j_k_q_t_p_datastore.html#a3d6b9f2649736b08b6731132f86368f6" title="add one column to the datastore. It will be filled with the values from first ... last">addCopiedColumn()</a> copies an external dataset into the datastore. e.g. with code like: <div class="fragment"><div class="line"> QVector&lt;double&gt; X, Y;</div>
 <div class="line"> <span class="keyword">const</span> <span class="keywordtype">int</span> Ndata=100;</div>
 <div class="line"> <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;Ndata; i++) {</div>
-<div class="line">  *   <span class="keyword">const</span> <span class="keywordtype">double</span> x=double(i)/double(Ndata)*8.0*<a class="code hl_define" href="group__jkqtptools__math__basic.html#gae96ac530dff57dae111b641b0c7f4eb4">JKQTPSTATISTICS_PI</a>;</div>
-<div class="line">     X&lt;&lt;x;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> x=double(i)/double(Ndata)*8.0*<a class="code hl_define" href="group__jkqtptools__math__basic.html#gae96ac530dff57dae111b641b0c7f4eb4">JKQTPSTATISTICS_PI</a>;</div>
+<div class="line">    X&lt;&lt;x;</div>
 <div class="line">    Y&lt;&lt;sin(x);</div>
 <div class="line">}</div>
 <div class="line">plot.addGraph(linegraph=<span class="keyword">new</span> <a class="code hl_class" href="class_j_k_q_t_p_x_y_line_graph.html">JKQTPXYLineGraph</a>(&amp;plot));</div>
@@ -6321,7 +6315,7 @@ the iterator <em>pos</em> is rendered invalid by this column, as the in some cas
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_p_datastore.html">JKQTPDatastore</a></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:03 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:16 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

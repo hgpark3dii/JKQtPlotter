@@ -171,16 +171,11 @@ Inner Workings</h1>
 <div class="line"> </div>
 <div class="line"><span class="comment">// ......</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_user_interaction.html#a980f749ecb8cec5e83304ec5524c921f">TestUserInteraction::setLeftMouseAction</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><span class="keywordtype">void</span> TestUserInteraction::setLeftMouseAction(<span class="keywordtype">int</span> index)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (index==<a class="code hl_variable" href="class_test_user_interaction.html#ac54271f28b6de253ab16cee3bdcb3ba1">cmbLeftNoModMouseAction</a>-&gt;count()-1) <a class="code hl_variable" href="class_test_user_interaction.html#a9dc5ee7166c1c88b44d86c860d6acc8d">plot</a>-&gt;<a class="code hl_function" href="class_j_k_q_t_plotter.html#aec50d0820bfff22653cc3730e39b5bd1">deregisterMouseDragAction</a>(Qt::LeftButton, Qt::NoModifier);</div>
-<div class="line">    <span class="keywordflow">else</span> <a class="code hl_variable" href="class_test_user_interaction.html#a9dc5ee7166c1c88b44d86c860d6acc8d">plot</a>-&gt;<a class="code hl_function" href="class_j_k_q_t_plotter.html#ac871e1b8092a125093d13ee5a0438910">registerMouseDragAction</a>(Qt::LeftButton, Qt::NoModifier, <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="group__jkqtpplottersupprt.html#ga5d43b30f0132d08b8793ceb2533e315f">JKQTPMouseDragActions</a><span class="keyword">&gt;</span>(index));</div>
+<div class="line">    <span class="keywordflow">if</span> (index==cmbLeftNoModMouseAction-&gt;count()-1) plot-&gt;deregisterMouseDragAction(Qt::LeftButton, Qt::NoModifier);</div>
+<div class="line">    <span class="keywordflow">else</span> plot-&gt;registerMouseDragAction(Qt::LeftButton, Qt::NoModifier, <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="group__jkqtpplottersupprt.html#ga5d43b30f0132d08b8793ceb2533e315f">JKQTPMouseDragActions</a><span class="keyword">&gt;</span>(index));</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_ac871e1b8092a125093d13ee5a0438910"><div class="ttname"><a href="class_j_k_q_t_plotter.html#ac871e1b8092a125093d13ee5a0438910">JKQTPlotter::registerMouseDragAction</a></div><div class="ttdeci">void registerMouseDragAction(Qt::MouseButton button, Qt::KeyboardModifiers modifier, JKQTPMouseDragActions action)</div><div class="ttdoc">registeres a certain mouse drag action action to be executed when a mouse drag operation is initializ...</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_aec50d0820bfff22653cc3730e39b5bd1"><div class="ttname"><a href="class_j_k_q_t_plotter.html#aec50d0820bfff22653cc3730e39b5bd1">JKQTPlotter::deregisterMouseDragAction</a></div><div class="ttdeci">void deregisterMouseDragAction(Qt::MouseButton button, Qt::KeyboardModifiers modifier)</div><div class="ttdoc">deregisteres the mouse drag action to be executed when a mouse drag operation is initialized with the...</div></div>
-<div class="ttc" id="aclass_test_user_interaction_html_a980f749ecb8cec5e83304ec5524c921f"><div class="ttname"><a href="class_test_user_interaction.html#a980f749ecb8cec5e83304ec5524c921f">TestUserInteraction::setLeftMouseAction</a></div><div class="ttdeci">void setLeftMouseAction(int index)</div></div>
-<div class="ttc" id="aclass_test_user_interaction_html_a9dc5ee7166c1c88b44d86c860d6acc8d"><div class="ttname"><a href="class_test_user_interaction.html#a9dc5ee7166c1c88b44d86c860d6acc8d">TestUserInteraction::plot</a></div><div class="ttdeci">JKQTPlotter * plot</div><div class="ttdef"><b>Definition:</b> test_user_interaction.h:55</div></div>
-<div class="ttc" id="aclass_test_user_interaction_html_ac54271f28b6de253ab16cee3bdcb3ba1"><div class="ttname"><a href="class_test_user_interaction.html#ac54271f28b6de253ab16cee3bdcb3ba1">TestUserInteraction::cmbLeftNoModMouseAction</a></div><div class="ttdeci">QComboBox * cmbLeftNoModMouseAction</div><div class="ttdef"><b>Definition:</b> test_user_interaction.h:66</div></div>
 <div class="ttc" id="agroup__jkqtpplottersupprt_html_ga5d43b30f0132d08b8793ceb2533e315f"><div class="ttname"><a href="group__jkqtpplottersupprt.html#ga5d43b30f0132d08b8793ceb2533e315f">JKQTPMouseDragActions</a></div><div class="ttdeci">JKQTPMouseDragActions</div><div class="ttdoc">Availble action this JKQtPlotter can perform when mouse events occur. This allows you to e....</div><div class="ttdef"><b>Definition:</b> jkqtptools.h:103</div></div>
 </div><!-- fragment --><p >As you can see, this QComboBox registers one of the available actions to the event of a left-button single mouse click without having modifiers pressed at the same time. The slot that actually reconfigures the <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> uses the methods <a class="el" href="class_j_k_q_t_plotter.html#aec50d0820bfff22653cc3730e39b5bd1" title="deregisteres the mouse drag action to be executed when a mouse drag operation is initialized with the...">JKQTPlotter::deregisterMouseDragAction()</a> and <a class="el" href="class_j_k_q_t_plotter.html#ac871e1b8092a125093d13ee5a0438910" title="registeres a certain mouse drag action action to be executed when a mouse drag operation is initializ...">JKQTPlotter::registerMouseDragAction()</a> to achieve this effect.</p>
 <h1><a class="anchor" id="autotoc_md99"></a>
@@ -249,7 +244,7 @@ Standard Context Menu</h3>
 <div class="line"> </div>
 <div class="line"><span class="comment">// ...</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_test_user_interaction.html#a29459861e34f352f8c428b3c26abff76">TestUserInteraction::contextMenuOpened</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, QMenu *contextMenu)</div>
+<div class="line"><span class="keywordtype">void</span> TestUserInteraction::contextMenuOpened(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, QMenu *contextMenu)</div>
 <div class="line">{</div>
 <div class="line">    contextMenu-&gt;addSeparator();</div>
 <div class="line">    QAction* act=contextMenu-&gt;addMenu(QString(<span class="stringliteral">&quot;contextMenuOpened(x=%1, y=%2)&quot;</span>).arg(x).arg(y))-&gt;addAction(<span class="stringliteral">&quot;user-added action&quot;</span>);</div>
@@ -257,10 +252,8 @@ Standard Context Menu</h3>
 <div class="line">                                                                     tr(<span class="stringliteral">&quot;Context Menu was opened at x/y=%1/%2!&quot;</span>).arg(x).arg(y),</div>
 <div class="line">                                                                     QMessageBox::Ok,</div>
 <div class="line">                                                                     QMessageBox::Ok); });</div>
-<div class="line">    <a class="code hl_variable" href="class_test_user_interaction.html#aaf2e4b8b4360f9fc84ba42746572d33a">labMouseAction</a>-&gt;setText(QString(<span class="stringliteral">&quot;contextMenuOpened(x=%1, y=%2)&quot;</span>).arg(x).arg(y));</div>
+<div class="line">    labMouseAction-&gt;setText(QString(<span class="stringliteral">&quot;contextMenuOpened(x=%1, y=%2)&quot;</span>).arg(x).arg(y));</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_test_user_interaction_html_a29459861e34f352f8c428b3c26abff76"><div class="ttname"><a href="class_test_user_interaction.html#a29459861e34f352f8c428b3c26abff76">TestUserInteraction::contextMenuOpened</a></div><div class="ttdeci">void contextMenuOpened(double x, double y, QMenu *contextMenu)</div></div>
-<div class="ttc" id="aclass_test_user_interaction_html_aaf2e4b8b4360f9fc84ba42746572d33a"><div class="ttname"><a href="class_test_user_interaction.html#aaf2e4b8b4360f9fc84ba42746572d33a">TestUserInteraction::labMouseAction</a></div><div class="ttdeci">QLabel * labMouseAction</div><div class="ttdef"><b>Definition:</b> test_user_interaction.h:81</div></div>
 </div><!-- fragment --></li>
 </ul>
 <h3><a class="anchor" id="autotoc_md114"></a>
@@ -273,7 +266,7 @@ Special Context Menu</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="example_tutorial_projects.html">Example &amp; Tutorial Projects</a></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:02 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

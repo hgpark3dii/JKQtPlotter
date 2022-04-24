@@ -1,7 +1,7 @@
 <map id="JKQTFPQScaleBarXPlot" name="JKQTFPQScaleBarXPlot">
-<area shape="rect" id="node1" title="plot a horizontal scale bar" alt="" coords="5,263,209,292"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_f_p_plot.html" title="base class for all plots that may be plotted by JKQTFastPlotter" alt="" coords="53,184,162,213"/>
-<area shape="rect" id="node3" title=" " alt="" coords="19,87,105,116"/>
-<area shape="rect" id="node4" href="$class_j_k_q_t_fast_plotter.html" title="a speed optimized plotter class" alt="" coords="129,87,275,116"/>
-<area shape="rect" id="node5" title=" " alt="" coords="126,5,278,35"/>
+<area shape="rect" id="node1" title="plot a horizontal scale bar" alt="" coords="5,263,204,292"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_f_p_plot.html" title="base class for all plots that may be plotted by JKQTFastPlotter" alt="" coords="49,184,160,213"/>
+<area shape="rect" id="node3" title=" " alt="" coords="19,87,102,116"/>
+<area shape="rect" id="node4" href="$class_j_k_q_t_fast_plotter.html" title="a speed optimized plotter class" alt="" coords="126,87,265,116"/>
+<area shape="rect" id="node5" title=" " alt="" coords="122,5,269,35"/>
 </map>

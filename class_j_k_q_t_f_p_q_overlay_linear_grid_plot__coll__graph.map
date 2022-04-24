@@ -1,7 +1,7 @@
 <map id="JKQTFPQOverlayLinearGridPlot" name="JKQTFPQOverlayLinearGridPlot">
-<area shape="rect" id="node1" title="plot a horizontal scale bar" alt="" coords="5,263,272,292"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_f_p_plot.html" title="base class for all plots that may be plotted by JKQTFastPlotter" alt="" coords="84,184,193,213"/>
-<area shape="rect" id="node3" title=" " alt="" coords="50,87,137,116"/>
-<area shape="rect" id="node4" href="$class_j_k_q_t_fast_plotter.html" title="a speed optimized plotter class" alt="" coords="161,87,306,116"/>
-<area shape="rect" id="node5" title=" " alt="" coords="157,5,309,35"/>
+<area shape="rect" id="node1" title="plot a horizontal scale bar" alt="" coords="5,263,259,292"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_f_p_plot.html" title="base class for all plots that may be plotted by JKQTFastPlotter" alt="" coords="77,184,187,213"/>
+<area shape="rect" id="node3" title=" " alt="" coords="47,87,129,116"/>
+<area shape="rect" id="node4" href="$class_j_k_q_t_fast_plotter.html" title="a speed optimized plotter class" alt="" coords="153,87,292,116"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,5,296,35"/>
 </map>

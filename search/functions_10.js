@@ -16,7 +16,7 @@ var searchData=
   ['registersavedataadapter_13',['registerSaveDataAdapter',['../class_j_k_q_t_base_plotter.html#a79c9a07a90738ca85afb0409b77054a8',1,'JKQTBasePlotter']]],
   ['reloadmodel_14',['reloadModel',['../class_j_k_q_t_p_datastore_model.html#a93c36f2d26253742b8315941f5f9ea07',1,'JKQTPDatastoreModel']]],
   ['removeoverridecolor_15',['removeOverrideColor',['../class_j_k_q_t_p_contour_plot.html#acba60843d8aec96b17847250688b7da7',1,'JKQTPContourPlot']]],
-  ['removepoint_16',['removePoint',['../class_j_k_q_t_p_geo_poly_lines.html#a1315ddd8ac19cf3b59c72b33a78f7bb6',1,'JKQTPGeoPolyLines::removePoint()'],['../class_j_k_q_t_p_geo_polygon.html#a28f22e29c8d940982d9af8a476a0a6ed',1,'JKQTPGeoPolygon::removePoint()']]],
+  ['removepoint_16',['removePoint',['../class_j_k_q_t_p_geo_polygon.html#a28f22e29c8d940982d9af8a476a0a6ed',1,'JKQTPGeoPolygon::removePoint()'],['../class_j_k_q_t_p_geo_poly_lines.html#a1315ddd8ac19cf3b59c72b33a78f7bb6',1,'JKQTPGeoPolyLines::removePoint()']]],
   ['replacememory_17',['replaceMemory',['../class_j_k_q_t_p_column.html#a2adcae27a99e9f6272942fae4c15c15b',1,'JKQTPColumn']]],
   ['replot_18',['replot',['../class_j_k_q_t_f_p_plot.html#abb5a8c18ef894f918f8a77b6dc694929',1,'JKQTFPPlot']]],
   ['replotting_19',['replotting',['../class_j_k_q_t_fast_plotter.html#ab076aa06f24049a47f7e53766a988b7d',1,'JKQTFastPlotter']]],
@@ -27,12 +27,11 @@ var searchData=
   ['resetmastersynchronization_24',['resetMasterSynchronization',['../class_j_k_q_t_base_plotter.html#aa88947d3b9caeb3778d2e149b00c261f',1,'JKQTBasePlotter::resetMasterSynchronization()'],['../class_j_k_q_t_plotter.html#a029399b189efb220fd2aadf8a5dde7a8',1,'JKQTPlotter::resetMasterSynchronization(JKQTBasePlotter::SynchronizationDirection synchronizeDirection=JKQTBasePlotter::sdXYAxes)']]],
   ['resetmouseleftaction_25',['resetMouseLeftAction',['../class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8',1,'JKQTPlotter']]],
   ['resetoverridemousedragaction_26',['resetOverrideMouseDragAction',['../class_j_k_q_t_plotter.html#acbd299f84bfe890d56e3d44df0ff46c3',1,'JKQTPlotter']]],
-  ['resetview_27',['resetView',['../class_mandelbrot_main_window.html#adde6df7ad9d79bc8c64e33d3b3997efc',1,'MandelbrotMainWindow']]],
-  ['resize_28',['resize',['../class_j_k_q_t_p_datastore_item.html#ac9fbf2a6fda1a256d8ebba3283cb450e',1,'JKQTPDatastoreItem']]],
-  ['resizecolumn_29',['resizeColumn',['../class_j_k_q_t_p_datastore.html#a6648af1cec252e63e84368179072d21e',1,'JKQTPDatastore']]],
-  ['resizecolumns_30',['resizeColumns',['../class_j_k_q_t_p_datastore_item.html#aafa690700972f40864c54d39a3870705',1,'JKQTPDatastoreItem']]],
-  ['resizeevent_31',['resizeEvent',['../class_j_k_q_t_fast_plotter.html#a7cf1891eb055091ee4a9087ecc4c3f84',1,'JKQTFastPlotter::resizeEvent()'],['../class_j_k_q_t_plotter.html#aac9ca452a7d8cd096245c5f634b30960',1,'JKQTPlotter::resizeEvent()']]],
-  ['resizeimagecolumn_32',['resizeImageColumn',['../class_j_k_q_t_p_datastore.html#ab04565d513a6830dcc58d035b685b3fa',1,'JKQTPDatastore']]],
-  ['rowcount_33',['rowCount',['../class_j_k_q_t_p_graphs_model.html#add5384cc40ef78eab722797e319ec6de',1,'JKQTPGraphsModel::rowCount()'],['../class_j_k_q_t_p_datastore_model.html#adbb191f9cc0b04563f2586b214d4f782',1,'JKQTPDatastoreModel::rowCount()']]],
-  ['rulerdisplayed_34',['rulerDisplayed',['../class_test_user_interaction.html#a5326da390a91131e14a07092e75112c8',1,'TestUserInteraction::rulerDisplayed()'],['../class_j_k_q_t_plotter.html#ad539ba834dae8a1dea629afc085ad977',1,'JKQTPlotter::rulerDisplayed()']]]
+  ['resize_27',['resize',['../class_j_k_q_t_p_datastore_item.html#ac9fbf2a6fda1a256d8ebba3283cb450e',1,'JKQTPDatastoreItem']]],
+  ['resizecolumn_28',['resizeColumn',['../class_j_k_q_t_p_datastore.html#a6648af1cec252e63e84368179072d21e',1,'JKQTPDatastore']]],
+  ['resizecolumns_29',['resizeColumns',['../class_j_k_q_t_p_datastore_item.html#aafa690700972f40864c54d39a3870705',1,'JKQTPDatastoreItem']]],
+  ['resizeevent_30',['resizeEvent',['../class_j_k_q_t_fast_plotter.html#a7cf1891eb055091ee4a9087ecc4c3f84',1,'JKQTFastPlotter::resizeEvent()'],['../class_j_k_q_t_plotter.html#aac9ca452a7d8cd096245c5f634b30960',1,'JKQTPlotter::resizeEvent()']]],
+  ['resizeimagecolumn_31',['resizeImageColumn',['../class_j_k_q_t_p_datastore.html#ab04565d513a6830dcc58d035b685b3fa',1,'JKQTPDatastore']]],
+  ['rowcount_32',['rowCount',['../class_j_k_q_t_p_graphs_model.html#add5384cc40ef78eab722797e319ec6de',1,'JKQTPGraphsModel::rowCount()'],['../class_j_k_q_t_p_datastore_model.html#adbb191f9cc0b04563f2586b214d4f782',1,'JKQTPDatastoreModel::rowCount()']]],
+  ['rulerdisplayed_33',['rulerDisplayed',['../class_j_k_q_t_plotter.html#ad539ba834dae8a1dea629afc085ad977',1,'JKQTPlotter']]]
 ];

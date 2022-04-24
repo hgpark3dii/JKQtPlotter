@@ -1,6 +1,6 @@
 <map id="JKQTPMathParser::jkmpException" name="JKQTPMathParser::jkmpException">
-<area shape="rect" id="node1" title="error handling: exceptions of the type of this class will be thrown if an error occurs" alt="" coords="5,196,292,225"/>
-<area shape="rect" id="node2" title=" " alt="" coords="60,101,195,131"/>
-<area shape="rect" id="node3" title=" " alt="" coords="219,101,321,131"/>
-<area shape="rect" id="node4" title=" " alt="" coords="189,5,351,52"/>
+<area shape="rect" id="node1" title="error handling: exceptions of the type of this class will be thrown if an error occurs" alt="" coords="5,196,273,225"/>
+<area shape="rect" id="node2" title=" " alt="" coords="37,101,157,131"/>
+<area shape="rect" id="node3" title=" " alt="" coords="181,101,271,131"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,5,299,52"/>
 </map>

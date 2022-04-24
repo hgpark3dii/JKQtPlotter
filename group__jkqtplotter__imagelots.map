@@ -1,8 +1,8 @@
 <map id="Matrix/Image Plotting" name="Matrix/Image Plotting">
-<area shape="rect" id="node1" href="$group__jkqtplotter__graphsgroup.html" title=" " alt="" coords="5,106,140,134"/>
-<area shape="rect" id="node2" title=" " alt="" coords="188,106,381,134"/>
-<area shape="rect" id="node3" href="$group__jkqtplotter__imagelots__contour.html" title=" " alt="" coords="433,5,640,51"/>
-<area shape="rect" id="node4" href="$group__jkqtplotter__imagelots__elements.html" title=" " alt="" coords="469,75,604,103"/>
-<area shape="rect" id="node5" href="$group__jkqtplotter__imagelots__overlays.html" title=" " alt="" coords="439,128,634,173"/>
-<area shape="rect" id="node6" href="$group__jkqtplotter__imagelots__tools.html" title=" " alt="" coords="429,197,644,243"/>
+<area shape="rect" id="node1" href="$group__jkqtplotter__graphsgroup.html" title=" " alt="" coords="5,106,132,134"/>
+<area shape="rect" id="node2" title=" " alt="" coords="180,106,351,134"/>
+<area shape="rect" id="node3" href="$group__jkqtplotter__imagelots__contour.html" title=" " alt="" coords="407,5,593,51"/>
+<area shape="rect" id="node4" href="$group__jkqtplotter__imagelots__elements.html" title=" " alt="" coords="439,75,561,103"/>
+<area shape="rect" id="node5" href="$group__jkqtplotter__imagelots__overlays.html" title=" " alt="" coords="413,128,587,173"/>
+<area shape="rect" id="node6" href="$group__jkqtplotter__imagelots__tools.html" title=" " alt="" coords="399,197,601,243"/>
 </map>

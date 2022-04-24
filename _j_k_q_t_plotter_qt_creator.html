@@ -150,7 +150,7 @@ QMake-Project of this example</h1>
 <div class="line">win32-msvc*: DEFINES += _USE_MATH_DEFINES</div>
 <div class="line">win32-msvc*: DEFINES += NOMINMAX</div>
 </div><!-- fragment --><p >As you can see there is a main CPP-file (shown below) and a <code>formwithjkqtplotter.ui</code>-file with the <code>formwithjkqtplotter.cpp/.h</code>-files that are used to implement the functionality behind the form (see next chapter).</p>
-<p >The source code of the main application is simply instanciating the Form class <code><a class="el" href="class_form_with_j_k_q_t_plotter.html">FormWithJKQTPlotter</a></code> from <code>formwithjkqtplotter.ui/.h/.cpp</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<p >The source code of the main application is simply instanciating the Form class <code>FormWithJKQTPlotter</code> from <code>formwithjkqtplotter.ui/.h/.cpp</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;QApplication&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;formwithjkqtplotter.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -158,13 +158,12 @@ QMake-Project of this example</h1>
 <div class="line">{</div>
 <div class="line">    QApplication app(argc, argv);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="class_form_with_j_k_q_t_plotter.html">FormWithJKQTPlotter</a> plot;</div>
+<div class="line">    FormWithJKQTPlotter plot;</div>
 <div class="line">    plot.show();</div>
 <div class="line">    plot.resize(600,400);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> app.exec();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html">FormWithJKQTPlotter</a></div><div class="ttdef"><b>Definition:</b> formwithjkqtplotter.h:14</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md96"></a>
 Form Class &lt;tt&gt;FormWithJKQTPlotter&lt;/tt&gt;</h1>
 <p >The Form was designed in the Qt Form Designer within Qt Creator, using the method described above (see <code>formwithjkqtplotter.ui</code>):</p>
@@ -172,9 +171,9 @@ Form Class &lt;tt&gt;FormWithJKQTPlotter&lt;/tt&gt;</h1>
 <p >In addition the example implements some simple functionality in the <code>formwithjkqtplotter.cpp/.h</code>-files. A single graph, which parses and plots a function (from a <code>QLineEdit</code>) is added to the plot in the constructor: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;formwithjkqtplotter.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;ui_formwithjkqtplotter.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="class_form_with_j_k_q_t_plotter.html#a7b1d48029fdd738058518c77cc166a3a">FormWithJKQTPlotter::FormWithJKQTPlotter</a>(QWidget *parent) :</div>
+<div class="line">FormWithJKQTPlotter::FormWithJKQTPlotter(QWidget *parent) :</div>
 <div class="line">    QWidget(parent),</div>
-<div class="line">    ui(new <a class="code hl_namespace" href="namespace_ui.html">Ui</a>::<a class="code hl_class" href="class_form_with_j_k_q_t_plotter.html">FormWithJKQTPlotter</a>)</div>
+<div class="line">    ui(new Ui::FormWithJKQTPlotter)</div>
 <div class="line">{</div>
 <div class="line">    ui-&gt;setupUi(<span class="keyword">this</span>);</div>
 <div class="line">    graph=<span class="keyword">new</span> <a class="code hl_class" href="class_j_k_q_t_p_x_parsed_function_line_graph.html">JKQTPXParsedFunctionLineGraph</a>(ui-&gt;plot);</div>
@@ -183,41 +182,32 @@ Form Class &lt;tt&gt;FormWithJKQTPlotter&lt;/tt&gt;</h1>
 <div class="line">    ui-&gt;plot-&gt;addGraph(graph);</div>
 <div class="line">    ui-&gt;plot-&gt;setXY(-10,10,-10,10);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_a7b1d48029fdd738058518c77cc166a3a"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#a7b1d48029fdd738058518c77cc166a3a">FormWithJKQTPlotter::FormWithJKQTPlotter</a></div><div class="ttdeci">FormWithJKQTPlotter(QWidget *parent=nullptr)</div></div>
 <div class="ttc" id="aclass_j_k_q_t_p_x_parsed_function_line_graph_html"><div class="ttname"><a href="class_j_k_q_t_p_x_parsed_function_line_graph.html">JKQTPXParsedFunctionLineGraph</a></div><div class="ttdoc">This implements line plots where the data is taken from a user supplied function  The function is def...</div><div class="ttdef"><b>Definition:</b> jkqtpparsedfunction.h:116</div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> testform.h:12</div></div>
-</div><!-- fragment --><p >Then three slots react to user interactions. First two interactions set the x- or y-axis to linear or logarithmic, depending on the state of the two check-boxes. It also sets the scaling of the axes to meaningful default values: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_form_with_j_k_q_t_plotter.html#aa743e264e45596a68bc021478abc31bb">FormWithJKQTPlotter::on_chkLogX_toggled</a>(<span class="keywordtype">bool</span> checked)</div>
+</div><!-- fragment --><p >Then three slots react to user interactions. First two interactions set the x- or y-axis to linear or logarithmic, depending on the state of the two check-boxes. It also sets the scaling of the axes to meaningful default values: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> FormWithJKQTPlotter::on_chkLogX_toggled(<span class="keywordtype">bool</span> checked)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;getXAxis()-&gt;setLogAxis(checked);</div>
+<div class="line">    ui-&gt;plot-&gt;getXAxis()-&gt;setLogAxis(checked);</div>
 <div class="line">    <span class="keywordflow">if</span> (checked) {</div>
-<div class="line">        <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;setX(1e-3,10);</div>
+<div class="line">        ui-&gt;plot-&gt;setX(1e-3,10);</div>
 <div class="line">    } <span class="keywordflow">else</span> {</div>
-<div class="line">        <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;setX(-10,10);</div>
+<div class="line">        ui-&gt;plot-&gt;setX(-10,10);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_form_with_j_k_q_t_plotter.html#a89ae5a5c81ac5c02e4611db51fc9e828">FormWithJKQTPlotter::on_chkLogY_toggled</a>(<span class="keywordtype">bool</span> checked)</div>
+<div class="line"><span class="keywordtype">void</span> FormWithJKQTPlotter::on_chkLogY_toggled(<span class="keywordtype">bool</span> checked)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;getYAxis()-&gt;setLogAxis(checked);</div>
+<div class="line">    ui-&gt;plot-&gt;getYAxis()-&gt;setLogAxis(checked);</div>
 <div class="line">    <span class="keywordflow">if</span> (checked) {</div>
-<div class="line">        <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;setY(1e-3,10);</div>
+<div class="line">        ui-&gt;plot-&gt;setY(1e-3,10);</div>
 <div class="line">    } <span class="keywordflow">else</span> {</div>
-<div class="line">        <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;setY(-10,10);</div>
+<div class="line">        ui-&gt;plot-&gt;setY(-10,10);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_a89ae5a5c81ac5c02e4611db51fc9e828"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#a89ae5a5c81ac5c02e4611db51fc9e828">FormWithJKQTPlotter::on_chkLogY_toggled</a></div><div class="ttdeci">void on_chkLogY_toggled(bool checked)</div></div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_aa743e264e45596a68bc021478abc31bb"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#aa743e264e45596a68bc021478abc31bb">FormWithJKQTPlotter::on_chkLogX_toggled</a></div><div class="ttdeci">void on_chkLogX_toggled(bool checked)</div></div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_ab12feabe3ece7d4402fc72ced27e74dc"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">FormWithJKQTPlotter::ui</a></div><div class="ttdeci">Ui::FormWithJKQTPlotter * ui</div><div class="ttdef"><b>Definition:</b> formwithjkqtplotter.h:26</div></div>
-</div><!-- fragment --><p >A third slot is connected to the <code>clicked()</code>-event of the <code>QPushButton</code> labeled "REPLOT!". This slot reads the function from the <code>QLineEdit</code> and updates the plot with it: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_slot" href="class_form_with_j_k_q_t_plotter.html#af275ebc5499378859b2a164965d8b074">FormWithJKQTPlotter::on_btnReplot_clicked</a>()</div>
+</div><!-- fragment --><p >A third slot is connected to the <code>clicked()</code>-event of the <code>QPushButton</code> labeled "REPLOT!". This slot reads the function from the <code>QLineEdit</code> and updates the plot with it: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> FormWithJKQTPlotter::on_btnReplot_clicked()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#abb854e18be7ea4a3e2d6b1f825f110e2">graph</a>-&gt;<a class="code hl_slot" href="class_j_k_q_t_p_parsed_function_line_graph_base.html#af5ffe52a652c39dd6171b8213c32f9fd">setFunction</a>(<a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;edtEquation-&gt;text());</div>
-<div class="line">    <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#abb854e18be7ea4a3e2d6b1f825f110e2">graph</a>-&gt;<a class="code hl_slot" href="class_j_k_q_t_p_plot_element.html#a02a8d7c24cde7768f0134cee1aa1159d">setTitle</a>(<a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;edtEquation-&gt;text());</div>
-<div class="line">    <a class="code hl_variable" href="class_form_with_j_k_q_t_plotter.html#ab12feabe3ece7d4402fc72ced27e74dc">ui</a>-&gt;plot-&gt;redrawPlot();</div>
+<div class="line">    graph-&gt;setFunction(ui-&gt;edtEquation-&gt;text());</div>
+<div class="line">    graph-&gt;setTitle(ui-&gt;edtEquation-&gt;text());</div>
+<div class="line">    ui-&gt;plot-&gt;redrawPlot();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_abb854e18be7ea4a3e2d6b1f825f110e2"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#abb854e18be7ea4a3e2d6b1f825f110e2">FormWithJKQTPlotter::graph</a></div><div class="ttdeci">JKQTPXParsedFunctionLineGraph * graph</div><div class="ttdef"><b>Definition:</b> formwithjkqtplotter.h:28</div></div>
-<div class="ttc" id="aclass_form_with_j_k_q_t_plotter_html_af275ebc5499378859b2a164965d8b074"><div class="ttname"><a href="class_form_with_j_k_q_t_plotter.html#af275ebc5499378859b2a164965d8b074">FormWithJKQTPlotter::on_btnReplot_clicked</a></div><div class="ttdeci">void on_btnReplot_clicked()</div></div>
-<div class="ttc" id="aclass_j_k_q_t_p_parsed_function_line_graph_base_html_af5ffe52a652c39dd6171b8213c32f9fd"><div class="ttname"><a href="class_j_k_q_t_p_parsed_function_line_graph_base.html#af5ffe52a652c39dd6171b8213c32f9fd">JKQTPParsedFunctionLineGraphBase::setFunction</a></div><div class="ttdeci">void setFunction(const QString &amp;__value)</div><div class="ttdoc">the function to be evaluated for the plot. Use x as the free variable, e.g. &quot;x^2+2&quot;</div></div>
-<div class="ttc" id="aclass_j_k_q_t_p_plot_element_html_a02a8d7c24cde7768f0134cee1aa1159d"><div class="ttname"><a href="class_j_k_q_t_p_plot_element.html#a02a8d7c24cde7768f0134cee1aa1159d">JKQTPPlotElement::setTitle</a></div><div class="ttdeci">virtual void setTitle(const QString &amp;__value)</div><div class="ttdoc">sets the title of the plot (for display in key!).</div></div>
 </div><!-- fragment --><p >The result looks like this:</p>
 <p ><img src="https://raw.githubusercontent.com/jkriege2/JKQtPlotter/master/screenshots/ui.png" alt="ui1" class="inline"/></p>
 <p >If you set both axes to logarithmic and modify the plotted function a bit, you get:</p>
@@ -229,7 +219,7 @@ Form Class &lt;tt&gt;FormWithJKQTPlotter&lt;/tt&gt;</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="example_tutorial_projects.html">Example &amp; Tutorial Projects</a></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:02 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

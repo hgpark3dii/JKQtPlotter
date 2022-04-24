@@ -1,7 +1,5 @@
 var annotated_dup =
 [
-    [ "ContourPlotAnimator", "class_contour_plot_animator.html", "class_contour_plot_animator" ],
-    [ "FormWithJKQTPlotter", "class_form_with_j_k_q_t_plotter.html", "class_form_with_j_k_q_t_plotter" ],
     [ "JKQTAnnotationsSpecificStyleProperties", "class_j_k_q_t_annotations_specific_style_properties.html", "class_j_k_q_t_annotations_specific_style_properties" ],
     [ "JKQTBasePlotter", "class_j_k_q_t_base_plotter.html", "class_j_k_q_t_base_plotter" ],
     [ "JKQTBasePlotterStyle", "class_j_k_q_t_base_plotter_style.html", "class_j_k_q_t_base_plotter_style" ],
@@ -58,7 +56,6 @@ var annotated_dup =
     [ "JKQTPDatastore", "class_j_k_q_t_p_datastore.html", "class_j_k_q_t_p_datastore" ],
     [ "JKQTPDatastoreItem", "class_j_k_q_t_p_datastore_item.html", "class_j_k_q_t_p_datastore_item" ],
     [ "JKQTPDatastoreModel", "class_j_k_q_t_p_datastore_model.html", "class_j_k_q_t_p_datastore_model" ],
-    [ "JKQTPEmfEngineAdapter", "class_j_k_q_t_p_emf_engine_adapter.html", "class_j_k_q_t_p_emf_engine_adapter" ],
     [ "JKQTPEnhancedDoubleSpinBox", "class_j_k_q_t_p_enhanced_double_spin_box.html", "class_j_k_q_t_p_enhanced_double_spin_box" ],
     [ "JKQTPEnhancedPainter", "class_j_k_q_t_p_enhanced_painter.html", "class_j_k_q_t_p_enhanced_painter" ],
     [ "JKQTPEnhancedSpinBox", "class_j_k_q_t_p_enhanced_spin_box.html", "class_j_k_q_t_p_enhanced_spin_box" ],
@@ -177,23 +174,5 @@ var annotated_dup =
     [ "JKQTPYGraphErrorData", "class_j_k_q_t_p_y_graph_error_data.html", "class_j_k_q_t_p_y_graph_error_data" ],
     [ "JKQTPYGraphErrors", "class_j_k_q_t_p_y_graph_errors.html", "class_j_k_q_t_p_y_graph_errors" ],
     [ "JKQTPYParsedFunctionLineGraph", "class_j_k_q_t_p_y_parsed_function_line_graph.html", "class_j_k_q_t_p_y_parsed_function_line_graph" ],
-    [ "JKVanishQToolBar", "class_j_k_vanish_q_tool_bar.html", "class_j_k_vanish_q_tool_bar" ],
-    [ "MandelbrotMainWindow", "class_mandelbrot_main_window.html", "class_mandelbrot_main_window" ],
-    [ "SpeedTestPlot", "class_speed_test_plot.html", "class_speed_test_plot" ],
-    [ "TestForm", "class_test_form.html", "class_test_form" ],
-    [ "TestMain", "class_test_main.html", "class_test_main" ],
-    [ "TestMultiplotUI", "class_test_multiplot_u_i.html", "class_test_multiplot_u_i" ],
-    [ "TestStyling", "class_test_styling.html", "class_test_styling" ],
-    [ "TestUserInteraction", "class_test_user_interaction.html", "class_test_user_interaction" ],
-    [ "TestWidgetBarcharts", "class_test_widget_barcharts.html", "class_test_widget_barcharts" ],
-    [ "TestWidgetContourPlots", "class_test_widget_contour_plots.html", "class_test_widget_contour_plots" ],
-    [ "TestWidgetEmptyPlot", "class_test_widget_empty_plot.html", "class_test_widget_empty_plot" ],
-    [ "TestWidgetFunctionPlots", "class_test_widget_function_plots.html", "class_test_widget_function_plots" ],
-    [ "TestWidgetGeometry", "class_test_widget_geometry.html", "class_test_widget_geometry" ],
-    [ "TestWidgetGraphs", "class_test_widget_graphs.html", "class_test_widget_graphs" ],
-    [ "TestWidgetImages", "class_test_widget_images.html", "class_test_widget_images" ],
-    [ "TestWidgetLogGraphs", "class_test_widget_log_graphs.html", "class_test_widget_log_graphs" ],
-    [ "TestWidgetParamScatterPlots", "class_test_widget_param_scatter_plots.html", "class_test_widget_param_scatter_plots" ],
-    [ "TestWidgetPeaksPlots", "class_test_widget_peaks_plots.html", "class_test_widget_peaks_plots" ],
-    [ "TestWidgetRGBImages", "class_test_widget_r_g_b_images.html", "class_test_widget_r_g_b_images" ]
+    [ "JKVanishQToolBar", "class_j_k_vanish_q_tool_bar.html", "class_j_k_vanish_q_tool_bar" ]
 ];

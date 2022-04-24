@@ -82,7 +82,7 @@ var searchData=
   ['drawline_79',['drawLine',['../class_j_k_q_t_p_x_y_line_graph.html#a0cff446f84f76ad71833b0d3e5fe40e4',1,'JKQTPXYLineGraph']]],
   ['drawmean_80',['drawMean',['../class_j_k_q_t_p_boxplot_element_base.html#ac5cceb162356d956ab964bf10f3a7991',1,'JKQTPBoxplotElementBase::drawMean()'],['../class_j_k_q_t_p_violinplot_element_base.html#a735fcd0cbafb12139806ddd25cd9da67',1,'JKQTPViolinplotElementBase::drawMean()']]],
   ['drawmedian_81',['drawMedian',['../class_j_k_q_t_p_boxplot_element_base.html#a3ad174e2558c217277c6ce1c36584908',1,'JKQTPBoxplotElementBase::drawMedian()'],['../class_j_k_q_t_p_violinplot_element_base.html#a16bef1543b117faec85a3ad78b9e70b4',1,'JKQTPViolinplotElementBase::drawMedian()']]],
-  ['drawminmax_82',['drawMinMax',['../class_j_k_q_t_p_violinplot_element_base.html#a96631293915167a7a8db576cf2a20991',1,'JKQTPViolinplotElementBase::drawMinMax()'],['../class_j_k_q_t_p_boxplot_element_base.html#a0264e0610dc10de2b8d3dc7d2efaa6eb',1,'JKQTPBoxplotElementBase::drawMinMax()']]],
+  ['drawminmax_82',['drawMinMax',['../class_j_k_q_t_p_boxplot_element_base.html#a0264e0610dc10de2b8d3dc7d2efaa6eb',1,'JKQTPBoxplotElementBase::drawMinMax()'],['../class_j_k_q_t_p_violinplot_element_base.html#a96631293915167a7a8db576cf2a20991',1,'JKQTPViolinplotElementBase::drawMinMax()']]],
   ['drawmode_83',['drawMode',['../class_j_k_q_t_p_overlay_image_enhanced.html#aba30e4d8d7cf4b59785f6d669743d415',1,'JKQTPOverlayImageEnhanced']]],
   ['drawmode1_84',['drawMode1',['../class_j_k_q_t_p_coordinate_axis_style.html#aa5833270d3f8d11d97b009f7f17bd461',1,'JKQTPCoordinateAxisStyle']]],
   ['drawmode2_85',['drawMode2',['../class_j_k_q_t_p_coordinate_axis_style.html#a1cbc9552f3a9cea7876526ed2b261f90',1,'JKQTPCoordinateAxisStyle']]],
@@ -90,8 +90,7 @@ var searchData=
   ['drawsymbols_87',['drawSymbols',['../class_j_k_q_t_p_impulses_graph_base.html#a328494ecf15454ddc0e00af136e2422c',1,'JKQTPImpulsesGraphBase']]],
   ['drawsystembox_88',['drawSystemBox',['../class_j_k_q_t_fast_plotter.html#ab69a9e761d0fc095589e87e3c397772e',1,'JKQTFastPlotter']]],
   ['drawzeroaxes_89',['drawZeroAxes',['../class_j_k_q_t_fast_plotter.html#a1309a54cdf194c8d35d9cd40c311edde',1,'JKQTFastPlotter']]],
-  ['ds_90',['ds',['../class_contour_plot_animator.html#a882e3ae80a01495b0a1f3dce4896aea5',1,'ContourPlotAnimator']]],
-  ['ds_5f_91',['ds_',['../class_j_k_q_t_p_column_back_inserter.html#a52995db22c2208c26eea8768e7942aca',1,'JKQTPColumnBackInserter']]],
-  ['dx_92',['dx',['../class_contour_plot_animator.html#ae900fa00ec883e04cf1e938838d17ec5',1,'ContourPlotAnimator::dx()'],['../class_speed_test_plot.html#aff532d54531cf5db539e5a825750baa3',1,'SpeedTestPlot::dx()'],['../class_j_k_q_t_p_geo_infinite_line.html#ad19e01cea6cd451b98041983f5c92859',1,'JKQTPGeoInfiniteLine::dx()']]],
-  ['dy_93',['dy',['../class_j_k_q_t_p_geo_infinite_line.html#a67738b0fbdc7b3d4023ac9bd57878764',1,'JKQTPGeoInfiniteLine']]]
+  ['ds_5f_90',['ds_',['../class_j_k_q_t_p_column_back_inserter.html#a52995db22c2208c26eea8768e7942aca',1,'JKQTPColumnBackInserter']]],
+  ['dx_91',['dx',['../class_j_k_q_t_p_geo_infinite_line.html#ad19e01cea6cd451b98041983f5c92859',1,'JKQTPGeoInfiniteLine']]],
+  ['dy_92',['dy',['../class_j_k_q_t_p_geo_infinite_line.html#a67738b0fbdc7b3d4023ac9bd57878764',1,'JKQTPGeoInfiniteLine']]]
 ];

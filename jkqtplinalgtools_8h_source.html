@@ -889,100 +889,99 @@ $(document).ready(function(){initNavTree('jkqtplinalgtools_8h_source.html',''); 
 <div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="comment"></span> </div>
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span><span class="comment">    \param A an NxN matrix of coefficients</span></div>
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span><span class="comment">    \param[in,out] b an N-entry vector (also receives the result)</span></div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span><span class="comment">    \param N number of equations</span></div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span><span class="comment">    \param N number of rows and columns in \a A</span></div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="comment">    \return \c true on success</span></div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span><span class="comment"></span> </div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="comment">    \note This function uses the Gauss-Jordan algorithm</span></div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="comment">    \note It is save to call \c jkqtpstatLinSolve(A,B,N,C,B) with the same argument for B and result_out. Then the input will be overwritten with the new matrix!</span></div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno"><a class="line" href="group__jkqtptools__math__linalg.html#ga79a76a555138167366b4618ef9b02cde">  791</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga872ca35efd41f7c01c4594cbf940a7fd">jkqtplinalgLinSolve</a>(<span class="keyword">const</span> T* A, T* b, <span class="keywordtype">long</span> N) {</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga872ca35efd41f7c01c4594cbf940a7fd">jkqtplinalgLinSolve</a>(A,b,N,1,b);</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>}</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span><span class="comment">    \param N number of rows and columns in \a A</span></div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span><span class="comment">    \return \c true on success</span></div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="comment"></span> </div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span><span class="comment">    \note This function uses the Gauss-Jordan algorithm</span></div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="comment">    \note It is save to call \c jkqtpstatLinSolve(A,B,N,C,B) with the same argument for B and result_out. Then the input will be overwritten with the new matrix!</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno"><a class="line" href="group__jkqtptools__math__linalg.html#ga79a76a555138167366b4618ef9b02cde">  790</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga872ca35efd41f7c01c4594cbf940a7fd">jkqtplinalgLinSolve</a>(<span class="keyword">const</span> T* A, T* b, <span class="keywordtype">long</span> N) {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga872ca35efd41f7c01c4594cbf940a7fd">jkqtplinalgLinSolve</a>(A,b,N,1,b);</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>}</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span> </div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span> </div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span> </div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span><span class="comment"></span> </div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="comment">/*! \brief determinant the given NxN matrix</span></div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span><span class="comment">    \ingroup jkqtptools_math_linalg</span></div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="comment"></span> </div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="comment">    \tparam T of the matrix cells (typically double or float)</span></div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="comment">    \param a the matrix  for which to calculate the determinant</span></div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="comment">    \param N number of rows and columns in the matrix</span></div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="comment">    \return the determinant of \a a</span></div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span><span class="comment"></span> </div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span><span class="comment">    \note for large matrices this algorithm is very slow, think about defining the macro JKQTP_STATISTICS_TOOLS_MAY_USE_EIGEN3 to use faster methods from the EIGEN library!</span></div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno"><a class="line" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">  809</a></span><span class="keyword">inline</span> T <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a>(<span class="keyword">const</span> T* a, <span class="keywordtype">long</span> N) {</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><span class="preprocessor">#ifdef JKQTP_STATISTICS_TOOLS_MAY_USE_EIGEN3</span></div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    <span class="keywordflow">if</span> (N &lt; 1) { <span class="comment">/* Error */</span></div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        <span class="keywordflow">return</span> NAN;</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 1) { <span class="comment">/* Shouldn&#39;t get used */</span></div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        <span class="keywordflow">return</span> a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)];</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 2) {</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>        <span class="keywordflow">return</span> a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,1,N)] - a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,1,N)];</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N==3){</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,3,3,Eigen::RowMajor&gt; &gt; eA(a);</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        <span class="keywordflow">return</span> eA.determinant();</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N==4){</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,4,4,Eigen::RowMajor&gt; &gt; eA(a);</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <span class="keywordflow">return</span> eA.determinant();</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,Eigen::Dynamic,Eigen::Dynamic,Eigen::RowMajor&gt; &gt; eA(a,N,N);</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        <span class="keywordflow">return</span> eA.determinant();</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    }</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    <span class="keywordtype">long</span> i,j,j1,j2;</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    T det = 0;</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span> </div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <span class="keywordflow">if</span> (N &lt; 1) { <span class="comment">/* Error */</span></div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        det=NAN;</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 1) { <span class="comment">/* Shouldn&#39;t get used */</span></div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        det = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)];</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 2) {</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>        det = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,1,N)] - a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,1,N)];</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        det = 0;</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>        <span class="keywordflow">for</span> (j1=0;j1&lt;N;j1++) {</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>            <a class="code hl_class" href="class_j_k_q_t_p_array_scoped_pointer.html">JKQTPArrayScopedPointer&lt;T&gt;</a> m(<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(calloc((N-1)*(N-1),<span class="keyword">sizeof</span>(T *))));</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span> </div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>            <span class="keywordflow">for</span> (i=1;i&lt;N;i++) {</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                j2 = 0;</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                <span class="keywordflow">for</span> (j=0;j&lt;N;j++) {</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                    <span class="keywordflow">if</span> (j != j1){</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                        m[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(i-1,j2,N-1)] = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(i,j,N)];</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                        j2++;</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                    }</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>                }</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>            }</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>            <span class="comment">//printf(&quot;%d: %lf (%lf  %lf)\n&quot;,j1,pow(-1.0,1.0+double(j1)+1.0),a[jkqtplinalgMatIndex(0,j1,N)], jkqtplinalgMatrixDeterminant(m,N-1));</span></div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>            det = det + double(((1+j1+1)%2==0)?1.0:-1.0)<span class="comment">/* pow(-1.0,1.0+double(j1)+1.0)*/</span> * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,j1,N)] * <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a>(m,N-1);</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>        }</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    }</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span> </div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>    <span class="comment">//printf(&quot;\n\n  jkqtplinalgMatrixDeterminant(%d):\n&quot;,N);</span></div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <span class="comment">//linalgPrintMatrix(a,N,N);</span></div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="comment">//printf(&quot;  jkqtplinalgMatrixDeterminant(%d) = %lf\n&quot;, N, det);</span></div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    <span class="keywordflow">return</span>(det);</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>}</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span><span class="comment"></span> </div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span><span class="comment">/*! \brief determinant the given NxN matrix</span></div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="comment">    \ingroup jkqtptools_math_linalg</span></div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span><span class="comment"></span> </div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="comment">    \tparam T of the matrix cells (typically double or float)</span></div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="comment">    \param a the matrix  for which to calculate the determinant</span></div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="comment">    \param N number of rows and columns in the matrix</span></div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="comment">    \return the determinant of \a a</span></div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="comment"></span> </div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span><span class="comment">    \note for large matrices this algorithm is very slow, think about defining the macro JKQTP_STATISTICS_TOOLS_MAY_USE_EIGEN3 to use faster methods from the EIGEN library!</span></div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno"><a class="line" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">  808</a></span><span class="keyword">inline</span> T <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a>(<span class="keyword">const</span> T* a, <span class="keywordtype">long</span> N) {</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span><span class="preprocessor">#ifdef JKQTP_STATISTICS_TOOLS_MAY_USE_EIGEN3</span></div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <span class="keywordflow">if</span> (N &lt; 1) { <span class="comment">/* Error */</span></div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        <span class="keywordflow">return</span> NAN;</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 1) { <span class="comment">/* Shouldn&#39;t get used */</span></div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        <span class="keywordflow">return</span> a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)];</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 2) {</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        <span class="keywordflow">return</span> a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,1,N)] - a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,1,N)];</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N==3){</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,3,3,Eigen::RowMajor&gt; &gt; eA(a);</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        <span class="keywordflow">return</span> eA.determinant();</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N==4){</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,4,4,Eigen::RowMajor&gt; &gt; eA(a);</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        <span class="keywordflow">return</span> eA.determinant();</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        Eigen::Map&lt;const Eigen::Matrix&lt;T,Eigen::Dynamic,Eigen::Dynamic,Eigen::RowMajor&gt; &gt; eA(a,N,N);</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        <span class="keywordflow">return</span> eA.determinant();</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    }</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    <span class="keywordtype">long</span> i,j,j1,j2;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    T det = 0;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span> </div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordflow">if</span> (N &lt; 1) { <span class="comment">/* Error */</span></div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>        det=NAN;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 1) { <span class="comment">/* Shouldn&#39;t get used */</span></div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        det = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)];</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (N == 2) {</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        det = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,1,N)] - a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(1,0,N)] * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,1,N)];</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        det = 0;</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        <span class="keywordflow">for</span> (j1=0;j1&lt;N;j1++) {</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>            <a class="code hl_class" href="class_j_k_q_t_p_array_scoped_pointer.html">JKQTPArrayScopedPointer&lt;T&gt;</a> m(<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(calloc((N-1)*(N-1),<span class="keyword">sizeof</span>(T *))));</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span> </div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>            <span class="keywordflow">for</span> (i=1;i&lt;N;i++) {</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                j2 = 0;</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                <span class="keywordflow">for</span> (j=0;j&lt;N;j++) {</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                    <span class="keywordflow">if</span> (j != j1){</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                        m[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(i-1,j2,N-1)] = a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(i,j,N)];</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                        j2++;</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                    }</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                }</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>            }</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>            <span class="comment">//printf(&quot;%d: %lf (%lf  %lf)\n&quot;,j1,pow(-1.0,1.0+double(j1)+1.0),a[jkqtplinalgMatIndex(0,j1,N)], jkqtplinalgMatrixDeterminant(m,N-1));</span></div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>            det = det + double(((1+j1+1)%2==0)?1.0:-1.0)<span class="comment">/* pow(-1.0,1.0+double(j1)+1.0)*/</span> * a[<a class="code hl_define" href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a>(0,j1,N)] * <a class="code hl_function" href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a>(m,N-1);</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span> </div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>        }</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    }</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <span class="comment">//printf(&quot;\n\n  jkqtplinalgMatrixDeterminant(%d):\n&quot;,N);</span></div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>    <span class="comment">//linalgPrintMatrix(a,N,N);</span></div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <span class="comment">//printf(&quot;  jkqtplinalgMatrixDeterminant(%d) = %lf\n&quot;, N, det);</span></div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="keywordflow">return</span>(det);</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>}</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span> </div>
 <div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span> </div>
 <div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span> </div>
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span><span class="preprocessor">#endif </span><span class="comment">// JKQTPLINALGTOOLS_H_INCLUDED</span></div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span><span class="preprocessor">#endif </span><span class="comment">// JKQTPLINALGTOOLS_H_INCLUDED</span></div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span> </div>
 <div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span> </div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span> </div>
 <div class="ttc" id="aclass_j_k_q_t_p_array_scoped_pointer_html"><div class="ttname"><a href="class_j_k_q_t_p_array_scoped_pointer.html">JKQTPArrayScopedPointer</a></div><div class="ttdoc">this class ensures that the given pointer is freed when the class is destroyed.</div><div class="ttdef"><b>Definition:</b> jkqtparraytools.h:108</div></div>
 <div class="ttc" id="aclass_j_k_q_t_p_array_scoped_pointer_html_ad87fcbc397ab2f51b17fc6db49aacf31"><div class="ttname"><a href="class_j_k_q_t_p_array_scoped_pointer.html#ad87fcbc397ab2f51b17fc6db49aacf31">JKQTPArrayScopedPointer::data</a></div><div class="ttdeci">T * data() const</div><div class="ttdef"><b>Definition:</b> jkqtparraytools.h:138</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__array_html_ga3e8ffdc0989b2c229973cab00543825d"><div class="ttname"><a href="group__jkqtptools__math__array.html#ga3e8ffdc0989b2c229973cab00543825d">jkqtpArraySwap</a></div><div class="ttdeci">void jkqtpArraySwap(T *a, long long l, long long r)</div><div class="ttdoc">swap two elements l and r in an array a</div><div class="ttdef"><b>Definition:</b> jkqtparraytools.h:67</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__array_html_ga3ee1bf982092f55f4e1d1f684aa20ea5"><div class="ttname"><a href="group__jkqtptools__math__array.html#ga3ee1bf982092f55f4e1d1f684aa20ea5">jkqtpArrayDuplicate</a></div><div class="ttdeci">T * jkqtpArrayDuplicate(const T *dataIn, long long N)</div><div class="ttdoc">duplicate an array of data</div><div class="ttdef"><b>Definition:</b> jkqtparraytools.h:92</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__basic_html_ga966c1a713f60bd026db4f35f7007eb7e"><div class="ttname"><a href="group__jkqtptools__math__basic.html#ga966c1a713f60bd026db4f35f7007eb7e">jkqtp_todouble</a></div><div class="ttdeci">constexpr double jkqtp_todouble(const T &amp;d)</div><div class="ttdoc">converts a boolean to a double, is used to convert boolean to double by JKQTPDatastore</div><div class="ttdef"><b>Definition:</b> jkqtpmathtools.h:104</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__basic_html_gaf0ace9f4ac87719798dea6ef64068ff4"><div class="ttname"><a href="group__jkqtptools__math__basic.html#gaf0ace9f4ac87719798dea6ef64068ff4">JKQTPIsOKFloat</a></div><div class="ttdeci">bool JKQTPIsOKFloat(T v)</div><div class="ttdoc">check whether the dlotaing point number is OK (i.e. non-inf, non-NAN)</div><div class="ttdef"><b>Definition:</b> jkqtpmathtools.h:443</div></div>
-<div class="ttc" id="agroup__jkqtptools__math__linalg_html_ga153118402267176871c733074893a325"><div class="ttname"><a href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a></div><div class="ttdeci">T jkqtplinalgMatrixDeterminant(const T *a, long N)</div><div class="ttdoc">determinant the given NxN matrix</div><div class="ttdef"><b>Definition:</b> jkqtplinalgtools.h:809</div></div>
+<div class="ttc" id="agroup__jkqtptools__math__linalg_html_ga153118402267176871c733074893a325"><div class="ttname"><a href="group__jkqtptools__math__linalg.html#ga153118402267176871c733074893a325">jkqtplinalgMatrixDeterminant</a></div><div class="ttdeci">T jkqtplinalgMatrixDeterminant(const T *a, long N)</div><div class="ttdoc">determinant the given NxN matrix</div><div class="ttdef"><b>Definition:</b> jkqtplinalgtools.h:808</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__linalg_html_ga23cca7d08432d92f7402c8e78e15c280"><div class="ttname"><a href="group__jkqtptools__math__linalg.html#ga23cca7d08432d92f7402c8e78e15c280">jkqtplinalgPrintMatrix</a></div><div class="ttdeci">void jkqtplinalgPrintMatrix(T *matrix, long L, long C, int width=9, int precision=3, char mode='f')</div><div class="ttdoc">print the given LxC matrix to std::cout</div><div class="ttdef"><b>Definition:</b> jkqtplinalgtools.h:94</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__linalg_html_ga34eac1e10f82c5d67a055a795a51bbed"><div class="ttname"><a href="group__jkqtptools__math__linalg.html#ga34eac1e10f82c5d67a055a795a51bbed">jkqtplinalgMatIndex</a></div><div class="ttdeci">#define jkqtplinalgMatIndex(l, c, C)</div><div class="ttdoc">calculate the index of the entry in line l and column c in a row-major matrix with C columns</div><div class="ttdef"><b>Definition:</b> jkqtplinalgtools.h:79</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__linalg_html_ga36e5b138c96b8ae51452dc364c54dd0e"><div class="ttname"><a href="group__jkqtptools__math__linalg.html#ga36e5b138c96b8ae51452dc364c54dd0e">jkqtplinalgTransposeMatrix</a></div><div class="ttdeci">void jkqtplinalgTransposeMatrix(T *matrix, long N)</div><div class="ttdoc">transpose the given NxN matrix</div><div class="ttdef"><b>Definition:</b> jkqtplinalgtools.h:319</div></div>
@@ -1004,7 +1003,7 @@ $(document).ready(function(){initNavTree('jkqtplinalgtools_8h_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_9c1c7b82103a20ec9a416a3dfc619ab1.html">jkqtcommon</a></li><li class="navelem"><b>jkqtplinalgtools.h</b></li>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:01 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

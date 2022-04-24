@@ -112,11 +112,8 @@ $(document).ready(function(){initNavTree('group__jkqtptools__math__statistics__a
 <div class="dynheader">
 Collaboration diagram for Statistics To Plot Adaptors:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__jkqtptools__math__statistics__adaptors.png" border="0" usemap="#agroup____jkqtptools____math____statistics____adaptors" alt=""/></div>
-<map name="agroup____jkqtptools____math____statistics____adaptors" id="agroup____jkqtptools____math____statistics____adaptors">
-<area shape="rect" href="group__jkqtptools__math__statistics.html" title=" " alt="" coords="5,14,220,42"/>
-<area shape="rect" title=" " alt="" coords="268,5,419,51"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__jkqtptools__math__statistics__adaptors.svg" width="390" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -3313,7 +3310,6 @@ template&lt;class InputItX , class InputItY &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plotter</td><td>the plotter to which to add the resulting graph </td></tr>
-    <tr><td class="paramname">type</td><td>model to be fitted </td></tr>
     <tr><td class="paramname">firstX</td><td>iterator pointing to the first item in the x-dataset to use <img class="formulaInl" alt="$ x_1 $" src="form_123.png" width="16" height="11"/> </td></tr>
     <tr><td class="paramname">lastX</td><td>iterator pointing behind the last item in the x-dataset to use <img class="formulaInl" alt="$ x_N $" src="form_124.png" width="21" height="11"/> </td></tr>
     <tr><td class="paramname">firstY</td><td>iterator pointing to the first item in the y-dataset to use <img class="formulaInl" alt="$ y_1 $" src="form_125.png" width="15" height="11"/> </td></tr>
@@ -3323,7 +3319,7 @@ template&lt;class InputItX , class InputItY &gt; </div>
   </dd>
 </dl>
 <p>Example: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group__jkqtptools__math__statistics__adaptors.html#ga843050e46d7b53c1ce239751910d13a8">jkqtpstatAddPolyFit</a>(plot1-&gt;getPlotter(), <a class="code hl_enumvalue" href="group__jkqtptools__math__statistics__regression.html#ggaa798f2573e7f03cb328b15ff76dda335ac1e19c09f700938f0ff7f1fd4722a3ac">JKQTPStatRegressionModelType::Exponential</a>, datastore1-&gt;begin(colLinX), datastore1-&gt;end(colLinX), datastore1-&gt;begin(colLinY), datastore1-&gt;end(colLinY), 3);</div>
-<div class="ttc" id="agroup__jkqtptools__math__statistics__adaptors_html_ga843050e46d7b53c1ce239751910d13a8"><div class="ttname"><a href="group__jkqtptools__math__statistics__adaptors.html#ga843050e46d7b53c1ce239751910d13a8">jkqtpstatAddPolyFit</a></div><div class="ttdeci">JKQTPXFunctionLineGraph * jkqtpstatAddPolyFit(JKQTBasePlotter *plotter, InputItX firstX, InputItX lastX, InputItY firstY, InputItY lastY, size_t P, OutputItP firstRes)</div><div class="ttdoc">fits (in a least-squares sense) a polynomial  of order P to a set of N data pairs  from a given data ...</div><div class="ttdef"><b>Definition:</b> jkqtpstatisticsadaptors.h:2249</div></div>
+<div class="ttc" id="agroup__jkqtptools__math__statistics__adaptors_html_ga843050e46d7b53c1ce239751910d13a8"><div class="ttname"><a href="group__jkqtptools__math__statistics__adaptors.html#ga843050e46d7b53c1ce239751910d13a8">jkqtpstatAddPolyFit</a></div><div class="ttdeci">JKQTPXFunctionLineGraph * jkqtpstatAddPolyFit(JKQTBasePlotter *plotter, InputItX firstX, InputItX lastX, InputItY firstY, InputItY lastY, size_t P, OutputItP firstRes)</div><div class="ttdoc">fits (in a least-squares sense) a polynomial  of order P to a set of N data pairs  from a given data ...</div><div class="ttdef"><b>Definition:</b> jkqtpstatisticsadaptors.h:2248</div></div>
 <div class="ttc" id="agroup__jkqtptools__math__statistics__regression_html_ggaa798f2573e7f03cb328b15ff76dda335ac1e19c09f700938f0ff7f1fd4722a3ac"><div class="ttname"><a href="group__jkqtptools__math__statistics__regression.html#ggaa798f2573e7f03cb328b15ff76dda335ac1e19c09f700938f0ff7f1fd4722a3ac">JKQTPStatRegressionModelType::Exponential</a></div><div class="ttdeci">@ Exponential</div><div class="ttdoc">exponential model</div></div>
 </div><!-- fragment --><div class="image">
 <img src="datastore_regression_polynom.png" alt=""/>
@@ -3410,7 +3406,6 @@ template&lt;class InputItX , class InputItY , class OutputItP &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">plotter</td><td>the plotter to which to add the resulting graph </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">type</td><td>model to be fitted </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">firstX</td><td>iterator pointing to the first item in the x-dataset to use <img class="formulaInl" alt="$ x_1 $" src="form_123.png" width="16" height="11"/> </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">lastX</td><td>iterator pointing behind the last item in the x-dataset to use <img class="formulaInl" alt="$ x_N $" src="form_124.png" width="21" height="11"/> </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">firstY</td><td>iterator pointing to the first item in the y-dataset to use <img class="formulaInl" alt="$ y_1 $" src="form_125.png" width="15" height="11"/> </td></tr>
@@ -7329,7 +7324,7 @@ template&lt;class InputCatIt , class InputValueIt &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:02 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:16 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

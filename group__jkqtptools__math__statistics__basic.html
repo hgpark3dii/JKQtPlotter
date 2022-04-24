@@ -113,11 +113,8 @@ $(document).ready(function(){initNavTree('group__jkqtptools__math__statistics__b
 <div class="dynheader">
 Collaboration diagram for Basic statistics:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__jkqtptools__math__statistics__basic.png" border="0" usemap="#agroup____jkqtptools____math____statistics____basic" alt=""/></div>
-<map name="agroup____jkqtptools____math____statistics____basic" id="agroup____jkqtptools____math____statistics____basic">
-<area shape="rect" href="group__jkqtptools__math__statistics.html" title=" " alt="" coords="5,5,220,33"/>
-<area shape="rect" title=" " alt="" coords="268,5,407,33"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__jkqtptools__math__statistics__basic.svg" width="378" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -1276,11 +1273,10 @@ template&lt;class InputIt , class OutputIt &gt; </div>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">first</td><td>iterator pointing to the first item in the dataset to use <img class="formulaInl" alt="$ X_1 $" src="form_50.png" width="21" height="16"/> </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">last</td><td>iterator pointing behind the last item in the dataset to use <img class="formulaInl" alt="$ X_N $" src="form_51.png" width="26" height="16"/> </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>This iterator is used to store the results, use e.g. a std::back_inserter </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>This iterator is used to store the results, use e.g. a std::back_inserter Output is then a vector of cummulative (or partial) sums returned between <em>first</em> and <em>last</em> (excluding invalid doubles). For invalid values, the last sum is re-inserted, so the returned vector has the same number of entries as the range <em>first</em> ... <em>last</em> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vector of cummulative (or partial) sums returned between <em>first</em> and <em>last</em> (excluding invalid doubles). For invalid values, the last sum is re-inserted, so the returned vector has the same number of entries as the range <em>first</em> ... <em>last</em> </dd></dl>
 <p>This function implements: </p><p class="formulaDsp">
 <img class="formulaDsp" alt="\[ \sum(X)_j=\cdot\sum\limits_{i=1}^{j}X_i \]" src="form_58.png" width="132" height="50"/>
 </p>
@@ -2652,7 +2648,7 @@ template&lt;class InputIt , class InputWeightIt &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 23 2022 13:20:02 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
