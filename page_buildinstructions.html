@@ -119,6 +119,7 @@ $(document).ready(function(){initNavTree('page_buildinstructions.html',''); init
 <li class="level1"><a href="#page_buildinstructions_QMAKE">Build using QMake</a><ul><li class="level2"><a href="#page_buildinstructions_QMAKEINCLUDE">QMake Include Project</a></li>
 <li class="level2"><a href="#page_buildinstructions_QMAKESTATIC">QMake Static Library</a></li>
 <li class="level2"><a href="#page_buildinstructions_QMAKEDYNAMIC">QMake Dynamic Library</a></li>
+<li class="level2"><a href="#page_buildinstructions_QMAKEQTCREATOR">QMake in QTCreator</a></li>
 </ul>
 </li>
 </ul>
@@ -128,7 +129,9 @@ $(document).ready(function(){initNavTree('page_buildinstructions.html',''); init
 Build using CMake</h1>
 <h2><a class="anchor" id="page_buildinstructions_CMAKE_RUN"></a>
 Running a Build with CMake</h2>
-<p >The preferred way to build <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> is using <a href="https://cmake.org/">CMake</a>. You can find a detailed explanation of CMake at <a href="https://cliutils.gitlab.io/modern-cmake/">https://cliutils.gitlab.io/modern-cmake/</a>. The CMake-build is defined in <code>CMakeLists.txt</code> files, found in many of the directories of the code repository. Especially in the root directory and the two subdirectories <code></code>./lib/ and <code></code>./examples/ .</p>
+<p >The preferred way to build <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> is using <a href="https://cmake.org/">CMake</a>. You can find a detailed explanation of CMake at <a href="https://cliutils.gitlab.io/modern-cmake/">https://cliutils.gitlab.io/modern-cmake/</a>. The CMake-build is defined in <code>CMakeLists.txt</code> files, found in many of the directories of the code repository. Especially in the root directory and the two subdirectories </p><div class="fragment"><div class="line">./lib/  </div>
+</div><!-- fragment --><p> and </p><div class="fragment"><div class="line">./examples/  </div>
+</div><!-- fragment --><p> .</p>
 <p >You can build <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> (and also the examples) by either opening the file <a href="https://github.com/jkriege2/JKQtPlotter/blob/master/CMakeLists.txt">CMakeLists.txt</a> in QTCreator (which has CMake integration), or by calling <code>CMake</code> by hand. How to do this depends on your local system und build environment.</p>
 <h3><a class="anchor" id="page_buildinstructions_CMAKE_MAKEFILE"></a>
 Building with MinGW/GNU/... Makefiles</h3>
@@ -143,7 +146,9 @@ Building with Visual Studio</h3>
 <p >For Visual Studio it could look like this: </p><div class="fragment"><div class="line">$ mkdir build</div>
 <div class="line">$ cd build</div>
 <div class="line">$ cmake .. -G &quot;Visual Studio 15 2017 Win64&quot; &quot;-DCMAKE_PREFIX_PATH=&lt;path_to_your_qt_sources&gt;&quot;</div>
-</div><!-- fragment --><p> Where <code></code> &lt;path_to_your_qt_sources&gt; could be e.g. <code>C:/development/Qt5/5</code>.12.0/msvc2017_64 . This call results in a Visual Studio solution <code>build/JKQTPlotter.sln</code> that you can load and compile from the Visual Studio IDE. Alternatively you can also build the solution directly calling: </p><div class="fragment"><div class="line">$ cmake --build . --config &quot;Debug&quot;</div>
+</div><!-- fragment --><p> Where </p><div class="fragment"><div class="line">&lt;path_to_your_qt_sources&gt;  </div>
+</div><!-- fragment --><p> could be e.g. </p><div class="fragment"><div class="line">C:/development/Qt5/5.12.0/msvc2017_64  </div>
+</div><!-- fragment --><p> . This call results in a Visual Studio solution <code>build/JKQTPlotter.sln</code> that you can load and compile from the Visual Studio IDE. Alternatively you can also build the solution directly calling: </p><div class="fragment"><div class="line">$ cmake --build . --config &quot;Debug&quot;</div>
 </div><!-- fragment --><p> Afterwards you can install the library by </p><div class="fragment"><div class="line">$ cmake --build . --config &quot;Debug&quot; --target install</div>
 </div><!-- fragment --><h2><a class="anchor" id="page_buildinstructions_CMAKE_CONFIG"></a>
 Configuring a Build with CMake</h2>
@@ -159,10 +164,14 @@ Configuring a Build with CMake</h2>
 <h2><a class="anchor" id="page_buildinstructions_CMAKE_USAGE"></a>
 Using a built, generated with CMake</h2>
 <p >After building and installing <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> you have all files that you need inside the instal directory:</p><ul>
-<li><code></code> &lt;INSTALLDIR&gt;/include contains all required header files</li>
-<li><code></code> &lt;INSTALLDIR&gt;/bin contains the shared libraries</li>
-<li><code></code> &lt;INSTALLDIR&gt;/lib contains the link libraries</li>
-<li><code></code> &lt;INSTALLDIR&gt;/lib/cmake contains files necessary for CMake's <code>find_package()</code> to work</li>
+<li><div class="fragment"><div class="line">&lt;INSTALLDIR&gt;/include </div>
+</div><!-- fragment --> contains all required header files</li>
+<li><div class="fragment"><div class="line">&lt;INSTALLDIR&gt;/bin </div>
+</div><!-- fragment --> contains the shared libraries</li>
+<li><div class="fragment"><div class="line">&lt;INSTALLDIR&gt;/lib </div>
+</div><!-- fragment --> contains the link libraries</li>
+<li><div class="fragment"><div class="line">&lt;INSTALLDIR&gt;/lib/cmake </div>
+</div><!-- fragment --> contains files necessary for CMake's <code>find_package()</code> to work</li>
 </ul>
 <p >You can find an example project that uses a complete cmake-build here: <a class="el" href="_j_k_q_t_c_make_link_example.html">Example (JKQTPlotter): CMake Example</a> (online: <a href="https://github.com/jkriege2/JKQtPlotter/blob/master/examples/cmake_link_example">https://github.com/jkriege2/JKQtPlotter/blob/master/examples/cmake_link_example</a>).</p>
 <p >Here is the <code>CMakeLists.txt</code> from that directory:</p>
@@ -216,8 +225,12 @@ Using a built, generated with CMake</h2>
 <div class="line">   $ cd build</div>
 <div class="line">   $ cmake .. -G <span class="stringliteral">&quot;&lt;GENERATOR&gt;&quot;</span> <span class="stringliteral">&quot;-DCMAKE_PREFIX_PATH=&lt;path_to_your_qt_sources&gt; -DCMAKE_MODULE_PATH=&lt;path_to_lib/cmake_dir_of_JKQTPLOTTER&gt;&quot;</span></div>
 </div><!-- fragment --><p> The you can use the generated makefiles (e.g. load them in an editor, or build them jsing <code>make</code> ). In the last line above, you need to specify two directories:</p><ul>
-<li><code></code> &lt;path_to_your_qt_sources&gt; points to you Qt installation</li>
-<li><code>&lt;path_to_lib/cmake_dir_of_JKQTPLOTTER&gt;</code> points to the directory containing the <code>XYZ.cmake</code> -files from the <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> build. Typically this is <code></code> &lt;JKQTPLOTTER_INSTALL_DIR&gt;/lib/cmake , where <code></code> &lt;JKQTPLOTTER_INSTALL_DIR&gt; is the directory into which you installed <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a>.</li>
+<li><div class="fragment"><div class="line">&lt;path_to_your_qt_sources&gt;  </div>
+</div><!-- fragment --> points to you Qt installation</li>
+<li><div class="fragment"><div class="line">&lt;path_to_lib/cmake_dir_of_JKQTPLOTTER&gt;  </div>
+</div><!-- fragment --> points to the directory containing the <code>XYZ.cmake</code> -files from the <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> build. Typically this is <div class="fragment"><div class="line">&lt;JKQTPLOTTER_INSTALL_DIR&gt;/lib/cmake </div>
+</div><!-- fragment --> , where <div class="fragment"><div class="line">&lt;JKQTPLOTTER_INSTALL_DIR&gt; </div>
+</div><!-- fragment --> is the directory into which you installed <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a>.</li>
 </ul>
 <h1><a class="anchor" id="page_buildinstructions_QMAKE"></a>
 Build using QMake</h1>
@@ -249,7 +262,9 @@ QMake Static Library</h2>
 <div class="line">    DEPENDPATH += &lt;PATHTOJKQTPLOTTERDIR&gt;/qmake/staticlib/jkqtplotterlib/release</div>
 <div class="line">    LIBS += -L&lt;PATHTOJKQTPLOTTERDIR&gt;/qmake/staticlib/jkqtplotterlib/release -ljkqtplotterlib</div>
 <div class="line">}</div>
-</div><!-- fragment --><p >This snippet assumes that you built the libraries with the provided <code>.PRO</code>-files. You can also add a second <code>.pro</code>-file to your projects, which integrates both as subdirs. Such files are used for all examples in this project. Here is an example: </p><div class="fragment"><div class="line">TEMPLATE = subdirs</div>
+</div><!-- fragment --><p >This snippet assumes that you built the libraries with the provided </p><div class="fragment"><div class="line">.PRO  </div>
+</div><!-- fragment --><p> -files. You can also add a second </p><div class="fragment"><div class="line">.PRO  </div>
+</div><!-- fragment --><p> -file to your projects, which integrates both as subdirs. Such files are used for all examples in this project. Here is an example: </p><div class="fragment"><div class="line">TEMPLATE = subdirs</div>
 <div class="line"> </div>
 <div class="line"># the (static library version) of JKQTPlotter</div>
 <div class="line">jkqtplotterlib_static.file = ../../qmake/staticlib/jkqtplotterlib/jkqtplotterlib.pro</div>
@@ -302,14 +317,17 @@ QMake Dynamic Library</h2>
 <div class="line"> </div>
 <div class="line"># add the two entries to SUBDIRS</div>
 <div class="line">SUBDIRS +=  jkqtplotterlib_shared test_styling</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You will have to run a deployment step <code>make install</code> before running your executable, so the shared libararies are actually copied to the output directory (see <code>INSTALLS + ...</code> above). </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You will have to run a deployment step <code>make install</code> before running your executable, so the shared libararies are actually copied to the output directory (see <code>INSTALLS + ...</code> above).</dd></dl>
+<h2><a class="anchor" id="page_buildinstructions_QMAKEQTCREATOR"></a>
+QMake in QTCreator</h2>
+<p >You can load the file <code>JKQtPlotterBuildAllExamples.pro</code> in te base directory of the project directly in QtCreator and use it to build the library and the examples. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Apr 24 2022 11:27:15 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun Apr 24 2022 20:10:57 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

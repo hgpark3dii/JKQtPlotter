@@ -56,7 +56,8 @@ var NAVTREE =
       [ "Build using QMake", "page_buildinstructions.html#page_buildinstructions_QMAKE", [
         [ "QMake Include Project", "page_buildinstructions.html#page_buildinstructions_QMAKEINCLUDE", null ],
         [ "QMake Static Library", "page_buildinstructions.html#page_buildinstructions_QMAKESTATIC", null ],
-        [ "QMake Dynamic Library", "page_buildinstructions.html#page_buildinstructions_QMAKEDYNAMIC", null ]
+        [ "QMake Dynamic Library", "page_buildinstructions.html#page_buildinstructions_QMAKEDYNAMIC", null ],
+        [ "QMake in QTCreator", "page_buildinstructions.html#page_buildinstructions_QMAKEQTCREATOR", null ]
       ] ]
     ] ],
     [ "Example & Tutorial Projects", "example_tutorial_projects.html", "example_tutorial_projects" ],
@@ -157,7 +158,7 @@ var NAVTREEINDEX =
 "group__jkqtplotter__imagelots__tools.html#ggab8a96386e4f981f6917c20a8f03215bfa23185b88b103cc57e8d5e1d9a64147e2",
 "group__jkqtptools__drawing.html#gga212568ec3a08aa8d047bdd11283e2b3ea288858a53ec263c2fb79ca817870a46a",
 "group__jkqtptools__math__statistics__adaptors.html#gabaefd955d37d0823152c17fbf15a5d23",
-"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a3b958dd6aa079aa2e37802c93d78c2b1"
+"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a0ccb8c4ae6d8be906a7af96e937751fb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

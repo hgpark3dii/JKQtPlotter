@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a0ccb8c4ae6d8be906a7af96e937751fb":[9,2,2,1,7,3,0,0,3],
 "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a3b958dd6aa079aa2e37802c93d78c2b1":[9,2,2,1,7,3,0,0,1],
 "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a6398bd37352d5c19430c3fc014f52b2c":[9,2,2,1,7,3,0,0,5],
 "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a692af778e2bb8065ae0065989a9bff85":[9,2,2,1,7,3,0,0,2],

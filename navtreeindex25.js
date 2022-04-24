@@ -164,6 +164,7 @@ var NAVTREEINDEX25 =
 "page_buildinstructions.html#page_buildinstructions_QMAKE":[3,1],
 "page_buildinstructions.html#page_buildinstructions_QMAKEDYNAMIC":[3,1,2],
 "page_buildinstructions.html#page_buildinstructions_QMAKEINCLUDE":[3,1,0],
+"page_buildinstructions.html#page_buildinstructions_QMAKEQTCREATOR":[3,1,3],
 "page_buildinstructions.html#page_buildinstructions_QMAKESTATIC":[3,1,1],
 "page_whatsnew.html":[6],
 "page_whatsnew.html#page_whatsnew_TRUNK":[6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "struct_j_k_q_t_math_text_1_1tbr_data_h.html#ac7e5e6ff34aae7304107254126258c35":[9,1,22,5],
 "struct_j_k_q_t_math_text_1_1tbr_data_h.html#aca80fb66982de185bcac45462419062a":[9,1,22,0],
 "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html":[9,2,2,1,7,3,0,0],
-"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a0c1f639939b225146bfe43543e88e055":[9,2,2,1,7,3,0,0,4],
-"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a0ccb8c4ae6d8be906a7af96e937751fb":[9,2,2,1,7,3,0,0,3]
+"struct_j_k_q_t_p_color_palette_single_color_lin_segment.html#a0c1f639939b225146bfe43543e88e055":[9,2,2,1,7,3,0,0,4]
 };
