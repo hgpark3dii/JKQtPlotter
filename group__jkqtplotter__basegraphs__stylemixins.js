@@ -205,6 +205,7 @@ var group__jkqtplotter__basegraphs__stylemixins =
       [ "getFillTexture", "class_j_k_q_t_p_graph_fill_style_mixin.html#ad60abd654128b6233e12ddd2db95ac97", null ],
       [ "getFillTextureImage", "class_j_k_q_t_p_graph_fill_style_mixin.html#a7aa6aa6d6f8bc19b3dd66db3bf54cd08", null ],
       [ "initFillStyle", "class_j_k_q_t_p_graph_fill_style_mixin.html#a37ce23c026a841324377f48aece76417", null ],
+      [ "initFillStyleInvertedColor", "class_j_k_q_t_p_graph_fill_style_mixin.html#a28fe55c9266712727b51be418f853a96", null ],
       [ "setFillBrush", "class_j_k_q_t_p_graph_fill_style_mixin.html#a6d912c976e206bab578eef0f9d0d4b6a", null ],
       [ "setFillColor", "class_j_k_q_t_p_graph_fill_style_mixin.html#a3281a7fad05f07acc4f2fe80a93b29bf", null ],
       [ "setFillGradient", "class_j_k_q_t_p_graph_fill_style_mixin.html#a6464668a98b9794f72bffdd337ec22ce", null ],

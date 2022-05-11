@@ -58,8 +58,8 @@ var sectionId = 'dynsection-1';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="This implements filled curve plots with y errors where the area is filled between the plot line and t...">
-<polygon fill="#bfbfbf" stroke="black" points="2934,-410.5 2934,-431.5 3116,-431.5 3116,-410.5 2934,-410.5"/>
-<text text-anchor="middle" x="3025" y="-417.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveYErrorGraph</text>
+<polygon fill="#bfbfbf" stroke="black" points="2934,-391.5 2934,-412.5 3116,-412.5 3116,-391.5 2934,-391.5"/>
+<text text-anchor="middle" x="3025" y="-398.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveYErrorGraph</text>
 </a>
 </g>
 </g>
@@ -67,106 +67,106 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="class_j_k_q_t_p_filled_curve_y_graph.html" target="_top" xlink:title="This implements filled curve plots where the area is filled between the plot line and y&#45;Axis.">
-<polygon fill="none" stroke="black" points="2740,-431.5 2740,-452.5 2897,-452.5 2897,-431.5 2740,-431.5"/>
-<text text-anchor="middle" x="2818.5" y="-438.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveYGraph</text>
+<polygon fill="none" stroke="black" points="2740,-412.5 2740,-433.5 2897,-433.5 2897,-412.5 2740,-412.5"/>
+<text text-anchor="middle" x="2818.5" y="-419.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveYGraph</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M2907.31,-432.98C2916.07,-432.08 2924.98,-431.17 2933.76,-430.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2906.69,-429.53 2897.1,-434.03 2907.41,-436.49 2906.69,-429.53"/>
+<path fill="none" stroke="midnightblue" d="M2907.31,-413.98C2916.07,-413.08 2924.98,-412.17 2933.76,-411.27"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2906.69,-410.53 2897.1,-415.03 2907.41,-417.49 2906.69,-410.53"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="class_j_k_q_t_p_filled_curve_graph_base.html" target="_top" xlink:title="a Base class for filled curve graphs like e.g. JKQTPFilledCurveXGraph">
-<polygon fill="none" stroke="black" points="2527,-431.5 2527,-452.5 2703,-452.5 2703,-431.5 2527,-431.5"/>
-<text text-anchor="middle" x="2615" y="-438.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveGraphBase</text>
+<polygon fill="none" stroke="black" points="2527,-412.5 2527,-433.5 2703,-433.5 2703,-412.5 2527,-412.5"/>
+<text text-anchor="middle" x="2615" y="-419.9" font-family="FreeSans" font-size="12.00">JKQTPFilledCurveGraphBase</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M2713.29,-442C2722.24,-442 2731.23,-442 2739.98,-442"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2713.21,-438.5 2703.21,-442 2713.21,-445.5 2713.21,-438.5"/>
+<path fill="none" stroke="midnightblue" d="M2713.29,-423C2722.24,-423 2731.23,-423 2739.98,-423"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2713.21,-419.5 2703.21,-423 2713.21,-426.5 2713.21,-419.5"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="class_j_k_q_t_p_x_y_baseline_graph.html" target="_top" xlink:title="This virtual JKQTPGraph descendent extends JKQTPXYGraph adds a baseline&#45;property, which is necessary,...">
-<polygon fill="none" stroke="black" points="2326.5,-452.5 2326.5,-473.5 2478.5,-473.5 2478.5,-452.5 2326.5,-452.5"/>
-<text text-anchor="middle" x="2402.5" y="-459.9" font-family="FreeSans" font-size="12.00">JKQTPXYBaselineGraph</text>
+<polygon fill="none" stroke="black" points="2326.5,-454.5 2326.5,-475.5 2478.5,-475.5 2478.5,-454.5 2326.5,-454.5"/>
+<text text-anchor="middle" x="2402.5" y="-461.9" font-family="FreeSans" font-size="12.00">JKQTPXYBaselineGraph</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M2488.58,-454.51C2501.15,-453.26 2514.11,-451.97 2526.72,-450.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2488.21,-451.03 2478.6,-455.51 2488.9,-458 2488.21,-451.03"/>
+<path fill="none" stroke="midnightblue" d="M2466.36,-452.46C2496.56,-446.43 2532.35,-439.29 2561.13,-433.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2465.47,-449.07 2456.35,-454.46 2466.84,-455.93 2465.47,-449.07"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="class_j_k_q_t_p_x_y_graph.html" target="_top" xlink:title="This virtual JKQTPGraph descendent may be used as base for all graphs that use at least two columns t...">
-<polygon fill="none" stroke="black" points="2142,-452.5 2142,-473.5 2247,-473.5 2247,-452.5 2142,-452.5"/>
-<text text-anchor="middle" x="2194.5" y="-459.9" font-family="FreeSans" font-size="12.00">JKQTPXYGraph</text>
+<polygon fill="none" stroke="black" points="2142,-454.5 2142,-475.5 2247,-475.5 2247,-454.5 2142,-454.5"/>
+<text text-anchor="middle" x="2194.5" y="-461.9" font-family="FreeSans" font-size="12.00">JKQTPXYGraph</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node5&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M2257.3,-463C2279.03,-463 2303.69,-463 2326.4,-463"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2257.22,-459.5 2247.22,-463 2257.22,-466.5 2257.22,-459.5"/>
+<path fill="none" stroke="midnightblue" d="M2257.3,-465C2279.03,-465 2303.69,-465 2326.4,-465"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2257.22,-461.5 2247.22,-465 2257.22,-468.5 2257.22,-461.5"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="class_j_k_q_t_p_graph.html" target="_top" xlink:title="this virtual base class of the (data&#45;column based) graphs, which are part of a JKQTPlotter plot and w...">
-<polygon fill="none" stroke="black" points="1963,-452.5 1963,-473.5 2052,-473.5 2052,-452.5 1963,-452.5"/>
-<text text-anchor="middle" x="2007.5" y="-459.9" font-family="FreeSans" font-size="12.00">JKQTPGraph</text>
+<polygon fill="none" stroke="black" points="1963,-454.5 1963,-475.5 2052,-475.5 2052,-454.5 1963,-454.5"/>
+<text text-anchor="middle" x="2007.5" y="-461.9" font-family="FreeSans" font-size="12.00">JKQTPGraph</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node6&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M2062.4,-463C2087.41,-463 2117.02,-463 2141.76,-463"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2062.34,-459.5 2052.34,-463 2062.34,-466.5 2062.34,-459.5"/>
+<path fill="none" stroke="midnightblue" d="M2062.4,-465C2087.41,-465 2117.02,-465 2141.76,-465"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2062.34,-461.5 2052.34,-465 2062.34,-468.5 2062.34,-461.5"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="class_j_k_q_t_p_plot_element.html" target="_top" xlink:title="this virtual base class of every element, which is part of a JKQTPlotter plot and may appear in its k...">
-<polygon fill="none" stroke="black" points="1748,-452.5 1748,-473.5 1866,-473.5 1866,-452.5 1748,-452.5"/>
-<text text-anchor="middle" x="1807" y="-459.9" font-family="FreeSans" font-size="12.00">JKQTPPlotElement</text>
+<polygon fill="none" stroke="black" points="1748,-454.5 1748,-475.5 1866,-475.5 1866,-454.5 1748,-454.5"/>
+<text text-anchor="middle" x="1807" y="-461.9" font-family="FreeSans" font-size="12.00">JKQTPPlotElement</text>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node7&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M1876.56,-463C1905.16,-463 1937.53,-463 1962.81,-463"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1876.22,-459.5 1866.22,-463 1876.22,-466.5 1876.22,-459.5"/>
+<path fill="none" stroke="midnightblue" d="M1876.56,-465C1905.16,-465 1937.53,-465 1962.81,-465"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1876.22,-461.5 1866.22,-465 1876.22,-468.5 1876.22,-461.5"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:title=" ">
-<polygon fill="none" stroke="black" points="901,-353.5 901,-374.5 963,-374.5 963,-353.5 901,-353.5"/>
-<text text-anchor="middle" x="932" y="-360.9" font-family="FreeSans" font-size="12.00">QObject</text>
+<polygon fill="none" stroke="black" points="901,-352.5 901,-373.5 963,-373.5 963,-352.5 901,-352.5"/>
+<text text-anchor="middle" x="932" y="-359.9" font-family="FreeSans" font-size="12.00">QObject</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node8&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M972.78,-377.47C990.78,-383.41 1012.38,-390.32 1032,-396 1160.7,-433.29 1191.07,-454.2 1324,-471 1432.91,-484.76 1461.23,-472.36 1571,-471 1624.79,-470.33 1638.24,-469.85 1692,-468 1710.12,-467.38 1729.85,-466.56 1747.72,-465.77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="973.78,-374.12 963.18,-374.29 971.57,-380.76 973.78,-374.12"/>
+<path fill="none" stroke="midnightblue" d="M972.79,-376.44C990.79,-382.38 1012.39,-389.28 1032,-395 1160.74,-432.53 1190.98,-453.97 1324,-471 1432.89,-484.94 1461.23,-472.4 1571,-471 1631.19,-470.23 1700.04,-468.36 1747.58,-466.91"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="973.78,-373.09 963.19,-373.26 971.58,-379.73 973.78,-373.09"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
@@ -180,8 +180,8 @@ var sectionId = 'dynsection-1';
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M973.48,-361.34C1072.95,-354.79 1329.4,-337.93 1441.6,-330.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="972.99,-357.86 963.24,-362.01 973.45,-364.85 972.99,-357.86"/>
+<path fill="none" stroke="midnightblue" d="M973.48,-360.41C1072.95,-354.04 1329.4,-337.63 1441.6,-330.45"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="973,-356.93 963.24,-361.06 973.45,-363.92 973,-356.93"/>
 </g>
 <!-- Node18 -->
 <g id="node18" class="node">
@@ -195,29 +195,29 @@ var sectionId = 'dynsection-1';
 <!-- Node8&#45;&gt;Node18 -->
 <g id="edge21" class="edge">
 <title>Node8&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M973.23,-368.49C1028.99,-374.72 1129.62,-385.95 1189.31,-392.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="973.36,-364.98 963.03,-367.35 972.58,-371.94 973.36,-364.98"/>
+<path fill="none" stroke="midnightblue" d="M973.23,-367.62C1028.99,-374.03 1129.62,-385.6 1189.31,-392.46"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="973.36,-364.12 963.03,-366.45 972.56,-371.07 973.36,-364.12"/>
 </g>
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
 <g id="a_node23"><a xlink:href="class_j_k_q_t_p_coordinate_axis.html" target="_top" xlink:title="this virtual class is the base for any type of coordinate axis, to be drawn by JKQTBasePlotter.">
-<polygon fill="none" stroke="black" points="1738.5,-233.5 1738.5,-254.5 1875.5,-254.5 1875.5,-233.5 1738.5,-233.5"/>
-<text text-anchor="middle" x="1807" y="-240.9" font-family="FreeSans" font-size="12.00">JKQTPCoordinateAxis</text>
+<polygon fill="none" stroke="black" points="1738.5,-232.5 1738.5,-253.5 1875.5,-253.5 1875.5,-232.5 1738.5,-232.5"/>
+<text text-anchor="middle" x="1807" y="-239.9" font-family="FreeSans" font-size="12.00">JKQTPCoordinateAxis</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node23 -->
 <g id="edge29" class="edge">
 <title>Node8&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M972.91,-356.16C1063.08,-338.25 1276.98,-294.6 1306,-278 1316.1,-272.23 1313.39,-263.76 1324,-259 1395.99,-226.7 1623.3,-233.83 1738.16,-239.84"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="972.18,-352.73 963.05,-358.11 973.54,-359.6 972.18,-352.73"/>
+<path fill="none" stroke="midnightblue" d="M972.94,-355.32C1063.17,-337.77 1277.19,-294.92 1306,-278 1316.31,-271.94 1313.15,-263.03 1324,-258 1395.57,-224.78 1623.07,-232.35 1738.07,-238.65"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="972.23,-351.89 963.08,-357.23 973.56,-358.76 972.23,-351.89"/>
 </g>
 <!-- Node9&#45;&gt;Node7 -->
 <g id="edge8" class="edge">
 <title>Node9&#45;&gt;Node7</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1518.53,-343.91C1533.63,-356.39 1554.21,-374.08 1571,-391 1579.66,-399.73 1578.5,-405.61 1589,-412 1637.6,-441.57 1701.94,-453.99 1747.91,-459.22"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1520.71,-341.18 1510.76,-337.55 1516.28,-346.6 1520.71,-341.18"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1518.4,-344.04C1533.45,-356.58 1554,-374.28 1571,-391 1579.53,-399.39 1578.75,-404.84 1589,-411 1637.75,-440.29 1701.77,-453.74 1747.62,-459.89"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1520.61,-341.32 1510.67,-337.64 1516.15,-346.71 1520.61,-341.32"/>
 <text text-anchor="middle" x="1640.5" y="-452.4" font-family="FreeSans" font-size="12.00"> parent</text>
 </g>
 <!-- Node9&#45;&gt;Node9 -->
@@ -232,24 +232,24 @@ var sectionId = 'dynsection-1';
 <g id="node20" class="node">
 <title>Node20</title>
 <g id="a_node20"><a xlink:href="class_j_k_q_t_p_graphs_model.html" target="_top" xlink:title="data model with all plots ina JKQTBasePlotter (+ allows to switch them visible/invisible)">
-<polygon fill="none" stroke="black" points="1743,-388.5 1743,-409.5 1871,-409.5 1871,-388.5 1743,-388.5"/>
-<text text-anchor="middle" x="1807" y="-395.9" font-family="FreeSans" font-size="12.00">JKQTPGraphsModel</text>
+<polygon fill="none" stroke="black" points="1743,-387.5 1743,-408.5 1871,-408.5 1871,-387.5 1743,-387.5"/>
+<text text-anchor="middle" x="1807" y="-394.9" font-family="FreeSans" font-size="12.00">JKQTPGraphsModel</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node20 -->
 <g id="edge26" class="edge">
 <title>Node9&#45;&gt;Node20</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1521.09,-343.34C1538.9,-354.79 1564.41,-369.38 1589,-377 1639.27,-392.58 1698.93,-397.73 1742.96,-399.18"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1522.79,-340.27 1512.52,-337.68 1518.94,-346.11 1522.79,-340.27"/>
-<text text-anchor="middle" x="1640.5" y="-398.4" font-family="FreeSans" font-size="12.00"> m_plotter</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1521.46,-343.2C1539.28,-354.4 1564.64,-368.56 1589,-376 1639.34,-391.37 1698.99,-396.54 1743,-398.05"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1523.17,-340.14 1512.87,-337.67 1519.38,-346.03 1523.17,-340.14"/>
+<text text-anchor="middle" x="1640.5" y="-397.4" font-family="FreeSans" font-size="12.00"> m_plotter</text>
 </g>
 <!-- Node9&#45;&gt;Node23 -->
 <g id="edge30" class="edge">
 <title>Node9&#45;&gt;Node23</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1521.91,-310.99C1539.78,-300.02 1564.99,-286.05 1589,-278 1615.98,-268.95 1685.26,-258.9 1738.35,-252.09"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1519.89,-308.13 1513.28,-316.41 1523.61,-314.06 1519.89,-308.13"/>
-<text text-anchor="middle" x="1640.5" y="-281.4" font-family="FreeSans" font-size="12.00"> parent</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1521.54,-310.86C1539.4,-299.62 1564.77,-285.24 1589,-277 1615.94,-267.84 1685.23,-257.8 1738.33,-251.03"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1519.44,-308.04 1512.93,-316.39 1523.23,-313.93 1519.44,-308.04"/>
+<text text-anchor="middle" x="1640.5" y="-280.4" font-family="FreeSans" font-size="12.00"> parent</text>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
@@ -305,8 +305,8 @@ var sectionId = 'dynsection-1';
 <!-- Node12&#45;&gt;Node23 -->
 <g id="edge31" class="edge">
 <title>Node12&#45;&gt;Node23</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1024.27,-143.77C1063.89,-145.82 1110.79,-148.82 1153,-153 1370.28,-174.52 1626.31,-214.5 1742.7,-233.47"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1024.26,-140.26 1014.1,-143.25 1023.91,-147.25 1024.26,-140.26"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1024.27,-143.8C1063.89,-145.86 1110.79,-148.85 1153,-153 1369.68,-174.3 1624.95,-213.65 1741.78,-232.45"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1024.26,-140.29 1014.09,-143.28 1023.9,-147.28 1024.26,-140.29"/>
 <text text-anchor="middle" x="1364" y="-186.4" font-family="FreeSans" font-size="12.00"> axisStyle</text>
 </g>
 <!-- Node13 -->
@@ -442,9 +442,9 @@ var sectionId = 'dynsection-1';
 <!-- Node20&#45;&gt;Node9 -->
 <g id="edge24" class="edge">
 <title>Node20&#45;&gt;Node9</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1765.29,-385.31C1743.68,-378.35 1716.57,-370.09 1692,-364 1644.79,-352.3 1590.35,-342.23 1551.09,-335.56"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1764.22,-388.64 1774.81,-388.41 1766.38,-381.99 1764.22,-388.64"/>
-<text text-anchor="middle" x="1640.5" y="-367.4" font-family="FreeSans" font-size="12.00"> m_plotsModel</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1765.3,-384.26C1743.69,-377.28 1716.59,-369.03 1692,-363 1644.81,-351.43 1590.36,-341.65 1551.1,-335.22"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1764.23,-387.59 1774.82,-387.37 1766.4,-380.94 1764.23,-387.59"/>
+<text text-anchor="middle" x="1640.5" y="-366.4" font-family="FreeSans" font-size="12.00"> m_plotsModel</text>
 </g>
 <!-- Node21 -->
 <g id="node21" class="node">
@@ -458,52 +458,52 @@ var sectionId = 'dynsection-1';
 <!-- Node21&#45;&gt;Node20 -->
 <g id="edge25" class="edge">
 <title>Node21&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M1559.41,-425.25C1563.43,-426.96 1567.33,-428.87 1571,-431 1580.79,-436.68 1578.55,-444.67 1589,-449 1631.29,-466.52 1647.2,-458.39 1692,-449 1701.41,-447.03 1752.85,-423.62 1783.32,-409.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1560.46,-421.91 1549.87,-421.61 1557.96,-428.45 1560.46,-421.91"/>
+<path fill="none" stroke="midnightblue" d="M1558.57,-425.06C1562.88,-426.82 1567.07,-428.79 1571,-431 1580.6,-436.38 1578.77,-443.93 1589,-448 1631.54,-464.91 1647.2,-457.39 1692,-448 1727.96,-440.46 1766.43,-420.89 1788.22,-408.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1559.59,-421.7 1549,-421.52 1557.17,-428.27 1559.59,-421.7"/>
 </g>
 <!-- Node22 -->
 <g id="node22" class="node">
 <title>Node22</title>
 <g id="a_node22"><a xlink:href="class_j_k_q_t_p_horizontal_axis.html" target="_top" xlink:title="implements a horizontal axis, based on JKQTPCoordinateAxis (for most of documentation: see JKQTPCoord...">
-<polygon fill="none" stroke="black" points="1941,-314.5 1941,-335.5 2074,-335.5 2074,-314.5 1941,-314.5"/>
-<text text-anchor="middle" x="2007.5" y="-321.9" font-family="FreeSans" font-size="12.00">JKQTPHorizontalAxis</text>
+<polygon fill="none" stroke="black" points="1941,-313.5 1941,-334.5 2074,-334.5 2074,-313.5 1941,-313.5"/>
+<text text-anchor="middle" x="2007.5" y="-320.9" font-family="FreeSans" font-size="12.00">JKQTPHorizontalAxis</text>
 </a>
 </g>
 </g>
 <!-- Node22&#45;&gt;Node9 -->
 <g id="edge27" class="edge">
 <title>Node22&#45;&gt;Node9</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1930.84,-325.3C1826.74,-325.71 1641.91,-326.43 1551.01,-326.79"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1930.98,-328.8 1940.97,-325.26 1930.95,-321.8 1930.98,-328.8"/>
-<text text-anchor="middle" x="1807" y="-330.4" font-family="FreeSans" font-size="12.00"> xAxis</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1930.84,-324.45C1826.74,-325.06 1641.91,-326.15 1551.01,-326.68"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1930.99,-327.95 1940.97,-324.39 1930.95,-320.95 1930.99,-327.95"/>
+<text text-anchor="middle" x="1807" y="-329.4" font-family="FreeSans" font-size="12.00"> xAxis</text>
 </g>
 <!-- Node23&#45;&gt;Node22 -->
 <g id="edge28" class="edge">
 <title>Node23&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M1862.85,-257.28C1876.48,-261.16 1890.93,-265.79 1904,-271 1920.44,-277.56 1962.72,-300.62 1987.54,-314.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1863.67,-253.87 1853.1,-254.58 1861.81,-260.62 1863.67,-253.87"/>
+<path fill="none" stroke="midnightblue" d="M1862.85,-256.28C1876.48,-260.16 1890.93,-264.79 1904,-270 1920.44,-276.56 1962.72,-299.62 1987.54,-313.4"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1863.67,-252.87 1853.1,-253.58 1861.81,-259.62 1863.67,-252.87"/>
 </g>
 <!-- Node24 -->
 <g id="node24" class="node">
 <title>Node24</title>
 <g id="a_node24"><a xlink:href="class_j_k_q_t_p_vertical_axis.html" target="_top" xlink:title="implements a vertical axis, based on JKQTPCoordinateAxis (for most of documentation: see JKQTPCoordin...">
-<polygon fill="none" stroke="black" points="1948.5,-257.5 1948.5,-278.5 2066.5,-278.5 2066.5,-257.5 1948.5,-257.5"/>
-<text text-anchor="middle" x="2007.5" y="-264.9" font-family="FreeSans" font-size="12.00">JKQTPVerticalAxis</text>
+<polygon fill="none" stroke="black" points="1948.5,-256.5 1948.5,-277.5 2066.5,-277.5 2066.5,-256.5 1948.5,-256.5"/>
+<text text-anchor="middle" x="2007.5" y="-263.9" font-family="FreeSans" font-size="12.00">JKQTPVerticalAxis</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node24 -->
 <g id="edge33" class="edge">
 <title>Node23&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M1885.5,-252.56C1898.04,-254.01 1910.88,-255.52 1923,-257 1931.13,-257.99 1939.69,-259.08 1948.12,-260.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1885.86,-249.08 1875.52,-251.42 1885.06,-256.04 1885.86,-249.08"/>
+<path fill="none" stroke="midnightblue" d="M1885.5,-251.56C1898.04,-253.01 1910.88,-254.52 1923,-256 1931.13,-256.99 1939.69,-258.08 1948.12,-259.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1885.86,-248.08 1875.52,-250.42 1885.06,-255.04 1885.86,-248.08"/>
 </g>
 <!-- Node24&#45;&gt;Node9 -->
 <g id="edge32" class="edge">
 <title>Node24&#45;&gt;Node9</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1938.33,-275.9C1835.83,-287.78 1644.13,-310 1551.01,-320.8"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="1938.74,-279.38 1948.27,-274.75 1937.93,-272.42 1938.74,-279.38"/>
-<text text-anchor="middle" x="1807" y="-306.4" font-family="FreeSans" font-size="12.00"> yAxis</text>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M1938.33,-275.04C1835.83,-287.12 1644.13,-309.71 1551.01,-320.69"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="1938.75,-278.51 1948.27,-273.86 1937.93,-271.56 1938.75,-278.51"/>
+<text text-anchor="middle" x="1807" y="-305.4" font-family="FreeSans" font-size="12.00"> yAxis</text>
 </g>
 <!-- Node25 -->
 <g id="node25" class="node">
@@ -596,92 +596,99 @@ var sectionId = 'dynsection-1';
 <g id="node30" class="node">
 <title>Node30</title>
 <g id="a_node30"><a xlink:href="class_j_k_q_t_p_graph_line_and_fill_style_mixin.html" target="_top" xlink:title="This Mix&#45;In class provides setter/getter methods, storage and other facilities for the graph line and...">
-<polygon fill="none" stroke="black" points="2315,-399 2315,-433 2490,-433 2490,-399 2315,-399"/>
-<text text-anchor="start" x="2323" y="-419.4" font-family="FreeSans" font-size="12.00">JKQTPGraphLineAndFillStyle</text>
-<text text-anchor="middle" x="2402.5" y="-406.4" font-family="FreeSans" font-size="12.00">Mixin</text>
+<polygon fill="none" stroke="black" points="2315,-352 2315,-386 2490,-386 2490,-352 2315,-352"/>
+<text text-anchor="start" x="2323" y="-372.4" font-family="FreeSans" font-size="12.00">JKQTPGraphLineAndFillStyle</text>
+<text text-anchor="middle" x="2402.5" y="-359.4" font-family="FreeSans" font-size="12.00">Mixin</text>
 </a>
 </g>
 </g>
 <!-- Node30&#45;&gt;Node3 -->
 <g id="edge41" class="edge">
 <title>Node30&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M2500,-427.92C2509.62,-429.11 2519.34,-430.31 2528.83,-431.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2500.38,-424.44 2490.03,-426.69 2499.53,-431.39 2500.38,-424.44"/>
+<path fill="none" stroke="midnightblue" d="M2473.46,-388.82C2490.91,-393.61 2509.61,-398.61 2527,-403 2539.77,-406.22 2553.65,-409.51 2566.5,-412.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2473.92,-385.32 2463.35,-386.03 2472.06,-392.06 2473.92,-385.32"/>
 </g>
 <!-- Node31 -->
 <g id="node31" class="node">
 <title>Node31</title>
 <g id="a_node31"><a xlink:href="class_j_k_q_t_p_graph_fill_style_mixin.html" target="_top" xlink:title="This Mix&#45;In class provides setter/getter methods, storage and other facilities for the graph filling ...">
-<polygon fill="none" stroke="black" points="2115,-409.5 2115,-430.5 2274,-430.5 2274,-409.5 2115,-409.5"/>
-<text text-anchor="middle" x="2194.5" y="-416.9" font-family="FreeSans" font-size="12.00">JKQTPGraphFillStyleMixin</text>
+<polygon fill="none" stroke="black" points="2115,-405.5 2115,-426.5 2274,-426.5 2274,-405.5 2115,-405.5"/>
+<text text-anchor="middle" x="2194.5" y="-412.9" font-family="FreeSans" font-size="12.00">JKQTPGraphFillStyleMixin</text>
 </a>
 </g>
+</g>
+<!-- Node31&#45;&gt;Node3 -->
+<g id="edge44" class="edge">
+<title>Node31&#45;&gt;Node3</title>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M2284.56,-417.49C2356.09,-418.69 2455.98,-420.36 2526.97,-421.54"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="2284.27,-413.98 2274.22,-417.32 2284.16,-420.98 2284.27,-413.98"/>
+<text text-anchor="middle" x="2402.5" y="-423.4" font-family="FreeSans" font-size="12.00"> m_fillStyleBelow</text>
 </g>
 <!-- Node31&#45;&gt;Node30 -->
 <g id="edge42" class="edge">
 <title>Node31&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M2284.32,-418.28C2294.46,-418.08 2304.78,-417.88 2314.89,-417.68"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2284.19,-414.78 2274.26,-418.47 2284.33,-421.78 2284.19,-414.78"/>
+<path fill="none" stroke="midnightblue" d="M2251.71,-403.17C2274.84,-397.9 2301.96,-391.71 2326.72,-386.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2250.7,-399.82 2241.73,-405.45 2252.26,-406.64 2250.7,-399.82"/>
 </g>
 <!-- Node32 -->
 <g id="node32" class="node">
 <title>Node32</title>
 <g id="a_node32"><a xlink:href="class_j_k_q_t_p_graph_line_style_mixin.html" target="_top" xlink:title="This Mix&#45;In class provides setter/getter methods, storage and other facilities for the graph line sty...">
-<polygon fill="none" stroke="black" points="2111,-369.5 2111,-390.5 2278,-390.5 2278,-369.5 2111,-369.5"/>
-<text text-anchor="middle" x="2194.5" y="-376.9" font-family="FreeSans" font-size="12.00">JKQTPGraphLineStyleMixin</text>
+<polygon fill="none" stroke="black" points="2111,-358.5 2111,-379.5 2278,-379.5 2278,-358.5 2111,-358.5"/>
+<text text-anchor="middle" x="2194.5" y="-365.9" font-family="FreeSans" font-size="12.00">JKQTPGraphLineStyleMixin</text>
 </a>
 </g>
 </g>
 <!-- Node32&#45;&gt;Node30 -->
 <g id="edge43" class="edge">
 <title>Node32&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M2265.82,-392.29C2281.6,-395.05 2298.52,-398 2314.88,-400.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2266.09,-388.78 2255.64,-390.51 2264.89,-395.68 2266.09,-388.78"/>
+<path fill="none" stroke="midnightblue" d="M2288.38,-369C2297.19,-369 2306.09,-369 2314.84,-369"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2288.1,-365.5 2278.1,-369 2288.1,-372.5 2288.1,-365.5"/>
 </g>
 <!-- Node33 -->
 <g id="node33" class="node">
 <title>Node33</title>
 <g id="a_node33"><a xlink:href="class_j_k_q_t_p_x_graph_errors.html" target="_top" xlink:title="This class is the base class for graphs that only display error indicators in x&#45;direction.">
-<polygon fill="none" stroke="black" points="2754.5,-391.5 2754.5,-412.5 2882.5,-412.5 2882.5,-391.5 2754.5,-391.5"/>
-<text text-anchor="middle" x="2818.5" y="-398.9" font-family="FreeSans" font-size="12.00">JKQTPXGraphErrors</text>
+<polygon fill="none" stroke="black" points="2754.5,-372.5 2754.5,-393.5 2882.5,-393.5 2882.5,-372.5 2754.5,-372.5"/>
+<text text-anchor="middle" x="2818.5" y="-379.9" font-family="FreeSans" font-size="12.00">JKQTPXGraphErrors</text>
 </a>
 </g>
 </g>
 <!-- Node33&#45;&gt;Node1 -->
-<g id="edge44" class="edge">
+<g id="edge45" class="edge">
 <title>Node33&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M2892.57,-408.79C2905.91,-410.03 2919.97,-411.33 2933.74,-412.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2892.81,-405.3 2882.53,-407.86 2892.16,-412.27 2892.81,-405.3"/>
+<path fill="none" stroke="midnightblue" d="M2892.57,-389.79C2905.91,-391.03 2919.97,-392.33 2933.74,-393.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2892.81,-386.3 2882.53,-388.86 2892.16,-393.27 2892.81,-386.3"/>
 </g>
 <!-- Node34 -->
 <g id="node34" class="node">
 <title>Node34</title>
 <g id="a_node34"><a xlink:href="class_j_k_q_t_p_x_graph_error_data.html" target="_top" xlink:title="This class adds data fields for error indicators in x direction.">
-<polygon fill="none" stroke="black" points="2541.5,-391.5 2541.5,-412.5 2688.5,-412.5 2688.5,-391.5 2541.5,-391.5"/>
-<text text-anchor="middle" x="2615" y="-398.9" font-family="FreeSans" font-size="12.00">JKQTPXGraphErrorData</text>
+<polygon fill="none" stroke="black" points="2541.5,-372.5 2541.5,-393.5 2688.5,-393.5 2688.5,-372.5 2541.5,-372.5"/>
+<text text-anchor="middle" x="2615" y="-379.9" font-family="FreeSans" font-size="12.00">JKQTPXGraphErrorData</text>
 </a>
 </g>
 </g>
 <!-- Node34&#45;&gt;Node33 -->
-<g id="edge45" class="edge">
+<g id="edge46" class="edge">
 <title>Node34&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M2698.9,-402C2717.37,-402 2736.66,-402 2754.19,-402"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2698.75,-398.5 2688.75,-402 2698.75,-405.5 2698.75,-398.5"/>
+<path fill="none" stroke="midnightblue" d="M2698.9,-383C2717.37,-383 2736.66,-383 2754.19,-383"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2698.75,-379.5 2688.75,-383 2698.75,-386.5 2698.75,-379.5"/>
 </g>
 <!-- Node35 -->
 <g id="node35" class="node">
 <title>Node35</title>
 <g id="a_node35"><a xlink:href="class_j_k_q_t_p_graph_error_style_mixin.html" target="_top" xlink:title="This mix&#45;in class assembles all styling properties applicable to error indicators.">
-<polygon fill="none" stroke="black" points="2530,-351.5 2530,-372.5 2700,-372.5 2700,-351.5 2530,-351.5"/>
-<text text-anchor="middle" x="2615" y="-358.9" font-family="FreeSans" font-size="12.00">JKQTPGraphErrorStyleMixin</text>
+<polygon fill="none" stroke="black" points="2530,-332.5 2530,-353.5 2700,-353.5 2700,-332.5 2530,-332.5"/>
+<text text-anchor="middle" x="2615" y="-339.9" font-family="FreeSans" font-size="12.00">JKQTPGraphErrorStyleMixin</text>
 </a>
 </g>
 </g>
 <!-- Node35&#45;&gt;Node33 -->
-<g id="edge46" class="edge">
+<g id="edge47" class="edge">
 <title>Node35&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M2678.86,-374.48C2706.37,-379.94 2738.29,-386.28 2764.56,-391.49"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2679.43,-371.02 2668.94,-372.51 2678.07,-377.89 2679.43,-371.02"/>
+<path fill="none" stroke="midnightblue" d="M2678.86,-355.48C2706.37,-360.94 2738.29,-367.28 2764.56,-372.49"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2679.43,-352.02 2668.94,-353.51 2678.07,-358.89 2679.43,-352.02"/>
 </g>
 </g>
 </svg>

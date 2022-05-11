@@ -950,10 +950,10 @@ Basic Usage of JKQTPlotter</h1>
 <img src="jkqtplotter_simpletest1.png" alt=""/>
 </div>
 <p >Starting from this basic example, you can observe several important principles: </p>
-<h1><a class="anchor" id="autotoc_md123"></a>
+<h1><a class="anchor" id="autotoc_md125"></a>
 Data is stored in an (internal) instance of JKQTPDatastore, which is accessible through</h1>
 <p ><a class="el" href="class_j_k_q_t_plotter.html#ae31c276a93cbf7aa8f9c153327aa5b74" title="returns a pointer to the datastore used by this object">JKQTPlotter::getDatastore()</a>. This datastore can either own its data (which is done here, as we copy the data into the store by calling <a class="el" href="class_j_k_q_t_p_datastore.html#a3d6b9f2649736b08b6731132f86368f6" title="add one column to the datastore. It will be filled with the values from first ... last">JKQTPDatastore::addCopiedColumn()</a>, or it can merely reference to the data (then data needs to be available as array of <code>double</code> values). </p>
-<h1><a class="anchor" id="autotoc_md124"></a>
+<h1><a class="anchor" id="autotoc_md126"></a>
 Naming conventions:</h1>
 <ul>
 <li><b>plot</b> is the complete drawn image, including the axes, the graphs, the key and all other visual elements</li>
@@ -963,13 +963,13 @@ Naming conventions:</h1>
 <li><b>key</b> is the legend of the plot</li>
 <li><b>coordinate axis</b> is each of the x- or y-axis (there might be addition axes, e.g. when showing a color-scale)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md125"></a>
+<h1><a class="anchor" id="autotoc_md127"></a>
 Each graph is represented by a class derived from JKQTPPlotElement (in the example we instanciated a JKQTPXYLineGraph,</h1>
 <p >which shows data as a scatter of symbols that may (or may not) be connected by a line). Creating the graph class does not yet add it to the plotter. To add it, call <a class="el" href="class_j_k_q_t_plotter.html#a63a54c5342d664c35ffb3d532ba26b99" title="add a new graph, returns it&#39;s position in the graphs list">JKQTPlotter::addGraph()</a>. Only after this sep, the graph is displayed. You can modify the apperance of the graph (e.g. colors, name in the key ...) by setting properties in the graph class instance. </p>
-<h1><a class="anchor" id="autotoc_md126"></a>
+<h1><a class="anchor" id="autotoc_md128"></a>
 You can auto-zoom the axis ranges of the plot by calling JKQTPlotter::zoomToFit(), or set them</h1>
 <p >exlicitly by calling <a class="el" href="class_j_k_q_t_plotter.html#ab29362d74e9e1a24c4add51815f0ec61" title="sets the x- and y-range of the plot (minimum and maximum values on the x-/y-axis)">JKQTPlotter::setXY()</a>. The user can later zoom in/out by the mouse (and other means). You can limit this zoom range by setting an absolute axis range, calling e.g. <a class="el" href="class_j_k_q_t_plotter.html#a90b33a1e53ec8cbd864a672fb5fcaccc" title="sets absolutely limiting x- and y-range of the plot">JKQTPlotter::setAbsoluteXY()</a>. The the user cannot zoom farther out than the given range(s). </p>
-<h1><a class="anchor" id="autotoc_md127"></a>
+<h1><a class="anchor" id="autotoc_md129"></a>
 If you want to style the plot itself, you need to set properties of the underlying JKQTBasePloter instance, which</h1>
 <p >is accessible through <a class="el" href="class_j_k_q_t_plotter.html#a267c8fd6e8a3519f05bf40fa972f2f03" title="returns the class internally used for plotting">JKQTPlotter::getPlotter()</a>. If you want to style the coordinate axes, you can acces their representing objects by caling <a class="el" href="class_j_k_q_t_plotter.html#a3cbc53df79a3bb52ccc53db8a87f14eb" title="returns the coordinate axis object for the x-axis">JKQTPlotter::getXAxis()</a> or <a class="el" href="class_j_k_q_t_plotter.html#abf8690bf73916c9f1d7c650ea074e7ab" title="returns the coordinate axis object for the y-axis">JKQTPlotter::getYAxis()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="_j_k_q_t_plotter_simple_test.html">Example (JKQTPlotter): Very simple line-graph</a> and </dd>
 <dd>
@@ -8919,7 +8919,7 @@ This is a short-cut to <a class="el" href="class_j_k_q_t_plotter.html#a5fad7365a
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_plotter.html">JKQTPlotter</a></li>
-    <li class="footer">Generated on Sun Apr 24 2022 20:10:59 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Wed May 11 2022 20:58:18 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

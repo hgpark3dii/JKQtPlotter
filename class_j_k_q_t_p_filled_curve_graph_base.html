@@ -113,8 +113,10 @@ $(document).ready(function(){initNavTree('class_j_k_q_t_p_filled_curve_graph_bas
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_j_k_q_t_p_filled_curve_graph_base-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JKQTPFilledCurveGraphBase Class Reference<div class="ingroups"><a class="el" href="group__jkqtplotter.html">JKQTPlotter: Qt based Scientific Plotter Class</a> &raquo; <a class="el" href="group__jkqtplotter__elements.html">Plot Elements</a> &raquo; <a class="el" href="group__jkqtplotter__graphsgroup.html">Graph Classes</a> &raquo; <a class="el" href="group__jkqtplotter__linesymbolgraphs.html">Line/Symbol Graphs</a> &raquo; <a class="el" href="group__jkqtplotter__linesymbolgraphs__simple.html">Basic Line/Scatter Graphs</a></div></div></div>
 </div><!--header-->
@@ -137,11 +139,47 @@ Collaboration diagram for JKQTPFilledCurveGraphBase:</div>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1c6ebab82d5a08bd63a0574fc278ff08"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a> { <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08a5e8bfa355f8db341dd902380fda40748">SingleFilling</a> =0
+, <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08a265cdb2a9b566d2b83f0bd2529ab6232">TwoColorFilling</a> =1
+<br />
+ }</td></tr>
+<tr class="memdesc:a1c6ebab82d5a08bd63a0574fc278ff08"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how the area below the graph is filled  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">More...</a><br /></td></tr>
+<tr class="separator:a1c6ebab82d5a08bd63a0574fc278ff08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_j_k_q_t_p_x_y_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_j_k_q_t_p_x_y_graph')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_j_k_q_t_p_x_y_graph.html">JKQTPXYGraph</a></td></tr>
+<tr class="memitem:ac6343eedb62ab432de4e563c0b734909 inherit pub_types_class_j_k_q_t_p_x_y_graph"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909">DataSortOrder</a> { <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a615f807714e5411337ca6c2748d27fce">Unsorted</a> =0
+, <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a49028b29bbaaa1c223075c5fbca809ec">SortedX</a> =1
+, <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a2016d1112c09a22048f24be6c3879f57">SortedY</a> =2
+<br />
+ }</td></tr>
+<tr class="memdesc:ac6343eedb62ab432de4e563c0b734909"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how to sort the data in a <a class="el" href="class_j_k_q_t_p_x_y_graph.html" title="This virtual JKQTPGraph descendent may be used as base for all graphs that use at least two columns t...">JKQTPXYGraph</a> before drawing  <a href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909">More...</a><br /></td></tr>
+<tr class="separator:ac6343eedb62ab432de4e563c0b734909 inherit pub_types_class_j_k_q_t_p_x_y_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_j_k_q_t_p_plot_element"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_j_k_q_t_p_plot_element')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_j_k_q_t_p_plot_element.html">JKQTPPlotElement</a></td></tr>
+<tr class="memitem:ada033e8fe68bbb9d24a28602ea969332 inherit pub_types_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332">HitTestMode</a> { <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332a78e85d1b53b16a44de8244d5cf8235a5">HitTestXY</a>
+, <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332a02f3b108acc2407a1d179f5bcfc7526e">HitTestXOnly</a>
+, <br />
+&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332abfa7a1fc942a6c8fb4857eef430e54cd">HitTestYOnly</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ada033e8fe68bbb9d24a28602ea969332"><td class="mdescLeft">&#160;</td><td class="mdescRight">modes of operation for the function <a class="el" href="class_j_k_q_t_p_plot_element.html#a122b7b717c3c578861005aa8db8605e0" title="returns the closest distance of the plot element to the (screen pixel) position pos,...">hitTest()</a>  <a href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332">More...</a><br /></td></tr>
+<tr class="separator:ada033e8fe68bbb9d24a28602ea969332 inherit pub_types_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:aba040cc6dac602cc58e8feaeffdb3a2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#aba040cc6dac602cc58e8feaeffdb3a2b">setColor</a> (QColor c)</td></tr>
 <tr class="memdesc:aba040cc6dac602cc58e8feaeffdb3a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set line-color, fill color and symbol color  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#aba040cc6dac602cc58e8feaeffdb3a2b">More...</a><br /></td></tr>
 <tr class="separator:aba040cc6dac602cc58e8feaeffdb3a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eadf2a741082e14d8e2347c80c4cb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a3eadf2a741082e14d8e2347c80c4cb08">setFillMode</a> (<a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a> mode)</td></tr>
+<tr class="memdesc:a3eadf2a741082e14d8e2347c80c4cb08"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how the area of the graph is filles  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a3eadf2a741082e14d8e2347c80c4cb08">More...</a><br /></td></tr>
+<tr class="separator:a3eadf2a741082e14d8e2347c80c4cb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_slots_class_j_k_q_t_p_x_y_baseline_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_class_j_k_q_t_p_x_y_baseline_graph')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html">JKQTPXYBaselineGraph</a></td></tr>
 <tr class="memitem:a8a0d886b3f92bf298e27e2b1cddaaf75 inherit pub_slots_class_j_k_q_t_p_x_y_baseline_graph"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html#a8a0d886b3f92bf298e27e2b1cddaaf75">setBaseline</a> (double __value)</td></tr>
 <tr class="memdesc:a8a0d886b3f92bf298e27e2b1cddaaf75 inherit pub_slots_class_j_k_q_t_p_x_y_baseline_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">baseline of the plot (NOTE: 0 is interpreted as until plot border in log-mode!!!)  <a href="class_j_k_q_t_p_x_y_baseline_graph.html#a8a0d886b3f92bf298e27e2b1cddaaf75">More...</a><br /></td></tr>
@@ -198,6 +236,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9b716842104b6d4d082067847b0ac2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#aa9b716842104b6d4d082067847b0ac2f">drawKeyMarker</a> (<a class="el" href="class_j_k_q_t_p_enhanced_painter.html">JKQTPEnhancedPainter</a> &amp;painter, QRectF &amp;rect) override</td></tr>
 <tr class="memdesc:aa9b716842104b6d4d082067847b0ac2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">plots a key marker inside the specified rectangle <em>rect</em>  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#aa9b716842104b6d4d082067847b0ac2f">More...</a><br /></td></tr>
 <tr class="separator:aa9b716842104b6d4d082067847b0ac2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1dfe18bdce384f520b48dfc331bac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a0f1dfe18bdce384f520b48dfc331bac6">fillStyleBelow</a> ()</td></tr>
+<tr class="memdesc:a0f1dfe18bdce384f520b48dfc331bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a0f1dfe18bdce384f520b48dfc331bac6">More...</a><br /></td></tr>
+<tr class="separator:a0f1dfe18bdce384f520b48dfc331bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b235f6d9640d4112b7ef3c3311fbb7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a91b235f6d9640d4112b7ef3c3311fbb7">fillStyleBelow</a> () const</td></tr>
+<tr class="memdesc:a91b235f6d9640d4112b7ef3c3311fbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a91b235f6d9640d4112b7ef3c3311fbb7">More...</a><br /></td></tr>
+<tr class="separator:a91b235f6d9640d4112b7ef3c3311fbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6f3fe9c4ee9811bd7badda03eff5eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a2a6f3fe9c4ee9811bd7badda03eff5eb">getFillMode</a> () const</td></tr>
+<tr class="memdesc:a2a6f3fe9c4ee9811bd7badda03eff5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how the area of the graph is filles  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a2a6f3fe9c4ee9811bd7badda03eff5eb">More...</a><br /></td></tr>
+<tr class="separator:a2a6f3fe9c4ee9811bd7badda03eff5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2efda75cf3cc0686c2f39adbbfe64daf"><td class="memItemLeft" align="right" valign="top">virtual QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a2efda75cf3cc0686c2f39adbbfe64daf">getKeyLabelColor</a> () const override</td></tr>
 <tr class="memdesc:a2efda75cf3cc0686c2f39adbbfe64daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the color to be used for the key label  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a2efda75cf3cc0686c2f39adbbfe64daf">More...</a><br /></td></tr>
 <tr class="separator:a2efda75cf3cc0686c2f39adbbfe64daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,6 +416,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a29da7d04fb49e400dce72381da3ea9d8 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb14667a3f9a4c8d84dc04448f7d020 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a2eb14667a3f9a4c8d84dc04448f7d020">~JKQTPGraphFillStyleMixin</a> ()</td></tr>
 <tr class="separator:a2eb14667a3f9a4c8d84dc04448f7d020 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae38dc75f5a319cb5d233e4d11b490d inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a7ae38dc75f5a319cb5d233e4d11b490d">getFillBrush</a> (<a class="el" href="class_j_k_q_t_p_enhanced_painter.html">JKQTPEnhancedPainter</a> &amp;painter, <a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *parent) const</td></tr>
+<tr class="memdesc:a7ae38dc75f5a319cb5d233e4d11b490d inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs a QBrush from the graph fill styling properties  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#a7ae38dc75f5a319cb5d233e4d11b490d">More...</a><br /></td></tr>
+<tr class="separator:a7ae38dc75f5a319cb5d233e4d11b490d inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd0ff899b261d2d578d24d223136a7c inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#adfd0ff899b261d2d578d24d223136a7c">getFillColor</a> () const</td></tr>
 <tr class="memdesc:adfd0ff899b261d2d578d24d223136a7c inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the color of the graph filling  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#adfd0ff899b261d2d578d24d223136a7c">More...</a><br /></td></tr>
 <tr class="separator:adfd0ff899b261d2d578d24d223136a7c inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,6 +437,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37ce23c026a841324377f48aece76417 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a37ce23c026a841324377f48aece76417">initFillStyle</a> (<a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *parent, int &amp;parentPlotStyle, <a class="el" href="group__jkqtpplottersupprt.html#gaf0d90444170dd9b4daeabdede17615c4">JKQTPPlotStyleType</a> styletype=<a class="el" href="group__jkqtpplottersupprt.html#ggaf0d90444170dd9b4daeabdede17615c4a7a1920d61156abc05a60135aefe8bc67">JKQTPPlotStyleType::Default</a>)</td></tr>
 <tr class="memdesc:a37ce23c026a841324377f48aece76417 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">initiaize the fill style (from the parent plotter)  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#a37ce23c026a841324377f48aece76417">More...</a><br /></td></tr>
 <tr class="separator:a37ce23c026a841324377f48aece76417 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fe55c9266712727b51be418f853a96 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a28fe55c9266712727b51be418f853a96">initFillStyleInvertedColor</a> (<a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> *other)</td></tr>
+<tr class="memdesc:a28fe55c9266712727b51be418f853a96 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">initiaize the fill style from another <a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html" title="This Mix-In class provides setter/getter methods, storage and other facilities for the graph filling ...">JKQTPGraphFillStyleMixin</a> <em>other</em> by inverting its fill color  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#a28fe55c9266712727b51be418f853a96">More...</a><br /></td></tr>
+<tr class="separator:a28fe55c9266712727b51be418f853a96 inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d912c976e206bab578eef0f9d0d4b6a inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a6d912c976e206bab578eef0f9d0d4b6a">setFillBrush</a> (const QBrush &amp;b)</td></tr>
 <tr class="memdesc:a6d912c976e206bab578eef0f9d0d4b6a inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets a fill brush (overwrites all internal properties!)  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#a6d912c976e206bab578eef0f9d0d4b6a">More...</a><br /></td></tr>
 <tr class="separator:a6d912c976e206bab578eef0f9d0d4b6a inherit pub_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -472,30 +525,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2d904165c9b3ca34092730875c3f1d6f inherit pub_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the line width of the graph line (in pt)  <a href="class_j_k_q_t_p_graph_line_style_mixin.html#a2d904165c9b3ca34092730875c3f1d6f">More...</a><br /></td></tr>
 <tr class="separator:a2d904165c9b3ca34092730875c3f1d6f inherit pub_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7449f9d7567f75a511758663e0fc8991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a7449f9d7567f75a511758663e0fc8991">m_fillMode</a></td></tr>
+<tr class="memdesc:a7449f9d7567f75a511758663e0fc8991"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how the area of the graph is filles  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a7449f9d7567f75a511758663e0fc8991">More...</a><br /></td></tr>
+<tr class="separator:a7449f9d7567f75a511758663e0fc8991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fac9d458a903a4cf75bacc6057a4890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a8fac9d458a903a4cf75bacc6057a4890">m_fillStyleBelow</a></td></tr>
+<tr class="memdesc:a8fac9d458a903a4cf75bacc6057a4890"><td class="mdescLeft">&#160;</td><td class="mdescRight">if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above  <a href="class_j_k_q_t_p_filled_curve_graph_base.html#a8fac9d458a903a4cf75bacc6057a4890">More...</a><br /></td></tr>
+<tr class="separator:a8fac9d458a903a4cf75bacc6057a4890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_x_y_baseline_graph')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html">JKQTPXYBaselineGraph</a></td></tr>
+<tr class="memitem:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html#ad5658330643e8ec411ec46cd80ace2b3">m_baseline</a></td></tr>
+<tr class="memdesc:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">baseline of the plot (NOTE: 0 is interpreted as until plot border in log-mode!!!)  <a href="class_j_k_q_t_p_x_y_baseline_graph.html#ad5658330643e8ec411ec46cd80ace2b3">More...</a><br /></td></tr>
+<tr class="separator:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_j_k_q_t_p_x_y_graph"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_x_y_graph')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_x_y_graph.html">JKQTPXYGraph</a></td></tr>
+<tr class="memitem:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="memItemLeft" align="right" valign="top">QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_graph.html#a3d4cdab4a709d064684381ab925e4e03">sortedIndices</a></td></tr>
+<tr class="memdesc:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">this array contains the order of indices, in which to access the data in the data columns  <a href="class_j_k_q_t_p_x_y_graph.html#a3d4cdab4a709d064684381ab925e4e03">More...</a><br /></td></tr>
+<tr class="separator:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_j_k_q_t_p_plot_element"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_plot_element')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_plot_element.html">JKQTPPlotElement</a></td></tr>
+<tr class="memitem:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="struct_j_k_q_t_p_plot_element_1_1_hit_test_location.html">HitTestLocation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a9edaa52a77a4829a6ed5ead3ffce69ce">m_hitTestData</a></td></tr>
+<tr class="memdesc:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">dataset with graph-points and associated data fro the function <a class="el" href="class_j_k_q_t_p_plot_element.html#a122b7b717c3c578861005aa8db8605e0" title="returns the closest distance of the plot element to the (screen pixel) position pos,...">hitTest()</a>  <a href="class_j_k_q_t_p_plot_element.html#a9edaa52a77a4829a6ed5ead3ffce69ce">More...</a><br /></td></tr>
+<tr class="separator:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a7dcfd87466c520b10078c037527d8918">parent</a></td></tr>
+<tr class="memdesc:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">the plotter object this object belongs to  <a href="class_j_k_q_t_p_plot_element.html#a7dcfd87466c520b10078c037527d8918">More...</a><br /></td></tr>
+<tr class="separator:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a05f99859e10d874e9a86512cbab9674f">parentPlotStyle</a></td></tr>
+<tr class="memdesc:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal storage for the used parent plot style  <a href="class_j_k_q_t_p_plot_element.html#a05f99859e10d874e9a86512cbab9674f">More...</a><br /></td></tr>
+<tr class="separator:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_class_j_k_q_t_p_x_y_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_j_k_q_t_p_x_y_graph')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_j_k_q_t_p_x_y_graph.html">JKQTPXYGraph</a></td></tr>
-<tr class="memitem:ac6343eedb62ab432de4e563c0b734909 inherit pub_types_class_j_k_q_t_p_x_y_graph"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909">DataSortOrder</a> { <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a615f807714e5411337ca6c2748d27fce">Unsorted</a> =0
-, <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a49028b29bbaaa1c223075c5fbca809ec">SortedX</a> =1
-, <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909a2016d1112c09a22048f24be6c3879f57">SortedY</a> =2
-<br />
- }</td></tr>
-<tr class="memdesc:ac6343eedb62ab432de4e563c0b734909"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies how to sort the data in a <a class="el" href="class_j_k_q_t_p_x_y_graph.html" title="This virtual JKQTPGraph descendent may be used as base for all graphs that use at least two columns t...">JKQTPXYGraph</a> before drawing  <a href="class_j_k_q_t_p_x_y_graph.html#ac6343eedb62ab432de4e563c0b734909">More...</a><br /></td></tr>
-<tr class="separator:ac6343eedb62ab432de4e563c0b734909 inherit pub_types_class_j_k_q_t_p_x_y_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_class_j_k_q_t_p_plot_element"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_j_k_q_t_p_plot_element')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_j_k_q_t_p_plot_element.html">JKQTPPlotElement</a></td></tr>
-<tr class="memitem:ada033e8fe68bbb9d24a28602ea969332 inherit pub_types_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332">HitTestMode</a> { <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332a78e85d1b53b16a44de8244d5cf8235a5">HitTestXY</a>
-, <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332a02f3b108acc2407a1d179f5bcfc7526e">HitTestXOnly</a>
-, <br />
-&#160;&#160;<a class="el" href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332abfa7a1fc942a6c8fb4857eef430e54cd">HitTestYOnly</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ada033e8fe68bbb9d24a28602ea969332"><td class="mdescLeft">&#160;</td><td class="mdescRight">modes of operation for the function <a class="el" href="class_j_k_q_t_p_plot_element.html#a122b7b717c3c578861005aa8db8605e0" title="returns the closest distance of the plot element to the (screen pixel) position pos,...">hitTest()</a>  <a href="class_j_k_q_t_p_plot_element.html#ada033e8fe68bbb9d24a28602ea969332">More...</a><br /></td></tr>
-<tr class="separator:ada033e8fe68bbb9d24a28602ea969332 inherit pub_types_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_j_k_q_t_p_x_y_graph"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_k_q_t_p_x_y_graph')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_k_q_t_p_x_y_graph.html">JKQTPXYGraph</a></td></tr>
 <tr class="memitem:a85d1f764f38d16ed361dd211b49e551d inherit pro_methods_class_j_k_q_t_p_x_y_graph"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_graph.html#a85d1f764f38d16ed361dd211b49e551d">getDataIndex</a> (int i) const</td></tr>
 <tr class="memdesc:a85d1f764f38d16ed361dd211b49e551d inherit pro_methods_class_j_k_q_t_p_x_y_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the index of the i-th datapoint (where i is an index into the SORTED datapoints)  <a href="class_j_k_q_t_p_x_y_graph.html#a85d1f764f38d16ed361dd211b49e551d">More...</a><br /></td></tr>
@@ -547,10 +605,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a0fd8e4d7c0235a5ad48da313adbe134c inherit pro_methods_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a0fd8e4d7c0235a5ad48da313adbe134c">reserveHitTestData</a> (int points)</td></tr>
 <tr class="memdesc:a0fd8e4d7c0235a5ad48da313adbe134c inherit pro_methods_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">reserve list entries for up to <em>points</em> graph points in the internal datastore for <a class="el" href="class_j_k_q_t_p_plot_element.html#a122b7b717c3c578861005aa8db8605e0" title="returns the closest distance of the plot element to the (screen pixel) position pos,...">hitTest()</a>  <a href="class_j_k_q_t_p_plot_element.html#a0fd8e4d7c0235a5ad48da313adbe134c">More...</a><br /></td></tr>
 <tr class="separator:a0fd8e4d7c0235a5ad48da313adbe134c inherit pro_methods_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_k_q_t_p_graph_fill_style_mixin')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a></td></tr>
-<tr class="memitem:a7ae38dc75f5a319cb5d233e4d11b490d inherit pro_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memItemLeft" align="right" valign="top">QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html#a7ae38dc75f5a319cb5d233e4d11b490d">getFillBrush</a> (<a class="el" href="class_j_k_q_t_p_enhanced_painter.html">JKQTPEnhancedPainter</a> &amp;painter, <a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *parent) const</td></tr>
-<tr class="memdesc:a7ae38dc75f5a319cb5d233e4d11b490d inherit pro_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs a QBrush from the graph fill styling properties  <a href="class_j_k_q_t_p_graph_fill_style_mixin.html#a7ae38dc75f5a319cb5d233e4d11b490d">More...</a><br /></td></tr>
-<tr class="separator:a7ae38dc75f5a319cb5d233e4d11b490d inherit pro_methods_class_j_k_q_t_p_graph_fill_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_j_k_q_t_p_graph_line_style_mixin')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_j_k_q_t_p_graph_line_style_mixin.html">JKQTPGraphLineStyleMixin</a></td></tr>
 <tr class="memitem:a39afeafa224de4a85f5eb45395ec80be inherit pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="memItemLeft" align="right" valign="top">QPen&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_line_style_mixin.html#a39afeafa224de4a85f5eb45395ec80be">getHighlightingLinePen</a> (<a class="el" href="class_j_k_q_t_p_enhanced_painter.html">JKQTPEnhancedPainter</a> &amp;painter, <a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *parent) const</td></tr>
 <tr class="memdesc:a39afeafa224de4a85f5eb45395ec80be inherit pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs a QPen from the line styling properties  <a href="class_j_k_q_t_p_graph_line_style_mixin.html#a39afeafa224de4a85f5eb45395ec80be">More...</a><br /></td></tr>
@@ -564,24 +618,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a35a20cf06337ced65a9a29bd6cedc0e7 inherit pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="memItemLeft" align="right" valign="top">QPen&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_graph_line_style_mixin.html#a35a20cf06337ced65a9a29bd6cedc0e7">getLinePenForRects</a> (<a class="el" href="class_j_k_q_t_p_enhanced_painter.html">JKQTPEnhancedPainter</a> &amp;painter, <a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *parent) const</td></tr>
 <tr class="memdesc:a35a20cf06337ced65a9a29bd6cedc0e7 inherit pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructs a QPen from the line styling properties, suitable for drawing rectangles with sharp edges  <a href="class_j_k_q_t_p_graph_line_style_mixin.html#a35a20cf06337ced65a9a29bd6cedc0e7">More...</a><br /></td></tr>
 <tr class="separator:a35a20cf06337ced65a9a29bd6cedc0e7 inherit pro_methods_class_j_k_q_t_p_graph_line_style_mixin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_x_y_baseline_graph')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html">JKQTPXYBaselineGraph</a></td></tr>
-<tr class="memitem:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html#ad5658330643e8ec411ec46cd80ace2b3">m_baseline</a></td></tr>
-<tr class="memdesc:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">baseline of the plot (NOTE: 0 is interpreted as until plot border in log-mode!!!)  <a href="class_j_k_q_t_p_x_y_baseline_graph.html#ad5658330643e8ec411ec46cd80ace2b3">More...</a><br /></td></tr>
-<tr class="separator:ad5658330643e8ec411ec46cd80ace2b3 inherit pro_attribs_class_j_k_q_t_p_x_y_baseline_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_j_k_q_t_p_x_y_graph"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_x_y_graph')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_x_y_graph.html">JKQTPXYGraph</a></td></tr>
-<tr class="memitem:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="memItemLeft" align="right" valign="top">QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_graph.html#a3d4cdab4a709d064684381ab925e4e03">sortedIndices</a></td></tr>
-<tr class="memdesc:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">this array contains the order of indices, in which to access the data in the data columns  <a href="class_j_k_q_t_p_x_y_graph.html#a3d4cdab4a709d064684381ab925e4e03">More...</a><br /></td></tr>
-<tr class="separator:a3d4cdab4a709d064684381ab925e4e03 inherit pro_attribs_class_j_k_q_t_p_x_y_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_j_k_q_t_p_plot_element"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_j_k_q_t_p_plot_element')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_j_k_q_t_p_plot_element.html">JKQTPPlotElement</a></td></tr>
-<tr class="memitem:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="struct_j_k_q_t_p_plot_element_1_1_hit_test_location.html">HitTestLocation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a9edaa52a77a4829a6ed5ead3ffce69ce">m_hitTestData</a></td></tr>
-<tr class="memdesc:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">dataset with graph-points and associated data fro the function <a class="el" href="class_j_k_q_t_p_plot_element.html#a122b7b717c3c578861005aa8db8605e0" title="returns the closest distance of the plot element to the (screen pixel) position pos,...">hitTest()</a>  <a href="class_j_k_q_t_p_plot_element.html#a9edaa52a77a4829a6ed5ead3ffce69ce">More...</a><br /></td></tr>
-<tr class="separator:a9edaa52a77a4829a6ed5ead3ffce69ce inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a7dcfd87466c520b10078c037527d8918">parent</a></td></tr>
-<tr class="memdesc:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">the plotter object this object belongs to  <a href="class_j_k_q_t_p_plot_element.html#a7dcfd87466c520b10078c037527d8918">More...</a><br /></td></tr>
-<tr class="separator:a7dcfd87466c520b10078c037527d8918 inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_plot_element.html#a05f99859e10d874e9a86512cbab9674f">parentPlotStyle</a></td></tr>
-<tr class="memdesc:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal storage for the used parent plot style  <a href="class_j_k_q_t_p_plot_element.html#a05f99859e10d874e9a86512cbab9674f">More...</a><br /></td></tr>
-<tr class="separator:a05f99859e10d874e9a86512cbab9674f inherit pro_attribs_class_j_k_q_t_p_plot_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_j_k_q_t_p_x_y_baseline_graph"><td colspan="2" onclick="javascript:toggleInherit('properties_class_j_k_q_t_p_x_y_baseline_graph')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html">JKQTPXYBaselineGraph</a></td></tr>
 <tr class="memitem:a004a8e1c1695a5673214929564dec8e5 inherit properties_class_j_k_q_t_p_x_y_baseline_graph"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_x_y_baseline_graph.html#a004a8e1c1695a5673214929564dec8e5">baseline</a></td></tr>
 <tr class="separator:a004a8e1c1695a5673214929564dec8e5 inherit properties_class_j_k_q_t_p_x_y_baseline_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -631,7 +667,37 @@ Additional Inherited Members</h2></td></tr>
 <img src="filledgraphs.png" alt=""/>
 </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_p_filled_curve_x_graph.html" title="This implements filled curve plots where the area is filled between the plot line and the x-Axis.">JKQTPFilledCurveXGraph</a>, <a class="el" href="class_j_k_q_t_p_filled_curve_y_graph.html" title="This implements filled curve plots where the area is filled between the plot line and y-Axis.">JKQTPFilledCurveYGraph</a> </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a1c6ebab82d5a08bd63a0574fc278ff08" name="a1c6ebab82d5a08bd63a0574fc278ff08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6ebab82d5a08bd63a0574fc278ff08">&#9670;&nbsp;</a></span>FillMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">JKQTPFilledCurveGraphBase::FillMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>specifies how the area below the graph is filled </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a3eadf2a741082e14d8e2347c80c4cb08" title="specifies how the area of the graph is filles">setFillMode()</a>, <a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a2a6f3fe9c4ee9811bd7badda03eff5eb" title="specifies how the area of the graph is filles">getFillMode()</a>, <a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a0f1dfe18bdce384f520b48dfc331bac6" title="if m_fillMode ==FillAboveAndBelowDifferently then this fill style is used below the baseline and the ...">fillStyleBelow()</a>, <a class="el" href="_j_k_q_t_plotter_wiggle_plots.html">Example (JKQTPlotter): Wiggle Plots</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1c6ebab82d5a08bd63a0574fc278ff08a5e8bfa355f8db341dd902380fda40748" name="a1c6ebab82d5a08bd63a0574fc278ff08a5e8bfa355f8db341dd902380fda40748"></a>SingleFilling&#160;</td><td class="fielddoc"><p >the whole area is filled with the same color/pattern, generates "simple filled plots", such as </p>
+<div class="image">
+<img src="filledgraphs_small.png" alt=""/>
+</div>
+ </td></tr>
+<tr><td class="fieldname"><a id="a1c6ebab82d5a08bd63a0574fc278ff08a265cdb2a9b566d2b83f0bd2529ab6232" name="a1c6ebab82d5a08bd63a0574fc278ff08a265cdb2a9b566d2b83f0bd2529ab6232"></a>TwoColorFilling&#160;</td><td class="fielddoc"><p >the area above and below baseline with the two different colors/patterns, generates "wiggle plots", such as </p>
+<div class="image">
+<img src="wiggleplots_small.png" alt=""/>
+</div>
+ </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a22fc11edaff36269a26ce3df45f78f4b" name="a22fc11edaff36269a26ce3df45f78f4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22fc11edaff36269a26ce3df45f78f4b">&#9670;&nbsp;</a></span>JKQTPFilledCurveGraphBase()</h2>
 
@@ -701,6 +767,63 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f1dfe18bdce384f520b48dfc331bac6" name="a0f1dfe18bdce384f520b48dfc331bac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1dfe18bdce384f520b48dfc331bac6">&#9670;&nbsp;</a></span>fillStyleBelow() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> &amp; JKQTPFilledCurveGraphBase::fillStyleBelow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above </p>
+
+</div>
+</div>
+<a id="a91b235f6d9640d4112b7ef3c3311fbb7" name="a91b235f6d9640d4112b7ef3c3311fbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b235f6d9640d4112b7ef3c3311fbb7">&#9670;&nbsp;</a></span>fillStyleBelow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> &amp; JKQTPFilledCurveGraphBase::fillStyleBelow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above </p>
+
+</div>
+</div>
+<a id="a2a6f3fe9c4ee9811bd7badda03eff5eb" name="a2a6f3fe9c4ee9811bd7badda03eff5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6f3fe9c4ee9811bd7badda03eff5eb">&#9670;&nbsp;</a></span>getFillMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a> JKQTPFilledCurveGraphBase::getFillMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>specifies how the area of the graph is filles </p>
+
+</div>
+</div>
 <a id="a2efda75cf3cc0686c2f39adbbfe64daf" name="a2efda75cf3cc0686c2f39adbbfe64daf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2efda75cf3cc0686c2f39adbbfe64daf">&#9670;&nbsp;</a></span>getKeyLabelColor()</h2>
 
@@ -758,6 +881,83 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a3eadf2a741082e14d8e2347c80c4cb08" name="a3eadf2a741082e14d8e2347c80c4cb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eadf2a741082e14d8e2347c80c4cb08">&#9670;&nbsp;</a></span>setFillMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPFilledCurveGraphBase::setFillMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>specifies how the area of the graph is filles </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7449f9d7567f75a511758663e0fc8991" name="a7449f9d7567f75a511758663e0fc8991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7449f9d7567f75a511758663e0fc8991">&#9670;&nbsp;</a></span>m_fillMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html#a1c6ebab82d5a08bd63a0574fc278ff08">FillMode</a> JKQTPFilledCurveGraphBase::m_fillMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>specifies how the area of the graph is filles </p>
+
+</div>
+</div>
+<a id="a8fac9d458a903a4cf75bacc6057a4890" name="a8fac9d458a903a4cf75bacc6057a4890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fac9d458a903a4cf75bacc6057a4890">&#9670;&nbsp;</a></span>m_fillStyleBelow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_k_q_t_p_graph_fill_style_mixin.html">JKQTPGraphFillStyleMixin</a> JKQTPFilledCurveGraphBase::m_fillStyleBelow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if m_fillMode <code>==FillAboveAndBelowDifferently</code> then this fill style is used below the baseline and the default fill style is used above </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="jkqtpfilledcurve_8h_source.html">jkqtpfilledcurve.h</a></li>
 </ul>
@@ -767,7 +967,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_p_filled_curve_graph_base.html">JKQTPFilledCurveGraphBase</a></li>
-    <li class="footer">Generated on Sun Apr 24 2022 20:10:58 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Wed May 11 2022 20:58:18 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
