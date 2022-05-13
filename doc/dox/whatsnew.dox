@@ -14,8 +14,7 @@ This page lists release notes for the diferent version of JKQTPlotter
 \subsection page_whatsnew_TRUNK_OVERVIEW trunk: Overview
 Changes, compared to  \ref page_whatsnew_V4_0_0 "v4.0.0" include:
 <ul>
-   <li></li>
-</ul>
+  <li>fixed issue <a href="https://github.com/jkriege2/JKQtPlotter/pull/70">#70: Typo in jkqtplotter/CMakeLists.txt</a>, thanks to <a href="https://github.com/tedlinlab">user:tedlinlab</a></li>
 
 \subsection page_whatsnew_TRUNK_DOWNLOAD trunk: Download
 
