@@ -1,7 +1,7 @@
 var NAVTREEINDEX8 =
 {
-"class_j_k_q_t_p_boxplot_vertical_element.html#ad2f97cab9abaa046af4ade44b40f1e38":[9,2,2,1,2,2,2],
 "class_j_k_q_t_p_boxplot_vertical_element.html#ad2f97cab9abaa046af4ade44b40f1e38":[9,2,2,1,8,4,2],
+"class_j_k_q_t_p_boxplot_vertical_element.html#ad2f97cab9abaa046af4ade44b40f1e38":[9,2,2,1,2,2,2],
 "class_j_k_q_t_p_boxplot_vertical_graph.html":[9,2,2,1,8,5],
 "class_j_k_q_t_p_boxplot_vertical_graph.html#a2e929f4426786091ee694d0b43476f08":[9,2,2,1,8,5,3],
 "class_j_k_q_t_p_boxplot_vertical_graph.html#a68e8d266e2a4d18585fe3ee8b3deff29":[9,2,2,1,8,5,1],

@@ -53,10 +53,11 @@ var searchData=
   ['currentdatafileformat_50',['currentDataFileFormat',['../class_j_k_q_t_base_plotter.html#a5250d3a801b99d28888ca3f650cc80ba',1,'JKQTBasePlotter']]],
   ['currentfileformat_51',['currentFileFormat',['../class_j_k_q_t_base_plotter.html#a37dc7e7e8332022cd565c96d5772db77',1,'JKQTBasePlotter']]],
   ['currentmousedragaction_52',['currentMouseDragAction',['../class_j_k_q_t_plotter.html#a0f33ad25e36b707f2fc0a8c5371de5e6',1,'JKQTPlotter']]],
-  ['currentprinter_53',['currentPrinter',['../class_j_k_q_t_base_plotter.html#aaf38ea08e6c8305ef0340ec9bcc7200b',1,'JKQTBasePlotter']]],
-  ['currentsavedirectory_54',['currentSaveDirectory',['../class_j_k_q_t_base_plotter.html#a76194e5197d720def2c0d544b970f563',1,'JKQTBasePlotter']]],
-  ['currenttoken_55',['CurrentToken',['../class_j_k_q_t_p_math_parser.html#adfd64aea92d1684906a20abb0cddc500',1,'JKQTPMathParser']]],
+  ['currentmousemoveaction_53',['currentMouseMoveAction',['../class_j_k_q_t_plotter.html#a52fd134db23ccf74a2efcd4f4ff0bc43',1,'JKQTPlotter']]],
+  ['currentprinter_54',['currentPrinter',['../class_j_k_q_t_base_plotter.html#aaf38ea08e6c8305ef0340ec9bcc7200b',1,'JKQTBasePlotter']]],
+  ['currentsavedirectory_55',['currentSaveDirectory',['../class_j_k_q_t_base_plotter.html#a76194e5197d720def2c0d544b970f563',1,'JKQTBasePlotter']]],
   ['currenttoken_56',['currentToken',['../class_j_k_q_t_math_text.html#a3ee5b2a8e1824e7bf3e99e29b5bad70b',1,'JKQTMathText']]],
-  ['currenttokenid_57',['currentTokenID',['../class_j_k_q_t_math_text.html#a8ac6dea19542de31e24cbe7386dfecfe',1,'JKQTMathText']]],
-  ['currenttokenname_58',['currentTokenName',['../class_j_k_q_t_math_text.html#a4ab53d22db2f30fc3d9e4d8c4fa23015',1,'JKQTMathText']]]
+  ['currenttoken_57',['CurrentToken',['../class_j_k_q_t_p_math_parser.html#adfd64aea92d1684906a20abb0cddc500',1,'JKQTPMathParser']]],
+  ['currenttokenid_58',['currentTokenID',['../class_j_k_q_t_math_text.html#a8ac6dea19542de31e24cbe7386dfecfe',1,'JKQTMathText']]],
+  ['currenttokenname_59',['currentTokenName',['../class_j_k_q_t_math_text.html#a4ab53d22db2f30fc3d9e4d8c4fa23015',1,'JKQTMathText']]]
 ];

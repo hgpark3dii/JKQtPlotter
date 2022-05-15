@@ -29,6 +29,8 @@ var group__jkqtpplottersupprt =
     [ "JKQTPMouseDoubleClickActionsHashMapIterator", "group__jkqtpplottersupprt.html#ga1c12366f4b4a2a7022f8f594f1ff646b", null ],
     [ "JKQTPMouseDragActionsHashMap", "group__jkqtpplottersupprt.html#gad8689aecfc37e84c6eec196fd0d8a2b3", null ],
     [ "JKQTPMouseDragActionsHashMapIterator", "group__jkqtpplottersupprt.html#ga58ce2d1123c5c6804cb42f78723e62eb", null ],
+    [ "JKQTPMouseMoveActionsHashMap", "group__jkqtpplottersupprt.html#gaa58494567a006b1c1cebbd0723f26238", null ],
+    [ "JKQTPMouseMoveActionsHashMapIterator", "group__jkqtpplottersupprt.html#ga0c445f7a26cf9e0526e99b19b857d50e", null ],
     [ "JKQTPMouseWheelActionsHashMap", "group__jkqtpplottersupprt.html#ga7aa3b51b32b5602ee44763590bc22bdd", null ],
     [ "JKQTPMouseWheelActionsHashMapIterator", "group__jkqtpplottersupprt.html#gae7cf0d1bc5943046e72e65a9f2fce4bf", null ],
     [ "JKQTPCADrawMode", "group__jkqtpplottersupprt.html#ga85daee0c57d33b5ebe5536ef8121252c", [
@@ -105,6 +107,9 @@ var group__jkqtpplottersupprt =
       [ "jkqtpmdaToolTipForClosestDataPoint", "group__jkqtpplottersupprt.html#gga5d43b30f0132d08b8793ceb2533e315fa2ccdd1ddb6b5108d21e25de01cecff74", null ],
       [ "jkqtpmdaRuler", "group__jkqtpplottersupprt.html#gga5d43b30f0132d08b8793ceb2533e315facace3a09732594638a7e9e725229bcb7", null ]
     ] ],
+    [ "JKQTPMouseMoveActions", "group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83", [
+      [ "jkqtpmmaToolTipForClosestDataPoint", "group__jkqtpplottersupprt.html#gga4ee195adbf937147b06aedf1217d3f83a0a301d05aa6e97312280cf5d2af2ae42", null ]
+    ] ],
     [ "JKQTPMouseWheelActions", "group__jkqtpplottersupprt.html#ga6617afa61313feda8c490932016ff58f", [
       [ "jkqtpmwaZoomByWheel", "group__jkqtpplottersupprt.html#gga6617afa61313feda8c490932016ff58fa04e6c07a8561e4f848102c4c3b87ca53", null ],
       [ "jkqtpmwaPanByWheel", "group__jkqtpplottersupprt.html#gga6617afa61313feda8c490932016ff58fa41f3b3f9abe99373630d56d5649adc77", null ]
@@ -138,6 +143,7 @@ var group__jkqtpplottersupprt =
     [ "JKQTPLabelTickMode2String", "group__jkqtpplottersupprt.html#ga0d6758ec121e94960225c362a1f24bea", null ],
     [ "JKQTPMouseDoubleClickActions2String", "group__jkqtpplottersupprt.html#gad22059af7b00cf4cf45814c5a58f86f4", null ],
     [ "JKQTPMouseDragActions2String", "group__jkqtpplottersupprt.html#gab3581c43037a1db05f3b54893b31f48d", null ],
+    [ "JKQTPMouseMoveActions2String", "group__jkqtpplottersupprt.html#ga99655ad5a819b4fbef4350854e1919c7", null ],
     [ "JKQTPMouseWheelActions2String", "group__jkqtpplottersupprt.html#ga4dccd3f05759ce4608f8da5c8a70dfb1", null ],
     [ "JKQTPUserActionMarkerType2String", "group__jkqtpplottersupprt.html#ga2e7b0296436e2c23eb36962a4b2ebbf4", null ],
     [ "qHash", "group__jkqtpplottersupprt.html#gaf7f4d2cbc77fa6bb5446221d595c2183", null ],
@@ -153,6 +159,7 @@ var group__jkqtpplottersupprt =
     [ "String2JKQTPLabelTickMode", "group__jkqtpplottersupprt.html#gad57d307c776414c6aaac3527b4fafc72", null ],
     [ "String2JKQTPMouseDoubleClickActions", "group__jkqtpplottersupprt.html#ga3ab1f81e4468bc5d3da99db202571534", null ],
     [ "String2JKQTPMouseDragActions", "group__jkqtpplottersupprt.html#gad5704579a0358e4b994ae0d1b5225982", null ],
+    [ "String2JKQTPMouseMoveActions", "group__jkqtpplottersupprt.html#ga6debbfe141c8d3b2f713abd7e0244353", null ],
     [ "String2JKQTPMouseWheelActions", "group__jkqtpplottersupprt.html#ga4849119ad4ca677432317a2113157b56", null ],
     [ "String2JKQTPUserActionMarkerType", "group__jkqtpplottersupprt.html#ga44cf43b89709fb30a9096a4f8eef1a4e", null ]
 ];

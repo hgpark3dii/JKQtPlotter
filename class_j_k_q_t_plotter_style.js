@@ -8,6 +8,7 @@ var class_j_k_q_t_plotter_style =
     [ "mousePositionTemplate", "class_j_k_q_t_plotter_style.html#abf3e397d73eeaa36db29f64d474236ea", null ],
     [ "registeredMouseDoubleClickActions", "class_j_k_q_t_plotter_style.html#a54c9a8fefe7e029c49a81acfbafa5f10", null ],
     [ "registeredMouseDragActionModes", "class_j_k_q_t_plotter_style.html#ac6a4a447e66ebd38eb02480f1a8acd18", null ],
+    [ "registeredMouseMoveActions", "class_j_k_q_t_plotter_style.html#ad142403a62c7c91e4a991d3fd2584f6c", null ],
     [ "registeredMouseWheelActions", "class_j_k_q_t_plotter_style.html#add03b79f68451798cc593ab331876532", null ],
     [ "toolbarAlwaysOn", "class_j_k_q_t_plotter_style.html#a1faf0c3a36f8ebbdeb64d8c49bea13ef", null ],
     [ "toolbarEnabled", "class_j_k_q_t_plotter_style.html#a94459337b494f8d242250b4d042ad280", null ],

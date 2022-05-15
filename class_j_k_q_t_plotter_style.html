@@ -154,6 +154,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac6a4a447e66ebd38eb02480f1a8acd18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#gad8689aecfc37e84c6eec196fd0d8a2b3">JKQTPMouseDragActionsHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter_style.html#ac6a4a447e66ebd38eb02480f1a8acd18">registeredMouseDragActionModes</a></td></tr>
 <tr class="memdesc:ac6a4a447e66ebd38eb02480f1a8acd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">lists all availble mouse drag action modes  <a href="class_j_k_q_t_plotter_style.html#ac6a4a447e66ebd38eb02480f1a8acd18">More...</a><br /></td></tr>
 <tr class="separator:ac6a4a447e66ebd38eb02480f1a8acd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad142403a62c7c91e4a991d3fd2584f6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#gaa58494567a006b1c1cebbd0723f26238">JKQTPMouseMoveActionsHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter_style.html#ad142403a62c7c91e4a991d3fd2584f6c">registeredMouseMoveActions</a></td></tr>
+<tr class="memdesc:ad142403a62c7c91e4a991d3fd2584f6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the currently executed MouseMoveAction  <a href="class_j_k_q_t_plotter_style.html#ad142403a62c7c91e4a991d3fd2584f6c">More...</a><br /></td></tr>
+<tr class="separator:ad142403a62c7c91e4a991d3fd2584f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add03b79f68451798cc593ab331876532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7aa3b51b32b5602ee44763590bc22bdd">JKQTPMouseWheelActionsHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter_style.html#add03b79f68451798cc593ab331876532">registeredMouseWheelActions</a></td></tr>
 <tr class="memdesc:add03b79f68451798cc593ab331876532"><td class="mdescLeft">&#160;</td><td class="mdescRight">lists all availble mouse wheel action modes  <a href="class_j_k_q_t_plotter_style.html#add03b79f68451798cc593ab331876532">More...</a><br /></td></tr>
 <tr class="separator:add03b79f68451798cc593ab331876532"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,7 +328,7 @@ Public Attributes</h2></td></tr>
 <div class="image">
 <img src="jkqtplotter_mousepositiondisplay.png" alt=""/>
 </div>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter_style.html#abf3e397d73eeaa36db29f64d474236ea" title="this string is used to generate the position output above the graph (%1 is replaced by the x-position...">mousePositionTemplate</a>, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter_style.html#abf3e397d73eeaa36db29f64d474236ea" title="this string is used to generate the position output above the graph (%1 is replaced by the x-position...">mousePositionTemplate</a>, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a> </dd></dl>
 
 </div>
 </div>
@@ -395,6 +398,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>lists all availble mouse drag action modes </p>
+
+</div>
+</div>
+<a id="ad142403a62c7c91e4a991d3fd2584f6c" name="ad142403a62c7c91e4a991d3fd2584f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad142403a62c7c91e4a991d3fd2584f6c">&#9670;&nbsp;</a></span>registeredMouseMoveActions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#gaa58494567a006b1c1cebbd0723f26238">JKQTPMouseMoveActionsHashMap</a> JKQTPlotterStyle::registeredMouseMoveActions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the currently executed MouseMoveAction </p>
 
 </div>
 </div>
@@ -691,7 +710,7 @@ Shown Toolbar</div></div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_plotter_style.html">JKQTPlotterStyle</a></li>
-    <li class="footer">Generated on Sat May 14 2022 21:02:27 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun May 15 2022 12:18:48 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

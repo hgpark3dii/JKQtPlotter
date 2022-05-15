@@ -153,12 +153,12 @@ var NAVTREEINDEX =
 "class_j_k_q_t_p_r_g_b_math_image.html#aad54664b9bd0eee32d1af06bce642a11",
 "class_j_k_q_t_p_violinplot_element_base.html#a40dd22fa52a82635824d2730b4a393cd",
 "class_j_k_q_t_p_x_y_parametrized_scatter_graph.html#a4c7c65155f6d86abba48656667bfa423",
-"class_j_k_q_t_plotter.html#a959f3f0f1e567ed4148332d1f6ef0ecf",
-"group__jkmpultil.html#gga2c40ad3a3d1312b13064d459e16cf4e3a07f06941370ac3637c43d1b02cd707ef",
-"group__jkqtplotter__imagelots__tools.html#ggaae2f1de8b42bb1734243b4201f4aa72daca5adbfcd85d6192977b1002726fe958",
-"group__jkqtptools__drawing.html#gab8ffc607cb2b2e7277612e2bbdb49e6c",
-"group__jkqtptools__math__statistics__adaptors.html#ga8f220c1c5e79e6ca45798a5572515e63",
-"struct_j_k_q_t_math_text_1_1tbr_data.html#ae48739726c0ebd861213b11690673359"
+"class_j_k_q_t_plotter.html#a8c7218c7b5254c2a7d8c053a82601f07",
+"group__jkmp.html#struct_j_k_q_t_p_math_parser_1_1jkmp_function_descriptor",
+"group__jkqtplotter__imagelots__tools.html#ggaae2f1de8b42bb1734243b4201f4aa72daadf18b71c2c041d612799883d3f9ed8c",
+"group__jkqtptools__debugging.html#gaace7e75bf4116e9cbf90d8c487012cde",
+"group__jkqtptools__math__statistics__adaptors.html#ga5c3c190fb942cc14bdccbee7e5c79ba9",
+"struct_j_k_q_t_math_text_1_1_m_tenvironment.html#ad5bd7eb05c6f1d517171807ea41b257c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

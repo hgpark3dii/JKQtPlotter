@@ -395,6 +395,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeebdda10f562801c167188c9a2fa395e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aeebdda10f562801c167188c9a2fa395e">addGridPrintingPlotter</a> (size_t x, size_t y, <a class="el" href="class_j_k_q_t_plotter.html">JKQTPlotter</a> *plotterOther)</td></tr>
 <tr class="memdesc:aeebdda10f562801c167188c9a2fa395e"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new plotter <em>plotterOther</em> for grid printing mode, at location <em>x</em> / <em>y</em>  <a href="class_j_k_q_t_plotter.html#aeebdda10f562801c167188c9a2fa395e">More...</a><br /></td></tr>
 <tr class="separator:aeebdda10f562801c167188c9a2fa395e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6254556adf9b0f8da3bbec2e97d49d07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a6254556adf9b0f8da3bbec2e97d49d07">clearAllMouseMoveActions</a> ()</td></tr>
+<tr class="memdesc:a6254556adf9b0f8da3bbec2e97d49d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all mouse-move actions  <a href="class_j_k_q_t_plotter.html#a6254556adf9b0f8da3bbec2e97d49d07">More...</a><br /></td></tr>
+<tr class="separator:a6254556adf9b0f8da3bbec2e97d49d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72759889dcf65d9ccb88f5ae005fe1f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a72759889dcf65d9ccb88f5ae005fe1f2">clearAllMouseWheelActions</a> ()</td></tr>
 <tr class="memdesc:a72759889dcf65d9ccb88f5ae005fe1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all mouse-wheel actions  <a href="class_j_k_q_t_plotter.html#a72759889dcf65d9ccb88f5ae005fe1f2">More...</a><br /></td></tr>
 <tr class="separator:a72759889dcf65d9ccb88f5ae005fe1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,6 +428,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec50d0820bfff22653cc3730e39b5bd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aec50d0820bfff22653cc3730e39b5bd1">deregisterMouseDragAction</a> (Qt::MouseButton button, Qt::KeyboardModifiers modifier)</td></tr>
 <tr class="memdesc:aec50d0820bfff22653cc3730e39b5bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">deregisteres the mouse drag action to be executed when a mouse drag operation is initialized with the given <em>button</em> and <em>modifier</em>  <a href="class_j_k_q_t_plotter.html#aec50d0820bfff22653cc3730e39b5bd1">More...</a><br /></td></tr>
 <tr class="separator:aec50d0820bfff22653cc3730e39b5bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbb6beff48bed9ada09b992617199a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#abcbb6beff48bed9ada09b992617199a3">deregisterMouseMoveAction</a> (Qt::KeyboardModifiers modifier)</td></tr>
+<tr class="memdesc:abcbb6beff48bed9ada09b992617199a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all mouse-move actions registered for a given <em>modifier</em>  <a href="class_j_k_q_t_plotter.html#abcbb6beff48bed9ada09b992617199a3">More...</a><br /></td></tr>
+<tr class="separator:abcbb6beff48bed9ada09b992617199a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fdf69db18bbffbb1d4fdac53359a451"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a5fdf69db18bbffbb1d4fdac53359a451">deregisterMouseWheelAction</a> (Qt::KeyboardModifiers modifier)</td></tr>
 <tr class="memdesc:a5fdf69db18bbffbb1d4fdac53359a451"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all mouse-wheel actions registered for a given <em>modifier</em>  <a href="class_j_k_q_t_plotter.html#a5fdf69db18bbffbb1d4fdac53359a451">More...</a><br /></td></tr>
 <tr class="separator:a5fdf69db18bbffbb1d4fdac53359a451"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -443,23 +449,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5f8f5ad103baa73ed52625fc30aab5b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#af5f8f5ad103baa73ed52625fc30aab5b">getAbsoluteYMin</a> () const</td></tr>
 <tr class="memdesc:af5f8f5ad103baa73ed52625fc30aab5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the absolute y-axis min  <a href="class_j_k_q_t_plotter.html#af5f8f5ad103baa73ed52625fc30aab5b">More...</a><br /></td></tr>
 <tr class="separator:af5f8f5ad103baa73ed52625fc30aab5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91643d5ae645720379b8d29fbb8cbaf"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aa91643d5ae645720379b8d29fbb8cbaf">getActMouseLeftAsDefault</a> () const</td></tr>
-<tr class="memdesc:aa91643d5ae645720379b8d29fbb8cbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the default action, set in plotterStyle!  <a href="class_j_k_q_t_plotter.html#aa91643d5ae645720379b8d29fbb8cbaf">More...</a><br /></td></tr>
-<tr class="separator:aa91643d5ae645720379b8d29fbb8cbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a832ceeba4725cba260ea4a0ecaae5e9c"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a832ceeba4725cba260ea4a0ecaae5e9c">getActMouseLeftAsPanView</a> () const</td></tr>
-<tr class="memdesc:a832ceeba4725cba260ea4a0ecaae5e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the pan view tool (override!) <br  />
-  <a href="class_j_k_q_t_plotter.html#a832ceeba4725cba260ea4a0ecaae5e9c">More...</a><br /></td></tr>
-<tr class="separator:a832ceeba4725cba260ea4a0ecaae5e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa277b32b0df1146f918da31771bc3d64"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aa277b32b0df1146f918da31771bc3d64">getActMouseLeftAsRuler</a> () const</td></tr>
-<tr class="memdesc:aa277b32b0df1146f918da31771bc3d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the ruler tool (override!)  <a href="class_j_k_q_t_plotter.html#aa277b32b0df1146f918da31771bc3d64">More...</a><br /></td></tr>
-<tr class="separator:aa277b32b0df1146f918da31771bc3d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa504d10b700b5cd4e153bc36bb85fc56"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aa504d10b700b5cd4e153bc36bb85fc56">getActMouseLeftAsToolTip</a> () const</td></tr>
-<tr class="memdesc:aa504d10b700b5cd4e153bc36bb85fc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool (override!) <br  />
-  <a href="class_j_k_q_t_plotter.html#aa504d10b700b5cd4e153bc36bb85fc56">More...</a><br /></td></tr>
-<tr class="separator:aa504d10b700b5cd4e153bc36bb85fc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80958752e136e910e0cc6edefde54f7c"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a80958752e136e910e0cc6edefde54f7c">getActMouseLeftAsZoomRect</a> () const</td></tr>
-<tr class="memdesc:a80958752e136e910e0cc6edefde54f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the zoom rectangle tool (override!)  <a href="class_j_k_q_t_plotter.html#a80958752e136e910e0cc6edefde54f7c">More...</a><br /></td></tr>
-<tr class="separator:a80958752e136e910e0cc6edefde54f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9266cf49aeb42114f92465e24e59ca8a"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a9266cf49aeb42114f92465e24e59ca8a">getActMouseLeftAsDefault</a> ()</td></tr>
+<tr class="memdesc:a9266cf49aeb42114f92465e24e59ca8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the default action, set in plotterStyle!  <a href="class_j_k_q_t_plotter.html#a9266cf49aeb42114f92465e24e59ca8a">More...</a><br /></td></tr>
+<tr class="separator:a9266cf49aeb42114f92465e24e59ca8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c0c1b00d172466716d8aee7f063b95"><td class="memItemLeft" align="right" valign="top">const QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#af0c0c1b00d172466716d8aee7f063b95">getActMouseLeftAsDefault</a> () const</td></tr>
+<tr class="memdesc:af0c0c1b00d172466716d8aee7f063b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the default action, set in plotterStyle!  <a href="class_j_k_q_t_plotter.html#af0c0c1b00d172466716d8aee7f063b95">More...</a><br /></td></tr>
+<tr class="separator:af0c0c1b00d172466716d8aee7f063b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d2b86c7610970c42aadee3eafa4f75"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a21d2b86c7610970c42aadee3eafa4f75">getActMouseLeftAsPanView</a> ()</td></tr>
+<tr class="memdesc:a21d2b86c7610970c42aadee3eafa4f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the pan view tool (override!) <br  />
+  <a href="class_j_k_q_t_plotter.html#a21d2b86c7610970c42aadee3eafa4f75">More...</a><br /></td></tr>
+<tr class="separator:a21d2b86c7610970c42aadee3eafa4f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3546d24e9ec6d47c91918691d00e703"><td class="memItemLeft" align="right" valign="top">const QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ab3546d24e9ec6d47c91918691d00e703">getActMouseLeftAsPanView</a> () const</td></tr>
+<tr class="memdesc:ab3546d24e9ec6d47c91918691d00e703"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the pan view tool (override!) <br  />
+  <a href="class_j_k_q_t_plotter.html#ab3546d24e9ec6d47c91918691d00e703">More...</a><br /></td></tr>
+<tr class="separator:ab3546d24e9ec6d47c91918691d00e703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91880a61c9cd4cd3fb5b5cc4bdc459dc"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a91880a61c9cd4cd3fb5b5cc4bdc459dc">getActMouseLeftAsRuler</a> ()</td></tr>
+<tr class="memdesc:a91880a61c9cd4cd3fb5b5cc4bdc459dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the ruler tool (override!)  <a href="class_j_k_q_t_plotter.html#a91880a61c9cd4cd3fb5b5cc4bdc459dc">More...</a><br /></td></tr>
+<tr class="separator:a91880a61c9cd4cd3fb5b5cc4bdc459dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d1d062d1cd650086d1fdd94a593156"><td class="memItemLeft" align="right" valign="top">const QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aa3d1d062d1cd650086d1fdd94a593156">getActMouseLeftAsRuler</a> () const</td></tr>
+<tr class="memdesc:aa3d1d062d1cd650086d1fdd94a593156"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the ruler tool (override!)  <a href="class_j_k_q_t_plotter.html#aa3d1d062d1cd650086d1fdd94a593156">More...</a><br /></td></tr>
+<tr class="separator:aa3d1d062d1cd650086d1fdd94a593156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac495d0c0d9860379e5f507cf31a33d"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a4ac495d0c0d9860379e5f507cf31a33d">getActMouseLeftAsZoomRect</a> ()</td></tr>
+<tr class="memdesc:a4ac495d0c0d9860379e5f507cf31a33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the zoom rectangle tool (override!)  <a href="class_j_k_q_t_plotter.html#a4ac495d0c0d9860379e5f507cf31a33d">More...</a><br /></td></tr>
+<tr class="separator:a4ac495d0c0d9860379e5f507cf31a33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4858ff3df5c15ee4a7bd8687737138"><td class="memItemLeft" align="right" valign="top">const QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a1c4858ff3df5c15ee4a7bd8687737138">getActMouseLeftAsZoomRect</a> () const</td></tr>
+<tr class="memdesc:a1c4858ff3df5c15ee4a7bd8687737138"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the zoom rectangle tool (override!)  <a href="class_j_k_q_t_plotter.html#a1c4858ff3df5c15ee4a7bd8687737138">More...</a><br /></td></tr>
+<tr class="separator:a1c4858ff3df5c15ee4a7bd8687737138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb8d4a70d10cfeabff0a393db2b75cf"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a7cb8d4a70d10cfeabff0a393db2b75cf">getActMouseMoveToolTip</a> ()</td></tr>
+<tr class="memdesc:a7cb8d4a70d10cfeabff0a393db2b75cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool (override!) <br  />
+  <a href="class_j_k_q_t_plotter.html#a7cb8d4a70d10cfeabff0a393db2b75cf">More...</a><br /></td></tr>
+<tr class="separator:a7cb8d4a70d10cfeabff0a393db2b75cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4fbb64c1195b7c1a577cb5f5e7bc011"><td class="memItemLeft" align="right" valign="top">const QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ab4fbb64c1195b7c1a577cb5f5e7bc011">getActMouseMoveToolTip</a> () const</td></tr>
+<tr class="memdesc:ab4fbb64c1195b7c1a577cb5f5e7bc011"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool (override!) <br  />
+  <a href="class_j_k_q_t_plotter.html#ab4fbb64c1195b7c1a577cb5f5e7bc011">More...</a><br /></td></tr>
+<tr class="separator:ab4fbb64c1195b7c1a577cb5f5e7bc011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffd28bfa62b225074ad6ae0a95b6710"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_j_k_q_t_base_plotter.html">JKQTBasePlotter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aeffd28bfa62b225074ad6ae0a95b6710">getConstplotter</a> () const</td></tr>
 <tr class="memdesc:aeffd28bfa62b225074ad6ae0a95b6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the class internally used for plotting  <a href="class_j_k_q_t_plotter.html#aeffd28bfa62b225074ad6ae0a95b6710">More...</a><br /></td></tr>
 <tr class="separator:aeffd28bfa62b225074ad6ae0a95b6710"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,6 +631,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac871e1b8092a125093d13ee5a0438910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ac871e1b8092a125093d13ee5a0438910">registerMouseDragAction</a> (Qt::MouseButton button, Qt::KeyboardModifiers modifier, <a class="el" href="group__jkqtpplottersupprt.html#ga5d43b30f0132d08b8793ceb2533e315f">JKQTPMouseDragActions</a> action)</td></tr>
 <tr class="memdesc:ac871e1b8092a125093d13ee5a0438910"><td class="mdescLeft">&#160;</td><td class="mdescRight">registeres a certain mouse drag action <em>action</em> to be executed when a mouse drag operation is initialized with the given <em>button</em> and <em>modifier</em>  <a href="class_j_k_q_t_plotter.html#ac871e1b8092a125093d13ee5a0438910">More...</a><br /></td></tr>
 <tr class="separator:ac871e1b8092a125093d13ee5a0438910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fd67aad67885a9a8df59071e3613bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a73fd67aad67885a9a8df59071e3613bb">registerMouseMoveAction</a> (Qt::KeyboardModifiers modifier, <a class="el" href="group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83">JKQTPMouseMoveActions</a> action)</td></tr>
+<tr class="memdesc:a73fd67aad67885a9a8df59071e3613bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies the action to perform on a mouse move event when a given modifier is pressed  <a href="class_j_k_q_t_plotter.html#a73fd67aad67885a9a8df59071e3613bb">More...</a><br /></td></tr>
+<tr class="separator:a73fd67aad67885a9a8df59071e3613bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3bc6fa4148a5b5bc8b88a8e35a144b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6">registerMouseWheelAction</a> (Qt::KeyboardModifiers modifier, <a class="el" href="group__jkqtpplottersupprt.html#ga6617afa61313feda8c490932016ff58f">JKQTPMouseWheelActions</a> action)</td></tr>
 <tr class="memdesc:af3bc6fa4148a5b5bc8b88a8e35a144b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies the action to perform on a mouse wheel event when a given modifier is pressed  <a href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6">More...</a><br /></td></tr>
 <tr class="separator:af3bc6fa4148a5b5bc8b88a8e35a144b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -700,12 +726,15 @@ Protected Slots</h2></td></tr>
 <tr class="memitem:a78876cd10a041173dd02fed18c79884c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c">setMouseLeftActionAsRuler</a> ()</td></tr>
 <tr class="memdesc:a78876cd10a041173dd02fed18c79884c"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the ruler tool  <a href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c">More...</a><br /></td></tr>
 <tr class="separator:a78876cd10a041173dd02fed18c79884c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007b3ab0d1950da59c48d0d51979d5b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6">setMouseLeftActionAsToolTip</a> ()</td></tr>
-<tr class="memdesc:a007b3ab0d1950da59c48d0d51979d5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool  <a href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6">More...</a><br /></td></tr>
-<tr class="separator:a007b3ab0d1950da59c48d0d51979d5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9e785ff08283119b6c9730593b16691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#af9e785ff08283119b6c9730593b16691">setMouseLeftActionAsZoomRect</a> ()</td></tr>
 <tr class="memdesc:af9e785ff08283119b6c9730593b16691"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the zoom rectangle tool  <a href="class_j_k_q_t_plotter.html#af9e785ff08283119b6c9730593b16691">More...</a><br /></td></tr>
 <tr class="separator:af9e785ff08283119b6c9730593b16691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58384e565a003a4a598b3e81a3729e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ac58384e565a003a4a598b3e81a3729e8">setMouseLeftDragActionAsToolTip</a> ()</td></tr>
+<tr class="memdesc:ac58384e565a003a4a598b3e81a3729e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool, when dragging the mouse with the left button pressed  <a href="class_j_k_q_t_plotter.html#ac58384e565a003a4a598b3e81a3729e8">More...</a><br /></td></tr>
+<tr class="separator:ac58384e565a003a4a598b3e81a3729e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417967edb35b94acc7b75732cb40b71c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a417967edb35b94acc7b75732cb40b71c">setMouseMoveActionAsToolTip</a> (bool enabled)</td></tr>
+<tr class="memdesc:a417967edb35b94acc7b75732cb40b71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that (de)activates the tooltip tool, when moving the mouse without any button pressed  <a href="class_j_k_q_t_plotter.html#a417967edb35b94acc7b75732cb40b71c">More...</a><br /></td></tr>
+<tr class="separator:a417967edb35b94acc7b75732cb40b71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -718,6 +747,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a76523892bfb2cfc45bda5204feaa24fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga58ce2d1123c5c6804cb42f78723e62eb">JKQTPMouseDragActionsHashMapIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a76523892bfb2cfc45bda5204feaa24fe">findMatchingMouseDragAction</a> (Qt::MouseButton button, Qt::KeyboardModifiers modifiers, bool *found=nullptr) const</td></tr>
 <tr class="memdesc:a76523892bfb2cfc45bda5204feaa24fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">searches JKQTPlotterStyle::registeredMouseActionModes for a matching action, returns in <em>found</em> whether an action was found  <a href="class_j_k_q_t_plotter.html#a76523892bfb2cfc45bda5204feaa24fe">More...</a><br /></td></tr>
 <tr class="separator:a76523892bfb2cfc45bda5204feaa24fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8afde741aece182c23870cbe154485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga0c445f7a26cf9e0526e99b19b857d50e">JKQTPMouseMoveActionsHashMapIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a6b8afde741aece182c23870cbe154485">findMatchingMouseMoveAction</a> (Qt::KeyboardModifiers modifiers, bool *found=nullptr) const</td></tr>
+<tr class="memdesc:a6b8afde741aece182c23870cbe154485"><td class="mdescLeft">&#160;</td><td class="mdescRight">searches <a class="el" href="class_j_k_q_t_plotter_style.html#ad142403a62c7c91e4a991d3fd2584f6c" title="the currently executed MouseMoveAction">JKQTPlotterStyle::registeredMouseMoveActions</a> for a matching action  <a href="class_j_k_q_t_plotter.html#a6b8afde741aece182c23870cbe154485">More...</a><br /></td></tr>
+<tr class="separator:a6b8afde741aece182c23870cbe154485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f70ecdea29c479ee0184a3ff6711d0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#gae7cf0d1bc5943046e72e65a9f2fce4bf">JKQTPMouseWheelActionsHashMapIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a3f70ecdea29c479ee0184a3ff6711d0b">findMatchingMouseWheelAction</a> (Qt::KeyboardModifiers modifiers, bool *found=nullptr) const</td></tr>
 <tr class="memdesc:a3f70ecdea29c479ee0184a3ff6711d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">searches <a class="el" href="class_j_k_q_t_plotter_style.html#add03b79f68451798cc593ab331876532" title="lists all availble mouse wheel action modes">JKQTPlotterStyle::registeredMouseWheelActions</a> for a matching action  <a href="class_j_k_q_t_plotter.html#a3f70ecdea29c479ee0184a3ff6711d0b">More...</a><br /></td></tr>
 <tr class="separator:a3f70ecdea29c479ee0184a3ff6711d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,13 +829,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad43d40d9e57f09bc84963a6d6dbdf033"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ad43d40d9e57f09bc84963a6d6dbdf033">actMouseLeftAsRuler</a></td></tr>
 <tr class="memdesc:ad43d40d9e57f09bc84963a6d6dbdf033"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the ruler tool (override!)  <a href="class_j_k_q_t_plotter.html#ad43d40d9e57f09bc84963a6d6dbdf033">More...</a><br /></td></tr>
 <tr class="separator:ad43d40d9e57f09bc84963a6d6dbdf033"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af001fd8879e72b98d2b301dbec1967bd"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#af001fd8879e72b98d2b301dbec1967bd">actMouseLeftAsToolTip</a></td></tr>
-<tr class="memdesc:af001fd8879e72b98d2b301dbec1967bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool (override!) <br  />
-  <a href="class_j_k_q_t_plotter.html#af001fd8879e72b98d2b301dbec1967bd">More...</a><br /></td></tr>
-<tr class="separator:af001fd8879e72b98d2b301dbec1967bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d7304f0e36fb4d7bfa2fb99c15df47"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#aa8d7304f0e36fb4d7bfa2fb99c15df47">actMouseLeftAsZoomRect</a></td></tr>
 <tr class="memdesc:aa8d7304f0e36fb4d7bfa2fb99c15df47"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the zoom rectangle tool (override!)  <a href="class_j_k_q_t_plotter.html#aa8d7304f0e36fb4d7bfa2fb99c15df47">More...</a><br /></td></tr>
 <tr class="separator:aa8d7304f0e36fb4d7bfa2fb99c15df47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1322bdec6a678c92a8c98f0c55acf47"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ac1322bdec6a678c92a8c98f0c55acf47">actMouseMoveToolTip</a></td></tr>
+<tr class="memdesc:ac1322bdec6a678c92a8c98f0c55acf47"><td class="mdescLeft">&#160;</td><td class="mdescRight">action that activates the tooltip tool (override!) <br  />
+  <a href="class_j_k_q_t_plotter.html#ac1322bdec6a678c92a8c98f0c55acf47">More...</a><br /></td></tr>
+<tr class="separator:ac1322bdec6a678c92a8c98f0c55acf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a469af1d407505c7d12aed87b6a25ff60"><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a469af1d407505c7d12aed87b6a25ff60">contextMenu</a></td></tr>
 <tr class="memdesc:a469af1d407505c7d12aed87b6a25ff60"><td class="mdescLeft">&#160;</td><td class="mdescRight">the context menu object used by this <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a>  <a href="class_j_k_q_t_plotter.html#a469af1d407505c7d12aed87b6a25ff60">More...</a><br /></td></tr>
 <tr class="separator:a469af1d407505c7d12aed87b6a25ff60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -816,6 +848,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a0f33ad25e36b707f2fc0a8c5371de5e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_j_k_q_t_plotter_1_1_mouse_drag_action.html">MouseDragAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a0f33ad25e36b707f2fc0a8c5371de5e6">currentMouseDragAction</a></td></tr>
 <tr class="memdesc:a0f33ad25e36b707f2fc0a8c5371de5e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">the currently executed <a class="el" href="struct_j_k_q_t_plotter_1_1_mouse_drag_action.html" title="ties a MouseActionMode to a mouse-button and a keyboard-modifier">MouseDragAction</a>  <a href="class_j_k_q_t_plotter.html#a0f33ad25e36b707f2fc0a8c5371de5e6">More...</a><br /></td></tr>
 <tr class="separator:a0f33ad25e36b707f2fc0a8c5371de5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fd134db23ccf74a2efcd4f4ff0bc43"><td class="memItemLeft" align="right" valign="top">QSet&lt; <a class="el" href="group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83">JKQTPMouseMoveActions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#a52fd134db23ccf74a2efcd4f4ff0bc43">currentMouseMoveAction</a></td></tr>
+<tr class="memdesc:a52fd134db23ccf74a2efcd4f4ff0bc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">the currently executed MouseMoveActions  <a href="class_j_k_q_t_plotter.html#a52fd134db23ccf74a2efcd4f4ff0bc43">More...</a><br /></td></tr>
+<tr class="separator:a52fd134db23ccf74a2efcd4f4ff0bc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae24b4392cfd4861732f9a708908a6a0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_plotter.html#ae24b4392cfd4861732f9a708908a6a0c">doDrawing</a></td></tr>
 <tr class="memdesc:ae24b4392cfd4861732f9a708908a6a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicates whether the plot is updated automatically at the moment  <a href="class_j_k_q_t_plotter.html#ae24b4392cfd4861732f9a708908a6a0c">More...</a><br /></td></tr>
 <tr class="separator:ae24b4392cfd4861732f9a708908a6a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -939,12 +974,12 @@ Basic Usage of JKQTPlotter</h1>
 <div class="ttc" id="aclass_j_k_q_t_p_x_y_graph_html_a462e07fa2a17157b7346d2d993ff2721"><div class="ttname"><a href="class_j_k_q_t_p_x_y_graph.html#a462e07fa2a17157b7346d2d993ff2721">JKQTPXYGraph::setYColumn</a></div><div class="ttdeci">void setYColumn(int __value)</div><div class="ttdoc">the column that contains the y-component of the datapoints</div></div>
 <div class="ttc" id="aclass_j_k_q_t_p_x_y_graph_html_a48809679e6f1ba587132608b8dfb903d"><div class="ttname"><a href="class_j_k_q_t_p_x_y_graph.html#a48809679e6f1ba587132608b8dfb903d">JKQTPXYGraph::setXColumn</a></div><div class="ttdeci">void setXColumn(int __value)</div><div class="ttdoc">the column that contains the x-component of the datapoints</div></div>
 <div class="ttc" id="aclass_j_k_q_t_p_x_y_line_graph_html"><div class="ttname"><a href="class_j_k_q_t_p_x_y_line_graph.html">JKQTPXYLineGraph</a></div><div class="ttdoc">This implements xy line plots. This also alows to draw symbols at the data points.</div><div class="ttdef"><b>Definition:</b> jkqtpscatter.h:56</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html"><div class="ttname"><a href="class_j_k_q_t_plotter.html">JKQTPlotter</a></div><div class="ttdoc">plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:433</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_a0ed800587c1f3f5ab36dd5422c101e28"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a0ed800587c1f3f5ab36dd5422c101e28">JKQTPlotter::zoomToFit</a></div><div class="ttdeci">void zoomToFit(bool zoomX=true, bool zoomY=true, bool includeX0=false, bool includeY0=false, double scaleX=1.05, double scaleY=1.05)</div><div class="ttdoc">this method zooms the graph so that all plotted datapoints are visible.</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1029</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_a63a54c5342d664c35ffb3d532ba26b99"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a63a54c5342d664c35ffb3d532ba26b99">JKQTPlotter::addGraph</a></div><div class="ttdeci">size_t addGraph(JKQTPPlotElement *gr)</div><div class="ttdoc">add a new graph, returns it's position in the graphs list</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:788</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html"><div class="ttname"><a href="class_j_k_q_t_plotter.html">JKQTPlotter</a></div><div class="ttdoc">plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:441</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html_a0ed800587c1f3f5ab36dd5422c101e28"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a0ed800587c1f3f5ab36dd5422c101e28">JKQTPlotter::zoomToFit</a></div><div class="ttdeci">void zoomToFit(bool zoomX=true, bool zoomY=true, bool includeX0=false, bool includeY0=false, double scaleX=1.05, double scaleY=1.05)</div><div class="ttdoc">this method zooms the graph so that all plotted datapoints are visible.</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1054</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html_a63a54c5342d664c35ffb3d532ba26b99"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a63a54c5342d664c35ffb3d532ba26b99">JKQTPlotter::addGraph</a></div><div class="ttdeci">size_t addGraph(JKQTPPlotElement *gr)</div><div class="ttdoc">add a new graph, returns it's position in the graphs list</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:803</div></div>
 <div class="ttc" id="aclass_j_k_q_t_plotter_html_a8e0c883816f540a177a6e85999efb5d6"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a8e0c883816f540a177a6e85999efb5d6">JKQTPlotter::JKQTPlotter</a></div><div class="ttdeci">JKQTPlotter(bool datastore_internal, QWidget *parent=nullptr, JKQTPDatastore *datast=nullptr)</div><div class="ttdoc">class constructor</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_ab29362d74e9e1a24c4add51815f0ec61"><div class="ttname"><a href="class_j_k_q_t_plotter.html#ab29362d74e9e1a24c4add51815f0ec61">JKQTPlotter::setXY</a></div><div class="ttdeci">void setXY(double xminn, double xmaxx, double yminn, double ymaxx)</div><div class="ttdoc">sets the x- and y-range of the plot (minimum and maximum values on the x-/y-axis)</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1226</div></div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_ae31c276a93cbf7aa8f9c153327aa5b74"><div class="ttname"><a href="class_j_k_q_t_plotter.html#ae31c276a93cbf7aa8f9c153327aa5b74">JKQTPlotter::getDatastore</a></div><div class="ttdeci">JKQTPDatastore * getDatastore()</div><div class="ttdoc">returns a pointer to the datastore used by this object</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:652</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html_ab29362d74e9e1a24c4add51815f0ec61"><div class="ttname"><a href="class_j_k_q_t_plotter.html#ab29362d74e9e1a24c4add51815f0ec61">JKQTPlotter::setXY</a></div><div class="ttdeci">void setXY(double xminn, double xmaxx, double yminn, double ymaxx)</div><div class="ttdoc">sets the x- and y-range of the plot (minimum and maximum values on the x-/y-axis)</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1251</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html_ae31c276a93cbf7aa8f9c153327aa5b74"><div class="ttname"><a href="class_j_k_q_t_plotter.html#ae31c276a93cbf7aa8f9c153327aa5b74">JKQTPlotter::getDatastore</a></div><div class="ttdeci">JKQTPDatastore * getDatastore()</div><div class="ttdoc">returns a pointer to the datastore used by this object</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:660</div></div>
 </div><!-- fragment --><p >The result should look something like this:</p>
 <div class="image">
 <img src="jkqtplotter_simpletest1.png" alt=""/>
@@ -1060,7 +1095,7 @@ switch the visibility of the different graphs in the plot </li>
 <div class="line">                                                                     QMessageBox::Ok); });</div>
 <div class="line">    labMouseAction-&gt;setText(QString(<span class="stringliteral">&quot;contextMenuOpened(x=%1, y=%2)&quot;</span>).arg(x).arg(y));</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_j_k_q_t_plotter_html_a469af1d407505c7d12aed87b6a25ff60"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a469af1d407505c7d12aed87b6a25ff60">JKQTPlotter::contextMenu</a></div><div class="ttdeci">QMenu * contextMenu</div><div class="ttdoc">the context menu object used by this JKQTPlotter</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1614</div></div>
+<div class="ttc" id="aclass_j_k_q_t_plotter_html_a469af1d407505c7d12aed87b6a25ff60"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a469af1d407505c7d12aed87b6a25ff60">JKQTPlotter::contextMenu</a></div><div class="ttdeci">QMenu * contextMenu</div><div class="ttdoc">the context menu object used by this JKQTPlotter</div><div class="ttdef"><b>Definition:</b> jkqtplotter.h:1647</div></div>
 <div class="ttc" id="aclass_j_k_q_t_plotter_html_a6a6347e94b3e03229692f947105b049b"><div class="ttname"><a href="class_j_k_q_t_plotter.html#a6a6347e94b3e03229692f947105b049b">JKQTPlotter::contextMenuOpened</a></div><div class="ttdeci">void contextMenuOpened(double x, double y, QMenu *contextMenu)</div><div class="ttdoc">emitted whenever a context menu is opened. You can modify the menu via the parameter contextMenu!</div></div>
 </div><!-- fragment --></li>
 </ul>
@@ -1116,7 +1151,7 @@ Mouse-Interaction in JKQTPlotter</h2>
 <li><a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEDRAG">Actions When Dragging the Mouse</a></li>
 <li><a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSECLICK">Actions After (Double-)Clicks on the Mouse Buttons</a></li>
 <li><a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEWHEEL">Actions When a Mouse Wheel Event Occurs</a></li>
-<li><a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a></li>
+<li><a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a></li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>Zooming and Paning interactions apply to both axes when they are performed with the mouse inside the plot. They are limited to one of the two axes, when the mouse hovers over that axis (e.g. when you zoom by mouse-wheel while the mouse pointer is below the plot, over the x-axis, only the x-axis is affected by the operation).</dd></dl>
 <h3><a class="anchor" id="JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEDRAG"></a>
@@ -1183,7 +1218,7 @@ Actions After (Double-)Clicks on the Mouse Buttons</h3>
 </div>
 <h3><a class="anchor" id="JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEWHEEL"></a>
 Actions When a Mouse Wheel Event Occurs</h3>
-<p >The actions to be performed when the mouse hweel is operated are specified in JKQTPMouseWheelActions. You can bind one of these actions to the mouse-wheel (under the condition that a specified Qt::KeyboardModifiers is pressed) by using these functions:</p><ul>
+<p >The actions to be performed when the mouse wheel is operated are specified in JKQTPMouseWheelActions. You can bind one of these actions to the mouse-wheel (under the condition that a specified Qt::KeyboardModifiers is pressed) by using these functions:</p><ul>
 <li><a class="el" href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6" title="specifies the action to perform on a mouse wheel event when a given modifier is pressed">registerMouseWheelAction()</a> tells <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> to perform a certain action (selected from JKQTPMouseWheelActions) when a specified mouse button is pushed while a specified (or no) keyborad modifiers (e.g. CTRL,ALT,SHIFT...) is pressed. By default <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> calls this in its constructors: <div class="fragment"><div class="line"><a class="code hl_function" href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6">registerMouseWheelAction</a>(Qt::NoModifier, <a class="code hl_enumvalue" href="group__jkqtpplottersupprt.html#gga6617afa61313feda8c490932016ff58fa04e6c07a8561e4f848102c4c3b87ca53">JKQTPMouseWheelActions::jkqtpmwaZoomByWheel</a>);</div>
 <div class="ttc" id="aclass_j_k_q_t_plotter_html_af3bc6fa4148a5b5bc8b88a8e35a144b6"><div class="ttname"><a href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6">JKQTPlotter::registerMouseWheelAction</a></div><div class="ttdeci">void registerMouseWheelAction(Qt::KeyboardModifiers modifier, JKQTPMouseWheelActions action)</div><div class="ttdoc">specifies the action to perform on a mouse wheel event when a given modifier is pressed</div></div>
 <div class="ttc" id="agroup__jkqtpplottersupprt_html_gga6617afa61313feda8c490932016ff58fa04e6c07a8561e4f848102c4c3b87ca53"><div class="ttname"><a href="group__jkqtpplottersupprt.html#gga6617afa61313feda8c490932016ff58fa04e6c07a8561e4f848102c4c3b87ca53">jkqtpmwaZoomByWheel</a></div><div class="ttdeci">@ jkqtpmwaZoomByWheel</div><div class="ttdoc">use the mouse-wheel for zooming</div><div class="ttdef"><b>Definition:</b> jkqtptools.h:158</div></div>
@@ -1193,12 +1228,17 @@ Actions When a Mouse Wheel Event Occurs</h3>
 </ul>
 <p >In addition the signal void <a class="el" href="class_j_k_q_t_plotter.html#a03df927374d96fcff7d9396cc51f6107" title="emitted when a single-click event from the mouse occurs inside the plot">plotMouseWheelOperated()</a> is emitted whenever a mouse-wheel event occurs.</p>
 <h3><a class="anchor" id="JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE"></a>
-Signaling When Mouse Moves</h3>
+Mouse Move Signaling and Actions</h3>
 <p >In addition the signal <a class="el" href="class_j_k_q_t_plotter.html#af7058cea1abcc60fe41bd8b769019f5b" title="emitted whenever the mouse moves">plotMouseMove()</a> is called whenever the mouse moves over the plot. Additional signals may be emitted, depending on the currently active JKQTPlotter::MouseActionMode.</p>
 <p >Also the current mouse position is shown above the graph by default (can be switched on or off using <a class="el" href="class_j_k_q_t_plotter.html#a6fad14bc73e1281ec00a6987c73c9753" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">setMousePositionShown()</a> ).</p>
 <div class="image">
 <img src="mousepositiondisplay.gif" alt=""/>
 </div>
+<p >The actions to be performed when the mouse moves without a mouse-button pressed are specified in JKQTPMouseMoveActions. You can bind one of these actions to the mouse (under the condition that a specified Qt::KeyboardModifiers is pressed) by using these functions:</p><ul>
+<li><a class="el" href="class_j_k_q_t_plotter.html#a73fd67aad67885a9a8df59071e3613bb" title="specifies the action to perform on a mouse move event when a given modifier is pressed">registerMouseMoveAction()</a> tells <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> to perform a certain action (selected from JKQTPMouseMoveActions) when a specified mouse button is pushed while a specified (or no) keyborad modifiers (e.g. CTRL,ALT,SHIFT...) is pressed.</li>
+<li><a class="el" href="class_j_k_q_t_plotter.html#abcbb6beff48bed9ada09b992617199a3" title="deletes all mouse-move actions registered for a given modifier">deregisterMouseMoveAction()</a> deletes a previously defined user-interaction</li>
+<li><a class="el" href="class_j_k_q_t_plotter.html#a6254556adf9b0f8da3bbec2e97d49d07" title="deletes all mouse-move actions">clearAllMouseMoveActions()</a> deletes all previously specified user-actions</li>
+</ul>
 <h3><a class="anchor" id="JKQTPLOTTER_USERMOUSEINTERACTION_FASTRESIZING"></a>
 Fast Resizing of a Plot Widget</h3>
 <p >When the user resized the widget, the graph would in principle have to be readrawn for every intermediate step. As this is very timeconsuming, <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a> uses a different approach: Actual Redrawing is delayed a few 100ms and this delay is reset whenever the widget size changes. Only after the last delay expires, the plot is redrawn. In between an image of the last state of the plot is simple stretched/compressed to fill the new/current widget size. In sum this looks like this:</p>
@@ -1522,6 +1562,26 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 </div><div class="memdoc">
 
 <p>emitted before the plot scaling has been recalculated </p>
+
+</div>
+</div>
+<a id="a6254556adf9b0f8da3bbec2e97d49d07" name="a6254556adf9b0f8da3bbec2e97d49d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6254556adf9b0f8da3bbec2e97d49d07">&#9670;&nbsp;</a></span>clearAllMouseMoveActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPlotter::clearAllMouseMoveActions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes all mouse-move actions </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a73fd67aad67885a9a8df59071e3613bb" title="specifies the action to perform on a mouse move event when a given modifier is pressed">registerMouseMoveAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#abcbb6beff48bed9ada09b992617199a3" title="deletes all mouse-move actions registered for a given modifier">deregisterMouseMoveAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION">Mouse-Interaction in JKQTPlotter</a> </dd></dl>
 
 </div>
 </div>
@@ -1958,6 +2018,27 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
+<a id="abcbb6beff48bed9ada09b992617199a3" name="abcbb6beff48bed9ada09b992617199a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbb6beff48bed9ada09b992617199a3">&#9670;&nbsp;</a></span>deregisterMouseMoveAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPlotter::deregisterMouseMoveAction </td>
+          <td>(</td>
+          <td class="paramtype">Qt::KeyboardModifiers&#160;</td>
+          <td class="paramname"><em>modifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes all mouse-move actions registered for a given <em>modifier</em> </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a73fd67aad67885a9a8df59071e3613bb" title="specifies the action to perform on a mouse move event when a given modifier is pressed">registerMouseMoveAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a6254556adf9b0f8da3bbec2e97d49d07" title="deletes all mouse-move actions">clearAllMouseMoveActions()</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION">Mouse-Interaction in JKQTPlotter</a> </dd></dl>
+
+</div>
+</div>
 <a id="a5fdf69db18bbffbb1d4fdac53359a451" name="a5fdf69db18bbffbb1d4fdac53359a451"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fdf69db18bbffbb1d4fdac53359a451">&#9670;&nbsp;</a></span>deregisterMouseWheelAction()</h2>
 
@@ -2109,6 +2190,44 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 </div><div class="memdoc">
 
 <p>searches JKQTPlotterStyle::registeredMouseActionModes for a matching action, returns in <em>found</em> whether an action was found </p>
+
+</div>
+</div>
+<a id="a6b8afde741aece182c23870cbe154485" name="a6b8afde741aece182c23870cbe154485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8afde741aece182c23870cbe154485">&#9670;&nbsp;</a></span>findMatchingMouseMoveAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#ga0c445f7a26cf9e0526e99b19b857d50e">JKQTPMouseMoveActionsHashMapIterator</a> JKQTPlotter::findMatchingMouseMoveAction </td>
+          <td>(</td>
+          <td class="paramtype">Qt::KeyboardModifiers&#160;</td>
+          <td class="paramname"><em>modifiers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>found</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>searches <a class="el" href="class_j_k_q_t_plotter_style.html#ad142403a62c7c91e4a991d3fd2584f6c" title="the currently executed MouseMoveAction">JKQTPlotterStyle::registeredMouseMoveActions</a> for a matching action </p>
 
 </div>
 </div>
@@ -2312,14 +2431,33 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
-<a id="aa91643d5ae645720379b8d29fbb8cbaf" name="aa91643d5ae645720379b8d29fbb8cbaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa91643d5ae645720379b8d29fbb8cbaf">&#9670;&nbsp;</a></span>getActMouseLeftAsDefault()</h2>
+<a id="a9266cf49aeb42114f92465e24e59ca8a" name="a9266cf49aeb42114f92465e24e59ca8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9266cf49aeb42114f92465e24e59ca8a">&#9670;&nbsp;</a></span>getActMouseLeftAsDefault() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>action that activates the default action, set in plotterStyle! </p>
+
+</div>
+</div>
+<a id="af0c0c1b00d172466716d8aee7f063b95" name="af0c0c1b00d172466716d8aee7f063b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c0c1b00d172466716d8aee7f063b95">&#9670;&nbsp;</a></span>getActMouseLeftAsDefault() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QAction * JKQTPlotter::getActMouseLeftAsDefault </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2331,14 +2469,34 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
-<a id="a832ceeba4725cba260ea4a0ecaae5e9c" name="a832ceeba4725cba260ea4a0ecaae5e9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832ceeba4725cba260ea4a0ecaae5e9c">&#9670;&nbsp;</a></span>getActMouseLeftAsPanView()</h2>
+<a id="a21d2b86c7610970c42aadee3eafa4f75" name="a21d2b86c7610970c42aadee3eafa4f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d2b86c7610970c42aadee3eafa4f75">&#9670;&nbsp;</a></span>getActMouseLeftAsPanView() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsPanView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>action that activates the pan view tool (override!) <br  />
+ </p>
+
+</div>
+</div>
+<a id="ab3546d24e9ec6d47c91918691d00e703" name="ab3546d24e9ec6d47c91918691d00e703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3546d24e9ec6d47c91918691d00e703">&#9670;&nbsp;</a></span>getActMouseLeftAsPanView() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QAction * JKQTPlotter::getActMouseLeftAsPanView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2351,14 +2509,33 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
-<a id="aa277b32b0df1146f918da31771bc3d64" name="aa277b32b0df1146f918da31771bc3d64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa277b32b0df1146f918da31771bc3d64">&#9670;&nbsp;</a></span>getActMouseLeftAsRuler()</h2>
+<a id="a91880a61c9cd4cd3fb5b5cc4bdc459dc" name="a91880a61c9cd4cd3fb5b5cc4bdc459dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91880a61c9cd4cd3fb5b5cc4bdc459dc">&#9670;&nbsp;</a></span>getActMouseLeftAsRuler() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsRuler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>action that activates the ruler tool (override!) </p>
+
+</div>
+</div>
+<a id="aa3d1d062d1cd650086d1fdd94a593156" name="aa3d1d062d1cd650086d1fdd94a593156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d1d062d1cd650086d1fdd94a593156">&#9670;&nbsp;</a></span>getActMouseLeftAsRuler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QAction * JKQTPlotter::getActMouseLeftAsRuler </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2370,17 +2547,55 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
-<a id="aa504d10b700b5cd4e153bc36bb85fc56" name="aa504d10b700b5cd4e153bc36bb85fc56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa504d10b700b5cd4e153bc36bb85fc56">&#9670;&nbsp;</a></span>getActMouseLeftAsToolTip()</h2>
+<a id="a4ac495d0c0d9860379e5f507cf31a33d" name="a4ac495d0c0d9860379e5f507cf31a33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac495d0c0d9860379e5f507cf31a33d">&#9670;&nbsp;</a></span>getActMouseLeftAsZoomRect() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsToolTip </td>
+          <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsZoomRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>action that activates the zoom rectangle tool (override!) </p>
+
+</div>
+</div>
+<a id="a1c4858ff3df5c15ee4a7bd8687737138" name="a1c4858ff3df5c15ee4a7bd8687737138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4858ff3df5c15ee4a7bd8687737138">&#9670;&nbsp;</a></span>getActMouseLeftAsZoomRect() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QAction * JKQTPlotter::getActMouseLeftAsZoomRect </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>action that activates the zoom rectangle tool (override!) </p>
+
+</div>
+</div>
+<a id="a7cb8d4a70d10cfeabff0a393db2b75cf" name="a7cb8d4a70d10cfeabff0a393db2b75cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb8d4a70d10cfeabff0a393db2b75cf">&#9670;&nbsp;</a></span>getActMouseMoveToolTip() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction * JKQTPlotter::getActMouseMoveToolTip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2390,14 +2605,14 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 
 </div>
 </div>
-<a id="a80958752e136e910e0cc6edefde54f7c" name="a80958752e136e910e0cc6edefde54f7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80958752e136e910e0cc6edefde54f7c">&#9670;&nbsp;</a></span>getActMouseLeftAsZoomRect()</h2>
+<a id="ab4fbb64c1195b7c1a577cb5f5e7bc011" name="ab4fbb64c1195b7c1a577cb5f5e7bc011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fbb64c1195b7c1a577cb5f5e7bc011">&#9670;&nbsp;</a></span>getActMouseMoveToolTip() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QAction * JKQTPlotter::getActMouseLeftAsZoomRect </td>
+          <td class="memname">const QAction * JKQTPlotter::getActMouseMoveToolTip </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2405,7 +2620,8 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>action that activates the zoom rectangle tool (override!) </p>
+<p>action that activates the tooltip tool (override!) <br  />
+ </p>
 
 </div>
 </div>
@@ -3418,9 +3634,9 @@ template&lt;class TJKQTPGraphContainer &gt; </div>
 <div class="image">
 <img src="jkqtplotter_mousepositiondisplay.png" alt=""/>
 </div>
-<dl class="section see"><dt>See also</dt><dd>mousePositionTemplate, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a></dd>
+<dl class="section see"><dt>See also</dt><dd>mousePositionTemplate, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a></dd>
 <dd>
-<a class="el" href="class_j_k_q_t_plotter.html#a6fad14bc73e1281ec00a6987c73c9753" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">setMousePositionShown()</a>, <a class="el" href="class_j_k_q_t_plotter_style.html#a11abad738ae86db939170fc3198a8f48" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">JKQTPlotterStyle::displayMousePosition</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a> </dd></dl>
+<a class="el" href="class_j_k_q_t_plotter.html#a6fad14bc73e1281ec00a6987c73c9753" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">setMousePositionShown()</a>, <a class="el" href="class_j_k_q_t_plotter_style.html#a11abad738ae86db939170fc3198a8f48" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">JKQTPlotterStyle::displayMousePosition</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a> </dd></dl>
 
 </div>
 </div>
@@ -3772,8 +3988,11 @@ Shown Toolbar</div></div>
 <li>if displayMousePosition is <code>true</code> , stores the current mouse position in mousePosX, mousePosY</li>
 <li>if necessary, contributes to user-actions started by <a class="el" href="class_j_k_q_t_plotter.html#a31993574cd9bb6395039af705ee5d8a1" title="event handler for a mouse down event">mousePressEvent()</a></li>
 <li>emits <a class="el" href="class_j_k_q_t_plotter.html#af7058cea1abcc60fe41bd8b769019f5b" title="emitted whenever the mouse moves">plotMouseMove()</a> if the mouse is inside the plot rectangle .</li>
+<li>execute mouseMoveActions</li>
 </ul>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#aeaf6e0dedcc7ddac0753e1db7e1f82ac" title="x-position of the mouse during the last mouseMoveEvent() calls (in plot coordinates)">mousePosX</a>, <a class="el" href="class_j_k_q_t_plotter.html#a19f642bc2fba1835ac6973dae1f1065a" title="y-position of the mouse during the last mouseMoveEvent() calls (in plot coordinates)">mousePosY</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#aeaf6e0dedcc7ddac0753e1db7e1f82ac" title="x-position of the mouse during the last mouseMoveEvent() calls (in plot coordinates)">mousePosX</a>, <a class="el" href="class_j_k_q_t_plotter.html#a19f642bc2fba1835ac6973dae1f1065a" title="y-position of the mouse during the last mouseMoveEvent() calls (in plot coordinates)">mousePosY</a> </dd>
+<dd>
+<a class="el" href="class_j_k_q_t_plotter.html#af3bc6fa4148a5b5bc8b88a8e35a144b6" title="specifies the action to perform on a mouse wheel event when a given modifier is pressed">registerMouseWheelAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a5fdf69db18bbffbb1d4fdac53359a451" title="deletes all mouse-wheel actions registered for a given modifier">deregisterMouseWheelAction()</a>, registeredMouseWheelActions </dd></dl>
 
 </div>
 </div>
@@ -4793,6 +5012,37 @@ Shown Toolbar</div></div>
 
 </div>
 </div>
+<a id="a73fd67aad67885a9a8df59071e3613bb" name="a73fd67aad67885a9a8df59071e3613bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73fd67aad67885a9a8df59071e3613bb">&#9670;&nbsp;</a></span>registerMouseMoveAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPlotter::registerMouseMoveAction </td>
+          <td>(</td>
+          <td class="paramtype">Qt::KeyboardModifiers&#160;</td>
+          <td class="paramname"><em>modifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83">JKQTPMouseMoveActions</a>&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>specifies the action to perform on a mouse move event when a given modifier is pressed </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#abcbb6beff48bed9ada09b992617199a3" title="deletes all mouse-move actions registered for a given modifier">deregisterMouseMoveAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a6254556adf9b0f8da3bbec2e97d49d07" title="deletes all mouse-move actions">clearAllMouseMoveActions()</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION">Mouse-Interaction in JKQTPlotter</a> </dd></dl>
+
+</div>
+</div>
 <a id="af3bc6fa4148a5b5bc8b88a8e35a144b6" name="af3bc6fa4148a5b5bc8b88a8e35a144b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3bc6fa4148a5b5bc8b88a8e35a144b6">&#9670;&nbsp;</a></span>registerMouseWheelAction()</h2>
 
@@ -4932,7 +5182,7 @@ Shown Toolbar</div></div>
 </div><div class="memdoc">
 
 <p>resets any previously set override action for the left mouse-button, un-modified </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c" title="action that activates the ruler tool">setMouseLeftActionAsRuler()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6" title="action that activates the tooltip tool">setMouseLeftActionAsToolTip()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c" title="action that activates the ruler tool">setMouseLeftActionAsRuler()</a>, setMouseLeftActionAsToolTip() </dd></dl>
 
 </div>
 </div>
@@ -5874,7 +6124,7 @@ Grid invisible</div></div>
 </div><div class="memdoc">
 
 <p>allows to activate/deactivate toolbar buttons that can activate certain mouse drag actions </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#aa91643d5ae645720379b8d29fbb8cbaf" title="action that activates the default action, set in plotterStyle!">getActMouseLeftAsDefault()</a>, <a class="el" href="class_j_k_q_t_plotter.html#aa277b32b0df1146f918da31771bc3d64" title="action that activates the ruler tool (override!)">getActMouseLeftAsRuler()</a>, <a class="el" href="class_j_k_q_t_plotter.html#aa504d10b700b5cd4e153bc36bb85fc56" title="action that activates the tooltip tool (override!)">getActMouseLeftAsToolTip()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a9266cf49aeb42114f92465e24e59ca8a" title="action that activates the default action, set in plotterStyle!">getActMouseLeftAsDefault()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a91880a61c9cd4cd3fb5b5cc4bdc459dc" title="action that activates the ruler tool (override!)">getActMouseLeftAsRuler()</a>, getActMouseLeftAsToolTip() </dd></dl>
 
 </div>
 </div>
@@ -5902,7 +6152,7 @@ Grid invisible</div></div>
 </div><div class="memdoc">
 
 <p>action that activates the pan viewport tool </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6" title="action that activates the tooltip tool">setMouseLeftActionAsToolTip()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, setMouseLeftActionAsToolTip() </dd></dl>
 
 </div>
 </div>
@@ -5930,35 +6180,7 @@ Grid invisible</div></div>
 </div><div class="memdoc">
 
 <p>action that activates the ruler tool </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6" title="action that activates the tooltip tool">setMouseLeftActionAsToolTip()</a> </dd></dl>
-
-</div>
-</div>
-<a id="a007b3ab0d1950da59c48d0d51979d5b6" name="a007b3ab0d1950da59c48d0d51979d5b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a007b3ab0d1950da59c48d0d51979d5b6">&#9670;&nbsp;</a></span>setMouseLeftActionAsToolTip</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JKQTPlotter::setMouseLeftActionAsToolTip </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>action that activates the tooltip tool </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c" title="action that activates the ruler tool">setMouseLeftActionAsRuler()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, setMouseLeftActionAsToolTip() </dd></dl>
 
 </div>
 </div>
@@ -5986,7 +6208,64 @@ Grid invisible</div></div>
 </div><div class="memdoc">
 
 <p>action that activates the zoom rectangle tool </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a007b3ab0d1950da59c48d0d51979d5b6" title="action that activates the tooltip tool">setMouseLeftActionAsToolTip()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a>, setMouseLeftActionAsToolTip() </dd></dl>
+
+</div>
+</div>
+<a id="ac58384e565a003a4a598b3e81a3729e8" name="ac58384e565a003a4a598b3e81a3729e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58384e565a003a4a598b3e81a3729e8">&#9670;&nbsp;</a></span>setMouseLeftDragActionAsToolTip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPlotter::setMouseLeftDragActionAsToolTip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>action that activates the tooltip tool, when dragging the mouse with the left button pressed </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a417967edb35b94acc7b75732cb40b71c" name="a417967edb35b94acc7b75732cb40b71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417967edb35b94acc7b75732cb40b71c">&#9670;&nbsp;</a></span>setMouseMoveActionAsToolTip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JKQTPlotter::setMouseMoveActionAsToolTip </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>action that (de)activates the tooltip tool, when moving the mouse without any button pressed </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_j_k_q_t_plotter.html#a78876cd10a041173dd02fed18c79884c" title="action that activates the ruler tool">setMouseLeftActionAsRuler()</a>, <a class="el" href="class_j_k_q_t_plotter.html#a2df1a4b9a5136c9c2bfe92d5f3c0a3d8" title="resets any previously set override action for the left mouse-button, un-modified">resetMouseLeftAction()</a> </dd></dl>
 
 </div>
 </div>
@@ -6018,9 +6297,9 @@ Grid invisible</div></div>
 <div class="image">
 <img src="jkqtplotter_mousepositiondisplay.png" alt=""/>
 </div>
-<dl class="section see"><dt>See also</dt><dd>mousePositionTemplate, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a></dd>
+<dl class="section see"><dt>See also</dt><dd>mousePositionTemplate, <a class="el" href="_j_k_q_t_plotter_user_interaction.html">Tutorial (JKQTPlotter): User-Interactions in JKQtPlotter</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a></dd>
 <dd>
-<a class="el" href="class_j_k_q_t_plotter.html#a70b214d9af6b939a6b1bee82adfcc6e8" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">isMousePositionShown()</a>, <a class="el" href="class_j_k_q_t_plotter_style.html#a11abad738ae86db939170fc3198a8f48" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">JKQTPlotterStyle::displayMousePosition</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Signaling When Mouse Moves</a> </dd></dl>
+<a class="el" href="class_j_k_q_t_plotter.html#a70b214d9af6b939a6b1bee82adfcc6e8" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">isMousePositionShown()</a>, <a class="el" href="class_j_k_q_t_plotter_style.html#a11abad738ae86db939170fc3198a8f48" title="specifies whether to display the current position of the mouse in the top border of the plot (this ma...">JKQTPlotterStyle::displayMousePosition</a>, <a class="el" href="class_j_k_q_t_plotter.html#JKQTPLOTTER_USERMOUSEINTERACTION_MOUSEMOVE">Mouse Move Signaling and Actions</a> </dd></dl>
 
 </div>
 </div>
@@ -8057,31 +8336,6 @@ This is a short-cut to <a class="el" href="class_j_k_q_t_plotter.html#a5fad7365a
 
 </div>
 </div>
-<a id="af001fd8879e72b98d2b301dbec1967bd" name="af001fd8879e72b98d2b301dbec1967bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af001fd8879e72b98d2b301dbec1967bd">&#9670;&nbsp;</a></span>actMouseLeftAsToolTip</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QAction* JKQTPlotter::actMouseLeftAsToolTip</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>action that activates the tooltip tool (override!) <br  />
- </p>
-
-</div>
-</div>
 <a id="aa8d7304f0e36fb4d7bfa2fb99c15df47" name="aa8d7304f0e36fb4d7bfa2fb99c15df47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8d7304f0e36fb4d7bfa2fb99c15df47">&#9670;&nbsp;</a></span>actMouseLeftAsZoomRect</h2>
 
@@ -8103,6 +8357,31 @@ This is a short-cut to <a class="el" href="class_j_k_q_t_plotter.html#a5fad7365a
 </div><div class="memdoc">
 
 <p>action that activates the zoom rectangle tool (override!) </p>
+
+</div>
+</div>
+<a id="ac1322bdec6a678c92a8c98f0c55acf47" name="ac1322bdec6a678c92a8c98f0c55acf47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1322bdec6a678c92a8c98f0c55acf47">&#9670;&nbsp;</a></span>actMouseMoveToolTip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* JKQTPlotter::actMouseMoveToolTip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>action that activates the tooltip tool (override!) <br  />
+ </p>
 
 </div>
 </div>
@@ -8203,6 +8482,30 @@ This is a short-cut to <a class="el" href="class_j_k_q_t_plotter.html#a5fad7365a
 </div><div class="memdoc">
 
 <p>the currently executed <a class="el" href="struct_j_k_q_t_plotter_1_1_mouse_drag_action.html" title="ties a MouseActionMode to a mouse-button and a keyboard-modifier">MouseDragAction</a> </p>
+
+</div>
+</div>
+<a id="a52fd134db23ccf74a2efcd4f4ff0bc43" name="a52fd134db23ccf74a2efcd4f4ff0bc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fd134db23ccf74a2efcd4f4ff0bc43">&#9670;&nbsp;</a></span>currentMouseMoveAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSet&lt;<a class="el" href="group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83">JKQTPMouseMoveActions</a>&gt; JKQTPlotter::currentMouseMoveAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the currently executed MouseMoveActions </p>
 
 </div>
 </div>
@@ -8919,7 +9222,7 @@ This is a short-cut to <a class="el" href="class_j_k_q_t_plotter.html#a5fad7365a
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_plotter.html">JKQTPlotter</a></li>
-    <li class="footer">Generated on Sat May 14 2022 21:02:27 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sun May 15 2022 12:18:48 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

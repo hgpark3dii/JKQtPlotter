@@ -22,11 +22,12 @@ var searchData=
   ['jkqtpmathimagemodifiermode_19',['JKQTPMathImageModifierMode',['../group__jkqtplotter__imagelots__tools.html#gab8a96386e4f981f6917c20a8f03215bf',1,'jkqtpbasicimagetools.h']]],
   ['jkqtpmousedoubleclickactions_20',['JKQTPMouseDoubleClickActions',['../group__jkqtpplottersupprt.html#gad4929dc37ab4326c404de91ef6a60f17',1,'jkqtptools.h']]],
   ['jkqtpmousedragactions_21',['JKQTPMouseDragActions',['../group__jkqtpplottersupprt.html#ga5d43b30f0132d08b8793ceb2533e315f',1,'jkqtptools.h']]],
-  ['jkqtpmousewheelactions_22',['JKQTPMouseWheelActions',['../group__jkqtpplottersupprt.html#ga6617afa61313feda8c490932016ff58f',1,'jkqtptools.h']]],
-  ['jkqtpplotstyletype_23',['JKQTPPlotStyleType',['../group__jkqtpplottersupprt.html#gaf0d90444170dd9b4daeabdede17615c4',1,'jkqtptools.h']]],
-  ['jkqtprgbmathimagergbmode_24',['JKQTPRGBMathImageRGBMode',['../group__jkqtplotter__imagelots__tools.html#ga28b53692f29935636e2ffee20896c69e',1,'jkqtpbasicimagetools.h']]],
-  ['jkqtpspeciallinetype_25',['JKQTPSpecialLineType',['../group__jkqtplotter__linesymbolgraphs__simple.html#ga5e78e9bcb463d22d3fd5d6158a78c8e4',1,'jkqtptools.h']]],
-  ['jkqtpstathistogrambinxmode_26',['JKQTPStatHistogramBinXMode',['../group__jkqtptools__math__statistics__1dhist.html#gab6b155ded164a7ae39a7024792251373',1,'jkqtpstathistogram.h']]],
-  ['jkqtpstatregressionmodeltype_27',['JKQTPStatRegressionModelType',['../group__jkqtptools__math__statistics__regression.html#gaa798f2573e7f03cb328b15ff76dda335',1,'jkqtpstatregression.h']]],
-  ['jkqtpuseractionmarkertype_28',['JKQTPUserActionMarkerType',['../group__jkqtpplottersupprt.html#ga6562bedae430e91546399ae1a70cb860',1,'jkqtptools.h']]]
+  ['jkqtpmousemoveactions_22',['JKQTPMouseMoveActions',['../group__jkqtpplottersupprt.html#ga4ee195adbf937147b06aedf1217d3f83',1,'jkqtptools.h']]],
+  ['jkqtpmousewheelactions_23',['JKQTPMouseWheelActions',['../group__jkqtpplottersupprt.html#ga6617afa61313feda8c490932016ff58f',1,'jkqtptools.h']]],
+  ['jkqtpplotstyletype_24',['JKQTPPlotStyleType',['../group__jkqtpplottersupprt.html#gaf0d90444170dd9b4daeabdede17615c4',1,'jkqtptools.h']]],
+  ['jkqtprgbmathimagergbmode_25',['JKQTPRGBMathImageRGBMode',['../group__jkqtplotter__imagelots__tools.html#ga28b53692f29935636e2ffee20896c69e',1,'jkqtpbasicimagetools.h']]],
+  ['jkqtpspeciallinetype_26',['JKQTPSpecialLineType',['../group__jkqtplotter__linesymbolgraphs__simple.html#ga5e78e9bcb463d22d3fd5d6158a78c8e4',1,'jkqtptools.h']]],
+  ['jkqtpstathistogrambinxmode_27',['JKQTPStatHistogramBinXMode',['../group__jkqtptools__math__statistics__1dhist.html#gab6b155ded164a7ae39a7024792251373',1,'jkqtpstathistogram.h']]],
+  ['jkqtpstatregressionmodeltype_28',['JKQTPStatRegressionModelType',['../group__jkqtptools__math__statistics__regression.html#gaa798f2573e7f03cb328b15ff76dda335',1,'jkqtpstatregression.h']]],
+  ['jkqtpuseractionmarkertype_29',['JKQTPUserActionMarkerType',['../group__jkqtpplottersupprt.html#ga6562bedae430e91546399ae1a70cb860',1,'jkqtptools.h']]]
 ];
