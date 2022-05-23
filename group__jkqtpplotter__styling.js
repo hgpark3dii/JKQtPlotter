@@ -39,8 +39,8 @@ var group__jkqtpplotter__styling =
       [ "plotFrameWidth", "class_j_k_q_t_base_plotter_style.html#a3e6d266d588a5e4b1db19c5920e9dc83", null ],
       [ "plotLabelFontName", "class_j_k_q_t_base_plotter_style.html#a3161f58c54dc8f42bed0cbe2f0da1436", null ],
       [ "plotLabelFontSize", "class_j_k_q_t_base_plotter_style.html#a7403bd605048164b2c3428f93040d5b1", null ],
-      [ "rightColorbarAxisStyle", "class_j_k_q_t_base_plotter_style.html#a675f1569b942fc7fbaec465cee13b7d1", null ],
-      [ "topColorbarAxisStyle", "class_j_k_q_t_base_plotter_style.html#a492aa82d0e4d7a3782dee008d7e871d7", null ],
+      [ "rightColorbarAxisStyle", "class_j_k_q_t_base_plotter_style.html#a25650b7d47d94338964d0dd90069d9f9", null ],
+      [ "topColorbarAxisStyle", "class_j_k_q_t_base_plotter_style.html#af20cb1c6fc3ca6ef259ad8fca0660572", null ],
       [ "useAntiAliasingForSystem", "class_j_k_q_t_base_plotter_style.html#a4bee6c06e328636ede42390b5b416a56", null ],
       [ "useAntiAliasingForText", "class_j_k_q_t_base_plotter_style.html#a6ea4a3f27ffa2bfea9b55f926c429284", null ],
       [ "widgetBackgroundBrush", "class_j_k_q_t_base_plotter_style.html#a8981534f280001f97d527130d4681c37", null ],
@@ -104,6 +104,11 @@ var group__jkqtpplotter__styling =
       [ "fillColorDerivationMode", "class_j_k_q_t_graphs_specific_style_properties.html#a9ce0787dcbd96c52a6d1474c7550a58b", null ],
       [ "graphColorDerivationMode", "class_j_k_q_t_graphs_specific_style_properties.html#a2bd648ac033ed7e6e2d849c0905acf54", null ],
       [ "symbolFillColorDerivationMode", "class_j_k_q_t_graphs_specific_style_properties.html#a974b9985319329a2e50bc8d6d1e72275", null ]
+    ] ],
+    [ "JKQTPColorbarCoordinateAxisStyle", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html", [
+      [ "JKQTPColorbarCoordinateAxisStyle", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html#a804eca7b1a69114180d85f1ab80686b1", null ],
+      [ "JKQTPColorbarCoordinateAxisStyle", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html#a88365311f7a62d60ad173cf2b9d7fb86", null ],
+      [ "initMembersForColorbars", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html#a12549643c0c93477108128b27b67fb92", null ]
     ] ],
     [ "JKQTPCoordinateAxisStyle", "class_j_k_q_t_p_coordinate_axis_style.html", [
       [ "JKQTPCoordinateAxisStyle", "class_j_k_q_t_p_coordinate_axis_style.html#a51905e1326caee3c78384b7003f45b7a", null ],

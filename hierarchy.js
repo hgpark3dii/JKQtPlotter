@@ -47,7 +47,9 @@ var hierarchy =
     [ "JKQTPColumnBackInserter", "class_j_k_q_t_p_column_back_inserter.html", null ],
     [ "JKQTPColumnConstIterator", "class_j_k_q_t_p_column_const_iterator.html", null ],
     [ "JKQTPColumnIterator", "class_j_k_q_t_p_column_iterator.html", null ],
-    [ "JKQTPCoordinateAxisStyle", "class_j_k_q_t_p_coordinate_axis_style.html", null ],
+    [ "JKQTPCoordinateAxisStyle", "class_j_k_q_t_p_coordinate_axis_style.html", [
+      [ "JKQTPColorbarCoordinateAxisStyle", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html", null ]
+    ] ],
     [ "JKQTPDatastore", "class_j_k_q_t_p_datastore.html", null ],
     [ "JKQTPDatastoreItem", "class_j_k_q_t_p_datastore_item.html", null ],
     [ "JKQTPFinalAct< F >", "class_j_k_q_t_p_final_act.html", null ],

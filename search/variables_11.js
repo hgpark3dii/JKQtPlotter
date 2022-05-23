@@ -21,7 +21,7 @@ var searchData=
   ['resizetimer_18',['resizeTimer',['../class_j_k_q_t_plotter.html#a492f59ecbc22186e9dd117a124d09a46',1,'JKQTPlotter']]],
   ['rgbmode_19',['rgbMode',['../class_j_k_q_t_p_r_g_b_math_image.html#a0f76228d327300dfec5f962244f9e955',1,'JKQTPRGBMathImage']]],
   ['right_20',['right',['../class_j_k_q_t_p_math_parser_1_1jkmp_binary_arithmetic_node.html#a267ae1156555a3f1fc8af3b9e94a4962',1,'JKQTPMathParser::jkmpBinaryArithmeticNode::right()'],['../class_j_k_q_t_p_math_parser_1_1jkmp_binary_bool_node.html#ab8800b54a12f4ea115c32365d8b0a280',1,'JKQTPMathParser::jkmpBinaryBoolNode::right()'],['../class_j_k_q_t_p_math_parser_1_1jkmp_compare_node.html#a12af707875e0a3e24baf08a807c61006',1,'JKQTPMathParser::jkmpCompareNode::right()']]],
-  ['rightcolorbaraxisstyle_21',['rightColorbarAxisStyle',['../class_j_k_q_t_base_plotter_style.html#a675f1569b942fc7fbaec465cee13b7d1',1,'JKQTBasePlotterStyle']]],
+  ['rightcolorbaraxisstyle_21',['rightColorbarAxisStyle',['../class_j_k_q_t_base_plotter_style.html#a25650b7d47d94338964d0dd90069d9f9',1,'JKQTBasePlotterStyle']]],
   ['rotation_22',['rotation',['../class_j_k_q_t_f_pimage_plot.html#ab320255b8e005d4398fc7db91caa92e8',1,'JKQTFPimagePlot::rotation()'],['../class_j_k_q_t_f_p_r_g_b_image_overlay_plot.html#ab441cb4f7d3d0d6c739e8710467e008f',1,'JKQTFPRGBImageOverlayPlot::rotation()'],['../class_j_k_q_t_f_pimage_overlay_plot.html#acbdbaf89e54745ffd18059c460f40a69',1,'JKQTFPimageOverlayPlot::rotation()']]],
   ['rows_23',['rows',['../class_j_k_q_t_p_datastore_item.html#abb8afa0743093d0cb661dd1ae8deb92a',1,'JKQTPDatastoreItem']]]
 ];

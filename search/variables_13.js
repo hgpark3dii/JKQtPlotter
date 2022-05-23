@@ -32,7 +32,7 @@ var searchData=
   ['toolbarenabled_29',['toolbarEnabled',['../class_j_k_q_t_plotter_style.html#a94459337b494f8d242250b4d042ad280',1,'JKQTPlotterStyle']]],
   ['toolbariconsize_30',['toolbarIconSize',['../class_j_k_q_t_plotter_style.html#a70668027a58c54970431c8eade1c2408',1,'JKQTPlotterStyle']]],
   ['toolbarvanishes_31',['toolbarVanishes',['../class_j_k_vanish_q_tool_bar.html#a48f58a565b32206fc7fd10c4560a0850',1,'JKVanishQToolBar']]],
-  ['topcolorbaraxisstyle_32',['topColorbarAxisStyle',['../class_j_k_q_t_base_plotter_style.html#a492aa82d0e4d7a3782dee008d7e871d7',1,'JKQTBasePlotterStyle']]],
+  ['topcolorbaraxisstyle_32',['topColorbarAxisStyle',['../class_j_k_q_t_base_plotter_style.html#af20cb1c6fc3ca6ef259ad8fca0660572',1,'JKQTBasePlotterStyle']]],
   ['truecolor_33',['trueColor',['../class_j_k_q_t_p_overlay_image.html#ae7ce5b759ad96414de868a3d26f42805',1,'JKQTPOverlayImage']]],
   ['two_5fsided_34',['two_sided',['../class_j_k_q_t_p_geo_infinite_line.html#a68218937cd881bfe888df9a8f6edc8df',1,'JKQTPGeoInfiniteLine']]],
   ['type_35',['type',['../struct_j_k_q_t_p_math_parser_1_1jkmp_result.html#a77733ea1fac8e37c423baa4a0759389e',1,'JKQTPMathParser::jkmpResult::type()'],['../struct_j_k_q_t_p_math_parser_1_1jkmp_variable.html#a64c057ecc63d250f3a0e6731613b2b07',1,'JKQTPMathParser::jkmpVariable::type()'],['../group__jkmp.html#aa6ace73bb91eb0252b759c7fc34f194b',1,'JKQTPMathParser::jkmpTempVariable::type()']]]

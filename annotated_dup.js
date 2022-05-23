@@ -39,6 +39,7 @@ var annotated_dup =
     [ "JKQTPBoxplotVerticalGraph", "class_j_k_q_t_p_boxplot_vertical_graph.html", "class_j_k_q_t_p_boxplot_vertical_graph" ],
     [ "JKQTPCADrawModeComboBox", "class_j_k_q_t_p_c_a_draw_mode_combo_box.html", "class_j_k_q_t_p_c_a_draw_mode_combo_box" ],
     [ "JKQTPCALabelTypeComboBox", "class_j_k_q_t_p_c_a_label_type_combo_box.html", "class_j_k_q_t_p_c_a_label_type_combo_box" ],
+    [ "JKQTPColorbarCoordinateAxisStyle", "class_j_k_q_t_p_colorbar_coordinate_axis_style.html", "class_j_k_q_t_p_colorbar_coordinate_axis_style" ],
     [ "JKQTPColorPaletteSingleColorLinSegment", "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html", "struct_j_k_q_t_p_color_palette_single_color_lin_segment" ],
     [ "JKQTPColorPaletteStyleAndToolsMixin", "class_j_k_q_t_p_color_palette_style_and_tools_mixin.html", "class_j_k_q_t_p_color_palette_style_and_tools_mixin" ],
     [ "JKQTPColorPaletteWithModifierStyleAndToolsMixin", "class_j_k_q_t_p_color_palette_with_modifier_style_and_tools_mixin.html", "class_j_k_q_t_p_color_palette_with_modifier_style_and_tools_mixin" ],
