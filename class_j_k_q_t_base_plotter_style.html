@@ -156,6 +156,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad89d7270cfd849aff5fad8822e7dbdb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_base_plotter_style.html#ad89d7270cfd849aff5fad8822e7dbdb5">debugShowRegionBoxes</a></td></tr>
 <tr class="memdesc:ad89d7270cfd849aff5fad8822e7dbdb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">if set <code>true</code> (default: <code>false</code> ) the <a class="el" href="class_j_k_q_t_base_plotter.html" title="base class for 2D plotter classes (used by the plotter widget JKQTPlotter)">JKQTBasePlotter</a> draws colored rectangles to indicate the different regions in the plot (border, axes, ...)  <a href="class_j_k_q_t_base_plotter_style.html#ad89d7270cfd849aff5fad8822e7dbdb5">More...</a><br /></td></tr>
 <tr class="separator:ad89d7270cfd849aff5fad8822e7dbdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9d9fa486078cff72d7a87d939b1cb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_base_plotter_style.html#a2f9d9fa486078cff72d7a87d939b1cb3">debugShowTextBoxes</a></td></tr>
+<tr class="memdesc:a2f9d9fa486078cff72d7a87d939b1cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">if set <code>true</code> (default: <code>false</code> ) the <a class="el" href="class_j_k_q_t_base_plotter.html" title="base class for 2D plotter classes (used by the plotter widget JKQTPlotter)">JKQTBasePlotter</a> draws colored rectangles to indicate the outline etc. of text inside the plot  <a href="class_j_k_q_t_base_plotter_style.html#a2f9d9fa486078cff72d7a87d939b1cb3">More...</a><br /></td></tr>
+<tr class="separator:a2f9d9fa486078cff72d7a87d939b1cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd8c71bcfb810f70867b71dfb18e597"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_base_plotter_style.html#a5fd8c71bcfb810f70867b71dfb18e597">debugTextBoxLineWidth</a></td></tr>
+<tr class="memdesc:a5fd8c71bcfb810f70867b71dfb18e597"><td class="mdescLeft">&#160;</td><td class="mdescRight">width of the lines that are drawn, when debugShowTextBoxes <code>==true</code> [in pixels]  <a href="class_j_k_q_t_base_plotter_style.html#a5fd8c71bcfb810f70867b71dfb18e597">More...</a><br /></td></tr>
+<tr class="separator:a5fd8c71bcfb810f70867b71dfb18e597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a715787f090345055850aa775806089ba"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_base_plotter_style.html#a715787f090345055850aa775806089ba">defaultFontName</a></td></tr>
 <tr class="memdesc:a715787f090345055850aa775806089ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">default font name in the plot  <a href="class_j_k_q_t_base_plotter_style.html#a715787f090345055850aa775806089ba">More...</a><br /></td></tr>
 <tr class="separator:a715787f090345055850aa775806089ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,6 +400,44 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>if set <code>true</code> (default: <code>false</code> ) the <a class="el" href="class_j_k_q_t_base_plotter.html" title="base class for 2D plotter classes (used by the plotter widget JKQTPlotter)">JKQTBasePlotter</a> draws colored rectangles to indicate the different regions in the plot (border, axes, ...) </p>
+<div class="image">
+<img src="debugShowRegionBoxes.png" alt=""/>
+</div>
+ 
+</div>
+</div>
+<a id="a2f9d9fa486078cff72d7a87d939b1cb3" name="a2f9d9fa486078cff72d7a87d939b1cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9d9fa486078cff72d7a87d939b1cb3">&#9670;&nbsp;</a></span>debugShowTextBoxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JKQTBasePlotterStyle::debugShowTextBoxes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if set <code>true</code> (default: <code>false</code> ) the <a class="el" href="class_j_k_q_t_base_plotter.html" title="base class for 2D plotter classes (used by the plotter widget JKQTPlotter)">JKQTBasePlotter</a> draws colored rectangles to indicate the outline etc. of text inside the plot </p>
+<div class="image">
+<img src="debugShowTextBoxes.png" alt=""/>
+</div>
+ 
+</div>
+</div>
+<a id="a5fd8c71bcfb810f70867b71dfb18e597" name="a5fd8c71bcfb810f70867b71dfb18e597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd8c71bcfb810f70867b71dfb18e597">&#9670;&nbsp;</a></span>debugTextBoxLineWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double JKQTBasePlotterStyle::debugTextBoxLineWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>width of the lines that are drawn, when debugShowTextBoxes <code>==true</code> [in pixels] </p>
 
 </div>
 </div>
@@ -807,7 +851,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_j_k_q_t_base_plotter_style.html">JKQTBasePlotterStyle</a></li>
-    <li class="footer">Generated on Thu Jun 2 2022 20:34:27 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Jun 2 2022 21:09:14 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

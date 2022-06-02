@@ -7,6 +7,8 @@ var class_j_k_q_t_base_plotter_style =
     [ "CSVdecimalSeparator", "class_j_k_q_t_base_plotter_style.html#a0c2dc408bbca4dbe3522f2ea32840598", null ],
     [ "debugRegionLineWidth", "class_j_k_q_t_base_plotter_style.html#ad140daa2505c3751806ef5d3a7cfefa9", null ],
     [ "debugShowRegionBoxes", "class_j_k_q_t_base_plotter_style.html#ad89d7270cfd849aff5fad8822e7dbdb5", null ],
+    [ "debugShowTextBoxes", "class_j_k_q_t_base_plotter_style.html#a2f9d9fa486078cff72d7a87d939b1cb3", null ],
+    [ "debugTextBoxLineWidth", "class_j_k_q_t_base_plotter_style.html#a5fd8c71bcfb810f70867b71dfb18e597", null ],
     [ "defaultFontName", "class_j_k_q_t_base_plotter_style.html#a715787f090345055850aa775806089ba", null ],
     [ "defaultFontSize", "class_j_k_q_t_base_plotter_style.html#a77682af31f24f7a560718d6c6574b317", null ],
     [ "defaultTextColor", "class_j_k_q_t_base_plotter_style.html#a943b1f0cfe08aff11494cbd6d14a52a5", null ],
