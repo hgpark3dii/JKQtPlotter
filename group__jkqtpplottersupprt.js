@@ -43,7 +43,8 @@ var group__jkqtpplottersupprt =
       [ "JKQTPCADMTickLabelsAxisLabel", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca0057a2bbec46668ccbd0ee1cfcd54562", null ],
       [ "JKQTPCADMTickLabels", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca5abedda6766c290b81f93fbfa82cc344", null ],
       [ "JKQTPCADMTicks", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca41346640ac5314f33079dc3614dfb09f", null ],
-      [ "JKQTPCADMnone", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca6685b8e3e8b895ebc570d8e01d291c54", null ]
+      [ "JKQTPCADMnone", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca6685b8e3e8b895ebc570d8e01d291c54", null ],
+      [ "JKQTPCADMmax", "group__jkqtpplottersupprt.html#gga85daee0c57d33b5ebe5536ef8121252ca0eaf1c56f65d9dee9e0f9db8fbd816d8", null ]
     ] ],
     [ "JKQTPCALabelType", "group__jkqtpplottersupprt.html#gad58b8a9812defae065b13b76154c8d2e", [
       [ "JKQTPCALTdefault", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2ea238f63f8e20f816b05a09851b469823f", null ],
@@ -51,7 +52,8 @@ var group__jkqtpplottersupprt =
       [ "JKQTPCALTexponent", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2ea1075444ab052a6338e9495f667a0eb11", null ],
       [ "JKQTPCALTdate", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2ea8343a082a4a5fefc22d3471a5bab6adb", null ],
       [ "JKQTPCALTtime", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2eac21cd0c77ad3a423eb18bf249cd284d1", null ],
-      [ "JKQTPCALTdatetime", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2eae74a5730d5380cdaa3a436b199af2f3c", null ]
+      [ "JKQTPCALTdatetime", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2eae74a5730d5380cdaa3a436b199af2f3c", null ],
+      [ "JKQTPCALTmax", "group__jkqtpplottersupprt.html#ggad58b8a9812defae065b13b76154c8d2eade6607160928e80cb65cbf589bf6f92f", null ]
     ] ],
     [ "JKQTPContextMenuModes", "group__jkqtpplottersupprt.html#ga80d2235c912ead563f404f4e7f331137", [
       [ "jkqtpcmmStandardContextMenu", "group__jkqtpplottersupprt.html#gga80d2235c912ead563f404f4e7f331137a0299106ffad81b24fee81f90f441d458", null ],
@@ -62,7 +64,8 @@ var group__jkqtpplottersupprt =
     [ "JKQTPKeyLayout", "group__jkqtpplottersupprt.html#ga12bbc8b1110ac5655e9afcf8ec49b6df", [
       [ "JKQTPKeyLayoutOneColumn", "group__jkqtpplottersupprt.html#gga12bbc8b1110ac5655e9afcf8ec49b6dfaa392dda89bd8a1f13de455f1200f4ff7", null ],
       [ "JKQTPKeyLayoutOneRow", "group__jkqtpplottersupprt.html#gga12bbc8b1110ac5655e9afcf8ec49b6dfa0a206f9051403ecdc2d888305a53eb99", null ],
-      [ "JKQTPKeyLayoutMultiColumn", "group__jkqtpplottersupprt.html#gga12bbc8b1110ac5655e9afcf8ec49b6dfa8d6515779d57ef7bd67e8f56918af253", null ]
+      [ "JKQTPKeyLayoutMultiColumn", "group__jkqtpplottersupprt.html#gga12bbc8b1110ac5655e9afcf8ec49b6dfa8d6515779d57ef7bd67e8f56918af253", null ],
+      [ "JKQTPKeyLayoutMax", "group__jkqtpplottersupprt.html#gga12bbc8b1110ac5655e9afcf8ec49b6dfab26b594e945414b766c7af178ff712f1", null ]
     ] ],
     [ "JKQTPKeyPosition", "group__jkqtpplottersupprt.html#ga53dd9054ccf1f02e17d1867ddab7183f", [
       [ "JKQTPKeyOutsideTopRight", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa7e4ce2ac9850a307f5fb051a823cd780", null ],
@@ -76,17 +79,20 @@ var group__jkqtpplottersupprt =
       [ "JKQTPKeyInsideTopRight", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fad2aa253d9711e1df6d09dcab807c6f22", null ],
       [ "JKQTPKeyInsideTopLeft", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa97a0dfe03f6ec7a8bd9a88dcda6ab50e", null ],
       [ "JKQTPKeyInsideBottomLeft", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa23d6d43b4fe57c692256fe02cccc6da8", null ],
-      [ "JKQTPKeyInsideBottomRight", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa7c395ba2a18f7221b937f4b8fb613b1a", null ]
+      [ "JKQTPKeyInsideBottomRight", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa7c395ba2a18f7221b937f4b8fb613b1a", null ],
+      [ "JKQTPKeyPositionMax", "group__jkqtpplottersupprt.html#gga53dd9054ccf1f02e17d1867ddab7183fa47b62b28c37267dba34fe1abda19b413", null ]
     ] ],
     [ "JKQTPLabelPosition", "group__jkqtpplottersupprt.html#ga6cb5c7e72efa604416b2ac1ac3fc55cd", [
       [ "JKQTPLabelMin", "group__jkqtpplottersupprt.html#gga6cb5c7e72efa604416b2ac1ac3fc55cda1fb40f7ba943ef4d30d74a3bc15ca802", null ],
       [ "JKQTPLabelMax", "group__jkqtpplottersupprt.html#gga6cb5c7e72efa604416b2ac1ac3fc55cda205c45e43194ee976b4b9e1a9b2a01c9", null ],
-      [ "JKQTPLabelCenter", "group__jkqtpplottersupprt.html#gga6cb5c7e72efa604416b2ac1ac3fc55cda777dd299b885c2031f0a90f8f075f728", null ]
+      [ "JKQTPLabelCenter", "group__jkqtpplottersupprt.html#gga6cb5c7e72efa604416b2ac1ac3fc55cda777dd299b885c2031f0a90f8f075f728", null ],
+      [ "JKQTPLabelPositionMax", "group__jkqtpplottersupprt.html#gga6cb5c7e72efa604416b2ac1ac3fc55cda5087517a252d16cfe0bc9ac7fa5f00ca", null ]
     ] ],
     [ "JKQTPLabelTickMode", "group__jkqtpplottersupprt.html#gafba2dfd5e979b2a4c063ac2316ce42f1", [
       [ "JKQTPLTMLinOrPower", "group__jkqtpplottersupprt.html#ggafba2dfd5e979b2a4c063ac2316ce42f1a1577632e07e9c66f81cac7875ed64e93", null ],
       [ "JKQTPLTMLin", "group__jkqtpplottersupprt.html#ggafba2dfd5e979b2a4c063ac2316ce42f1aeb2d5d16ed32bc6829f015665bb27d34", null ],
-      [ "JKQTPLTMPower", "group__jkqtpplottersupprt.html#ggafba2dfd5e979b2a4c063ac2316ce42f1a46174d06d8caa101ed8008113f42dd4c", null ]
+      [ "JKQTPLTMPower", "group__jkqtpplottersupprt.html#ggafba2dfd5e979b2a4c063ac2316ce42f1a46174d06d8caa101ed8008113f42dd4c", null ],
+      [ "JKQTPLTMmax", "group__jkqtpplottersupprt.html#ggafba2dfd5e979b2a4c063ac2316ce42f1a80e54b559846900862da776690bd948c", null ]
     ] ],
     [ "JKQTPMouseDoubleClickActions", "group__jkqtpplottersupprt.html#gad4929dc37ab4326c404de91ef6a60f17", [
       [ "jkqtpdcaClickZoomsIn", "group__jkqtpplottersupprt.html#ggad4929dc37ab4326c404de91ef6a60f17a63c85affe739a61ad087a090b4f24629", null ],

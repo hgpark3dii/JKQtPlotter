@@ -1,5 +1,6 @@
 <map id="JKQTAnnotationsSpecificStyleProperties" name="JKQTAnnotationsSpecificStyleProperties">
-<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="25,177,265,224"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_geometric_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="31,83,259,129"/>
-<area shape="rect" id="node3" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="5,5,284,35"/>
+<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="28,360,268,407"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_geometric_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="158,264,386,311"/>
+<area shape="rect" id="node3" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="145,169,423,199"/>
+<area shape="rect" id="node4" href="$struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill&#45;color is derived from a given color." alt="" coords="5,5,229,35"/>
 </map>

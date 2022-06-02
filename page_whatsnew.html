@@ -141,9 +141,15 @@ fixed issue described in <a href="https://github.com/jkriege2/JKQtPlotter/pull/6
 <li>
 fixed issue <a href="https://github.com/jkriege2/JKQtPlotter/pull/70">#70: Typo in jkqtplotter/CMakeLists.txt</a>, thanks to <a href="https://github.com/tedlinlab">user:tedlinlab</a> </li>
 <li>
+fixed: styling was not properly applied to coordinate axes of colorbars outside the plot </li>
+<li>
 NEW: <a class="el" href="class_j_k_q_t_p_filled_curve_x_graph.html" title="This implements filled curve plots where the area is filled between the plot line and the x-Axis.">JKQTPFilledCurveXGraph</a> and <a class="el" href="class_j_k_q_t_p_filled_curve_y_graph.html" title="This implements filled curve plots where the area is filled between the plot line and y-Axis.">JKQTPFilledCurveYGraph</a> can now plot wiggle plots with different fill styles above and below the baseline (feature request <a href="https://github.com/jkriege2/JKQtPlotter/issues/68">#68 Wiggle Plots</a> from <a href="https://github.com/xichaoqiang">user:xichaoqiang</a>  </li>
 <li>
 NEW/BREAKING CHANGE: data tooltip can now also be shown when "just" moving the mouse (so far this was only possible when dragging the mouse with a button pressed). This also removes JKQtPlotter::getActMouseLeftAsToolTip() and adds JKQtPlotter::getActMouseMoveToolTip() instead! Also the default toolbars and context menus changed! </li>
+<li>
+NEW: new "seaborn" style for plots </li>
+<li>
+NEW/BREAKING CHANGE: changed <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> into a struct, which extends its capabilities above the previously available few enum-items </li>
 </ul>
 <h2><a class="anchor" id="page_whatsnew_TRUNK_DOWNLOAD"></a>
 trunk: Download</h2>
@@ -390,7 +396,7 @@ v2015.10: Download</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 23 2022 20:48:26 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Jun 2 2022 19:30:13 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

@@ -17,6 +17,8 @@ var group__jkqtptools__string =
     [ "jkqtp_format", "group__jkqtptools__string.html#gaaae7a770b2f16e448553dcc61687fe80", null ],
     [ "jkqtp_inttohex", "group__jkqtptools__string.html#gae87c18d7b4d2105db434aee37e9cdb3f", null ],
     [ "jkqtp_inttostr", "group__jkqtptools__string.html#ga25069128d19d112ba61d6fad739f6379", null ],
+    [ "jkqtp_listNamedColors", "group__jkqtptools__string.html#ga7940ce286e0a03bcc6c1e419dadfd374", null ],
+    [ "jkqtp_lookupQColorName", "group__jkqtptools__string.html#ga4fb3660c39df8ac7506f474bacd766d2", null ],
     [ "jkqtp_QBrushStyle2String", "group__jkqtptools__string.html#gaccef8e37ba6aa5b02cf469c416db26f8", null ],
     [ "jkqtp_QColor2String", "group__jkqtptools__string.html#gadda659c1b40f56cc8f2c63793499179e", null ],
     [ "jkqtp_QPenStyle2String", "group__jkqtptools__string.html#ga565495bf3ad0ff6d09c19d9296cb3ee1", null ],

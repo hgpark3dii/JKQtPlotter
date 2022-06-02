@@ -27,8 +27,10 @@ var hierarchy =
         [ "JKQTAnnotationsSpecificStyleProperties", "class_j_k_q_t_annotations_specific_style_properties.html", null ]
       ] ]
     ] ],
+    [ "JKQTMathTextFontSpecifier", "struct_j_k_q_t_math_text_font_specifier.html", null ],
     [ "JKQTPAdaptiveFunctionGraphEvaluator", "class_j_k_q_t_p_adaptive_function_graph_evaluator.html", null ],
     [ "JKQTPArrayScopedPointer< T >", "class_j_k_q_t_p_array_scoped_pointer.html", null ],
+    [ "JKQTPColorDerivationMode", "struct_j_k_q_t_p_color_derivation_mode.html", null ],
     [ "JKQTPColorPaletteSingleColorLinSegment", "struct_j_k_q_t_p_color_palette_single_color_lin_segment.html", null ],
     [ "JKQTPColorPaletteStyleAndToolsMixin", "class_j_k_q_t_p_color_palette_style_and_tools_mixin.html", [
       [ "JKQTPColorPaletteWithModifierStyleAndToolsMixin", "class_j_k_q_t_p_color_palette_with_modifier_style_and_tools_mixin.html", [

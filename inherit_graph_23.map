@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_j_k_q_t_p_datastore_item.html" title="this represents one chunk of memory which can represent one or more columns of data for JKQTBasePlott..." alt="" coords="5,5,177,35"/>
+<area shape="rect" id="node1" href="$class_j_k_q_t_p_coordinate_axis_style.html" title="Support Class for JKQTPCoordinateAxis, which summarizes all properties that define the visual styling..." alt="" coords="5,14,224,43"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_p_colorbar_coordinate_axis_style.html" title="Support Class for JKQTPCoordinateAxis, which summarizes all properties that define the visual styling..." alt="" coords="272,5,515,52"/>
 </map>

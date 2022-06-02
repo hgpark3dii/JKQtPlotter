@@ -1,4 +1,5 @@
 <map id="JKQTGeometricSpecificStyleProperties" name="JKQTGeometricSpecificStyleProperties">
-<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="31,83,259,129"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="5,5,284,35"/>
+<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="31,248,259,295"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="5,169,284,199"/>
+<area shape="rect" id="node3" href="$struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill&#45;color is derived from a given color." alt="" coords="33,5,257,35"/>
 </map>

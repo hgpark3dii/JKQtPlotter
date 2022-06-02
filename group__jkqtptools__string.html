@@ -173,8 +173,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ga25069128d19d112ba61d6fad739f6379"><td class="memItemLeft" align="right" valign="top">JKQTCOMMON_LIB_EXPORT std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtptools__string.html#ga25069128d19d112ba61d6fad739f6379">jkqtp_inttostr</a> (long data)</td></tr>
 <tr class="memdesc:ga25069128d19d112ba61d6fad739f6379"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert an integer to a string  <a href="group__jkqtptools__string.html#ga25069128d19d112ba61d6fad739f6379">More...</a><br /></td></tr>
 <tr class="separator:ga25069128d19d112ba61d6fad739f6379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7940ce286e0a03bcc6c1e419dadfd374"><td class="memItemLeft" align="right" valign="top">JKQTCOMMON_LIB_EXPORT const QStringList &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtptools__string.html#ga7940ce286e0a03bcc6c1e419dadfd374">jkqtp_listNamedColors</a> ()</td></tr>
+<tr class="memdesc:ga7940ce286e0a03bcc6c1e419dadfd374"><td class="mdescLeft">&#160;</td><td class="mdescRight">list the (machine-readable) names of all predefined colors  <a href="group__jkqtptools__string.html#ga7940ce286e0a03bcc6c1e419dadfd374">More...</a><br /></td></tr>
+<tr class="separator:ga7940ce286e0a03bcc6c1e419dadfd374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fb3660c39df8ac7506f474bacd766d2"><td class="memItemLeft" align="right" valign="top">JKQTCOMMON_LIB_EXPORT QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtptools__string.html#ga4fb3660c39df8ac7506f474bacd766d2">jkqtp_lookupQColorName</a> (const QString &amp;color)</td></tr>
+<tr class="memdesc:ga4fb3660c39df8ac7506f474bacd766d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a QString into a QColor, does not support the ,alpha%-notation, use <a class="el" href="group__jkqtptools__string.html#gaf7a35039cf08c3c3bb754b580d979e6c" title="converts a QString into a QColor, compatible with jkqtp_QColor2String(QColor color);">jkqtp_String2QColor()</a> for a full conversion!  <a href="group__jkqtptools__string.html#ga4fb3660c39df8ac7506f474bacd766d2">More...</a><br /></td></tr>
+<tr class="separator:ga4fb3660c39df8ac7506f474bacd766d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaccef8e37ba6aa5b02cf469c416db26f8"><td class="memItemLeft" align="right" valign="top">JKQTCOMMON_LIB_EXPORT QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtptools__string.html#gaccef8e37ba6aa5b02cf469c416db26f8">jkqtp_QBrushStyle2String</a> (Qt::BrushStyle style)</td></tr>
-<tr class="memdesc:gaccef8e37ba6aa5b02cf469c416db26f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a QT::BrushStyle into a string  <a href="group__jkqtptools__string.html#gaccef8e37ba6aa5b02cf469c416db26f8">More...</a><br /></td></tr>
+<tr class="memdesc:gaccef8e37ba6aa5b02cf469c416db26f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a Qt::BrushStyle into a string  <a href="group__jkqtptools__string.html#gaccef8e37ba6aa5b02cf469c416db26f8">More...</a><br /></td></tr>
 <tr class="separator:gaccef8e37ba6aa5b02cf469c416db26f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadda659c1b40f56cc8f2c63793499179e"><td class="memItemLeft" align="right" valign="top">JKQTCOMMON_LIB_EXPORT QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtptools__string.html#gadda659c1b40f56cc8f2c63793499179e">jkqtp_QColor2String</a> (QColor color, bool useSpecialTransparencySyntax=true)</td></tr>
 <tr class="memdesc:gadda659c1b40f56cc8f2c63793499179e"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a QColor into a string using the <a class="el" href="group__jkqtptools__string.html#ga366e49502b11752e70b80cb507bfd597" title="converts a RGBA color into a string">jkqtp_rgbtostring()</a> method.  <a href="group__jkqtptools__string.html#gadda659c1b40f56cc8f2c63793499179e">More...</a><br /></td></tr>
@@ -887,6 +893,46 @@ template&lt;class T1 , class T2 , class T3 , class T4 &gt; </div>
 
 </div>
 </div>
+<a id="ga7940ce286e0a03bcc6c1e419dadfd374" name="ga7940ce286e0a03bcc6c1e419dadfd374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7940ce286e0a03bcc6c1e419dadfd374">&#9670;&nbsp;</a></span>jkqtp_listNamedColors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JKQTCOMMON_LIB_EXPORT const QStringList &amp; jkqtp_listNamedColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>list the (machine-readable) names of all predefined colors </p>
+
+</div>
+</div>
+<a id="ga4fb3660c39df8ac7506f474bacd766d2" name="ga4fb3660c39df8ac7506f474bacd766d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fb3660c39df8ac7506f474bacd766d2">&#9670;&nbsp;</a></span>jkqtp_lookupQColorName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JKQTCOMMON_LIB_EXPORT QColor jkqtp_lookupQColorName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts a QString into a QColor, does not support the ,alpha%-notation, use <a class="el" href="group__jkqtptools__string.html#gaf7a35039cf08c3c3bb754b580d979e6c" title="converts a QString into a QColor, compatible with jkqtp_QColor2String(QColor color);">jkqtp_String2QColor()</a> for a full conversion! </p>
+<p >This returns a QString which contains the name of named colors and the RGBA values in a QT readable form othertwise. </p>
+
+</div>
+</div>
 <a id="gaccef8e37ba6aa5b02cf469c416db26f8" name="gaccef8e37ba6aa5b02cf469c416db26f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaccef8e37ba6aa5b02cf469c416db26f8">&#9670;&nbsp;</a></span>jkqtp_QBrushStyle2String()</h2>
 
@@ -903,7 +949,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>converts a QT::BrushStyle into a string </p>
+<p>converts a Qt::BrushStyle into a string </p>
 
 </div>
 </div>
@@ -1054,7 +1100,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 &gt; </div>
 </div><div class="memdoc">
 
 <p>converts a QString into a QColor, compatible with jkqtp_QColor2String(QColor color); </p>
-<p >This returns a QString which contains the name of named colors and the RGBA values in a QT readable form othertwise. </p>
+<p >This returns a QString which contains the name of named colors and the RGBA values in a QT readable form othertwise. This function allows to add the alpha-value as <code>"&lt;color_name&gt;,&lt;alpha&gt;"</code> as integer betwee 0 and 255 or as <code>"&lt;color_name&gt;,&lt;transparency_percent&gt;%"</code> in the range of 0..100 % (i.e. (1-transparency_percent/100)*255). Also <code>"&lt;color_name&gt;,a&lt;alpha_percent&gt;%"</code> in the range of 0..100 % (i.e. alpha_percent/100*255). </p>
 
 </div>
 </div>
@@ -1261,7 +1307,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 23 2022 20:48:26 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Jun 2 2022 19:30:14 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

@@ -106,7 +106,6 @@ $(document).ready(function(){initNavTree('group__jkqtpplotter__styling.html','')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">JKQTPlotter Styling System<div class="ingroups"><a class="el" href="group__jkqtplotter.html">JKQTPlotter: Qt based Scientific Plotter Class</a></div></div></div>
 </div><!--header-->
@@ -138,6 +137,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_colorbar_coordinate_axis_style.html">JKQTPColorbarCoordinateAxisStyle</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support Class for <a class="el" href="class_j_k_q_t_p_coordinate_axis.html" title="this virtual class is the base for any type of coordinate axis, to be drawn by JKQTBasePlotter.">JKQTPCoordinateAxis</a>, which summarizes all properties that define the visual styling of a <a class="el" href="class_j_k_q_t_p_coordinate_axis.html" title="this virtual class is the base for any type of coordinate axis, to be drawn by JKQTBasePlotter.">JKQTPCoordinateAxis</a> used for colorbars outside the plot.  <a href="class_j_k_q_t_p_colorbar_coordinate_axis_style.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how a fill-color is derived from a given color.  <a href="struct_j_k_q_t_p_color_derivation_mode.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_k_q_t_p_coordinate_axis_style.html">JKQTPCoordinateAxisStyle</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support Class for <a class="el" href="class_j_k_q_t_p_coordinate_axis.html" title="this virtual class is the base for any type of coordinate axis, to be drawn by JKQTBasePlotter.">JKQTPCoordinateAxis</a>, which summarizes all properties that define the visual styling of a <a class="el" href="class_j_k_q_t_p_coordinate_axis.html" title="this virtual class is the base for any type of coordinate axis, to be drawn by JKQTBasePlotter.">JKQTPCoordinateAxis</a>.  <a href="class_j_k_q_t_p_coordinate_axis_style.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,86 +153,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support Class for <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a>, which summarizes all properties that define the visual styling of a <a class="el" href="class_j_k_q_t_plotter.html" title="plotter widget for scientific plots (uses JKQTBasePlotter to do the actual drawing)">JKQTPlotter</a>.  <a href="class_j_k_q_t_plotter_style.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga3930f6cc74fa249a3a49e2d8b2dd0e93"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a> { <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a5a437ada1f2a34cdcac680a588d4b9cc">JKQTPFFCMFullyTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a5cebea49d99841391c3c37737496c617">JKQTPFFCMNoColor</a> =JKQTPFFCMFullyTransparentColor
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a3048b23391149f6c1916e7d8df92fe7a">JKQTPFFCMBlack</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a1ea4d0c58eb296da36a993d57c64bda9">JKQTPFFCMGrey75</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a809c9da39b6156515a21e669b62efc53">JKQTPFFCMGrey50</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a0a3192e68964173a3096e47476f831d6">JKQTPFFCMGrey25</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a21e47586666885242e95b765a72a5dc0">JKQTPFFCMWhite</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a5179f972a6ad751c07cf9e337718996c">JKQTPFFCMBlackTransparent</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a27b1e90b08b11941c0c3d8f19517211b">JKQTPFFCMGrey75Transparent</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a4ac0d24a9095cd5847c7af61a13f188c">JKQTPFFCMGrey50Transparent</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ad7cb2a6d233a27dc8479a67f8d055295">JKQTPFFCMGrey25Transparent</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ad49073139308f0c3d813432781e4ff29">JKQTPFFCMWhiteTransparent</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a7bc9e4df2ae7d7365fae0a6fb7db6413">JKQTPFFCMSameColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a1721562d492d7c450aea5f356ff5fa85">JKQTPFFCMSameNonTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a1e5d45ca949b97d4eb211e5939af96f9">JKQTPFFCMSameMoreTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93af56bb7d5dfbfd4f8a0738401e355247e">JKQTPFFCMSameEvenMoreTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93afc095bb487aaf0987731c98e0cdea556">JKQTPFFCMSameLessTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93aa3847013273633c32d07dd4d7fe32699">JKQTPFFCMSameEvenLessTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0324355957b4e49ce7181c82a9cb22f">JKQTPFFCMInvertedColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93aa48b5deb750977484dfce50e57dea751">JKQTPFFCMInvertedTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ab6777ddaaf9c57d77ef9581349da00a4">JKQTPFFCMInvertedNonTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a086f041a37150c8139d22d6897e0fb36">JKQTPFFCMLighterColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ab4e3c83bbd2db786396bb1052900cb5c">JKQTPFFCMEvenLighterColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a1308ce3503c03977330b33cf5a098128">JKQTPFFCMDarkerColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a4817fa1eb527c9f79cc753b994e7d7f6">JKQTPFFCMEvenDarkerColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93adf5079be346344e7284c4776d4e914fe">JKQTPFFCMLighterAndTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a689c2cbb3c40afb20a27dd4315cb5c60">JKQTPFFCMEvenLighterAndTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a12d3d751568dc330c4cbb79ef9b00bc2">JKQTPFFCMDarkerAndTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ad73da3eb40fcf55ec0ee770781cb063e">JKQTPFFCMEvenDarkerAndTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a8918f61ce73cc9af8207cd5e979feffa">JKQTPFFCMLighterAndNonTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93a39be1ef3bffbbb0bbdc86bb437f38110">JKQTPFFCMEvenLighterAndNonTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ac07849e27fca30548afc6e9e45f8caaa">JKQTPFFCMDarkerAndNonTransparentColor</a>
-, <br />
-&#160;&#160;<a class="el" href="group__jkqtpplotter__styling.html#gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0c64dae6ca67a4f5adfd13844458007">JKQTPFFCMEvenDarkerAndNonTransparentColor</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ga3930f6cc74fa249a3a49e2d8b2dd0e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how a fill-color is derived from a given color.  <a href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">More...</a><br /></td></tr>
-<tr class="separator:ga3930f6cc74fa249a3a49e2d8b2dd0e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga169da9c172a073d777c6a4d4f8b8546c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c">JKQTPColorDerivationMode2String</a> (<a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a> mode)</td></tr>
-<tr class="memdesc:ga169da9c172a073d777c6a4d4f8b8546c"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert a JKQTPColorDerivationMode to a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a>  <a href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c">More...</a><br /></td></tr>
+<tr class="memitem:ga169da9c172a073d777c6a4d4f8b8546c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c">JKQTPColorDerivationMode2String</a> (<a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a> mode)</td></tr>
+<tr class="memdesc:ga169da9c172a073d777c6a4d4f8b8546c"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert a <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> to a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a>  <a href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c">More...</a><br /></td></tr>
 <tr class="separator:ga169da9c172a073d777c6a4d4f8b8546c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga91fe0ecef2ae61e728f80b0b4a9e8c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga91fe0ecef2ae61e728f80b0b4a9e8c2e">JKQTPGetDerivedColor</a> (<a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a> mode, const QColor &amp;basecolor)</td></tr>
-<tr class="memdesc:ga91fe0ecef2ae61e728f80b0b4a9e8c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">use a JKQTPColorDerivationMode to derive a color from <em>col</em> as specified  <a href="group__jkqtpplotter__styling.html#ga91fe0ecef2ae61e728f80b0b4a9e8c2e">More...</a><br /></td></tr>
+<tr class="memitem:ga91fe0ecef2ae61e728f80b0b4a9e8c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga91fe0ecef2ae61e728f80b0b4a9e8c2e">JKQTPGetDerivedColor</a> (<a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a> mode, const QColor &amp;basecolor)</td></tr>
+<tr class="memdesc:ga91fe0ecef2ae61e728f80b0b4a9e8c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">use a <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> to derive a color from <em>col</em> as specified  <a href="group__jkqtpplotter__styling.html#ga91fe0ecef2ae61e728f80b0b4a9e8c2e">More...</a><br /></td></tr>
 <tr class="separator:ga91fe0ecef2ae61e728f80b0b4a9e8c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad617cbbb3fbc3e988495dc9553042549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> <a class="el" href="class_j_k_q_t_base_plotter_style.html">JKQTBasePlotterStyle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#gad617cbbb3fbc3e988495dc9553042549">JKQTPGetSystemDefaultBaseStyle</a> ()</td></tr>
 <tr class="memdesc:gad617cbbb3fbc3e988495dc9553042549"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the system-wide default <a class="el" href="class_j_k_q_t_plotter_style.html" title="Support Class for JKQTPlotter, which summarizes all properties that define the visual styling of a JK...">JKQTPlotterStyle</a>  <a href="group__jkqtpplotter__styling.html#gad617cbbb3fbc3e988495dc9553042549">More...</a><br /></td></tr>
@@ -250,8 +179,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4840ec94f56ddc9df4bf5d2c3d0c15ae"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#ga4840ec94f56ddc9df4bf5d2c3d0c15ae">QColorWithAlphaF</a> (const QColor &amp;color, qreal alphaF)</td></tr>
 <tr class="memdesc:ga4840ec94f56ddc9df4bf5d2c3d0c15ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a QColor, based on the given <em>color</em>, but with alpha set to the specified value <em>alphaF</em>  <a href="group__jkqtpplotter__styling.html#ga4840ec94f56ddc9df4bf5d2c3d0c15ae">More...</a><br /></td></tr>
 <tr class="separator:ga4840ec94f56ddc9df4bf5d2c3d0c15ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac40219b5681253c92960f758d2aea32c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> <a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c">String2JKQTPColorDerivationMode</a> (const QString &amp;mode)</td></tr>
-<tr class="memdesc:gac40219b5681253c92960f758d2aea32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> (created by <a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a> ) to JKQTPColorDerivationMode  <a href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c">More...</a><br /></td></tr>
+<tr class="memitem:gac40219b5681253c92960f758d2aea32c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c">String2JKQTPColorDerivationMode</a> (const QString &amp;mode)</td></tr>
+<tr class="memdesc:gac40219b5681253c92960f758d2aea32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> (created by <a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a> ) to <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a>  <a href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c">More...</a><br /></td></tr>
 <tr class="separator:gac40219b5681253c92960f758d2aea32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -328,95 +257,6 @@ Functions</h2></td></tr>
  </td></tr>
 </table>
 <dl class="section see"><dt>See also</dt><dd>For a detailed example, see <a class="el" href="_j_k_q_t_plotter_styling.html">Tutorial (JKQTPlotter): Styling a JKQtPlotter</a> </dd></dl>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ga3930f6cc74fa249a3a49e2d8b2dd0e93" name="ga3930f6cc74fa249a3a49e2d8b2dd0e93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3930f6cc74fa249a3a49e2d8b2dd0e93">&#9670;&nbsp;</a></span>JKQTPColorDerivationMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Specifies how a fill-color is derived from a given color. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5a437ada1f2a34cdcac680a588d4b9cc" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5a437ada1f2a34cdcac680a588d4b9cc"></a>JKQTPFFCMFullyTransparentColor&#160;</td><td class="fielddoc"><p >fully transparent color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5cebea49d99841391c3c37737496c617" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5cebea49d99841391c3c37737496c617"></a>JKQTPFFCMNoColor&#160;</td><td class="fielddoc"><p >fully transparent color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a3048b23391149f6c1916e7d8df92fe7a" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a3048b23391149f6c1916e7d8df92fe7a"></a>JKQTPFFCMBlack&#160;</td><td class="fielddoc"><p >fill with black </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1ea4d0c58eb296da36a993d57c64bda9" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1ea4d0c58eb296da36a993d57c64bda9"></a>JKQTPFFCMGrey75&#160;</td><td class="fielddoc"><p >fill with 75% grey </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a809c9da39b6156515a21e669b62efc53" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a809c9da39b6156515a21e669b62efc53"></a>JKQTPFFCMGrey50&#160;</td><td class="fielddoc"><p >fill with 50% grey </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a0a3192e68964173a3096e47476f831d6" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a0a3192e68964173a3096e47476f831d6"></a>JKQTPFFCMGrey25&#160;</td><td class="fielddoc"><p >fill with 25% grey </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a21e47586666885242e95b765a72a5dc0" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a21e47586666885242e95b765a72a5dc0"></a>JKQTPFFCMWhite&#160;</td><td class="fielddoc"><p >fill with white </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5179f972a6ad751c07cf9e337718996c" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a5179f972a6ad751c07cf9e337718996c"></a>JKQTPFFCMBlackTransparent&#160;</td><td class="fielddoc"><p >fill with black, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a27b1e90b08b11941c0c3d8f19517211b" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a27b1e90b08b11941c0c3d8f19517211b"></a>JKQTPFFCMGrey75Transparent&#160;</td><td class="fielddoc"><p >fill with 75% grey, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a4ac0d24a9095cd5847c7af61a13f188c" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a4ac0d24a9095cd5847c7af61a13f188c"></a>JKQTPFFCMGrey50Transparent&#160;</td><td class="fielddoc"><p >fill with 50% grey, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad7cb2a6d233a27dc8479a67f8d055295" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad7cb2a6d233a27dc8479a67f8d055295"></a>JKQTPFFCMGrey25Transparent&#160;</td><td class="fielddoc"><p >fill with 25% grey, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad49073139308f0c3d813432781e4ff29" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad49073139308f0c3d813432781e4ff29"></a>JKQTPFFCMWhiteTransparent&#160;</td><td class="fielddoc"><p >fill with white, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a7bc9e4df2ae7d7365fae0a6fb7db6413" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a7bc9e4df2ae7d7365fae0a6fb7db6413"></a>JKQTPFFCMSameColor&#160;</td><td class="fielddoc"><p >fill with the same color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1721562d492d7c450aea5f356ff5fa85" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1721562d492d7c450aea5f356ff5fa85"></a>JKQTPFFCMSameNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the same color, but remove any transparency (if any) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1e5d45ca949b97d4eb211e5939af96f9" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1e5d45ca949b97d4eb211e5939af96f9"></a>JKQTPFFCMSameMoreTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a partly transparent color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93af56bb7d5dfbfd4f8a0738401e355247e" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93af56bb7d5dfbfd4f8a0738401e355247e"></a>JKQTPFFCMSameEvenMoreTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a more transparent color than JKQTPFFCMMoreTransparentColor </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93afc095bb487aaf0987731c98e0cdea556" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93afc095bb487aaf0987731c98e0cdea556"></a>JKQTPFFCMSameLessTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a partly transparent color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93aa3847013273633c32d07dd4d7fe32699" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93aa3847013273633c32d07dd4d7fe32699"></a>JKQTPFFCMSameEvenLessTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a more transparent color than JKQTPFFCMLessTransparentColor </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0324355957b4e49ce7181c82a9cb22f" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0324355957b4e49ce7181c82a9cb22f"></a>JKQTPFFCMInvertedColor&#160;</td><td class="fielddoc"><p >fill with the inverted color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93aa48b5deb750977484dfce50e57dea751" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93aa48b5deb750977484dfce50e57dea751"></a>JKQTPFFCMInvertedTransparentColor&#160;</td><td class="fielddoc"><p >fill with the inverted color, slightly transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ab6777ddaaf9c57d77ef9581349da00a4" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ab6777ddaaf9c57d77ef9581349da00a4"></a>JKQTPFFCMInvertedNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the inverted color, non-transparent (even if the basecolor had some transparency) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a086f041a37150c8139d22d6897e0fb36" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a086f041a37150c8139d22d6897e0fb36"></a>JKQTPFFCMLighterColor&#160;</td><td class="fielddoc"><p >fill with the a lighter color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ab4e3c83bbd2db786396bb1052900cb5c" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ab4e3c83bbd2db786396bb1052900cb5c"></a>JKQTPFFCMEvenLighterColor&#160;</td><td class="fielddoc"><p >fill with the an even lighter color than JKQTPFFCMLighterColor </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1308ce3503c03977330b33cf5a098128" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a1308ce3503c03977330b33cf5a098128"></a>JKQTPFFCMDarkerColor&#160;</td><td class="fielddoc"><p >fill with the a darker color </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a4817fa1eb527c9f79cc753b994e7d7f6" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a4817fa1eb527c9f79cc753b994e7d7f6"></a>JKQTPFFCMEvenDarkerColor&#160;</td><td class="fielddoc"><p >fill with the an even darker color than JKQTPFFCMDarkerColor </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93adf5079be346344e7284c4776d4e914fe" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93adf5079be346344e7284c4776d4e914fe"></a>JKQTPFFCMLighterAndTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a lighter color, that is in addition a bit transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a689c2cbb3c40afb20a27dd4315cb5c60" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a689c2cbb3c40afb20a27dd4315cb5c60"></a>JKQTPFFCMEvenLighterAndTransparentColor&#160;</td><td class="fielddoc"><p >fill with the an even lighter color than JKQTPFFCMLighterColor, that is in addition a bit transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a12d3d751568dc330c4cbb79ef9b00bc2" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a12d3d751568dc330c4cbb79ef9b00bc2"></a>JKQTPFFCMDarkerAndTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a darker color, that is in addition a bit transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad73da3eb40fcf55ec0ee770781cb063e" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ad73da3eb40fcf55ec0ee770781cb063e"></a>JKQTPFFCMEvenDarkerAndTransparentColor&#160;</td><td class="fielddoc"><p >fill with the an even darker color than JKQTPFFCMDarkerColor, that is in addition a bit transparent </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a8918f61ce73cc9af8207cd5e979feffa" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a8918f61ce73cc9af8207cd5e979feffa"></a>JKQTPFFCMLighterAndNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a lighter color, that is non-transparent (even if the basecolor had some transparency) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93a39be1ef3bffbbb0bbdc86bb437f38110" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93a39be1ef3bffbbb0bbdc86bb437f38110"></a>JKQTPFFCMEvenLighterAndNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the an even lighter color than JKQTPFFCMLighterColor, that is non-transparent (even if the basecolor had some transparency) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ac07849e27fca30548afc6e9e45f8caaa" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ac07849e27fca30548afc6e9e45f8caaa"></a>JKQTPFFCMDarkerAndNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the a darker color, that is non-transparent (even if the basecolor had some transparency) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0c64dae6ca67a4f5adfd13844458007" name="gga3930f6cc74fa249a3a49e2d8b2dd0e93ae0c64dae6ca67a4f5adfd13844458007"></a>JKQTPFFCMEvenDarkerAndNonTransparentColor&#160;</td><td class="fielddoc"><p >fill with the an even darker color than JKQTPFFCMDarkerColor, that is non-transparent (even if the basecolor had some transparency) <br  />
- </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga169da9c172a073d777c6a4d4f8b8546c" name="ga169da9c172a073d777c6a4d4f8b8546c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga169da9c172a073d777c6a4d4f8b8546c">&#9670;&nbsp;</a></span>JKQTPColorDerivationMode2String()</h2>
@@ -427,15 +267,15 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QString JKQTPColorDerivationMode2String </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a>&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>convert a JKQTPColorDerivationMode to a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c" title="convert a QString (created by JKQTPColorDerivationMode2String() ) to JKQTPColorDerivationMode">String2JKQTPColorDerivationMode()</a>, <a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
+<p>convert a <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> to a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__jkqtpplotter__styling.html#gac40219b5681253c92960f758d2aea32c" title="convert a QString (created by JKQTPColorDerivationMode2String() ) to JKQTPColorDerivationMode">String2JKQTPColorDerivationMode()</a>, <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
 
 </div>
 </div>
@@ -448,7 +288,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> QColor JKQTPGetDerivedColor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a>&#160;</td>
           <td class="paramname"><em>mode</em>, </td>
         </tr>
         <tr>
@@ -465,7 +305,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>use a JKQTPColorDerivationMode to derive a color from <em>col</em> as specified </p>
+<p>use a <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> to derive a color from <em>col</em> as specified </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>the mode of how to modify the given color <em>basecolor</em> </td></tr>
@@ -473,7 +313,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
 
 </div>
 </div>
@@ -644,7 +484,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> <a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93">JKQTPColorDerivationMode</a> String2JKQTPColorDerivationMode </td>
+          <td class="memname"><a class="el" href="group__jkqtpplottersupprt.html#ga7cc1b67e0aa855571646587b4f0a6488">JKQTPLOTTER_LIB_EXPORT</a> <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html">JKQTPColorDerivationMode</a> String2JKQTPColorDerivationMode </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
@@ -653,8 +493,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>convert a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> (created by <a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a> ) to JKQTPColorDerivationMode </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a>, <a class="el" href="group__jkqtpplotter__styling.html#ga3930f6cc74fa249a3a49e2d8b2dd0e93" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
+<p>convert a <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> (created by <a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a> ) to <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__jkqtpplotter__styling.html#ga169da9c172a073d777c6a4d4f8b8546c" title="convert a JKQTPColorDerivationMode to a QString">JKQTPColorDerivationMode2String()</a>, <a class="el" href="struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill-color is derived from a given color.">JKQTPColorDerivationMode</a> </dd></dl>
 
 </div>
 </div>
@@ -663,7 +503,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 23 2022 20:48:26 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Jun 2 2022 19:30:14 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

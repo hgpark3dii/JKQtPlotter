@@ -1,6 +1,7 @@
 <map id="JKQTGraphsBaseStyle" name="JKQTGraphsBaseStyle">
-<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="1139,107,1327,136"/>
-<area shape="rect" id="node2" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="5,83,284,112"/>
-<area shape="rect" id="node3" href="$class_j_k_q_t_geometric_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="333,105,561,151"/>
-<area shape="rect" id="node4" href="$class_j_k_q_t_annotations_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="736,170,976,217"/>
+<area shape="rect" id="node1" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="1811,105,1999,135"/>
+<area shape="rect" id="node2" href="$class_j_k_q_t_graphs_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="499,113,777,143"/>
+<area shape="rect" id="node4" href="$class_j_k_q_t_geometric_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="1005,105,1233,151"/>
+<area shape="rect" id="node3" href="$struct_j_k_q_t_p_color_derivation_mode.html" title="Specifies how a fill&#45;color is derived from a given color." alt="" coords="5,155,229,184"/>
+<area shape="rect" id="node5" href="$class_j_k_q_t_annotations_specific_style_properties.html" title="Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of ..." alt="" coords="1408,169,1648,215"/>
 </map>

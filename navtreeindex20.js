@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"class_j_k_q_t_p_x_y_parametrized_scatter_graph.html#a2681a15634cbdcc982e811ed6b45487f":[9,2,2,1,6,2,1,15],
 "class_j_k_q_t_p_x_y_parametrized_scatter_graph.html#a42ed5f991ba940fd2a7ff897c6fe6e1e":[9,2,2,1,6,2,1,11],
 "class_j_k_q_t_p_x_y_parametrized_scatter_graph.html#a457888077f01f6877cc9f440bd26ef8c":[9,2,2,1,6,2,1,5],
 "class_j_k_q_t_p_x_y_parametrized_scatter_graph.html#a476f0a7a02572210520250bba75515cd":[9,2,2,1,6,2,1,38],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "class_j_k_q_t_plotter.html#a83fc23a6480150623a3d8b19971ca223":[9,2,3,1,237],
 "class_j_k_q_t_plotter.html#a842f47ae32ea070eb9cd96aeba378e2e":[9,2,3,1,194],
 "class_j_k_q_t_plotter.html#a854047a78e082a2960ebe5d5c7c07aa6":[9,2,3,1,202],
-"class_j_k_q_t_plotter.html#a85735d84b5876d63cb2e1f87e7d58f16":[9,2,3,1,189],
-"class_j_k_q_t_plotter.html#a86ec8b38d833a0dc2750f13d13f7d247":[9,2,3,1,101]
+"class_j_k_q_t_plotter.html#a85735d84b5876d63cb2e1f87e7d58f16":[9,2,3,1,189]
 };
