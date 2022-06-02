@@ -123,7 +123,7 @@ var class_j_k_q_t_math_text =
     [ "isFontBlackboardSimulated", "class_j_k_q_t_math_text.html#af60ac08c5ac3e342e932ef0def6173c4", null ],
     [ "isUsingUnparsed", "class_j_k_q_t_math_text.html#ad1ecf17531288f4bedd880754d00a1d2", null ],
     [ "loadSettings", "class_j_k_q_t_math_text.html#a8862f932173da3044cf4b34b260f7256", null ],
-    [ "parse", "class_j_k_q_t_math_text.html#a8c03bdb5295d9d9c3fb4a063079a02cc", null ],
+    [ "parse", "class_j_k_q_t_math_text.html#a7e5a8ec55ff08d2dc3375e62407d2beb", null ],
     [ "parseLatexString", "class_j_k_q_t_math_text.html#aef8c51d7448f174db11f17d5f6676b5f", null ],
     [ "parseMath", "class_j_k_q_t_math_text.html#ae6c78b09d7374df3c9d1cb54746ab62e", null ],
     [ "saveSettings", "class_j_k_q_t_math_text.html#aeb2080ea22fda5c3b5e918492441b59d", null ],

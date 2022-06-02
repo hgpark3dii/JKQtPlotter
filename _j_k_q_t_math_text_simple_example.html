@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('_j_k_q_t_math_text_simple_example.html
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 3. now we parse some LaTeX code (the Schroedinger&#39;s equation), so</span></div>
 <div class="line">    <span class="comment">//    we can draw it onto the QPixmap in the next step</span></div>
-<div class="line">    mathText.<a class="code hl_function" href="class_j_k_q_t_math_text.html#a8c03bdb5295d9d9c3fb4a063079a02cc">parse</a>(<span class="stringliteral">&quot;$\\left[-\\frac{\\hbar^2}{2m}\\frac{\\partial^2}{\\partial x^2}+V(x)\\right]\\Psi(x)=\\mathrm{i}\\hbar\\frac{\\partial}{\\partial t}\\Psi(x)$&quot;</span>);</div>
+<div class="line">    mathText.<a class="code hl_function" href="class_j_k_q_t_math_text.html#a7e5a8ec55ff08d2dc3375e62407d2beb">parse</a>(<span class="stringliteral">&quot;$\\left[-\\frac{\\hbar^2}{2m}\\frac{\\partial^2}{\\partial x^2}+V(x)\\right]\\Psi(x)=\\mathrm{i}\\hbar\\frac{\\partial}{\\partial t}\\Psi(x)$&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 3. here we do the painting</span></div>
 <div class="line">    painter.begin(&amp;pix);</div>
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('_j_k_q_t_math_text_simple_example.html
 <div class="line">    <span class="keywordflow">return</span> app.exec();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_j_k_q_t_math_text_html"><div class="ttname"><a href="class_j_k_q_t_math_text.html">JKQTMathText</a></div><div class="ttdoc">this class parses a LaTeX string and can then draw the contained text/equation onto a QPainter</div><div class="ttdef"><b>Definition:</b> jkqtmathtext.h:291</div></div>
-<div class="ttc" id="aclass_j_k_q_t_math_text_html_a8c03bdb5295d9d9c3fb4a063079a02cc"><div class="ttname"><a href="class_j_k_q_t_math_text.html#a8c03bdb5295d9d9c3fb4a063079a02cc">JKQTMathText::parse</a></div><div class="ttdeci">bool parse(QString text)</div><div class="ttdoc">parse the given enhanced string. Returns true on success.</div></div>
+<div class="ttc" id="aclass_j_k_q_t_math_text_html_a7e5a8ec55ff08d2dc3375e62407d2beb"><div class="ttname"><a href="class_j_k_q_t_math_text.html#a7e5a8ec55ff08d2dc3375e62407d2beb">JKQTMathText::parse</a></div><div class="ttdeci">bool parse(const QString &amp;text, bool addSpaceBeforeAndAfter=false)</div><div class="ttdoc">parse the given enhanced string. If addSpaceBeforeAndAfter==true a little bit of space is added befor...</div></div>
 <div class="ttc" id="aclass_j_k_q_t_math_text_html_ace4fa59fd6101d2396b150ca2d5acf7b"><div class="ttname"><a href="class_j_k_q_t_math_text.html#ace4fa59fd6101d2396b150ca2d5acf7b">JKQTMathText::draw</a></div><div class="ttdeci">void draw(QPainter &amp;painter, double x, double y, bool drawBoxes=false)</div><div class="ttdoc">draw a representation to the QPainter object at the specified position</div></div>
 <div class="ttc" id="aclass_j_k_q_t_math_text_html_af231fd040caed5040c227dd3748ff899"><div class="ttname"><a href="class_j_k_q_t_math_text.html#af231fd040caed5040c227dd3748ff899">JKQTMathText::setFontSize</a></div><div class="ttdeci">void setFontSize(double __value)</div><div class="ttdoc">base font size in points</div></div>
 <div class="ttc" id="aclass_j_k_q_t_math_text_html_af7d28d367b075afe9a0d3155d20b4581"><div class="ttname"><a href="class_j_k_q_t_math_text.html#af7d28d367b075afe9a0d3155d20b4581">JKQTMathText::useXITS</a></div><div class="ttdeci">bool useXITS(bool mathModeOnly=true)</div><div class="ttdoc">configures the class to use the XITS fonts in mathmode</div></div>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('_j_k_q_t_math_text_simple_example.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="example_tutorial_projects.html">Example &amp; Tutorial Projects</a></li>
-    <li class="footer">Generated on Thu Jun 2 2022 21:09:14 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Jun 2 2022 21:27:30 for JKQTPlotter by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
