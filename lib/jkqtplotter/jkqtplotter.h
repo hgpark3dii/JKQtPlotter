@@ -687,6 +687,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPlotter: public QWidget {
          */
         void setPlotUpdateEnabled(bool enable);
 
+        void setRedrawDelayOnResize(int delay_msec = 100);
+
         /** \brief registeres a certain mouse drag action \a action to be executed when a mouse drag operation is
          *         initialized with the given \a button and \a modifier */
         void registerMouseDragAction(Qt::MouseButton button, Qt::KeyboardModifiers modifier, JKQTPMouseDragActions action);
@@ -1438,6 +1440,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPlotter: public QWidget {
          * \see setPlotUpdateEnabled(), isPlotUpdateEnabled()
          */
         bool doDrawing;
+
+        int redraw_delay_msec;
 
         /** \brief JKQTBasePlotter used to plot */
         JKQTBasePlotter* plotter;

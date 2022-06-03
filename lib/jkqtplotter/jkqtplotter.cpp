@@ -31,8 +31,6 @@
 #include "jkqtplotter/graphs/jkqtpscatter.h"
 
 
-#define jkqtp_RESIZE_DELAY 100
-
 
 
 
@@ -45,6 +43,7 @@ JKQTPlotter::JKQTPlotter(bool datastore_internal, QWidget* parent, JKQTPDatastor
     QWidget(parent, Qt::Widget),
     currentMouseDragAction(),
     doDrawing(false),
+    redraw_delay_msec(100),
     plotter(nullptr),
     mouseDragingRectangle(false),
     mouseDragRectXStart(0), mouseDragRectXStartPixel(0), mouseDragRectXEndPixel(0),
@@ -1230,7 +1229,7 @@ void JKQTPlotter::resizeEvent(QResizeEvent *event) {
      }
      if (sizeChanged) {
          resizeTimer.setSingleShot(true);
-         resizeTimer.start(jkqtp_RESIZE_DELAY);
+         resizeTimer.start(redraw_delay_msec);
      }
 
      //updateGeometry();
@@ -1736,6 +1735,11 @@ void JKQTPlotter::setPlotUpdateEnabled(bool enable)
     doDrawing=enable;
     plotter->setEmittingSignalsEnabled(enable);
     //qDebug()<<objectName()<<"  doDrawing="<<doDrawing;
+}
+
+void JKQTPlotter::setRedrawDelayOnResize(int delay_msec)
+{
+    redraw_delay_msec=delay_msec;
 }
 
 void JKQTPlotter::registerMouseDragAction(Qt::MouseButton button, Qt::KeyboardModifiers modifier, JKQTPMouseDragActions action)
