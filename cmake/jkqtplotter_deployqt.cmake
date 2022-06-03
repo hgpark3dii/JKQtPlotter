@@ -1,4 +1,9 @@
 function(jkqtplotter_deployqt TARGET_NAME)
+    if(DEFINED _VCPKG_INSTALLED_DIR)
+        # Do nothing because vcpkg takes care of deploying DLLs.
+        return()
+    endif()
+
     #use windeploy
     if (WIN32)
         get_target_property(_qmake_executable Qt${QT_VERSION_MAJOR}::qmake IMPORTED_LOCATION)
