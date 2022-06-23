@@ -702,6 +702,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTBasePlotter: public QObject {
         double getKeyYMargin() const;
         /** \copydoc JKQTPKeyStyle::xSeparation */
         double getKeyXSeparation() const;
+        /** \copydoc JKQTPKeyStyle::xSpacing */
+        double getKeyXSpacing() const;
         /** \copydoc JKQTPKeyStyle::xOffset */
         double getKeyXOffset() const;
         /** \copydoc JKQTPKeyStyle::yOffset */
@@ -1518,6 +1520,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTBasePlotter: public QObject {
         void setKeyYMargin(double __value);
         /** \copydoc JKQTPKeyStyle::xSeparation */
         void setKeyXSeparation(double __value);
+        /** \copydoc JKQTPKeyStyle::xSpacing */
+        void setKeyXSpacing(double __value);
         /** \copydoc JKQTPKeyStyle::yOffset */
         void setKeyXOffset(double __value);
         /** \copydoc JKQTPKeyStyle::xOffset */

@@ -89,6 +89,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPKeyStyle  {
         double yOffset;
         /** \brief distance between key line example and key text [in units of width of 'X' set in font, fontSize] */
         double xSeparation;
+        /** \brief distance between two key entries (only for JKQTPKeyLayoutOneRow currently) [in units of width of 'X' set in font, fontSize] */
+        double xSpacing;
         /** \brief distance between two key entries [in units of height of font, fontSize] */
         double ySeparation;
         /** \brief key position */

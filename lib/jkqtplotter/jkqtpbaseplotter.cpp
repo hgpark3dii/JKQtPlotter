@@ -2606,9 +2606,22 @@ void JKQTBasePlotter::setKeyXSeparation(double __value)
     }
 }
 
+void JKQTBasePlotter::setKeyXSpacing(double __value)
+{
+    if (jkqtp_approximatelyUnequal(this->plotterStyle.keyStyle.xSpacing , __value)) {
+        this->plotterStyle.keyStyle.xSpacing = __value;
+        redrawPlot();
+    }
+}
+
 double JKQTBasePlotter::getKeyXSeparation() const
 {
     return this->plotterStyle.keyStyle.xSeparation;
+}
+
+double JKQTBasePlotter::getKeyXSpacing() const
+{
+    return this->plotterStyle.keyStyle.xSpacing;
 }
 
 void JKQTBasePlotter::setKeyXOffset(double __value)
@@ -4209,7 +4222,7 @@ void JKQTBasePlotter::drawKeyContents(JKQTPEnhancedPainter& painter, double x, d
                 }
                 //if (itheight<key_item_height*kfm.height()) itheight=key_item_height*kfm.height();
                 //y=y+itheight+(plotterStyle.keyStyle.ySeparation)*kfm.height();
-                x=x+fs.width()+(2.0*plotterStyle.keyStyle.xSeparation+plotterStyle.keyStyle.sampleLineLength)*Xwid;
+                x=x+fs.width()+(2.0*plotterStyle.keyStyle.xSeparation+plotterStyle.keyStyle.xSpacing+plotterStyle.keyStyle.sampleLineLength)*Xwid;
             }
         }
     } else if (plotterStyle.keyStyle.layout==JKQTPKeyLayoutMultiColumn) {
@@ -4349,7 +4362,8 @@ void JKQTBasePlotter::getKeyExtent(JKQTPEnhancedPainter& painter, double* width,
                 QSizeF fs=getTextSizeSize(plotterStyle.defaultFontName, plotterStyle.keyStyle.fontSize*fontSizeMultiplier, graphs[i]->getTitle(), painter);
                 if (fs.height()>h) h=fs.height();
                 if (text_width && fs.width()>*text_width) *text_width=fs.width();
-                w=w+fs.width()+(plotterStyle.keyStyle.sampleLineLength+2.0*plotterStyle.keyStyle.xSeparation)*Xwid;
+                double spacing = i>0 ? plotterStyle.keyStyle.xSpacing : 0;
+                w=w+fs.width()+(plotterStyle.keyStyle.sampleLineLength+2.0*plotterStyle.keyStyle.xSeparation+spacing)*Xwid;
             }
         }
         if (h<plotterStyle.keyStyle.itemHeight*Xwid) h=plotterStyle.keyStyle.itemHeight*Xwid;
