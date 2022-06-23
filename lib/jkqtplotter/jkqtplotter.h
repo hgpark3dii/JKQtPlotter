@@ -1333,6 +1333,13 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPlotter: public QWidget {
          */
         void contextMenuOpened(double x, double y, QMenu* contextMenu);
 
+        /** \brief signal: emitted immediately after initialisation of the standard context menu, prior to contextMenuOpened signal
+         *         (intended to support proper modification of the menu)
+         *
+         * \param contextMenu QMenu-object of the context menu.
+         */
+        void standardContextMenuInitialised(QMenu* contextMenu);
+
 
         /** \brief signal: emitted whenever the user selects a new x-y zoom range (by mouse)
          *

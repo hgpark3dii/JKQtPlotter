@@ -1686,6 +1686,7 @@ void JKQTPlotter::openStandardContextMenu(int x, int y)
     mouseContextX=plotter->p2x(x/magnification);
     mouseContextY=plotter->p2y((y-getPlotYOffset())/magnification);
     initContextMenu();
+    emit standardContextMenuInitialised(contextMenu);
     contextMenu->popup(mapToGlobal(QPoint(x,y)));
     //qDebug()<<" -> "<<mapToGlobal(QPoint(x,y))<<contextMenu->size()<<contextMenu->pos()<<contextMenu->parent();
     emit contextMenuOpened(mouseContextX, mouseContextY, contextMenu);
