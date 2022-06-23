@@ -39,6 +39,7 @@ JKQTPKeyStyle::JKQTPKeyStyle():
     xOffset(0.5),
     yOffset(0.5),
     xSeparation(0.75),
+    xSpacing(0.5),
     ySeparation(0.75),
     position(JKQTPKeyInsideTopRight),
     layout(JKQTPKeyLayoutOneColumn),
@@ -63,6 +64,7 @@ void JKQTPKeyStyle::loadSettings(const QSettings &settings, const QString &group
     xMargin = settings.value(group+"xmargin", defaultStyle.xMargin).toDouble();
     yMargin = settings.value(group+"ymargin", defaultStyle.yMargin).toDouble();
     xSeparation = settings.value(group+"xseparation", defaultStyle.xSeparation).toDouble();
+    xSpacing = settings.value(group+"xspacing", defaultStyle.xSpacing).toDouble();
     ySeparation = settings.value(group+"yseparation", defaultStyle.ySeparation).toDouble();
     frameColor = jkqtp_String2QColor(settings.value(group+"frame_color", jkqtp_QColor2String(defaultStyle.frameColor)).toString());
     textColor = jkqtp_String2QColor(settings.value(group+"text_color", jkqtp_QColor2String(defaultStyle.textColor)).toString());
@@ -87,6 +89,7 @@ void JKQTPKeyStyle::saveSettings(QSettings &settings, const QString &group) cons
     settings.setValue(group+"xmargin", xMargin);
     settings.setValue(group+"ymargin", yMargin);
     settings.setValue(group+"xseparation", xSeparation);
+    settings.setValue(group+"xspacing", xSpacing);
     settings.setValue(group+"yseparation", ySeparation);
     settings.setValue(group+"frame_visible", frameVisible);
     settings.setValue(group+"frame_color", jkqtp_QColor2String(frameColor));
