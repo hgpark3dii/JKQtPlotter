@@ -30,6 +30,8 @@
 #include "jkqtplotter/jkqtplotter.h"
 #include "jkqtplotter/graphs/jkqtpscatter.h"
 
+#include <utility>
+
 
 
 
@@ -1056,7 +1058,12 @@ void JKQTPlotter::initContextMenu()
         QAction* act=new QAction(tit, menVisibleGroup);
         act->setCheckable(true);
         act->setChecked(getPlotter()->getGraph(i)->isVisible());
-        act->setIcon(QIcon(QPixmap::fromImage(getPlotter()->getGraph(i)->generateKeyMarker(QSize(16,16)))));
+        {
+            qreal dpr = devicePixelRatioF();
+            QImage newImage=getPlotter()->getGraph(i)->generateKeyMarker(QSize(16*dpr,16*dpr));
+            newImage.setDevicePixelRatio(dpr);
+            act->setIcon(QIcon(QPixmap::fromImage(std::move(newImage))));
+        }
         act->setData(static_cast<int>(i));
         connect(act, SIGNAL(toggled(bool)), this, SLOT(reactGraphVisible(bool)));
         menVisibleGroup->addAction(act);
