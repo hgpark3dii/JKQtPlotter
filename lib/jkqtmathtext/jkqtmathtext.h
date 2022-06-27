@@ -416,10 +416,10 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
          * use generic Unicode fonts, e.g. "Arial" and "Times New Roman" in math-mode.
          * You should use fonts that contain as many of the mathematical symbols as possible to ensure good rendering results.
          *
-         * <code>setAnyUnicode("Times New Roman", "Times New Roman")</code>:<br>\image html jkqtmathtext/jkqtmathparser_timesnewroman.png  <br><br>
-         * <code>setAnyUnicode("Arial", "Arial")</code>:<br>\image html jkqtmathtext/jkqtmathparser_arial.png  <br><br>
-         * <code>setAnyUnicode("Courier New", "Courier New")</code>:<br>\image html jkqtmathtext/jkqtmathparser_couriernew.png  <br><br>
-         * <code>setAnyUnicode("Comic Sans MS", "Comic Sans MS")</code>:<br>\image html jkqtmathtext/jkqtmathparser_comicsans.png  <br><br>
+         * <code>useAnyUnicode("Times New Roman", "Times New Roman")</code>:<br>\image html jkqtmathtext/jkqtmathparser_timesnewroman.png  <br><br>
+         * <code>useAnyUnicode("Arial", "Arial")</code>:<br>\image html jkqtmathtext/jkqtmathparser_arial.png  <br><br>
+         * <code>useAnyUnicode("Courier New", "Courier New")</code>:<br>\image html jkqtmathtext/jkqtmathparser_couriernew.png  <br><br>
+         * <code>useAnyUnicode("Comic Sans MS", "Comic Sans MS")</code>:<br>\image html jkqtmathtext/jkqtmathparser_comicsans.png  <br><br>
          *
          */
         void useAnyUnicode(QString timesFont=QString(""), const QString& sansFont=QString(""), JKQTMathTextFontEncoding encodingTimes=JKQTMathTextFontEncoding::MTFEunicode, JKQTMathTextFontEncoding encodingSans=JKQTMathTextFontEncoding::MTFEunicode);
@@ -430,11 +430,15 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
         void setBraceFactor(double __value);
         /** \copydoc brace_factor */ 
         double getBraceFactor() const;
-        /** \copydoc subsuper_size_factor */ 
+        /** \copydoc subsuper_size_factor */
         void setSubsuperSizeFactor(double __value);
-        /** \copydoc subsuper_size_factor */ 
+        /** \copydoc subsuper_size_factor */
         double getSubsuperSizeFactor() const;
-        /** \copydoc italic_correction_factor */ 
+        /** \copydoc subsuper_mode_selection_by_size_factor */
+        void setSubsuperModeSelectionBySizeFactor(double __value);
+        /** \copydoc subsuper_mode_selection_by_size_factor */
+        double getSubsuperModeSelectionBySizeFactor() const;
+        /** \copydoc italic_correction_factor */
         void setItalicCorrectionFactor(double __value);
         /** \copydoc italic_correction_factor */ 
         double getItalicCorrectionFactor() const;
@@ -442,19 +446,39 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
         void setOperatorsubsuperSizeFactor(double __value);
         /** \copydoc operatorsubsuper_size_factor */ 
         double getOperatorsubsuperSizeFactor() const;
-        /** \copydoc mathoperator_width_factor */ 
+        /** \copydoc operatorsubsuper_distance_factor */
+        void setOperatorsubsuperDistanceFactor(double __value);
+        /** \copydoc operatorsubsuper_distance_factor */
+        double getOperatorsubsuperDistanceFactor() const;
+        /** \copydoc operatorsubsuper_extraspace_factor */
+        void setOperatorsubsuperExtraSpaceFactor(double __value);
+        /** \copydoc operatorsubsuper_extraspace_factor */
+        double getOperatorsubsuperExtraSpaceFactor() const;
+        /** \copydoc mathoperator_width_factor */
         void setMathoperatorWidthFactor(double __value);
-        /** \copydoc mathoperator_width_factor */ 
+        /** \copydoc mathoperator_width_factor */
         double getMathoperatorWidthFactor() const;
-        /** \copydoc super_shift_factor */ 
+        /** \copydoc bigmathoperator_font_factor */
+        void setBigMathoperatorFontFactor(double __value);
+        /** \copydoc bigmathoperator_font_factor */
+        double getBigMathoperatorFontFactor() const;
+        /** \copydoc super_shift_factor */
         void setSuperShiftFactor(double __value);
-        /** \copydoc super_shift_factor */ 
+        /** \copydoc super_shift_factor */
         double getSuperShiftFactor() const;
-        /** \copydoc sub_shift_factor */ 
+        /** \copydoc sub_shift_factor */
         void setSubShiftFactor(double __value);
-        /** \copydoc sub_shift_factor */ 
+        /** \copydoc sub_shift_factor */
         double getSubShiftFactor() const;
-        /** \copydoc brace_shrink_factor */ 
+        /** \copydoc special_super_shift_factor */
+        void setSpecialSuperShiftFactor(double __value);
+        /** \copydoc special_super_shift_factor */
+        double getSpecialSuperShiftFactor() const;
+        /** \copydoc special_sub_shift_factor */
+        void setSpecialSubShiftFactor(double __value);
+        /** \copydoc special_sub_shift_factor */
+        double getSpecialSubShiftFactor() const;
+        /** \copydoc brace_shrink_factor */
         void setBraceShrinkFactor(double __value);
         /** \copydoc brace_shrink_factor */ 
         double getBraceShrinkFactor() const;
@@ -493,10 +517,6 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
         void setDecorationWidthReductionXFactor(double __value);
         /** \copydoc decoration_width_reduction_Xfactor */
         double getDecorationWidthReductionXFactor() const;
-        /** \copydoc expensiveRendering */
-        void setExpensiveRendering(bool __value);
-        /** \copydoc expensiveRendering */ 
-        bool getExpensiveRendering() const;
         /** \copydoc useUnparsed */ 
         void setUseUnparsed(bool __value);
         /** \copydoc useUnparsed */ 
@@ -533,30 +553,94 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
         double brace_shrink_factor;
         /** \brief resizing factor for font size in sub-/superscript */
         double subsuper_size_factor;
+        /** \brief this factor is used to determine how to typeset sub-/superscript.
+         *
+         *  If the ascent for superscript of descent for subscript of the previous character is  \c >=subsuper_mode_selection_by_size_factor*ascent(currentFont)
+         *  or \c <=subsuper_mode_selection_by_size_factor*descent(currentFont) respectively, the sub/superscript is typeset, aligned with the ascent or descent
+         *  of the previous character. Otherwise it is aligned with the default method:
+         *
+         *  <b>Default mode:</b>
+         *  \image html jkqtmathtext_superscriptnode_getSizeInternal.png
+         *  \image html jkqtmathtext_subscriptnode_getSizeInternal.png
+         *
+         *  <b>Special mode:</b>
+         *
+         *
+         *  This method fixes problems with characters that are significantyl larger that normal text character of the fonst, such as generated
+         *  by \c \\sum,\\int,... .
+         */
+        double subsuper_mode_selection_by_size_factor;
         /** \brief fraction of a whitespace by which to shift a sub-/superscript left/right when the previous text is italic */
         double italic_correction_factor;
-        /** \brief like subsuper_size_factor, but for operators (\\sum, \\int) where the text is placed above/below the symbol */
+        /** \brief like subsuper_size_factor, but for operators (\c \\sum , \c \\int , ...) where the text is placed above/below the symbol */
         double operatorsubsuper_size_factor;
-        /** \brief factor, used to extend the size of an operator in math mode */
+        /** \brief for operators (\c \\sum , \c \\int , ...) where the text is placed above/below the symbol, this is the distance between the operator symbol and the sub-/super-text if multiplied by xHeight
+         *
+         *  \image html jkqtmathtext_subsuper_with_limits.png
+         */
+        double operatorsubsuper_distance_factor;
+        /** \brief for operators (\c \\sum , \c \\int , ...) where the text is placed above/below the symbol, this is the additional width added to the width of maximum width of the operator, above and below
+         *
+         *  \image html jkqtmathtext_subsuper_with_limits.png
+         */
+        double operatorsubsuper_extraspace_factor;
+        /** \brief factor, used to extend the size of an operator in math mode
+         *
+         *  The next image demonstrates the effect of this property, which adds extra space
+         *  around certain math operators in math mode:
+         *
+         *  \image html jkqtmathparser_mathoperator_width_factor.png
+         */
         double mathoperator_width_factor;
+        /** \brief factor, used to increase the font size for big math operators, such as \c \\sum , \c \\prod , ...
+         *
+         */
+        double bigmathoperator_font_factor;
         /** \brief relative shift of text in superscript to normal text:
-         *         0= baseline kept, 1: baseline shifted to top of normal text */
+         *         0= baseline kept, 1: baseline shifted to top of normal text
+         *
+         *  \image html jkqtmathtext_superscriptnode_getSizeInternal.png
+         */
         double super_shift_factor;
         /** \brief relative shift of text in subscript to normal text:
-         *         0= baseline kept, 1: baseline shifted to bottom of normal text */
+         *         0= baseline kept, 1: baseline shifted to bottom of normal text
+         *
+         *  \image html jkqtmathtext_subscriptnode_getSizeInternal.png
+         */
         double sub_shift_factor;
+        /** \brief relative shift of text in superscript to normal text in special superscript mode (after large previous nodes):
+         *         0= superscript descent coincides with the previous node's baselineHeight, 1: top of previous node and top of the superscript nodes coincide
+         *
+         *  \image html jkqtmathtext_specialsuperscriptnode_getSizeInternal.png
+         */
+        double special_super_shift_factor;
+        /** \brief relative shift of text in subscript to normal text in special superscript mode (after large previous nodes):
+         *         0=child's baseline at the descent of the previous node, 1: subscript-node starts at the descent of the previous node
+         *
+         *  \image html jkqtmathtext_specialsubscriptnode_getSizeInternal.png
+         */
+        double special_sub_shift_factor;
 
 
-        /** \brief scaling factor for font size of nominator and denominator of a fraction */
+        /** \brief scaling factor for font size of nominator and denominator of a fraction
+         *
+         *  \image html jkqtmathtext_frac_factor.png
+         */
         double frac_factor;
-        /** \brief scaling factor for font size of nominator and denominator of a nested fraction */
+        /** \brief scaling factor for font size of nominator and denominator of a nested fraction
+         *
+         *  \image html jkqtmathtext_frac_factor.png
+         */
         double frac_nested_factor;
-        /** \brief shift of denominator/nummerator away from central line of a frac */
+        /** \brief shift of denominator/nummerator away from central line of a frac
+         *
+         *  \image html jkqtmathtext_fracnode_geo.png
+         */
         double frac_shift_factor;
         /** \brief scaling factor for font of underbrace/overbrace text */
         double underbrace_factor;
         /** \brief scaling factor for font of underset/overset text */
-        double undersetFactor;
+        double underset_factor;
         /** \brief fraction of the brace ascent that the brace is shifted downwards, when scaled */
         double brace_y_shift_factor;
         /** \brief size of the decorations (dot, tilde, ...), as fraction of the baselineheight
@@ -569,14 +653,8 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
          *  \image html jkqtmathtext/decoration_sizing.png
          */
         double decoration_width_reduction_Xfactor;
-        /** \brief switches on some options that will grant better rendering at the expense of higher time consumption */
-        bool expensiveRendering;
         /** \brief a list that will be filled with error messages while parsing, if any error occur */
         QStringList error_list;
-        /** \brief used by the parser. This is used to implement brace pairs with \\right. */
-        bool showRightBrace;
-        /** \brief used by the parser. This is used to implement brace pairs with \\left. */
-        bool showLeftBrace;
 
         /** \brief the result of parsing the last string supplied to the object via parse() */
         JKQTMathTextNode* parsedNode;
@@ -585,22 +663,23 @@ class JKQTMATHTEXT_LIB_EXPORT JKQTMathText : public QObject {
         /** \brief if true, the unparsedNode is drawn */
         bool useUnparsed;
 
-        JKQTMathTextNode* getTree() const;
+        /** \brief returns the syntax tree of JKQTMathTextNode's that was created by the last parse call */
+        JKQTMathTextNode* getNodeTree() const;
 
         /** \brief the token types that may arrise in the string */
         enum tokenType {
             MTTnone, /*!< \brief no token */
             MTTtext, /*!< \brief a piece of general text */
-            MTTinstruction, /*!< \brief an instruction, started by "\", e.g. "\textbf", ... */
-            MTTunderscore,  /*!< \brief the character "_" */
-            MTThat,  /*!< \brief the character "^" */
-            MTTdollar,  /*!< \brief the character "$" */
-            MTTopenbrace, /*!< \brief the character "{" */
-            MTTclosebrace, /*!< \brief the character "}" */
-            MTTopenbracket, /*!< \brief the character "[" */
-            MTTclosebracket, /*!< \brief the character "]" */
+            MTTinstruction, /*!< \brief an instruction, started by \c "\\", e.g. \c "\textbf", ... */
+            MTTunderscore,  /*!< \brief the character \c "_" */
+            MTThat,  /*!< \brief the character \c "^" */
+            MTTdollar,  /*!< \brief the character \c "$" */
+            MTTopenbrace, /*!< \brief the character \c "{" */
+            MTTclosebrace, /*!< \brief the character \c "}" */
+            MTTopenbracket, /*!< \brief the character \c "[" */
+            MTTclosebracket, /*!< \brief the character \c "]" */
             MTTwhitespace, /*!< \brief some whitespace */
-            MTTampersand  /*!< \brief the character "&" */
+            MTTampersand  /*!< \brief the character \c "&" */
         };
 
         /** \brief tokenizer for the LaTeX parser */

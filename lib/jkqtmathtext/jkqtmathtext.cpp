@@ -60,30 +60,35 @@ JKQTMathText::JKQTMathText(QObject* parent):
     //qDebug()<<"init_resoucre: "<<std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now()-t0).count()/1000.0<<"ms"; t0=std::chrono::high_resolution_clock::now();
 
     fontSize=10;
-    brace_factor=1.04;
-    subsuper_size_factor=0.7;
-    italic_correction_factor=0.4;
-    sub_shift_factor=0.4;
-    super_shift_factor=0.6;
-    brace_shrink_factor=0.6;
     fontColor=QColor("black");
+    italic_correction_factor=0.4;
+    brace_factor=1.04;
+    brace_shrink_factor=0.45;
+    brace_y_shift_factor=0.7;//-1;
+
+    subsuper_size_factor=0.7;
+    subsuper_mode_selection_by_size_factor=1.01;
+    sub_shift_factor=0.4;
+    super_shift_factor=0.7;
+    special_sub_shift_factor=0.4;
+    special_super_shift_factor=0.4;
 
     frac_factor=1.0;
     frac_nested_factor=0.7;
     frac_shift_factor=0.4;
+
     underbrace_factor=0.75;
-    undersetFactor=0.7;
+    underset_factor=0.7;
     decoration_height_factor=0.2;
     decoration_width_reduction_Xfactor=0.2;
-    brace_y_shift_factor=0.7;//-1;
+
     operatorsubsuper_size_factor=0.65;
+    operatorsubsuper_distance_factor=0.25;
+    operatorsubsuper_extraspace_factor=0.5;
     mathoperator_width_factor=1.5;
+    bigmathoperator_font_factor=1.8;
 
-    expensiveRendering=true;
     blackboardSimulated=true;
-
-    showLeftBrace=true;
-    showRightBrace=true;
 
 
     static QString serifFont="serif";
@@ -204,17 +209,22 @@ void JKQTMathText::loadSettings(const QSettings& settings, const QString& group)
     brace_factor=settings.value(group+"brace_factor", brace_factor).toDouble();
     brace_shrink_factor=settings.value(group+"brace_shrink_factor", brace_shrink_factor).toDouble();
     subsuper_size_factor=settings.value(group+"subsuper_size_factor", subsuper_size_factor).toDouble();
+    subsuper_mode_selection_by_size_factor=settings.value(group+"subsuper_mode_selection_by_size_factor", subsuper_mode_selection_by_size_factor).toDouble();
     italic_correction_factor=settings.value(group+"italic_correction_factor", italic_correction_factor).toDouble();
     super_shift_factor=settings.value(group+"super_shift_factor", super_shift_factor).toDouble();
     sub_shift_factor=settings.value(group+"sub_shift_factor", sub_shift_factor).toDouble();
+    special_super_shift_factor=settings.value(group+"special_super_shift_factor", special_super_shift_factor).toDouble();
+    special_sub_shift_factor=settings.value(group+"special_sub_shift_factor", special_sub_shift_factor).toDouble();
     frac_factor=settings.value(group+"frac_factor", frac_factor).toDouble();
     frac_shift_factor=settings.value(group+"frac_shift_factor", frac_shift_factor).toDouble();
     underbrace_factor=settings.value(group+"underbrace_factor", underbrace_factor).toDouble();
-    undersetFactor=settings.value(group+"undersetFactor", undersetFactor).toDouble();
+    underset_factor=settings.value(group+"undersetFactor", underset_factor).toDouble();
     brace_y_shift_factor=settings.value(group+"brace_y_shift_factor", brace_y_shift_factor).toDouble();
     decoration_height_factor=settings.value(group+"decoration_height_factor", decoration_height_factor).toDouble();
     decoration_width_reduction_Xfactor=settings.value(group+"decoration_width_reduction_xfactor", decoration_width_reduction_Xfactor).toDouble();
     operatorsubsuper_size_factor=settings.value(group+"operatorsubsuper_size_factor", operatorsubsuper_size_factor).toDouble();
+    operatorsubsuper_distance_factor=settings.value(group+"operatorsubsuper_distance_factor", operatorsubsuper_distance_factor).toDouble();
+    operatorsubsuper_extraspace_factor=settings.value(group+"operatorsubsuper_extraspace_factor", operatorsubsuper_extraspace_factor).toDouble();
     mathoperator_width_factor=settings.value(group+"mathoperator_width_factor", mathoperator_width_factor).toDouble();
 
 
@@ -230,14 +240,19 @@ void JKQTMathText::saveSettings(QSettings& settings, const QString& group) const
     settings.setValue(group+ "brace_factor", brace_factor);
     settings.setValue(group+ "brace_shrink_factor", brace_shrink_factor);
     settings.setValue(group+ "subsuper_size_factor", subsuper_size_factor);
+    settings.setValue(group+ "subsuper_mode_selection_by_size_factor", subsuper_mode_selection_by_size_factor);
     settings.setValue(group+ "italic_correction_factor", italic_correction_factor);
     settings.setValue(group+ "sub_shift_factor", sub_shift_factor);
     settings.setValue(group+ "super_shift_factor", super_shift_factor);
+    settings.setValue(group+ "special_sub_shift_factor", special_sub_shift_factor);
+    settings.setValue(group+ "special_super_shift_factor", special_super_shift_factor);
     settings.setValue(group+ "frac_factor", frac_factor);
     settings.setValue(group+ "frac_shift_factor", frac_shift_factor);
     settings.setValue(group+ "underbrace_factor", underbrace_factor);
-    settings.setValue(group+ "undersetFactor", undersetFactor);
+    settings.setValue(group+ "undersetFactor", underset_factor);
     settings.setValue(group+ "operatorsubsuper_size_factor", operatorsubsuper_size_factor);
+    settings.setValue(group+ "operatorsubsuper_distance_factor", operatorsubsuper_distance_factor);
+    settings.setValue(group+ "operatorsubsuper_extraspace_factor", operatorsubsuper_extraspace_factor);
     settings.setValue(group+ "mathoperator_width_factor", mathoperator_width_factor);
     settings.setValue(group+ "brace_y_shift_factor", brace_y_shift_factor);
     settings.setValue(group+ "decoration_height_factor", decoration_height_factor);
@@ -261,7 +276,6 @@ bool JKQTMathText::useSTIX(bool mathModeOnly) {
         res=true;
     }
 
-    brace_shrink_factor=0.6;
     return res;
 }
 
@@ -275,14 +289,12 @@ bool JKQTMathText::useXITS(bool mathModeOnly)
         setFontRoman(xits.fontName(), MTFEunicode);
         setSymbolfontSymbol(xits.fontName(), MTFEunicode);
         setSymbolfontGreek(xits.fontName(), MTFEunicode);
-        brace_shrink_factor=0.6;
         res=true;
     }
     if (!xits.mathFontName().isEmpty()) {
         setFontMathRoman(xits.mathFontName(), MTFEunicode);
         setSymbolfontSymbol(xits.fontName(), MTFEunicode);
         setSymbolfontGreek(xits.fontName(), MTFEunicode);
-        brace_shrink_factor=0.6;
         res=true;
     }
 
@@ -304,7 +316,6 @@ bool JKQTMathText::useASANA(bool mathModeOnly)
         res=true;
     }
 
-    brace_shrink_factor=0.6;
     return res;
 }
 
@@ -312,14 +323,13 @@ void JKQTMathText::useAnyUnicode(QString timesFont, const QString &sansFont, JKQ
 {
     if (!timesFont.isEmpty()) { setFontRoman(timesFont, encodingTimes); }
     if (!sansFont.isEmpty()) { setFontSans(sansFont, encodingSans); }
-    brace_shrink_factor=0.6;
 }
 
 
 QString JKQTMathText::toHtml(bool *ok, double fontPointSize) {
     QString s;
     bool okk=false;
-    if (getTree()!=nullptr) {
+    if (getNodeTree()!=nullptr) {
         JKQTMathTextEnvironment ev;
         ev.color=fontColor;
         ev.fontSize=fontPointSize;
@@ -327,7 +337,7 @@ QString JKQTMathText::toHtml(bool *ok, double fontPointSize) {
         JKQTMathTextEnvironment defaultev;
         defaultev.fontSize=fontPointSize;
 
-        okk=getTree()->toHtml(s, ev, defaultev);
+        okk=getNodeTree()->toHtml(s, ev, defaultev);
     }
     if (ok) *ok=okk;
     return s;
@@ -367,10 +377,8 @@ void JKQTMathText::addReplacementFont(const QString &nonUseFont, const QString &
 
 QPair<QString,JKQTMathTextFontEncoding> JKQTMathText::getReplacementFont(const QString &nonUseFont, const QString &defaultFont, JKQTMathTextFontEncoding defaultFontEncoding) const {
     QPair<QString,JKQTMathTextFontEncoding> res(defaultFont, defaultFontEncoding);
-    bool foundFont=false;
     for (auto it=fontReplacements.begin(); it!=fontReplacements.end(); ++it) {
         if (it.key().toLower()==nonUseFont.toLower()) {
-            foundFont=true;
             res.first=it.value();
             res.second=fontEncodingReplacements.value(res.first, res.second);
             return res;
@@ -648,6 +656,16 @@ double JKQTMathText::getSubsuperSizeFactor() const
     return this->subsuper_size_factor;
 }
 
+void JKQTMathText::setSubsuperModeSelectionBySizeFactor(double __value)
+{
+    subsuper_mode_selection_by_size_factor=__value;
+}
+
+double JKQTMathText::getSubsuperModeSelectionBySizeFactor() const
+{
+    return subsuper_mode_selection_by_size_factor;
+}
+
 void JKQTMathText::setItalicCorrectionFactor(double __value)
 {
     this->italic_correction_factor = __value;
@@ -668,6 +686,26 @@ double JKQTMathText::getOperatorsubsuperSizeFactor() const
     return this->operatorsubsuper_size_factor;
 }
 
+void JKQTMathText::setOperatorsubsuperDistanceFactor(double __value)
+{
+    this->operatorsubsuper_distance_factor = __value;
+}
+
+double JKQTMathText::getOperatorsubsuperDistanceFactor() const
+{
+    return this->operatorsubsuper_distance_factor;
+}
+
+void JKQTMathText::setOperatorsubsuperExtraSpaceFactor(double __value)
+{
+    operatorsubsuper_extraspace_factor=__value;
+}
+
+double JKQTMathText::getOperatorsubsuperExtraSpaceFactor() const
+{
+    return operatorsubsuper_extraspace_factor;
+}
+
 void JKQTMathText::setMathoperatorWidthFactor(double __value)
 {
     this->mathoperator_width_factor = __value;
@@ -676,6 +714,16 @@ void JKQTMathText::setMathoperatorWidthFactor(double __value)
 double JKQTMathText::getMathoperatorWidthFactor() const
 {
     return this->mathoperator_width_factor;
+}
+
+void JKQTMathText::setBigMathoperatorFontFactor(double __value)
+{
+    bigmathoperator_font_factor=__value;
+}
+
+double JKQTMathText::getBigMathoperatorFontFactor() const
+{
+    return bigmathoperator_font_factor;
 }
 
 void JKQTMathText::setSuperShiftFactor(double __value)
@@ -696,6 +744,26 @@ void JKQTMathText::setSubShiftFactor(double __value)
 double JKQTMathText::getSubShiftFactor() const
 {
     return this->sub_shift_factor;
+}
+
+double JKQTMathText::getSpecialSuperShiftFactor() const
+{
+    return special_super_shift_factor;
+}
+
+void JKQTMathText::setSpecialSuperShiftFactor(double __value)
+{
+    special_super_shift_factor=__value;
+}
+
+void JKQTMathText::setSpecialSubShiftFactor(double __value)
+{
+    special_sub_shift_factor=__value;
+}
+
+double JKQTMathText::getSpecialSubShiftFactor() const
+{
+    return special_sub_shift_factor;
 }
 
 void JKQTMathText::setBraceShrinkFactor(double __value)
@@ -720,12 +788,12 @@ double JKQTMathText::getUnderbraceFactor() const
 
 void JKQTMathText::setUndersetFactor(double __value)
 {
-    this->undersetFactor = __value;
+    this->underset_factor = __value;
 }
 
 double JKQTMathText::getUndersetFactor() const
 {
-    return this->undersetFactor;
+    return this->underset_factor;
 }
 
 void JKQTMathText::setFracFactor(double __value)
@@ -786,16 +854,6 @@ void JKQTMathText::setDecorationWidthReductionXFactor(double __value)
 double JKQTMathText::getDecorationWidthReductionXFactor() const
 {
     return decoration_width_reduction_Xfactor;
-}
-
-void JKQTMathText::setExpensiveRendering(bool __value)
-{
-    this->expensiveRendering = __value;
-}
-
-bool JKQTMathText::getExpensiveRendering() const
-{
-    return this->expensiveRendering;
 }
 
 void JKQTMathText::setUseUnparsed(bool __value)
@@ -1193,6 +1251,17 @@ JKQTMathTextNode* JKQTMathText::parseLatexString(bool get, JKQTMathTextBraceType
                         nl->addChild(new JKQTMathTextInstruction1Node(this, currentInstructionName, parseLatexString(true)));
                     }
                 }
+                if (getNew) getToken();
+                if (currentToken==MTTinstruction && currentTokenName=="limits") {
+                    if (nl->hasChildren()) nl->getLastChild()->setSubSuperscriptAboveBelowNode(true);
+                    getNew=true;
+                } else  if (currentToken==MTTinstruction && currentTokenName=="nolimits") {
+                    if (nl->hasChildren()) nl->getLastChild()->setSubSuperscriptAboveBelowNode(false);
+                    getNew=true;
+                } else {
+                    getNew=false;
+                }
+
             } else if (currentToken==MTTopenbracket && currentInstructionName!="left") {
                 //std::cout<<"found '[' after '"<<name.toStdString()<<"'\n";
                 if (currentInstructionName=="sqrt") {
@@ -1220,6 +1289,7 @@ JKQTMathTextNode* JKQTMathText::parseLatexString(bool get, JKQTMathTextBraceType
                     nl->addChild(new JKQTMathTextTextNode(this, "[", false));
                 }
             } else {
+                bool subSuperscriptAboveBelowNode=false;
                 //std::cout<<"did not find '{' after '"<<name.toStdString()<<"'\n";
                 if (currentInstructionName=="right") {
                     if (currentToken==MTTtext) {
@@ -1227,10 +1297,6 @@ JKQTMathTextNode* JKQTMathText::parseLatexString(bool get, JKQTMathTextBraceType
                             bool tokenWasNoBrace=false;
                             const QString firstTokenChar(currentTokenName[0]);
                             if (TokenNameMatchesJKQTMathTextBraceType(firstTokenChar, quitOnClosingBrace, true, &tokenWasNoBrace)) {
-                                //std::cout<<"found \\right '"<<currentTokenName.toStdString()<<"'\n";
-                                showLeftBrace=(quitOnClosingBrace==MTBTAny || quitOnClosingBrace!=MTBTNone);
-                                showRightBrace=!tokenWasNoBrace;
-                                //if (!showRightBrace) std::cout<<"don't show right brace '"<<quitOnClosingBrace.toStdString()<<"' !!!\n";
                                 if (quitOnClosingBrace!=MTBTAny) currentTokenName=currentTokenName.right(currentTokenName.size()-1);
                                 break;
                             } else {
@@ -1280,32 +1346,23 @@ JKQTMathTextNode* JKQTMathText::parseLatexString(bool get, JKQTMathTextBraceType
                     }
 
                 } else {
-                    //bool addWhite=(currentToken==MTTwhitespace);
-                    //getNew=addWhite;
-                    getNew=false;
-                    bool done=false;
-                    if (currentInstructionName.size()==2) {
-                        QChar n0=currentInstructionName[0];
-                        QChar n1=currentInstructionName[1];
-                        if (n0=='v' && n1.isLetter()) {
-                            done=true;
-                            //std::cout<<"found \\v... command\n";
-                            nl->addChild(new JKQTMathTextDecoratedNode(this, JKQTMathTextDecoratedNode::MTDvec, new JKQTMathTextTextNode(this, QString(n1), false, parsingMathEnvironment)));
-                        } else if (n0=='c' && n1.isLetter()) {
-                            done=true;
-                            //std::cout<<"found \\v... command\n";
-                            nl->addChild(new JKQTMathTextInstruction1Node(this, "mathcal", new JKQTMathTextTextNode(this, QString(n1), false, parsingMathEnvironment)));
-                        }
-                    } else if (currentInstructionName.size()==3) {
-                        QString n0=currentInstructionName.left(2);
-                        QChar n1=currentInstructionName[currentInstructionName.size()-1];
-                        if (n0=="bb" && n1.isLetter()) {
-                            done=true;
-                            //std::cout<<"found \\v... command\n";
-                            nl->addChild(new JKQTMathTextInstruction1Node(this, "mathbb", new JKQTMathTextTextNode(this, QString(n1), false, parsingMathEnvironment)));
-                        }
+                    nl->addChild(new JKQTMathTextSymbolNode(this, currentInstructionName, false));
+
+                    static QSet<QString> subsupOperations= (QSet<QString>()<<"sum"<<"prod"<<"coprod"
+                                                                           <<"bigcap"<<"bigcup"<<"bigvee"<<"bighat"
+                                                                           <<"int"<<"iint"<<"iiint"<<"oint"<<"oiint"<<"oiiint"
+                                                                           <<"mod"<<"median"<<"max"<<"min"<<"argmax"<<"argmin"<<"sup"<<"inf"
+                                                                           <<"liminf"<<"limsup"<<"lim"<<"max"<<"min");
+                    if (subsupOperations.contains(currentInstructionName) && parsingMathEnvironment) {
+                        nl->getLastChild()->setSubSuperscriptAboveBelowNode(true);
                     }
-                    if (!done) nl->addChild(new JKQTMathTextSymbolNode(this, currentInstructionName, false));//, addWhite));
+                    if (currentToken==MTTinstruction && currentTokenName=="limits") {
+                        if (nl->hasChildren()) nl->getLastChild()->setSubSuperscriptAboveBelowNode(true);
+                    } else  if (currentToken==MTTinstruction && currentTokenName=="nolimits") {
+                        if (nl->hasChildren()) nl->getLastChild()->setSubSuperscriptAboveBelowNode(false);
+                    } else {
+                        getNew=false;
+                    }
 
                 }
             }
@@ -1410,7 +1467,6 @@ bool JKQTMathText::parse(const QString& text, bool addSpaceBeforeAndAfter){
     QString ntext;
     if (addSpaceBeforeAndAfter) ntext=QString("\\;")+text+QString("\\;");
     else ntext=text;
-    ntext=ntext.remove("\\limits");
     if (parsedNode && parseString==ntext) return true;
 
 
@@ -1430,7 +1486,7 @@ bool JKQTMathText::parse(const QString& text, bool addSpaceBeforeAndAfter){
 
 
 QSizeF JKQTMathText::getSize(QPainter& painter){
-    if (getTree()!=nullptr) {
+    if (getNodeTree()!=nullptr) {
         double w=0, a=0, d=0, s=0;
         getSizeDetail(painter, w, a, d, s);
         return QSizeF(w, a+d);
@@ -1455,13 +1511,13 @@ void JKQTMathText::getSizeDetail(QPainter& painter, double& width, double& ascen
     ascent=0;
     descent=0;
     strikeoutPos=0;
-    if (getTree()!=nullptr) {
+    if (getNodeTree()!=nullptr) {
         JKQTMathTextEnvironment ev;
         ev.color=fontColor;
         ev.fontSize=fontSize;
 
         double overallHeight=0;        
-        getTree()->getSize(painter, ev, width, ascent, overallHeight, strikeoutPos);
+        getNodeTree()->getSize(painter, ev, width, ascent, overallHeight, strikeoutPos);
         descent=overallHeight-ascent;
         ascent=ascent*1.1;
         descent=qMax(ascent*0.1, descent*1.1);
@@ -1470,7 +1526,7 @@ void JKQTMathText::getSizeDetail(QPainter& painter, double& width, double& ascen
 }
 
 void JKQTMathText::draw(QPainter& painter, double x, double y, bool drawBoxes){
-    if (getTree()!=nullptr) {
+    if (getNodeTree()!=nullptr) {
         JKQTMathTextEnvironment ev;
         ev.color=fontColor;
         ev.fontSize=fontSize;
@@ -1478,15 +1534,15 @@ void JKQTMathText::draw(QPainter& painter, double x, double y, bool drawBoxes){
         QPen p=pp;
         p.setStyle(Qt::SolidLine);
         painter.setPen(p);
-        getTree()->setDrawBoxes(drawBoxes);
+        getNodeTree()->setDrawBoxes(drawBoxes);
         painter.setPen(p);
-        getTree()->draw(painter, x, y, ev);
+        getNodeTree()->draw(painter, x, y, ev);
         painter.setPen(pp);
     }
 }
 
 void JKQTMathText::draw(QPainter& painter, unsigned int flags, QRectF rect, bool drawBoxes) {
-    if (getTree()!=nullptr) {
+    if (getNodeTree()!=nullptr) {
         QPen pp=painter.pen();
         QPen p=pp;
         p.setStyle(Qt::SolidLine);
@@ -1494,13 +1550,13 @@ void JKQTMathText::draw(QPainter& painter, unsigned int flags, QRectF rect, bool
         JKQTMathTextEnvironment ev;
         ev.color=fontColor;
         ev.fontSize=fontSize;
-        getTree()->setDrawBoxes(drawBoxes);
+        getNodeTree()->setDrawBoxes(drawBoxes);
         painter.setPen(p);
 
         double width=0;
         double baselineHeight=0;
         double overallHeight=0, strikeoutPos=0;
-        getTree()->getSize(painter, ev, width, baselineHeight, overallHeight, strikeoutPos);
+        getNodeTree()->getSize(painter, ev, width, baselineHeight, overallHeight, strikeoutPos);
 
         // align left top
         double x=rect.left();
@@ -1515,13 +1571,13 @@ void JKQTMathText::draw(QPainter& painter, unsigned int flags, QRectF rect, bool
         else if ((flags & Qt::AlignVCenter) != 0) y=y+(rect.height()-overallHeight)/2.0;
 
         // finally draw
-        getTree()->draw(painter, x, y, ev);
+        getNodeTree()->draw(painter, x, y, ev);
         painter.setPen(pp);
     }
 }
 
 
-JKQTMathTextNode *JKQTMathText::getTree() const {
+JKQTMathTextNode *JKQTMathText::getNodeTree() const {
     if (useUnparsed) return unparsedNode;
     return parsedNode;
 }

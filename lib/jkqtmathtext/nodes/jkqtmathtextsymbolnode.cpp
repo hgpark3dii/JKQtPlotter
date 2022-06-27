@@ -199,8 +199,11 @@ bool JKQTMathTextSymbolNode::getWinSymbolProp(JKQTMathTextSymbolNode::SymbolProp
       else if (n == "grqq") { props.symbol = "\""; props.bold = 0; props.italic = 0; }
       else if (n == "flq") { props.symbol = "<"; props.bold = 0; props.italic = 0; }
       else if (n == "frq") { props.symbol = ">"; props.bold = 0; props.italic = 0; }
-      else if (n == "flqq") { props.symbol = ""; props.bold = 0; props.italic = 0; }
-      else if (n == "frqq") { props.symbol = ""; props.bold = 0; props.italic = 0; }
+      else if (n == "flqq") { props.symbol = QChar(0xAB); props.bold = 0; props.italic = 0; }
+      else if (n == "frqq") { props.symbol = QChar(0xBB); props.bold = 0; props.italic = 0; }
+      else if (n == "prime") { props.symbol = "'"; props.bold = 0; props.italic = 0; }
+      else if (n == "dprime") { props.symbol = "''"; props.bold = 0; props.italic = 0; }
+      else if (n == "trprime") { props.symbol = "'''"; props.bold = 0; props.italic = 0; }
       else { return false; }
     }
 
@@ -450,8 +453,11 @@ bool JKQTMathTextSymbolNode::getUnicodeBaseSymbolProp(JKQTMathTextSymbolNode::Sy
         else if (n == "grqq") { props.symbol = QChar(0x201D); props.bold = 0; props.italic = 0; }
         else if (n == "flq") { props.symbol = QChar(0x2039); props.bold = 0; props.italic = 0; }
         else if (n == "frq") { props.symbol = QChar(0x203A); props.bold = 0; props.italic = 0; }
-        else if (n == "flqq") { props.symbol = ""; props.bold = 0; props.italic = 0; }
-        else if (n == "frqq") { props.symbol = ""; props.bold = 0; props.italic = 0; }
+        else if (n == "flqq") { props.symbol = QChar(0x00AB); props.bold = 0; props.italic = 0; }
+        else if (n == "frqq") { props.symbol = QChar(0x00BB); props.bold = 0; props.italic = 0; }
+        else if (n == "prime") { props.symbol = QChar(0x2032); props.bold = 0; props.italic = 0; }
+        else if (n == "dprime") { props.symbol = QChar(0x2033); props.bold = 0; props.italic = 0; }
+        else if (n == "trprime") { props.symbol = QChar(0x2034); props.bold = 0; props.italic = 0; }
         else { return false; }
     }
     //qDebug()<<"### found "<<n<<" in unicodeBaseSymbol";
@@ -507,6 +513,14 @@ bool JKQTMathTextSymbolNode::getUnicodeFullSymbolProp(JKQTMathTextSymbolNode::Sy
       unicodeSymbol.insert("rceil", QChar(0x2309));
       unicodeSymbol.insert("lfloor", QChar(0x230A));
       unicodeSymbol.insert("rfloor", QChar(0x230B));
+      unicodeSymbol.insert("llcorner", QChar(0x231E));
+      unicodeSymbol.insert("lrcorner", QChar(0x231F));
+      unicodeSymbol.insert("ulcorner", QChar(0x231C));
+      unicodeSymbol.insert("urcorner", QChar(0x231D));
+      unicodeSymbol.insert("blcorner", QChar(0x231E));
+      unicodeSymbol.insert("brcorner", QChar(0x231F));
+      unicodeSymbol.insert("tlcorner", QChar(0x231C));
+      unicodeSymbol.insert("trcorner", QChar(0x231D));
       unicodeSymbol.insert("subsetnot", QChar(0x2284));
       unicodeSymbol.insert("DC", QChar(0x2393));
       unicodeSymbol.insert("bot", QChar(0x22A4));
@@ -627,10 +641,10 @@ bool JKQTMathTextSymbolNode::getUnicodeFullSymbolProp(JKQTMathTextSymbolNode::Sy
     else if (n == "oiint") { props.symbol = QChar(0x222F); props.fontFactor = mathFontFactor; /*yfactor=+0.1;*/ props.heightIsAscent = true; props.exactAscent = true; }
     else if (n == "oiiint") { props.symbol = QChar(0x2230); props.fontFactor = mathFontFactor; /*yfactor=+0.1;*/ props.heightIsAscent = true; props.exactAscent = true; }
     else if (n == "coprod") { props.symbol = QChar(0x2210); props.heightIsAscent = true; props.exactAscent = true; }
-    else if (n == "bigcap") { props.symbol = QChar(0x22C2); props.heightIsAscent = true; props.exactAscent = true; props.heightIsAscent = true; props.exactAscent = true; }
-    else if (n == "bigcup") { props.symbol = QChar(0x22C3); props.heightIsAscent = true; props.exactAscent = true; props.heightIsAscent = true; props.exactAscent = true; }
-    else if (n == "bigvee") { props.symbol = QChar(0x22C1); props.heightIsAscent = true; props.exactAscent = true; props.heightIsAscent = true; props.exactAscent = true; }
-    else if (n == "bighat") { props.symbol = QChar(0x22C0); props.heightIsAscent = true; props.exactAscent = true; props.heightIsAscent = true; props.exactAscent = true; }
+    else if (n == "bigcap") { props.symbol = QChar(0x22C2); props.heightIsAscent = true; props.exactAscent = true; }
+    else if (n == "bigcup") { props.symbol = QChar(0x22C3); props.heightIsAscent = true; props.exactAscent = true; }
+    else if (n == "bigvee") { props.symbol = QChar(0x22C1); props.heightIsAscent = true; props.exactAscent = true; }
+    else if (n == "bighat") { props.symbol = QChar(0x22C0); props.heightIsAscent = true; props.exactAscent = true; }
     else if (n == "int") { props.symbol = QChar(0x222B); props.fontFactor = mathFontFactor; /*yfactor=+0.1;*/ props.heightIsAscent = true; props.exactAscent = true; }
     else {return false;}
     return true;
@@ -647,7 +661,7 @@ bool JKQTMathTextSymbolNode::getSymbolProp(JKQTMathTextSymbolNode::SymbolProps& 
     props.font = fnt.first;
     if (fnt.second==MTFEunicode) {
         props.font = fnt.first;
-        if (!getUnicodeBaseSymbolProp(props, n) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
+        if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
             return false;
         }
     } else if (fnt.second==MTFEunicodeLimited) {
@@ -655,7 +669,7 @@ bool JKQTMathTextSymbolNode::getSymbolProp(JKQTMathTextSymbolNode::SymbolProps& 
         if (!getUnicodeBaseSymbolProp(props, n) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
             if (fntSym.second==MTFEunicode) {
                 props.font = fntSym.first;
-                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
+                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
                     return false;
                 }
             } else if (fntSym.second==MTFEunicodeLimited) {
@@ -678,7 +692,7 @@ bool JKQTMathTextSymbolNode::getSymbolProp(JKQTMathTextSymbolNode::SymbolProps& 
         if (!getWinSymbolProp(props, n, currentEv, mathFontFactor)) {
             if (fntSym.second==MTFEunicode) {
                 props.font = fntSym.first;
-                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
+                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
                     return false;
                 }
             } else if (fntSym.second==MTFEunicodeLimited) {
@@ -701,7 +715,7 @@ bool JKQTMathTextSymbolNode::getSymbolProp(JKQTMathTextSymbolNode::SymbolProps& 
         if (!getStandardTextSymbolProp(props, n)) {
             if (fntSym.second==MTFEunicode) {
                 props.font = fntSym.first;
-                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
+                if (!getUnicodeBaseSymbolProp(props, n) && !getUnicodeFullSymbolProp(props,n,mathFontFactor) && !getGreekSymbolProp(props, n, currentEv, mathFontFactor)) {
                     return false;
                 }
             } else if (fntSym.second==MTFEunicodeLimited) {
@@ -910,7 +924,7 @@ void JKQTMathTextSymbolNode::getSizeInternal(QPainter& painter, JKQTMathTextEnvi
         else if (symbolName=="longleftrightarrow") { width=JKQTMathTextGetTightBoundingRect(f, "X", painter.device()).width()*3.5; symb="x"; }
         else if (symbolName=="Longleftrightarrow") { width=JKQTMathTextGetTightBoundingRect(f, "X", painter.device()).width()*3.5; symb="x"; }
     }
-    const QRectF tbr=JKQTMathTextGetTightBoundingRect(f, symb, painter.device());
+    const QRectF tbr=(symb.isEmpty())?JKQTMathTextGetTightBoundingRect(f, "X", painter.device()):JKQTMathTextGetTightBoundingRect(f, symb, painter.device());
     overallHeight=tbr.height();// fm.height();
     baselineHeight=tbr.height()-tbr.bottom();
     if (props.exactAscent) {
@@ -1202,6 +1216,14 @@ bool JKQTMathTextSymbolNode::toHtml(QString &html, JKQTMathTextEnvironment curre
       entitylut.insert("exists", "&exist;");
       entitylut.insert("cong", "&sim;");
       entitylut.insert("bot", "&perp;");
+      entitylut.insert("llcorner", "&ulcorner;");
+      entitylut.insert("lrcorner", "&urcorner;");
+      entitylut.insert("ulcorner", "&ulcorner;");
+      entitylut.insert("urcorner", "&urcorner;");
+      entitylut.insert("blcorner", "&llcorner;");
+      entitylut.insert("brcorner", "&llcorner;");
+      entitylut.insert("tlcorner", "&lrcorner;");
+      entitylut.insert("trcorner", "&lrcorner;");
 
 
       entitylut.insert("ll", "<<");
@@ -1245,26 +1267,34 @@ bool JKQTMathTextSymbolNode::toHtml(QString &html, JKQTMathTextEnvironment curre
       entitylut.insert("%", "%");
       entitylut.insert("&", "&");
       entitylut.insert("#", "#");
+      entitylut.insert("|", "||");
+      entitylut.insert("<", "&lt;");
+      entitylut.insert(">", "&gt;");
       entitylut.insert("ast", "*");
-      entitylut.insert("glq", "'");
-      entitylut.insert("grq", "'");
-      entitylut.insert("glqq", "\"");
-      entitylut.insert("grqq", "\"");
-      entitylut.insert("flq", "&lt;");
-      entitylut.insert("frq", "&gt;");
-      entitylut.insert("flqq", "");
-      entitylut.insert("frqq", "");
+      entitylut.insert("glq", "&OpenCurlyQuote;");
+      entitylut.insert("grq", "&CloseCurlyQuote;");
+      entitylut.insert("glqq", "&OpenCurlyDoubleQuote;");
+      entitylut.insert("grqq", "&CloseCurlyDoubleQuote;");
+      entitylut.insert("flq", "&lsaquo;");
+      entitylut.insert("frq", "&rsaquo;");
+      entitylut.insert("flqq", "&laquo;");
+      entitylut.insert("frqq", "&raquo;");
+      entitylut.insert("prime", "&prime;");
+      entitylut.insert("dprime", "&Prime;");
+      entitylut.insert("trprime", "&tprime;");
     }
 
 
     QMap<QString, QString>::iterator itS = entitylut.find(symbolName);
     if (itS!=entitylut.end()) { s=itS.value(); }
-    else if (symbolName == "sum") { ev.fontSize*=1.7; s="&sum;"; }
-    else if (symbolName == "prod") { ev.fontSize*=1.7; s="&prod;"; }
-    else if (symbolName == "bigcap") { ev.fontSize*=1.7; s="&cap;"; }
-    else if (symbolName == "bigcup") { ev.fontSize*=1.7; s="&cup;"; }
-    else if (symbolName == "bigvee") { ev.fontSize*=1.7; s="&or;"; }
-    else if (symbolName == "bighat") { ev.fontSize*=1.7; s="&and;"; }
+    else if (symbolName == "sum") {
+        ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&sum;"; }
+    else if (symbolName == "prod") {
+        ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&prod;"; }
+    else if (symbolName == "bigcap") { ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&cap;"; }
+    else if (symbolName == "bigcup") { ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&cup;"; }
+    else if (symbolName == "bigvee") { ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&or;"; }
+    else if (symbolName == "bighat") { ev.fontSize*=parentMathText->getBigMathoperatorFontFactor(); s="&and;"; }
     else ok=false;
 
     if (ok) html=html+ev.toHtmlStart(defaultEv)+s+ev.toHtmlAfter(defaultEv);
