@@ -78,6 +78,8 @@ JKQTMathText::JKQTMathText(QObject* parent):
     frac_shift_factor=0.4;
 
     underbrace_factor=0.75;
+    underbrace_separation_xfactor=0.25;
+    underbrace_bracesize_xfactor=0.5;
     underset_factor=0.7;
     decoration_height_factor=0.2;
     decoration_width_reduction_Xfactor=0.2;
@@ -85,6 +87,8 @@ JKQTMathText::JKQTMathText(QObject* parent):
     operatorsubsuper_size_factor=0.65;
     operatorsubsuper_distance_factor=0.25;
     operatorsubsuper_extraspace_factor=0.5;
+    intsubsuper_xcorrection_factor=0.25;
+    intsubbesides_xcorrection_xfactor=0.33;
     mathoperator_width_factor=1.5;
     bigmathoperator_font_factor=1.8;
 
@@ -218,6 +222,8 @@ void JKQTMathText::loadSettings(const QSettings& settings, const QString& group)
     frac_factor=settings.value(group+"frac_factor", frac_factor).toDouble();
     frac_shift_factor=settings.value(group+"frac_shift_factor", frac_shift_factor).toDouble();
     underbrace_factor=settings.value(group+"underbrace_factor", underbrace_factor).toDouble();
+    underbrace_bracesize_xfactor=settings.value(group+"underbrace_bracesize_xfactor", underbrace_bracesize_xfactor).toDouble();
+    underbrace_separation_xfactor=settings.value(group+"underbrace_separation_xfactor", underbrace_separation_xfactor).toDouble();
     underset_factor=settings.value(group+"undersetFactor", underset_factor).toDouble();
     brace_y_shift_factor=settings.value(group+"brace_y_shift_factor", brace_y_shift_factor).toDouble();
     decoration_height_factor=settings.value(group+"decoration_height_factor", decoration_height_factor).toDouble();
@@ -226,6 +232,8 @@ void JKQTMathText::loadSettings(const QSettings& settings, const QString& group)
     operatorsubsuper_distance_factor=settings.value(group+"operatorsubsuper_distance_factor", operatorsubsuper_distance_factor).toDouble();
     operatorsubsuper_extraspace_factor=settings.value(group+"operatorsubsuper_extraspace_factor", operatorsubsuper_extraspace_factor).toDouble();
     mathoperator_width_factor=settings.value(group+"mathoperator_width_factor", mathoperator_width_factor).toDouble();
+    intsubsuper_xcorrection_factor=settings.value(group+"intsubsuper_xcorrection_factor", intsubsuper_xcorrection_factor).toDouble();
+    intsubbesides_xcorrection_xfactor=settings.value(group+"intsubbesides_xcorrection_xfactor", intsubbesides_xcorrection_xfactor).toDouble();
 
 
     if (settings.value(group+"use_stix_fonts", false).toBool()) useSTIX();
@@ -249,11 +257,15 @@ void JKQTMathText::saveSettings(QSettings& settings, const QString& group) const
     settings.setValue(group+ "frac_factor", frac_factor);
     settings.setValue(group+ "frac_shift_factor", frac_shift_factor);
     settings.setValue(group+ "underbrace_factor", underbrace_factor);
+    settings.setValue(group+ "underbrace_bracesize_xfactor", underbrace_bracesize_xfactor);
+    settings.setValue(group+ "underbrace_separation_xfactor", underbrace_separation_xfactor);
     settings.setValue(group+ "undersetFactor", underset_factor);
     settings.setValue(group+ "operatorsubsuper_size_factor", operatorsubsuper_size_factor);
     settings.setValue(group+ "operatorsubsuper_distance_factor", operatorsubsuper_distance_factor);
     settings.setValue(group+ "operatorsubsuper_extraspace_factor", operatorsubsuper_extraspace_factor);
     settings.setValue(group+ "mathoperator_width_factor", mathoperator_width_factor);
+    settings.setValue(group+ "intsubsuper_xcorrection_factor", intsubsuper_xcorrection_factor);
+    settings.setValue(group+ "intsubbesides_xcorrection_xfactor", intsubbesides_xcorrection_xfactor);
     settings.setValue(group+ "brace_y_shift_factor", brace_y_shift_factor);
     settings.setValue(group+ "decoration_height_factor", decoration_height_factor);
     settings.setValue(group+ "decoration_width_reduction_xfactor", decoration_width_reduction_Xfactor);
@@ -716,6 +728,26 @@ double JKQTMathText::getMathoperatorWidthFactor() const
     return this->mathoperator_width_factor;
 }
 
+void JKQTMathText::setIntSubSuperXCorrectionFactor(double __value)
+{
+    intsubsuper_xcorrection_factor=__value;
+}
+
+double JKQTMathText::getIntSubSuperXCorrectionFactor() const
+{
+    return intsubsuper_xcorrection_factor;
+}
+
+void JKQTMathText::setIntSubBesidesXCorrectionXFactor(double __value)
+{
+    intsubbesides_xcorrection_xfactor=__value;
+}
+
+double JKQTMathText::getIntSubBesidesXCorrectionXFactor() const
+{
+    return intsubbesides_xcorrection_xfactor;
+}
+
 void JKQTMathText::setBigMathoperatorFontFactor(double __value)
 {
     bigmathoperator_font_factor=__value;
@@ -784,6 +816,26 @@ void JKQTMathText::setUnderbraceFactor(double __value)
 double JKQTMathText::getUnderbraceFactor() const
 {
     return this->underbrace_factor;
+}
+
+void JKQTMathText::setUnderbraceSeparationXFactor(double __value)
+{
+    underbrace_separation_xfactor=__value;
+}
+
+double JKQTMathText::getUnderbraceSeparationXFactor() const
+{
+    return underbrace_separation_xfactor;
+}
+
+void JKQTMathText::setUnderbraceBraceSizeXFactor(double __value)
+{
+    underbrace_bracesize_xfactor=__value;
+}
+
+double JKQTMathText::getUnderbraceBraceSizeXFactor() const
+{
+    return underbrace_bracesize_xfactor;
 }
 
 void JKQTMathText::setUndersetFactor(double __value)
