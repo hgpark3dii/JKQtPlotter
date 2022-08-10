@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
 
 
@@ -22,9 +22,12 @@
 
 #include "jkqtplotter/jkqtptools.h"
 #include "jkqtplotter/jkqtplotter_imexport.h"
+#include "jkqtplotter/jkqtplotter_configmacros.h"
 #include <QColor>
 #include <QString>
 #include <QSettings>
+#include <QPen>
+#include <QBrush>
 
 class JKQTBasePlotterStyle; // forward
 

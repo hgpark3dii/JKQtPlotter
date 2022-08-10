@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     
 
@@ -23,7 +23,7 @@
 
 
 #include "jkqtplotter/jkqtplotter_imexport.h"
-#include "jkqtcommon/jkqtpstatisticstools.h"
+#include "jkqtcommon_statistics_and_math/jkqtpstatisticstools.h"
 #include "jkqtcommon/jkqtpdebuggingtools.h"
 #include "jkqtplotter/jkqtpgraphsbase.h"
 #include "jkqtplotter/jkqtpgraphsbaseerrors.h"

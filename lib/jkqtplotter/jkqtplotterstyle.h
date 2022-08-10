@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
 
 
@@ -22,6 +22,7 @@
 
 #include "jkqtplotter/jkqtptools.h"
 #include "jkqtplotter/jkqtplotter_imexport.h"
+#include "jkqtplotter/jkqtplotter_configmacros.h"
 #include <QColor>
 #include <QPainter>
 #include <QString>
@@ -149,7 +150,6 @@ public:
 
     /** \brief action to perform on a double-click of the mouse buttons (depending on the button and the modifiers) */
     JKQTPMouseDoubleClickActionsHashMap registeredMouseDoubleClickActions;
-
 
     /** \brief the currently executed MouseMoveAction */
     JKQTPMouseMoveActionsHashMap registeredMouseMoveActions;

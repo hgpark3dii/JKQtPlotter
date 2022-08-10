@@ -38,10 +38,14 @@ TestUserInteraction::TestUserInteraction(QWidget *parent) :
     // Some of the are also available in the context menu and toolbar of the JKQTPlotter
     // others are not
     QMenu* menuPlot=menuBar()->addMenu("Plot-Menu");
+#ifndef JKQTPLOTTER_COMPILE_WITHOUT_PRINTSUPPORT
     menuPlot->addAction(plot->getPlotter()->getActionPrint());
+#endif
     QMenu* menuPlotS=menuPlot->addMenu("Save ...");
     menuPlotS->addAction(plot->getPlotter()->getActionSaveData());
+#ifndef JKQTPLOTTER_COMPILE_WITHOUT_PRINTSUPPORT
     menuPlotS->addAction(plot->getPlotter()->getActionSavePDF()); // not available from JKQTPlotter by default
+#endif
     menuPlotS->addAction(plot->getPlotter()->getActionSavePlot());
     QMenu* menuPlotZ=menuPlot->addMenu("Zoom ...");
     menuPlotZ->addAction(plot->getPlotter()->getActionZoomAll());
@@ -504,7 +508,7 @@ void TestUserInteraction::userEllipseFinished(double x, double y, double radiusX
     labMouseAction->setText(QString("userEllipseFinished(x=%1, y=%2, radiusX=%3, radiusY=%4, modifiers=%5)").arg(x).arg(y).arg(radiusX).arg(radiusY).arg(KeyboradMod2String(modifiers)));
 }
 
-void TestUserInteraction::tooltipDisplayed(double x, double y, const QStringList& entries, const QList<JKQTPPlotElement*>& graphs)
+void TestUserInteraction::tooltipDisplayed(double x, double y, const QStringList& entries, const QList<JKQTPPlotElement*>& /*graphs*/)
 {
     labMouseAction->setText(QString("tooltipDisplayed(x=%1, y=%2, entries=%3)").arg(x).arg(y).arg(entries.join(";;")));
 }

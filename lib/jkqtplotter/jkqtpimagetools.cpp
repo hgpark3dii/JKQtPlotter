@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     
 
@@ -587,7 +587,7 @@ void JKQTPColorPaletteWithModifierStyleAndToolsMixin::cbGetOutsideSize(JKQTPEnha
     }
 }
 
-void JKQTPColorPaletteWithModifierStyleAndToolsMixin::cbDrawOutside(JKQTPEnhancedPainter &painter, QRect leftSpace, QRect rightSpace, QRect topSpace, QRect bottomSpace)
+void JKQTPColorPaletteWithModifierStyleAndToolsMixin::cbDrawOutside(JKQTPEnhancedPainter &painter, QRect /*leftSpace*/, QRect rightSpace, QRect topSpace, QRect /*bottomSpace*/)
 {
     if (showColorBar) {
         double internalDataMin=0;

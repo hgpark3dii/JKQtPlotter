@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     
 
@@ -406,7 +406,7 @@ void JKQTPGeoInfiniteLine::draw(JKQTPEnhancedPainter& painter) {
         QLineF line(QPointF(transformX(x1), transformY(y1)), QPointF(transformX(x2), transformY(y2)));
         if (line.length()>0) {
             QPointF xx1;
-            double angle1;
+            double angle1=0;
             if ((getDrawMode()==DrawAsGraphicElement) || (getParent()->getXAxis()->isLinearAxis() && getParent()->getYAxis()->isLinearAxis())) {
                 painter.drawLine(line);
                 xx1=QPointF(transformX(x),transformY(y));

@@ -41,6 +41,7 @@
 #include <QLabel>
 #include <QHash>
 #include <QPainterPath>
+#include <QtMath>
 
 class JKQTMathText; // forward
 
@@ -126,11 +127,18 @@ private:
  *  \ingroup jkqtmathtext_tools
 */
 enum JKQTMathTextFontEncoding {
-    MTFEwinSymbol,      /*!< \brief This assumes that symbols shall be taken from a MS Windows style Symbol font */
-    MTFEunicode,        /*!< \brief This assumes that symbols shall be taken from a Unicode font  (e.g. the STIX fonts from <a href="http://www.stixfonts.org/">http://www.stixfonts.org/</a>)*/
-    MTFEunicodeLimited, /*!< \brief This assumes that the fonts used are Unicode, but only offer a limited set of symbols.  Especially math symbols are missing from this encoding */
-    MTFEStandard,       /*!< \brief the encoding of a standard TTF font (i.e. we can only expect letters,number and not many special characters) */
+    MTFEWinSymbol=0,      /*!< \brief This assumes that symbols shall be taken from a MS Windows style Symbol font */
+    MTFEUnicode=1,        /*!< \brief This assumes that symbols shall be taken from a Unicode font, which ideally offers full symbol support  (e.g. the XITS fonts, STIX fonts from <a href="http://www.stixfonts.org/">http://www.stixfonts.org/</a>)*/
+    MTFELatin1=2,         /*!< \brief the encoding of a standard Latin1 TTF font (i.e. we can only expect letters,number and not many special characters) */
+    MTFEStandard=MTFELatin1
 };
+
+/** \brief this function tries to determine the JKQTMathTextFontEncoding of a given font (HEURISTICS!!!)
+ *  \ingroup jkqtmathtext_tools
+*/
+JKQTMATHTEXT_LIB_EXPORT JKQTMathTextFontEncoding estimateJKQTMathTextFontEncoding(QFont font);
+
+
 
 /** \brief convert MTfontEncoding to a string
  *  \ingroup jkqtmathtext_tools
@@ -149,8 +157,8 @@ enum JKQTMathTextBraceType {
     MTBTFloorBracket,  /*!< \brief floor brackets \image html jkqtmathtext/jkqtmathtext_brace_floor.png */
     MTBTDoubleLine,  /*!< \brief double-line brackets (norm ||...||) \image html jkqtmathtext/jkqtmathtext_brace_dblline.png */
     MTBTSingleLine,  /*!< \brief single-line brackets (abs |...|) \image html jkqtmathtext/jkqtmathtext_brace_oneline.png */
-    MTBTTopCorner,  /*!< \brief top-corner brackets  \image html jkqtmathtext/jkqtmathtext_brace_topcorner.png */
-    MTBTBottomCorner,  /*!< \brief bottom-corner brackets  \image html jkqtmathtext/jkqtmathtext_brace_bottomcorner.png */
+    MTBTTopCorner,  /*!< \brief top-corner brackets  \image html jkqtmathtext/jkqtmathtext_brace_ucorner.png */
+    MTBTBottomCorner,  /*!< \brief bottom-corner brackets  \image html jkqtmathtext/jkqtmathtext_brace_lcorner.png */
     MTBTNone,  /*!< \brief no bracket */
     MTBTAny,  /*!< \brief any bracket, used by JKQTMathText::parseLatexString() */
     MTBTUnknown  /*!< \brief an unknown tokenName presented to TokenName2JKQTMathTextBraceType() */
@@ -162,7 +170,7 @@ JKQTMATHTEXT_LIB_EXPORT QString JKQTMathTextBraceType2String(JKQTMathTextBraceTy
 /** \brief convert a string \a tokenName describing a LaTeX Token or Instruction into an opening or closing JKQTMathTextBraceType
  *  \ingroup jkqtmathtext_tools
  */
-JKQTMATHTEXT_LIB_EXPORT JKQTMathTextBraceType TokenName2JKQTMathTextBraceType(const QString& tokenName);
+JKQTMATHTEXT_LIB_EXPORT JKQTMathTextBraceType TokenName2JKQTMathTextBraceType(const QString& tokenName, bool *isOpening=nullptr);
 /** \brief convert a string \a tokenName describing a LaTeX Instruction into an opening JKQTMathTextBraceType
  *  \ingroup jkqtmathtext_tools
  *
@@ -212,8 +220,10 @@ enum JKQTMathTextEnvironmentFont {
     MTEblackboard,  /*!< \brief blackboard font, e.g. <code>\\mathbb{}</code> */
     MTEcaligraphic, /*!< \brief caligraphic font, e.g. <code>\\mathcal{}</code> */
     MTEfraktur,     /*!< \brief fraktur font, e.g. <code>\\mathfrak{}</code> */
+    MTEFallbackSymbols, /*!< \brief symbol font */
 
-    MTenvironmentFontCount  /*!< \brief internal enum value that allows to iterate over MTenvironmentFont \internal */
+    MTECurrentFont,  /*!< \brief internal enum value that specifies that the currently set font shall be used \internal */
+    MTECustomFont,  /*!< \brief internal enum value that specifies that a custom font specified elsewhere shall be used \internal */
 };
 
 
@@ -221,13 +231,28 @@ enum JKQTMathTextEnvironmentFont {
  *  \ingroup jkqtmathtext_tools
  */
 struct JKQTMATHTEXT_LIB_EXPORT JKQTMathTextEnvironment {
+    /** \brief units for the property JKQTMathTextEnvironment::fontSize (Points/PT or Pixels) */
+    enum FontSizeUnit {
+        POINTS,
+        PIXELS
+    };
+    /** \brief convert a FontSizeUnit to a string \see FontSizeUnit,String2FontSizeUnit() */
+    static QString FontSizeUnit2String(FontSizeUnit unit);
+    /** \brief convert a string into a FontSizeUnit \see FontSizeUnit,FontSizeUnit2String()  */
+    static FontSizeUnit String2FontSizeUnit(QString unit);
+
     JKQTMathTextEnvironment();
     /** \brief current font color */
     QColor color;
     /** \brief current font */
     JKQTMathTextEnvironmentFont font;
-    /** \brief current font size [pt] */
+    /** \brief custom font, when font==MTECustomFont */
+    QString customFontName;
+    /** \brief current font size the unit is determined by fontSizeUnit */
     double fontSize;
+    /** \brief the unit of the font size fontSize */
+    FontSizeUnit fontSizeUnit;
+
     /** \brief is the text currently bold? */
     bool bold;
     /** \brief is the text currently italic? */
@@ -242,33 +267,55 @@ struct JKQTMATHTEXT_LIB_EXPORT JKQTMathTextEnvironment {
     bool strike;
     /** \brief is the text currently are we inside a math environment? */
     bool insideMath;
+    /** \brief if \a insideMath \c ==true and this is \c  true (the default), then digits are forced to be typeset in upright, otherwise they are typeset as defined by the other properties */
+    bool insideMathForceDigitsUpright;
+    /** \brief sets  insideMath \c =true and insideMathForceDigitsUpright \c =true */
+    void beginMathMode();
+    /** \brief sets  insideMath \c =false and insideMathForceDigitsUpright \c =true */
+    void endMathMode();
 
 
-    /** \brief build a QFont object from the settings in this object */
+    /** \brief build a <a href="https://doc.qt.io/qt-5/qfont.html">QFont</a> object from the settings in this object */
     QFont getFont(JKQTMathText* parent) const;
+    /** \brief return the encoding of the given Font */
+    JKQTMathTextFontEncoding getFontEncoding(JKQTMathText *parent) const;
     /** \brief generate a HTML prefix that formats the text after it according to the settings in this object
      *
      * \param defaultEv environment before applying the current object (to detect changes)
+     * \param parentMathText the JKQTMathText object currently in use (used to e.g. look up font names)
+     *
      * \see toHtmlAfter()
      */
-    QString toHtmlStart(JKQTMathTextEnvironment defaultEv) const;
+    QString toHtmlStart(JKQTMathTextEnvironment defaultEv, JKQTMathText *parentMathText) const;
     /** \brief generate a HTML postfix that formats the text in front of it according to the settings in this object
      *
      * \param defaultEv environment before applying the current object (to detect changes)
+     * \param parentMathText the JKQTMathText object currently in use (used to e.g. look up font names)
+     *
      * \see toHtmlAfter()
      */
-    QString toHtmlAfter(JKQTMathTextEnvironment defaultEv) const;
+    QString toHtmlAfter(JKQTMathTextEnvironment defaultEv, JKQTMathText *parentMathText) const;
 };
 
-/** \brief beschreibt die Größe eines Knotens
+/** \brief beschreibt die Größe(n) eines Knotens
  *  \ingroup jkqtmathtext_tools
  */
 struct JKQTMATHTEXT_LIB_EXPORT JKQTMathTextNodeSize {
     JKQTMathTextNodeSize();
+    /** \brief width of whole block */
     double width;
+    /** \brief baselineHeight of whole block */
     double baselineHeight;
+    /** \brief overallHeight of whole block */
     double overallHeight;
+    /** \brief strikeoutPos of whole block */
     double strikeoutPos;
+    /** \brief calculate the descent */
+    inline double getDescent() const { return overallHeight-baselineHeight; }
+    /** \brief calculate the overall size in floating-point precision */
+    inline QSizeF getSize() const { return QSizeF(width, overallHeight); }
+    /** \brief calculate the overall size in floating-point precision */
+    inline QSize getIntSize() const { return QSize(qCeil(width+1.0), qCeil(overallHeight+1.0)); }
 };
 
 /** \brief summarizes all information available on a font for a specific MTenvironmentFont
@@ -281,15 +328,6 @@ struct JKQTMATHTEXT_LIB_EXPORT JKQTMathTextFontDefinition {
     QString fontName;
     /** \brief specifies the encoding of the font (default is \c MTFEwinSymbol ) */
     JKQTMathTextFontEncoding fontEncoding;
-
-    /** \brief symbol font used for greek symbols, or empty when \a fontName shall be used */
-    QString symbolfontGreek;
-    /** \brief specifies the encoding of symbolfontGreek */
-    JKQTMathTextFontEncoding symbolfontGreekEncoding;
-    /** \brief symbol font, used for math symbols, or empty when \a fontName shall be used */
-    QString symbolfontSymbol;
-    /** \brief specifies the encoding of symbolfontSymbol */
-    JKQTMathTextFontEncoding symbolfontSymbolEncoding;
 };
 
 
@@ -301,14 +339,14 @@ struct JKQTMATHTEXT_LIB_EXPORT JKQTMathTextFontDefinition {
  *  \param x x-center-position of the brace
  *  \param ybrace y-center-position of the brace
  *  \param width with of the overall brace
- *  \param height of the brace
+ *  \param bw height of the brace
  *  \param lineWidth linewidth when drawing, used for correcting so the brace exactly fills the rectangle and not overshoots it
  *  \param cubicshrink
  *  \param cubiccontrolfac
  *  \param lineWidthShrinkFactor the width of the tips is lineWidth reduced by this factor
  *  \param lineWidthGrowFactor the width of the horizontal bars is increased by this factor from lineWidth
  */
-JKQTMATHTEXT_LIB_EXPORT QPainterPath JKQTMathTextMakeHBracePath(double x, double ybrace, double width, double bw, double lineWidth, double cubicshrink=0.5, double cubiccontrolfac=0.3, double lineWidthShrinkFactor=0.3, double lineWidthGrowFactor=0.9);
+JKQTMATHTEXT_LIB_EXPORT QPainterPath JKQTMathTextMakeHBracePath(double x, double ybrace, double width, double bw, double lineWidth, double cubicshrink=0.5, double cubiccontrolfac=0.3, double lineWidthShrinkFactor=0.6, double lineWidthGrowFactor=0.9);
 
 
 /** \brief create a QPainterPath for drawing horizontal arrows
@@ -367,6 +405,52 @@ JKQTMATHTEXT_LIB_EXPORT QRectF JKQTMathTextGetTightBoundingRect(const QFont &fm,
  */
 JKQTMATHTEXT_LIB_EXPORT QFont JKQTMathTextGetNonItalic(const QFont& f);
 
+
+/** \brief types of horizontal alignment
+ *  \ingroup jkqtmathtext_tools
+ *
+ *  \image html jkqtmathtext_horizontalalignment.png
+ *
+ *  \see JKQTMathTextVerticalOrientation2String(), String2JKQTMathTextVerticalOrientation(), JKQTMathTextVerticalListNode
+ */
+enum JKQTMathTextHorizontalAlignment {
+    MTHALeft,  /*!< \brief align left */
+    MTHACentered,  /*!< \brief align centered */
+    MTHARight,  /*!< \brief align right */
+};
+/** \brief convert a JKQTMathTextHorizontalAlignment into a string
+ *  \ingroup jkqtmathtext_tools
+ */
+JKQTMATHTEXT_LIB_EXPORT QString JKQTMathTextHorizontalAlignment2String(JKQTMathTextHorizontalAlignment type);
+/** \brief convert a string \a tokenName into a JKQTMathTextHorizontalAlignment
+ *  \ingroup jkqtmathtext_tools
+ */
+JKQTMATHTEXT_LIB_EXPORT JKQTMathTextHorizontalAlignment String2JKQTMathTextHorizontalAlignment(QString tokenName);
+
+/** \brief type of ffractions represented by JKQTMathTextFracNode
+ *  \ingroup jkqtmathtext_tools
+ *
+ *  \image html jkqtmathtext_verticalorientation.png
+ *
+ *  \see JKQTMathTextVerticalOrientation2String(), String2JKQTMathTextVerticalOrientation(), JKQTMathTextVerticalListNode
+ */
+enum JKQTMathTextVerticalOrientation {
+    MTVOTop,  /*!< \brief baseline of the whole block is at the top of the first */
+    MTVOFirstLine,  /*!< \brief baseline of the whole block is at the baseline of the first line */
+    MTVOCentered,  /*!< \brief baseline of the whole block is at the center of all lines */
+    MTVOLastLine,  /*!< \brief baseline of the whole block is at the baseline of the last line */
+    MTVOBottom,  /*!< \brief baseline of the whole block is at the bottom of the last line */
+};
+
+/** \brief convert a JKQTMathTextVerticalOrientation into a QString
+ *  \ingroup jkqtmathtext_tools
+ */
+JKQTMATHTEXT_LIB_EXPORT QString JKQTMathTextVerticalOrientation2String(JKQTMathTextVerticalOrientation mode);
+
+/** \brief returns the JKQTMathTextVerticalOrientation corresponding to \a instructionName
+ *  \ingroup jkqtmathtext_tools
+ */
+JKQTMATHTEXT_LIB_EXPORT JKQTMathTextVerticalOrientation String2JKQTMathTextVerticalOrientation(QString mode);
 
 #endif // JKQTMATHTEXTTOOLS_H
 

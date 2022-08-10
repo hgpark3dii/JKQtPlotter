@@ -3,7 +3,7 @@
 
 
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     last modification: $LastChangedDate: 2015-04-02 13:55:22 +0200 (Do, 02 Apr 2015) $  (revision $Rev: 3902 $)
 
@@ -57,7 +57,11 @@
 
  */
 
-/*! \def JKQTPLOTTER_LIB_IN_DLL 
+// necessary to add this define to the Doxygen autodoc!!!
+#ifdef DOXYGEN
+#  define JKQTPLOTTER_LIB_IN_DLL
+#endif
+/*! \def JKQTPLOTTER_LIB_IN_DLL
     \ingroup jkqtpplottersupprt
     \brief declares that the application should link against a shared version of 
            JKQTPlotter, i.e. \c JKQTPlotterSharedLib_XYZ .
@@ -65,7 +69,11 @@
            any application linking against  \c JKQTPlotterSharedLib_XYZ. 
 */
 
-/*! \def JKQTPLOTTER_LIB_EXPORT_LIBRARY 
+// necessary to add this define to the Doxygen autodoc!!!
+#ifdef DOXYGEN
+#  define JKQTPLOTTER_LIB_EXPORT_LIBRARY
+#endif
+/*! \def JKQTPLOTTER_LIB_EXPORT_LIBRARY
     \ingroup jkqtpplottersupprt
     \brief is only defined while compiling JKQTPlotter into \c JKQTPlotterSharedLib_XYZ
            and ensures thet the symbols are exported. If it is not defined (e.g. while 

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     
 
@@ -711,7 +711,7 @@ void JKQTPDatastore::copyColumnData(size_t toColumn, size_t fromColumn)
 {
     resizeColumn(toColumn, getRows(fromColumn));
     std::copy(begin(fromColumn), end(fromColumn), begin(toColumn));
-    setColumnImageWidth(toColumn, getColumnImageWidth(fromColumn));
+    setColumnImageWidth(toColumn, getColumnImageWidth(static_cast<int>(fromColumn)));
 }
 
 

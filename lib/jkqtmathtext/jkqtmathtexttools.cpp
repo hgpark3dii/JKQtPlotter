@@ -317,10 +317,9 @@ JKQTMathTextFontSpecifier JKQTMathTextFontSpecifier::getSTIXFamilies()
 QString JKQTMathTextFontEncoding2String(JKQTMathTextFontEncoding e)
 {
     switch(e) {
-        case MTFEunicode: return "MTFEunicode";
-        case MTFEStandard: return "MTFEStandard";
-        case MTFEunicodeLimited: return "MTFEunicodeLimited";
-        case MTFEwinSymbol: return "MTFEwinSymbol";
+        case MTFEUnicode: return "MTFEUnicode";
+        case MTFEStandard: return "MTFELatin1";
+        case MTFEWinSymbol: return "MTFEWinSymbol";
     }
     return "???";
 }
@@ -353,22 +352,35 @@ QString JKQTMathTextBraceType2String(JKQTMathTextBraceType type) {
         return "any";
     case MTBTNone:
         return "none";
+    case MTBTUnknown:
+        return "unknow";
     }
-    return "unknown";
+    return "???";
 }
 
-JKQTMathTextBraceType TokenName2JKQTMathTextBraceType(const QString &tokenName)
+JKQTMathTextBraceType TokenName2JKQTMathTextBraceType(const QString &tokenName, bool* isOpening)
 {
-    if (tokenName=="(" || tokenName==")") return MTBTParenthesis;
-    if (tokenName=="[" || tokenName=="]") return MTBTSquareBracket;
-    if (tokenName=="{" || tokenName=="}") return MTBTCurlyBracket;
-    if (tokenName=="|") return MTBTSingleLine;
-    if (tokenName=="||" || tokenName=="#") return MTBTDoubleLine;
-    if (tokenName=="<" || tokenName==">" || tokenName=="langle" || tokenName=="rangle") return MTBTAngleBracket;
-    if (tokenName=="_" || tokenName=="lfloor" || tokenName=="rfloor") return MTBTFloorBracket;
-    if (tokenName=="~" || tokenName=="lceil" || tokenName=="rceil") return MTBTCeilBracket;
-    if (tokenName=="ulcorner" || tokenName=="urcorner"||tokenName=="tlcorner" || tokenName=="trcorner") return MTBTTopCorner;
-    if (tokenName=="blcorner" || tokenName=="brcorner"||tokenName=="llcorner" || tokenName=="lrcorner") return MTBTBottomCorner;
+    if (tokenName=="(") { if (isOpening) *isOpening=true; return MTBTParenthesis; }
+    if (tokenName==")") { if (isOpening) *isOpening=false; return MTBTParenthesis; }
+    if (tokenName=="[") { if (isOpening) *isOpening=true; return MTBTSquareBracket; }
+    if (tokenName=="]") { if (isOpening) *isOpening=false; return MTBTSquareBracket; }
+    if (tokenName=="{") { if (isOpening) *isOpening=true; return MTBTCurlyBracket; }
+    if (tokenName=="}") { if (isOpening) *isOpening=false; return MTBTCurlyBracket; }
+    if (tokenName=="|") { if (isOpening) *isOpening=true; return MTBTSingleLine; }
+    if (tokenName=="||" || tokenName=="#") { if (isOpening) *isOpening=true; return MTBTDoubleLine; }
+
+    if (tokenName=="<" || tokenName=="langle") { if (isOpening) *isOpening=true; return MTBTAngleBracket; }
+    if (tokenName==">" || tokenName=="rangle") { if (isOpening) *isOpening=false; return MTBTAngleBracket; }
+    if (tokenName=="_" || tokenName=="lfloor") { if (isOpening) *isOpening=true; return MTBTFloorBracket; }
+    if (tokenName=="_" || tokenName=="rfloor") { if (isOpening) *isOpening=false; return MTBTFloorBracket; }
+    if (tokenName=="~" || tokenName=="lceil") { if (isOpening) *isOpening=true; return MTBTCeilBracket; }
+    if (tokenName=="~" || tokenName=="rceil") { if (isOpening) *isOpening=false; return MTBTCeilBracket; }
+    if (tokenName=="ulcorner" || tokenName=="tlcorner") { if (isOpening) *isOpening=true; return MTBTTopCorner; }
+    if (tokenName=="urcorner" || tokenName=="trcorner") { if (isOpening) *isOpening=false; return MTBTTopCorner; }
+    if (tokenName=="blcorner" || tokenName=="llcorner") { if (isOpening) *isOpening=true; return MTBTBottomCorner; }
+    if (tokenName=="brcorner" || tokenName=="lrcorner") { if (isOpening) *isOpening=false; return MTBTBottomCorner; }
+    if (isOpening) *isOpening=true;
+
     if (tokenName=="any") return MTBTAny;
     if (tokenName=="." || tokenName=="" || tokenName=="none") return MTBTNone;
     return MTBTUnknown;
@@ -416,10 +428,28 @@ bool InstructionNameMatchesJKQTMathTextBraceType(const QString &token, JKQTMathT
     return (bt==type);
 }
 
+QString JKQTMathTextEnvironment::FontSizeUnit2String(FontSizeUnit unit)
+{
+    switch(unit) {
+    case PIXELS: return "pix";
+    default:
+    case POINTS: return "pt";
+    }
+}
+
+JKQTMathTextEnvironment::FontSizeUnit JKQTMathTextEnvironment::String2FontSizeUnit(QString unit)
+{
+    unit=unit.toLower().trimmed();
+    if (unit=="pt" || unit=="points" || unit=="point") return POINTS;
+    if (unit=="pix" || unit=="pixel" || unit=="pixels" || unit=="px") return PIXELS;
+    return POINTS;
+}
+
 JKQTMathTextEnvironment::JKQTMathTextEnvironment() {
     color=QColor("black");
     font=MTEroman;
     fontSize=10;
+    fontSizeUnit=POINTS;
     bold=false;
     italic=false;
     smallCaps=false;
@@ -427,6 +457,56 @@ JKQTMathTextEnvironment::JKQTMathTextEnvironment() {
     overline=false;
     strike=false;
     insideMath=false;
+    insideMathForceDigitsUpright=true;
+}
+
+void JKQTMathTextEnvironment::beginMathMode()
+{
+    insideMath=true;
+    insideMathForceDigitsUpright=true;
+    italic=true;
+    smallCaps=false;
+    underlined=false;
+    overline=false;
+    strike=false;
+}
+
+void JKQTMathTextEnvironment::endMathMode()
+{
+    insideMath=false;
+    insideMathForceDigitsUpright=true;
+    italic=false;
+    smallCaps=false;
+    underlined=false;
+    overline=false;
+    strike=false;
+}
+
+JKQTMathTextFontEncoding JKQTMathTextEnvironment::getFontEncoding(JKQTMathText* parent) const {
+    switch (font) {
+        case MTEsans: if (insideMath) {
+                return parent->getFontEncodingMathSans();
+            } else {
+                return parent->getFontEncodingSans();
+            }
+            break;
+        case MTEmathSans: return parent->getFontEncodingMathSans(); break;
+        case MTEtypewriter: return parent->getFontEncodingTypewriter(); break;
+        case MTEscript: return parent->getFontEncodingScript(); break;
+        case MTEcaligraphic: return parent->getFontEncodingCaligraphic(); break;
+        case MTEblackboard: return parent->getFontEncodingBlackboard(); break;
+        case MTEfraktur: return parent->getFontEncodingFraktur(); break;
+        case MTEmathRoman: return parent->getFontEncodingMathRoman(); break;
+        case MTEroman: if (insideMath) {
+                return parent->getFontEncodingMathRoman();
+            } else {
+                return parent->getFontEncodingRoman();
+            }
+            break;
+        default:
+            return MTFEStandard;
+    }
+    return MTFEStandard;
 }
 
 QFont JKQTMathTextEnvironment::getFont(JKQTMathText* parent) const {
@@ -445,6 +525,8 @@ QFont JKQTMathTextEnvironment::getFont(JKQTMathText* parent) const {
         case MTEblackboard: f.setFamily(parent->getFontBlackboard()); break;
         case MTEfraktur: f.setFamily(parent->getFontFraktur()); break;
         case MTEmathRoman: f.setFamily(parent->getFontMathRoman()); break;
+        case MTEFallbackSymbols: f.setFamily(parent->getFallbackFontSymbols()); break;
+        case MTECustomFont: f.setFamily(customFontName); break;
         default:
         case MTEroman: if (insideMath) {
                 f.setFamily(parent->getFontMathRoman());
@@ -460,14 +542,17 @@ QFont JKQTMathTextEnvironment::getFont(JKQTMathText* parent) const {
     f.setStrikeOut(strike);
     f.setCapitalization(QFont::MixedCase);
     if (smallCaps) f.setCapitalization(QFont::SmallCaps);
-    f.setPointSizeF(fontSize);
+    if (fontSizeUnit==POINTS) f.setPointSizeF(fontSize);
+    else if (fontSizeUnit==PIXELS) f.setPixelSize(static_cast<int>(fontSize));
     f.setStyleStrategy(QFont::NoFontMerging);
     return f;
 }
 
-QString JKQTMathTextEnvironment::toHtmlStart(JKQTMathTextEnvironment defaultEv) const {
+QString JKQTMathTextEnvironment::toHtmlStart(JKQTMathTextEnvironment defaultEv, JKQTMathText* parentMathText) const {
     QString s;
-    s=s+"font-size: "+QLocale::c().toString(fontSize)+"pt; ";
+    if (fontSizeUnit==POINTS) s=s+"font-size: "+QLocale::c().toString(fontSize)+"pt; ";
+    else if (fontSizeUnit==PIXELS) s=s+"font-size: "+QLocale::c().toString(fontSize)+"px; ";
+
     if (insideMath) {
         if (defaultEv.italic) {
             if (!italic) s=s+"font-style: italic; ";
@@ -479,6 +564,8 @@ QString JKQTMathTextEnvironment::toHtmlStart(JKQTMathTextEnvironment defaultEv) 
         if (!defaultEv.italic && italic) s=s+"font-style: italic; ";
     }
     if (bold && !defaultEv.bold) s=s+"font-weight: bold";
+    if (color!=defaultEv.color) s=s+"color: "+color.name();
+    if (font!=defaultEv.font) s=s+"font-family: "+getFont(parentMathText).family();
 
     QStringList td;
     if (underlined && !defaultEv.underlined) td<<"underline";
@@ -488,7 +575,7 @@ QString JKQTMathTextEnvironment::toHtmlStart(JKQTMathTextEnvironment defaultEv) 
     return "<span style=\""+s+"\">";
 }
 
-QString JKQTMathTextEnvironment::toHtmlAfter(JKQTMathTextEnvironment /*defaultEv*/) const {
+QString JKQTMathTextEnvironment::toHtmlAfter(JKQTMathTextEnvironment /*defaultEv*/, JKQTMathText */*parentMathText*/) const {
     return "</span>";
 }
 
@@ -503,9 +590,7 @@ JKQTMathTextNodeSize::JKQTMathTextNodeSize():
 
 
 JKQTMathTextFontDefinition::JKQTMathTextFontDefinition():
-    fontName("Times New Roman"), fontEncoding(MTFEStandard),
-    symbolfontGreek("Symbol"), symbolfontGreekEncoding(MTFEwinSymbol),
-    symbolfontSymbol("Symbol"), symbolfontSymbolEncoding(MTFEwinSymbol)
+    fontName("Times New Roman"), fontEncoding(MTFEStandard)
 {
 
 }
@@ -703,4 +788,60 @@ QFont JKQTMathTextGetNonItalic(const QFont &font)
 bool isPrintableJKQTMathTextBraceType(JKQTMathTextBraceType type)
 {
     return (type!=MTBTAny) && (type!=MTBTUnknown);
+}
+
+JKQTMathTextFontEncoding estimateJKQTMathTextFontEncoding(QFont font)
+{
+    font.setStyleStrategy(QFont::NoFontMerging);
+    const QString fontFamily=font.family().toLower();
+    if (fontFamily=="symbol") return JKQTMathTextFontEncoding::MTFEWinSymbol;
+    if (fontFamily.startsWith("xits") || fontFamily.startsWith("stix")||fontFamily.startsWith("asana")) return JKQTMathTextFontEncoding::MTFEUnicode;
+    const QFontMetricsF fm(font);
+    if (fm.inFont(QChar(0x3B1))) return JKQTMathTextFontEncoding::MTFEUnicode; // griechisch alpha
+    if (fm.inFont(QChar(0x2192))) return JKQTMathTextFontEncoding::MTFEUnicode; // pfeil nach rechts
+    if (fm.inFont(QChar(0x2202))) return JKQTMathTextFontEncoding::MTFEUnicode; // partial
+    if (fm.inFont(QChar(0x2208))) return JKQTMathTextFontEncoding::MTFEUnicode; // element
+    return JKQTMathTextFontEncoding::MTFELatin1;
+}
+
+QString JKQTMathTextHorizontalAlignment2String(JKQTMathTextHorizontalAlignment type)
+{
+    switch(type) {
+        case MTHALeft: return "left";
+        case MTHARight: return "right";
+        default:
+        case MTHACentered: return "centered";
+    }
+}
+
+JKQTMathTextHorizontalAlignment String2JKQTMathTextHorizontalAlignment(QString tokenName)
+{
+    tokenName=tokenName.toLower().trimmed();
+    if (tokenName=="l" || tokenName=="left" || tokenName=="flushleft") return MTHALeft;
+    if (tokenName=="r" || tokenName=="right" || tokenName=="flushright") return MTHARight;
+    if (tokenName=="c" || tokenName=="center" || tokenName=="centered") return MTHACentered;
+    return MTHACentered;
+}
+
+QString JKQTMathTextVerticalOrientation2String(JKQTMathTextVerticalOrientation mode)
+{
+    switch(mode) {
+        case MTVOTop: return "top";
+        case MTVOCentered: return "centered";
+        case MTVOLastLine: return "last_line";
+        case MTVOBottom: return "bottom";
+        default:
+        case MTVOFirstLine: return "first_line";
+    }
+}
+
+JKQTMathTextVerticalOrientation String2JKQTMathTextVerticalOrientation(QString tokenName)
+{
+    tokenName=tokenName.toLower().trimmed();
+    if (tokenName=="p" || tokenName=="first_line" || tokenName=="first-line" || tokenName=="firstline" || tokenName=="line1") return MTVOFirstLine;
+    if (tokenName=="last_line" || tokenName=="last-line" || tokenName=="lastline" || tokenName=="linen") return MTVOLastLine;
+    if (tokenName=="t" || tokenName=="top") return MTVOTop;
+    if (tokenName=="b" || tokenName=="bottom") return MTVOBottom;
+    if (tokenName=="c" || tokenName=="center" || tokenName=="centered") return MTVOCentered;
+    return MTVOCentered;
 }

@@ -1,9 +1,6 @@
 /*
-Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
-    
-
-    
 
     This software is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License (LGPL) as published by
@@ -31,14 +28,6 @@ Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>)
 #include <QKeyEvent>
 #include <QAction>
 #include <QLocale>
-#include <QDialog>
-#include <QCheckBox>
-#include <QGridLayout>
-#include <QLabel>
-#include <QPrinter>
-#include <QHeaderView>
-#include <QPrintDialog>
-#include <QDialogButtonBox>
 #include <cstring>
 #include <cstdlib>
 #include <cstdio>
@@ -382,8 +371,8 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
     targetColor("black"),
     colorModificationStrength(200),
     transparencyModification(TransparencyChangeMode::SameTransparency),
-    targetTransparency(0.5),
-    transparencyModficationStrength(0.66)
+    targetTransparency(0.5f),
+    transparencyModficationStrength(0.66f)
 {
     switch(mode) {
     case JKQTPFFCMFullyTransparentColor:
@@ -438,27 +427,27 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
         break;
     case JKQTPFFCMSameMoreTransparentColor:
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMSameEvenMoreTransparentColor:
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.66;
+        transparencyModficationStrength=0.66f;
         break;
     case JKQTPFFCMSameLessTransparentColor:
         transparencyModification=TransparencyChangeMode::LessTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMSameEvenLessTransparentColor:
         transparencyModification=TransparencyChangeMode::LessTransparent;
-        transparencyModficationStrength=0.66;
-
+        transparencyModficationStrength=0.66f;
+        break;
     case JKQTPFFCMInvertedColor:
         colorModification=ColorChangeMode::InvertColor;
         break;
     case JKQTPFFCMInvertedTransparentColor:
         colorModification=ColorChangeMode::InvertColor;
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMInvertedNonTransparentColor:
         colorModification=ColorChangeMode::InvertColor;
@@ -474,7 +463,7 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
         colorModification=ColorChangeMode::LighterColor;
         colorModificationStrength=150;
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMLighterAndNonTransparentColor:
         colorModification=ColorChangeMode::LighterColor;
@@ -491,13 +480,13 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
         colorModification=ColorChangeMode::LighterColor;
         colorModificationStrength=200;
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMEvenLighterAndNonTransparentColor:
         colorModification=ColorChangeMode::LighterColor;
         colorModificationStrength=200;
         transparencyModification=TransparencyChangeMode::ReplaceTransparency;
-        targetTransparency=0.0;
+        targetTransparency=0.0f;
         break;
 
 
@@ -509,13 +498,13 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
         colorModification=ColorChangeMode::DarkerColor;
         colorModificationStrength=200;
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMDarkerAndNonTransparentColor:
         colorModification=ColorChangeMode::DarkerColor;
         colorModificationStrength=200;
         transparencyModification=TransparencyChangeMode::ReplaceTransparency;
-        targetTransparency=0.0;
+        targetTransparency=0.0f;
         break;
 
     case JKQTPFFCMEvenDarkerColor:
@@ -526,13 +515,13 @@ JKQTPColorDerivationMode::JKQTPColorDerivationMode(PredefinedModes mode):
         colorModification=ColorChangeMode::DarkerColor;
         colorModificationStrength=300;
         transparencyModification=TransparencyChangeMode::MoreTransparent;
-        transparencyModficationStrength=0.33;
+        transparencyModficationStrength=0.33f;
         break;
     case JKQTPFFCMEvenDarkerAndNonTransparentColor:
         colorModification=ColorChangeMode::DarkerColor;
         colorModificationStrength=300;
         transparencyModification=TransparencyChangeMode::ReplaceTransparency;
-        targetTransparency=0.0;
+        targetTransparency=0.0f;
         break;
     }
 }

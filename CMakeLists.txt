@@ -10,7 +10,12 @@ cmake_minimum_required(VERSION 3.16)
 #   - v2018.08  <--> 2.0.0
 #   - v2019.11  <--> 3.x.y
 #   ==> sematic versioning starts with 4.0.0
-project(JKQTPlotter LANGUAGES CXX VERSION 4.0.0)
+project(JKQTPlotter
+          LANGUAGES CXX
+          VERSION 5.0.0
+          HOMEPAGE_URL https://github.com/jkriege2/JKQtPlotter
+          DESCRIPTION "an extensive Qt5 & Qt6 Plotter framework (including a feature-richt plotter widget, a speed-optimized, but limited variant and a LaTeX equation renderer!), written fully in C/C++ and without external dependencies"
+      )
 
 
 # set search path for CMake files
@@ -42,6 +47,12 @@ add_subdirectory(lib)
 if(JKQtPlotter_BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
+
+if(JKQtPlotter_BUILD_TOOLS)
+    add_subdirectory(tools)
+endif()
+
+add_subdirectory(doc)
 
 
 

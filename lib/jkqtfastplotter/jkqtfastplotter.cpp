@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger (<jan@jkrieger.de>) (DKFZ) & IWR, University of Heidelberg
+    Copyright (c) 2008-2022 Jan W. Krieger (<jan@jkrieger.de>)
 
     
 
@@ -640,6 +640,30 @@ void JKQTFastPlotter::updateDataImmediate() {
     delete painter;
     mutexRepaintData.unlock();
     repaint();
+}
+
+void JKQTFastPlotter::setXMin(double value){
+    setPlotUpdateEnabled(false);
+    setXRange(value,xMax,xAxisLog);
+    setPlotUpdateEnabled(true);
+}
+
+void JKQTFastPlotter::setXMax(double value){
+    setPlotUpdateEnabled(false);
+    setXRange(xMin,value,xAxisLog);
+    setPlotUpdateEnabled(true);
+}
+
+void JKQTFastPlotter::setYMin(double value){
+    setPlotUpdateEnabled(false);
+    setYRange(value,yMax,yAxisLog);
+    setPlotUpdateEnabled(true);
+}
+
+void JKQTFastPlotter::setYMax(double value){
+    setPlotUpdateEnabled(false);
+    setYRange(yMin,value,yAxisLog);
+    setPlotUpdateEnabled(true);
 }
 
 void JKQTFastPlotter::calcPlotScaling() {

@@ -280,9 +280,9 @@ int JKQTMathTextDualChildNode::childCount() const
 void JKQTMathTextDualChildNode::clearChildren(bool deleteChildren)
 {
     JKQTMathTextNode* c1=child1; child1=nullptr;
-    if (c1) delete c1;
+    if (deleteChildren&&c1) delete c1;
     JKQTMathTextNode* c2=child2; child2=nullptr;
-    if (c2) delete c2;
+    if (deleteChildren&&c2) delete c2;
 }
 
 JKQTMathTextMultiChildNode::JKQTMathTextMultiChildNode(JKQTMathText *parentMathText):
@@ -360,4 +360,11 @@ void JKQTMathTextMultiChildNode::setDrawBoxes(bool draw)
         if (c) c->setDrawBoxes(draw);
     }
 
+}
+
+JKQTMathTextNodeSize JKQTMathTextNode::getSize(QPainter &painter, JKQTMathTextEnvironment currentEv, const JKQTMathTextNodeSize *prevNodeSize)
+{
+    JKQTMathTextNodeSize s;
+    getSize(painter, currentEv, s.width, s.baselineHeight, s.overallHeight, s.strikeoutPos, prevNodeSize);
+    return s;
 }

@@ -12,6 +12,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{xfrac}
+\usepackage{yfonts}
+\usepackage{mathrsfs}  
+
 
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 
@@ -38,8 +41,46 @@
 
 \newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
 
+\newcommand*{\textcal}[1]{%
+	% family qzc: Font TeX Gyre Chorus (package tgchorus)
+	% family pzc: Font Zapf Chancery (package chancery)
+	{\fontfamily{qzc}\selectfon #1}%
+}
+
 \begin{document}
 	 \begin{itemize}
+	 	\item\textbf{Text: Umlaute \& fonts: }\\ rm: \textrm{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	it: \textit{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	 sf: \textsf{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	  tt: \texttt{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	   cal: \textcal{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	    scr: \textscr{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	     bb: \textbb{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S},\\
+	 	      frak: \textfrak{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S}, 
+	 	\item\textbf{text: Umlaute}:\"A\"a\`A\`a\'A\'a\^A\^a\~A\~a\r{A}\r{a}\u{A}\u{a}\=A\=a\AA\aa{\AE}{\ae}\v{C}\v{c}\"E\"e\.e\L\l\"O\"o\`O\`o\'O\'o\^O\^o\~O\~o\O\o{\OE}{\ae}\v{S}\v{s}\ss\"U\"u\`U\`u\'U\'u\^U\^u\~U\~u 
+ 	 	\item\textbf{math: Umlaute and fonts}\\ rm: \textrm{\"Aq{\"u}\"{a}t{\oe}r abcABC00, 123-45+6.0\%\S} \\bs: $\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S$, ,\\
+ 	 	it: $\mathit{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	rm: $\mathrm{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	sf: $\mathsf{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	tt: $\mathtt{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	cal: $\mathcal{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	scr: $\mathscr{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	bb: $\mathbb{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$, \\
+ 	 	frak: $\mathfrak{\ddot{A}q\ddot{u}\ddot{a}t{\oe}r abcABC00, 123-45+6.0\%\S}$
+ 	 	
+ 	 	\item \begin{tabular}{rl}
+ 	 		text: & abc123+d/e\\
+ 	 		textit: & \textit{abc123+d/e}\\
+ 	 		textbf: & \textbf{abc123+d/e}\\
+ 	 		math: & $abc123+d/e$\\
+ 	 		mathrm: & $\mathrm{abc123+d/e}$\\
+ 	 		mathit: & $\mathit{abc123+d/e}$\\
+ 	 		mathbf: & $\mathbf{abc123+d/e}$\\
+ 	 		mathfrak: & $\mathfrak{abc123+d/e}$\\
+ 	 	\end{tabular}
+ 	 	
+ 	 	\item $xHq\ \vert\  \big\vert\  \Big\vert\  \bigg\vert\  \Bigg\vert$\\
+ 	 	$xHq\ (\  \big(\  \Big(\  \bigg(\  \Bigg($
 	
 \item\textbf{std dev:} \[\sigma_x=\sqrt{\langle (x-\langle x\rangle)^2\rangle}=\sqrt{\frac{1}{N-1}\cdot\left( \sum_{i=1}^N{x_i}^2-\frac{1}{N}\cdot\left(\sum_{i=1}^Nx_i\right)^2\right)} \]
     \item\textbf{std dev 2:} \[\sigma_x=\sqrt{\langle (x-\langle x\rangle)^2\rangle}=\sqrt{\frac{1}{N-1}\cdot\left( \sum_{i=1}^Nx_i^2-\frac{1}{N}\cdot\left(\sum_{i=1}^Nx_i\right)^2\right)} \]
@@ -89,7 +130,12 @@
     \item\textbf{math 1:} \[f(x)=\int_{-\infty}^xe^{-t^2}\;\mathrm{d}t \]
     \item\textbf{math 2:} \[\sum_{i=1}^\infty\frac{-e^{i\pi}}{2^n} \]
     \item\textbf{math 3:} \[\mbox{det} \begin{pmatrix} 1 & x_1 & \ldots & x_1^{n-1} \\ 1 & x_2 & \ldots & x_2^{n-1} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_n & \ldots & x_n^{n-1} \end{pmatrix} = \prod_{1 \leq i < j \leq n} (x_j - x_i)  \]
-    \item\textbf{math 4:} \[\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+x}}}}}} \]
+    \item\textbf{math 4:} \[M\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+x}}}}}} \]
+    \item\textbf{math 4:} \[M\sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+x}}}}}} \]
+    \item\textbf{math 4:} \[M\sqrt{1+X}\sqrt[3]{1+X}\sqrt[3.14156]{1+X} \]
+    \item\textbf{math 4:} \[M\sqrt{1+X}\sqrt[\frac{1}{2}]{1+X}\sqrt[3.14156\cdot\frac{1}{2}]{1+X} \]
+    \item\textbf{math 4:} \[M\sqrt{\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{1+x}}}}}} \]
+    \item\textbf{math 4:} \[M\sqrt{a}\frac{\sqrt{a}}{\sqrt{a}}\sqrt{\frac{1}{a}} \]
     \item\textbf{math 5:} \[\left(\stackrel{p}{2}\right)=x^2y^{p-2}-\frac{1}{1-x}\frac{1}{1-x^2} \]
     \item\textbf{math 6:} \[a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{a_4}}}} \]
     \item\textbf{math 7:} \[\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\right)\left|\varphi(x+\mathrm{i}y)\right|^2=0 \]
@@ -135,6 +181,7 @@
 		    \item\textbf{math: frac test:} \[\frac{a}{b}+\frac{g}{a}-\frac{a^2}{b^2}\cdot\frac{a^2}{b^{\frac{1}{2}}}\]
 		\item\textbf{sfrac:} Hxq \sfrac{1}{2} \ \ -- \ \  $Hxq \frac{1}{2}\ \ \sfrac{1}{2}\ \ \frac{1}{2+\frac{1}{2}}\ \ \sfrac{1}{2+\sfrac{1}{2}}\ \ \sfrac{1}{2+\frac{1}{2}}\ \ \sfrac{\frac{1}{2+\frac{1}{2}}}{2}\ \ e^{\sfrac{1}{2}}$
 		\item\textbf{brace+sub/superscript:} $\stkout{\left\langle \stkout{r_{123}}\right\rangle\left\langle r^{123}\right\rangle\left\langle r_{123}^{123}\right\rangle}$
+		\item\textbf{math: quadratic formula} \[x_{1/2}=\frac{-b\pm \sqrt{b^2-4ac}}{2a}\]
 	 \end{itemize}
  
 

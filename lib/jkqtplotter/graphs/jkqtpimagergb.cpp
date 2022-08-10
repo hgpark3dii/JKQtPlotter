@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2008-2020 Jan W. Krieger
+    Copyright (c) 2008-2022 Jan W. Krieger (jan@jkrieger.de)
 
     
 
@@ -1178,7 +1178,7 @@ JKQTPColumnRGBMathImage::JKQTPColumnRGBMathImage(JKQTBasePlotter *parent):
 }
 
 JKQTPColumnRGBMathImage::JKQTPColumnRGBMathImage(double x, double y, double width, double height, JKQTBasePlotter *parent):
-    JKQTPRGBMathImage(x,y,width,height,JKQTPMathImageDataType::DoubleArray,nullptr,Nx,Ny,parent)
+    JKQTPRGBMathImage(x,y,width,height,JKQTPMathImageDataType::DoubleArray,nullptr,0,0,parent)
 {
     this->modifierColumn=-1;
     this->imageRColumn=-1;

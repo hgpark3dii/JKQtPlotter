@@ -28,7 +28,8 @@ class TestForm : public QWidget
         Ui::TestForm *ui;
         JKQTPHighResTimer ht;
         double draw(QPainter& painter, double X, double YY, JKQTMathText& mt, QString name, double &durationSizingMS, double &durationTimingMS, QStringList *lstErrors=nullptr);
-
+        double drawAligned(QPainter& painter, double X, double YY, JKQTMathText& mt, QString name);
+        QString getFonts(const JKQTMathText& mt) const;
         QTreeWidgetItem* createTree(JKQTMathTextNode* node, QTreeWidgetItem *parent=NULL);
 };
 
