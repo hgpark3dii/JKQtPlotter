@@ -30,9 +30,19 @@
 #include "jkqtplotter/jkqtplotter.h"
 #include "jkqtplotter/graphs/jkqtpscatter.h"
 #include "jkqtplotter.h"
-#include <utility>
 
 
+int JKQTPlotter::jkqtp_RESIZE_DELAY = 100;
+
+void JKQTPlotter::setGlobalResizeDelay(int delayMS)
+{
+    jkqtp_RESIZE_DELAY=delayMS;
+}
+
+int JKQTPlotter::getGlobalResizeDelay()
+{
+    return jkqtp_RESIZE_DELAY;
+}
 
 
 
@@ -41,6 +51,7 @@
 /**************************************************************************************************************************
  * JKQTPlotter
  **************************************************************************************************************************/
+
 JKQTPlotter::JKQTPlotter(bool datastore_internal, QWidget* parent, JKQTPDatastore* datast):
     QWidget(parent, Qt::Widget),
     currentMouseDragAction(),
@@ -79,7 +90,9 @@ JKQTPlotter::JKQTPlotter(bool datastore_internal, QWidget* parent, JKQTPDatastor
     connect(plotter, SIGNAL(beforePlotScalingRecalculate()), this, SLOT(intBeforePlotScalingRecalculate()));
     connect(plotter, SIGNAL(zoomChangedLocally(double, double, double, double, JKQTBasePlotter*)), this, SLOT(pzoomChangedLocally(double, double, double, double, JKQTBasePlotter*)));
 
-    image=QImage(width(), height(), QImage::Format_ARGB32);
+    const qreal dpr = devicePixelRatioF();
+    image=QImage(width()*dpr, height()*dpr, QImage::Format_ARGB32);
+    image.setDevicePixelRatio(dpr);
     oldImage=image;
 
     // enable mouse-tracking, so mouseMoved-Events can be caught
@@ -566,7 +579,7 @@ void JKQTPlotter::paintUserAction() {
                         QString txt;
                         double a=0,d=0,so=0,w=0;
                         getPlotter()->getMathText()->setFontSize(plotterStyle.userActionFontSize);
-                        getPlotter()->getMathText()->setFontRomanOrSpecial(plotterStyle.userActionFontName);
+                        getPlotter()->getMathText()->setFontSpecial(plotterStyle.userActionFontName);
 
                         txt=QString::fromStdString("\\delta_{x}="+jkqtp_floattolatexstr(dx, 3));
                         getPlotter()->getMathText()->parse(txt);
@@ -641,10 +654,9 @@ void JKQTPlotter::paintUserAction() {
                         QVector<QString> txts;
                         QVector<QColor> colors;
                         const int txtoffset=4;
-                        QString txt;
                         double ascent=0,descent=0,strikeout=0,width=0;
                         getPlotter()->getMathText()->setFontSize(plotterStyle.userActionFontSize);
-                        getPlotter()->getMathText()->setFontRomanOrSpecial(plotterStyle.userActionFontName);
+                        getPlotter()->getMathText()->setFontSpecial(plotterStyle.userActionFontName);
 
 
                         for (auto& m: mouseDragMarkers) {
@@ -785,7 +797,7 @@ void JKQTPlotter::mouseMoveEvent ( QMouseEvent * event ) {
                 } else {
                     zoomRect.translate(mouseDragRectXStartPixel-mouseDragRectXEndPixel, mouseDragRectYStartPixel-mouseDragRectYEndPixel);
                 }
-                setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()));
+                setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()), true);
             }
 
         } else {
@@ -889,7 +901,7 @@ void JKQTPlotter::mouseReleaseEvent ( QMouseEvent * event ){
                 plotter->correctXYRangeForAspectRatio(xmin,xmax,ymin,ymax);
 
                 emit zoomChangedLocally(xmin, xmax, ymin, ymax, this);
-                plotter->setXY(xmin, xmax, ymin, ymax);
+                plotter->setXY(xmin, xmax, ymin, ymax, true);
             } else if (currentMouseDragAction.mode==jkqtpmdaPanPlotOnRelease) {
                 QRectF zoomRect= QRectF(QPointF(plotter->x2p(getXAxis()->getMin()),plotter->y2p(getYAxis()->getMax())), QPointF(plotter->x2p(getXAxis()->getMax()),plotter->y2p(getYAxis()->getMin())));
                 if  ( (mouseLastClickX/magnification<plotter->getInternalPlotBorderLeft()) || (mouseLastClickX/magnification>plotter->getPlotWidth()+plotter->getInternalPlotBorderLeft()) ) {
@@ -899,7 +911,7 @@ void JKQTPlotter::mouseReleaseEvent ( QMouseEvent * event ){
                 } else {
                     zoomRect.translate(mouseDragRectXStartPixel-mouseDragRectXEndPixel, mouseDragRectYStartPixel-mouseDragRectYEndPixel);
                 }
-                setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()));
+                setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()), true);
             } else if (currentMouseDragAction.mode==jkqtpmdaDrawRectangleForEvent) {
                 emit userRectangleFinished(x1, y1, x2-x1, y2-y1, event->modifiers());
             } else if (currentMouseDragAction.mode==jkqtpmdaDrawCircleForEvent) {
@@ -951,7 +963,7 @@ void JKQTPlotter::mouseDoubleClickEvent ( QMouseEvent * event ){
                 ymin=getYMin();
                 ymax=getYMax();
             }
-            plotter->setXY(xmin, xmax, ymin, ymax);
+            plotter->setXY(xmin, xmax, ymin, ymax, true);
             update();
         } else if (itAction.value()==JKQTPMouseDoubleClickActions::jkqtpdcaClickMovesViewport) {
             QRectF zoomRect= QRectF(QPointF(plotter->x2p(getXAxis()->getMin()),plotter->y2p(getYAxis()->getMax())), QPointF(plotter->x2p(getXAxis()->getMax()),plotter->y2p(getYAxis()->getMin())));
@@ -962,7 +974,7 @@ void JKQTPlotter::mouseDoubleClickEvent ( QMouseEvent * event ){
             } else {
                 zoomRect.moveCenter(QPointF(event->pos().x(), event->pos().y()));
             }
-            setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()));
+            setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()), true);
         }
     }
 
@@ -1026,7 +1038,7 @@ void JKQTPlotter::wheelEvent ( QWheelEvent * event ) {
                 ymin=getYMin();
                 ymax=getYMax();
             }
-            plotter->setXY(xmin, xmax, ymin, ymax);
+            plotter->setXY(xmin, xmax, ymin, ymax, true);
         } else if (itAction.value()==JKQTPMouseWheelActions::jkqtpmwaPanByWheel) {
         //} else if (act==JKQTPMouseWheelActions::jkqtpmwaPanByWheel) {
             //qDebug()<<"wheelEvent("<<event->modifiers()<<"):PanByWheel";
@@ -1048,7 +1060,7 @@ void JKQTPlotter::wheelEvent ( QWheelEvent * event ) {
             } else {
                 zoomRect.translate(d.x(), d.y());
             }
-            setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()));
+            setXY(plotter->p2x(zoomRect.left()), plotter->p2x(zoomRect.right()), plotter->p2y(zoomRect.bottom()), plotter->p2y(zoomRect.top()), true);
         }
     }
 
@@ -1106,12 +1118,10 @@ void JKQTPlotter::initContextMenu()
         QAction* act=new QAction(tit, menVisibleGroup);
         act->setCheckable(true);
         act->setChecked(getPlotter()->getGraph(i)->isVisible());
-        {
-            qreal dpr = devicePixelRatioF();
-            QImage newImage=getPlotter()->getGraph(i)->generateKeyMarker(QSize(16*dpr,16*dpr));
-            newImage.setDevicePixelRatio(dpr);
-            act->setIcon(QIcon(QPixmap::fromImage(std::move(newImage))));
-        }
+        const qreal dpr = devicePixelRatioF();
+        QPixmap pix=QPixmap::fromImage(getPlotter()->getGraph(i)->generateKeyMarker(QSize(16,16)*dpr));
+        pix.setDevicePixelRatio(dpr);
+        act->setIcon(QIcon(pix));
         act->setData(static_cast<int>(i));
         connect(act, SIGNAL(toggled(bool)), this, SLOT(reactGraphVisible(bool)));
         menVisibleGroup->addAction(act);
@@ -1353,12 +1363,17 @@ QSize JKQTPlotter::sizeHint() const {
     return QWidget::sizeHint();
 }
 
+bool JKQTPlotter::isResizeTimerRunning() const
+{
+    return resizeTimer.isActive();
+}
+
 void JKQTPlotter::synchronizeToMaster(JKQTPlotter *master, JKQTBasePlotter::SynchronizationDirection synchronizeDirection, bool synchronizeAxisLength, bool synchronizeZoomingMasterToSlave, bool synchronizeZoomingSlaveToMaster)
 {
     if (masterPlotterX) disconnect(masterPlotterX->getPlotter(), SIGNAL(plotScalingRecalculated()), this, SLOT(masterPlotScalingRecalculated()));
     if (masterPlotterY) disconnect(masterPlotterY->getPlotter(), SIGNAL(plotScalingRecalculated()), this, SLOT(masterPlotScalingRecalculated()));
 
-    plotter->synchronizeToMaster(master->getPlotter(), synchronizeDirection, synchronizeAxisLength, synchronizeZoomingMasterToSlave, synchronizeZoomingSlaveToMaster);
+    if (master) plotter->synchronizeToMaster(master->getPlotter(), synchronizeDirection, synchronizeAxisLength, synchronizeZoomingMasterToSlave, synchronizeZoomingSlaveToMaster);
 
     if (synchronizeDirection==JKQTBasePlotter::sdXAxis || synchronizeDirection==JKQTBasePlotter::sdXYAxes) {
         masterPlotterX=master;

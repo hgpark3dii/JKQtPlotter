@@ -25,8 +25,6 @@
 #include <QDebug>
 #include <iostream>
 #include "jkqtplotter/jkqtptools.h"
-#include "jkqtplotter/graphs/jkqtpimage.h"
-#include "jkqtplotter/jkqtpbaseelements.h"
 #include "jkqtplotter/jkqtplotter.h"
 
 #define SmallestGreaterZeroCompare_xvsgz() if ((xvsgz>10.0*DBL_MIN)&&((smallestGreaterZero<10.0*DBL_MIN) || (xvsgz<smallestGreaterZero))) smallestGreaterZero=xvsgz;
@@ -59,17 +57,20 @@ void JKQTPBarVerticalGraph::draw(JKQTPEnhancedPainter& painter) {
     drawErrorsBefore(painter);
 
     const QPen p=getLinePenForRects(painter, parent);
-    const QBrush b=getFillBrush(painter, parent);
+    const auto fillFunctor=std::bind(constructFillBrushFunctor(), std::placeholders::_1, std::placeholders::_2, std::ref(painter), this);
 
     int imax=0;
     int imin=0;
+    double left=-1e6;
+    double right=1e6;
+    bool firstXY=true;
     if (getIndexRange(imin, imax)) {
         painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
 
     //    double x0=transformX(0);
-    //    if (parent->getXAxis()->isLogAxis()) x0=transformX(parent->getXAxis()->getMin());
+    //    if (getXAxis()->isLogAxis()) x0=transformX(getXAxis()->getMin());
         double y0=transformY(0);
-        if (parent->getYAxis()->isLogAxis()) y0=transformY(parent->getYAxis()->getMin());
+        if (getYAxis()->isLogAxis()) y0=transformY(getYAxis()->getMin());
         double delta=1;
         double deltap=0;
         double deltam=0;
@@ -80,7 +81,8 @@ void JKQTPBarVerticalGraph::draw(JKQTPEnhancedPainter& painter) {
             const double xv=datastore->get(static_cast<size_t>(xColumn),static_cast<size_t>(i));
             const int sr=datastore->getNextLowerIndex(xColumn, i);
             const int lr=datastore->getNextHigherIndex(xColumn, i);
-            double yv=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i));
+            const double yvdirect=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i));
+            double yv=yvdirect;
             double yv0=y0;
             if (!qFuzzyIsNull(getBaseline())) yv0=transformY(getBaseline());
             if (hasStackPar) {
@@ -110,15 +112,54 @@ void JKQTPBarVerticalGraph::draw(JKQTPEnhancedPainter& painter) {
                 double yy=yv0;
 
                 //std::cout<<"delta="<<delta<<"   x="<<x<<" y="<<y<<"   xx="<<xx<<" yy="<<yy<<std::endl;
-                if (yy<y) { qSwap(y,yy); }
+                bool swapped=false;
+                if (yy<y) { qSwap(y,yy); swapped=true; }
                 if (JKQTPIsOKFloat(x) && JKQTPIsOKFloat(xx) && JKQTPIsOKFloat(y) && JKQTPIsOKFloat(yy)) {
+                    const QBrush b=fillFunctor(xv,yv);
                     painter.setBrush(b);
-                    painter.setPen(p);
-                    QRectF r(QPointF(x, y), QPointF(xx, yy));
-                    painter.drawRect(r);
-
+                    if (getFillMode()!=FillMode::SingleFilling) {
+                        QPen pl=p;
+                        pl.setColor(JKQTPGetDerivedColor(m_lineColorDerivationModeForSpecialFill,b.color()));
+                    } else {
+                        painter.setPen(p);
+                    }
+                    const QRectF r(QPointF(x, y), QPointF(xx, yy));
+                    if (firstXY) {
+                        left=r.left();
+                        right=r.right();
+                    } else {
+                        left=qMin(left, r.left());
+                        right=qMax(right, r.right());
+                    }
+                    firstXY=false;
+                    if (usesCustomDrawFunctor()) {
+                        if (m_customDrawFunctor) {
+                            m_customDrawFunctor(painter, r, QPointF(xv,yv), Qt::Vertical, this);
+                        }
+                    } else {
+                        const double rAtBaseline=parent->pt2px(painter, rectRadiusAtBaseline);
+                        const double rAtValue=parent->pt2px(painter, rectRadiusAtValue);
+                        //qDebug()<<"r="<<r<<", rectRadiusAtBaseline="<<rectRadiusAtBaseline<<", rectRadiusAtValue="<<rectRadiusAtValue<<", rAtBaseline="<<rAtBaseline<<", rAtValue="<<rAtValue;
+                        if (rAtBaseline+rAtValue>=r.height()+2) {
+                            //qDebug()<<"drawRect";
+                            painter.drawRect(r);
+                        } else {
+                            //qDebug()<<"drawRoundRect swapped="<<swapped;
+                            if (swapped) {
+                                painter.drawComplexRoundedRect(r,rAtBaseline,rAtBaseline,rAtValue,rAtValue,Qt::AbsoluteSize);
+                            } else {
+                                painter.drawComplexRoundedRect(r,rAtValue,rAtValue,rAtBaseline,rAtBaseline,Qt::AbsoluteSize);
+                            }
+                        }
+                    }
                 }
             }
+        }
+
+        if (getDrawBaseline() && left!=right && !hasStackParent()) {
+            painter.setPen(baselineStyle().getLinePen(painter, parent));
+            const double yb=transformY(getBaseline());
+            if (JKQTPIsOKFloat(yb)) painter.drawLine(left, yb, right, yb);
         }
 
     }
@@ -133,35 +174,6 @@ bool JKQTPBarVerticalGraph::getYMinMax(double& miny, double& maxy, double& small
     return getValuesMinMax(miny, maxy, smallestGreaterZero);
 }
 
-int JKQTPBarVerticalGraph::getBarPositionColumn() const
-{
-    return xColumn;
-}
-
-int JKQTPBarVerticalGraph::getBarHeightColumn() const
-{
-    return yColumn;
-}
-
-void JKQTPBarVerticalGraph::setBarPositionColumn(int column)
-{
-    xColumn=column;
-}
-
-void JKQTPBarVerticalGraph::setBarPositionColumn(size_t column)
-{
-    xColumn=static_cast<int>(column);
-}
-
-void JKQTPBarVerticalGraph::setBarHeightColumn(int column)
-{
-    yColumn=column;
-}
-
-void JKQTPBarVerticalGraph::setBarHeightColumn(size_t column)
-{
-    yColumn=static_cast<int>(column);
-}
 
 bool JKQTPBarVerticalGraph::considerForAutoscaling(JKQTPBarGraphBase *other) const
 {
@@ -189,34 +201,25 @@ JKQTPBarHorizontalGraph::JKQTPBarHorizontalGraph(JKQTPlotter *parent):
 
 }
 
-int JKQTPBarHorizontalGraph::getBarPositionColumn() const
+
+int JKQTPBarHorizontalGraph::getKeyColumn() const
 {
     return yColumn;
 }
 
-int JKQTPBarHorizontalGraph::getBarHeightColumn() const
+int JKQTPBarHorizontalGraph::getValueColumn() const
 {
     return xColumn;
 }
 
-void JKQTPBarHorizontalGraph::setBarPositionColumn(int column)
+void JKQTPBarHorizontalGraph::setKeyColumn(int __value)
 {
-    yColumn=column;
+    yColumn=__value;
 }
 
-void JKQTPBarHorizontalGraph::setBarPositionColumn(size_t column)
+void JKQTPBarHorizontalGraph::setValueColumn(int __value)
 {
-    yColumn=static_cast<int>(column);
-}
-
-void JKQTPBarHorizontalGraph::setBarHeightColumn(int column)
-{
-    xColumn=column;
-}
-
-void JKQTPBarHorizontalGraph::setBarHeightColumn(size_t column)
-{
-    xColumn=static_cast<int>(column);
+    xColumn=__value;
 }
 
 bool JKQTPBarHorizontalGraph::considerForAutoscaling(JKQTPBarGraphBase *other) const
@@ -235,16 +238,19 @@ void JKQTPBarHorizontalGraph::draw(JKQTPEnhancedPainter& painter) {
     drawErrorsBefore(painter);
 
     const QPen p=getLinePenForRects(painter, parent);
-    const QBrush b=getFillBrush(painter, parent);
+    const auto fillFunctor=std::bind(constructFillBrushFunctor(), std::placeholders::_1, std::placeholders::_2, std::ref(painter), this);
 
     int imax=0;
     int imin=0;
+    double top=0;
+    double bottom=0;
+    bool firstXY=true;
     if (getIndexRange(imin, imax)) {
 
         double x0=transformX(0);
-        if (parent->getXAxis()->isLogAxis()) x0=transformX(parent->getXAxis()->getMin());
+        if (getXAxis()->isLogAxis()) x0=transformX(getXAxis()->getMin());
     //    double y0=transformY(0);
-    //    if (parent->getYAxis()->isLogAxis()) y0=transformY(parent->getYAxis()->getMin());
+    //    if (getYAxis()->isLogAxis()) y0=transformY(getYAxis()->getMin());
         {
             painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
             intSortData();
@@ -254,7 +260,8 @@ void JKQTPBarHorizontalGraph::draw(JKQTPEnhancedPainter& painter) {
             double deltam=0;
             for (int iii=imin; iii<imax; iii++) {
                 int i=qBound(imin, getDataIndex(iii), imax);
-                double xv=datastore->get(static_cast<size_t>(xColumn),static_cast<size_t>(i));
+                const double xvdirect=datastore->get(static_cast<size_t>(xColumn),static_cast<size_t>(i));
+                double xv=xvdirect;
                 double yv=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i));
                 int sr=datastore->getNextLowerIndex(yColumn, i);
                 int lr=datastore->getNextHigherIndex(yColumn, i);
@@ -287,17 +294,53 @@ void JKQTPBarHorizontalGraph::draw(JKQTPEnhancedPainter& painter) {
                     double y=transformY(yv+shift*delta+width*deltap);
                     double xx=transformX(xv);
                     double yy=transformY(yv+shift*delta-width*deltam);
-                    if (x>xx) { qSwap(x,xx); }
+                    bool swapped=false;
+                    if (x>xx) { qSwap(x,xx); swapped=true; }
                     //qDebug()<<"delta="<<delta<<"   x="<<x<<" y="<<y<<"   xx="<<xx<<" yy="<<yy;
                     //qDebug()<<"xv="<<xv<<"   x0="<<x0<<"   x="<<x<<"..."<<xx;
                     if (JKQTPIsOKFloat(x) && JKQTPIsOKFloat(xx) && JKQTPIsOKFloat(y) && JKQTPIsOKFloat(yy)) {
+                        const QBrush b=fillFunctor(yv,xv);
                         painter.setBrush(b);
-                        painter.setPen(p);
-                        QRectF r(QPointF(x, y), QPointF(xx, yy));
-                        painter.drawRect(r);
+                        if (getFillMode()!=FillMode::SingleFilling) {
+                            QPen pl=p;
+                            pl.setColor(JKQTPGetDerivedColor(m_lineColorDerivationModeForSpecialFill,b.color()));
+                        } else {
+                            painter.setPen(p);
+                        }
+                        const QRectF r(QPointF(x, y), QPointF(xx, yy));
+                        if (firstXY) {
+                            top=r.top();
+                            bottom=r.bottom();
+                        } else {
+                            top=qMin(top, r.top());
+                            bottom=qMax(bottom, r.bottom());
+                        }
+                        firstXY=false;
+                        if (usesCustomDrawFunctor()) {
+                            if (m_customDrawFunctor) {
+                                m_customDrawFunctor(painter, r, QPointF(xv,yv), Qt::Horizontal, this);
+                            }
+                        } else {
+                            const double rAtBaseline=parent->pt2px(painter, rectRadiusAtBaseline);
+                            const double rAtValue=parent->pt2px(painter, rectRadiusAtBaseline);
+                            if (rAtBaseline+rAtValue>r.width()+2) {
+                                painter.drawRect(r);
+                            } else {
+                                if (swapped) {
+                                    painter.drawComplexRoundedRect(r,rAtBaseline,rAtValue,rAtBaseline,rAtValue,Qt::AbsoluteSize);
+                                } else {
+                                    painter.drawComplexRoundedRect(r,rAtValue,rAtBaseline,rAtValue,rAtBaseline,Qt::AbsoluteSize);
+                                }
+                            }
+                        }
                     }
                 }
             }
+        }
+        if (getDrawBaseline() && top!=bottom && !hasStackParent()) {
+            painter.setPen(baselineStyle().getLinePen(painter, parent));
+            const double xb=transformX(getBaseline());
+            if (JKQTPIsOKFloat(xb)) painter.drawLine(xb,top,xb,bottom);
         }
     }
     drawErrorsAfter(painter);
@@ -337,38 +380,9 @@ bool JKQTPBarHorizontalErrorGraph::usesColumn(int c) const
 bool JKQTPBarHorizontalErrorGraph::getXMinMax(double &minx, double &maxx, double &smallestGreaterZero)
 {
     if (xErrorColumn<0 || xErrorStyle==JKQTPNoError) {
-        return JKQTPBarHorizontalGraph::getXMinMax(minx, maxx, smallestGreaterZero);
+        return getMinMaxWithBaseline(xColumn, minx, maxx, smallestGreaterZero);
     } else {
-        bool start=false;
-        minx=0;
-        maxx=0;
-        smallestGreaterZero=0;
-
-        if (parent==nullptr) return false;
-
-        const JKQTPDatastore* datastore=parent->getDatastore();
-        int imax=0;
-        int imin=0;
-        if (getIndexRange(imin, imax)) {
-
-            for (int i=imin; i<imax; i++) {
-                double xvsgz;
-                const double xv=datastore->get(static_cast<size_t>(xColumn),static_cast<size_t>(i))+getXErrorU(i, datastore);
-                const double xvv=datastore->get(static_cast<size_t>(xColumn),static_cast<size_t>(i))-getXErrorL(i, datastore);
-                if (JKQTPIsOKFloat(xv) && JKQTPIsOKFloat(xvv) ) {
-                    if (start || xv>maxx) maxx=xv;
-                    if (start || xv<minx) minx=xv;
-                    xvsgz=xv; SmallestGreaterZeroCompare_xvsgz();
-                    start=false;
-                    if (xvv>maxx) maxx=xvv;
-                    if (xvv<minx) minx=xvv;
-                    xvsgz=xvv; SmallestGreaterZeroCompare_xvsgz();
-                    start=false;
-                }
-            }
-            return !start;
-        }
-        return false;
+        return getMinMaxWithErrorsAndBaseline(xColumn, xErrorColumn, xErrorColumnLower, xErrorSymmetric, minx, maxx, smallestGreaterZero);
     }
 }
 
@@ -388,6 +402,26 @@ int JKQTPBarHorizontalErrorGraph::getBarErrorColumn() const
 int JKQTPBarHorizontalErrorGraph::getBarLowerErrorColumn() const
 {
     return getXErrorColumnLower();
+}
+
+JKQTPErrorPlotstyle JKQTPBarHorizontalErrorGraph::getBarErrorStyle() const
+{
+    return getXErrorStyle();
+}
+
+bool JKQTPBarHorizontalErrorGraph::getBarErrorSymmetric() const
+{
+    return getXErrorSymmetric();
+}
+
+void JKQTPBarHorizontalErrorGraph::setBarErrorSymmetric(bool __value)
+{
+    setXErrorSymmetric(__value);
+}
+
+void JKQTPBarHorizontalErrorGraph::setBarErrorStyle(JKQTPErrorPlotstyle __value)
+{
+    setXErrorStyle(__value);
 }
 
 void JKQTPBarHorizontalErrorGraph::setBarErrorColumn(int column)
@@ -432,78 +466,10 @@ bool JKQTPBarVerticalErrorGraph::usesColumn(int c) const
 bool JKQTPBarVerticalErrorGraph::getYMinMax(double &miny, double &maxy, double &smallestGreaterZero)
 {
     if (yErrorColumn<0 || yErrorStyle==JKQTPNoError) {
-        miny=0;
-        maxy=0;
-        smallestGreaterZero=0;
-        if (getBaseline()>0) {
-            smallestGreaterZero=getBaseline();
-            miny=getBaseline();
-            maxy=getBaseline();
-        }
-
-        if (parent==nullptr) return false;
-
-        JKQTPDatastore* datastore=parent->getDatastore();
-        int imax=0;
-        int imin=0;
-        if (getIndexRange(imin, imax)) {
-
-
-            for (int i=imin; i<imax; i++) {
-                double yv=getBaseline();
-                if (JKQTPIsOKFloat(yv)) {
-                    if (yv>maxy) maxy=yv;
-                    if (yv<miny) miny=yv;
-                    double xvsgz;
-                    xvsgz=yv; SmallestGreaterZeroCompare_xvsgz();
-                }
-                yv=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i));
-                if (JKQTPIsOKFloat(yv)) {
-                    if (yv>maxy) maxy=yv;
-                    if (yv<miny) miny=yv;
-                    double xvsgz;
-                    xvsgz=yv; SmallestGreaterZeroCompare_xvsgz();
-                }
-            }
-            return true;
-        }
+        return getMinMaxWithBaseline(yColumn, miny, maxy, smallestGreaterZero);
     } else {
-        bool start=false;
-        miny=getBaseline();
-        maxy=getBaseline();
-        smallestGreaterZero=0;
-        if (getBaseline()>0) {
-            smallestGreaterZero=getBaseline();
-            miny=getBaseline();
-            maxy=getBaseline();
-        }
-
-        if (parent==nullptr) return false;
-
-        const JKQTPDatastore* datastore=parent->getDatastore();
-        int imax=0;
-        int imin=0;
-        if (getIndexRange(imin, imax)) {
-
-
-            for (int i=imin; i<imax; i++) {
-                const double yv=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i))+getYErrorU(i, datastore);
-                const double yvv=datastore->get(static_cast<size_t>(yColumn),static_cast<size_t>(i))-getYErrorL(i, datastore);
-                if (JKQTPIsOKFloat(yv) && JKQTPIsOKFloat(yvv) ) {
-                    if (start || yv>maxy) maxy=yv;
-                    if (start || yv<miny) miny=yv;
-                    double xvsgz;
-                    xvsgz=yv; SmallestGreaterZeroCompare_xvsgz();
-                    if (start || yvv>maxy) maxy=yvv;
-                    if (start || yvv<miny) miny=yvv;
-                    xvsgz=yvv; SmallestGreaterZeroCompare_xvsgz();
-                    start=false;
-                }
-            }
-            return !start;
-        }
+        return getMinMaxWithErrorsAndBaseline(yColumn, yErrorColumn, yErrorColumnLower, yErrorSymmetric, miny, maxy, smallestGreaterZero);
     }
-    return false;
 }
 
 int JKQTPBarVerticalErrorGraph::getBarErrorColumn() const
@@ -514,6 +480,26 @@ int JKQTPBarVerticalErrorGraph::getBarErrorColumn() const
 int JKQTPBarVerticalErrorGraph::getBarLowerErrorColumn() const
 {
     return getYErrorColumnLower();
+}
+
+JKQTPErrorPlotstyle JKQTPBarVerticalErrorGraph::getBarErrorStyle() const
+{
+    return getYErrorStyle();
+}
+
+bool JKQTPBarVerticalErrorGraph::getBarErrorSymmetric() const
+{
+    return getYErrorSymmetric();
+}
+
+void JKQTPBarVerticalErrorGraph::setBarErrorSymmetric(bool __value)
+{
+    setYErrorSymmetric(__value);
+}
+
+void JKQTPBarVerticalErrorGraph::setBarErrorStyle(JKQTPErrorPlotstyle __value)
+{
+    setYErrorStyle(__value);
 }
 
 void JKQTPBarVerticalErrorGraph::setBarErrorColumn(int column)

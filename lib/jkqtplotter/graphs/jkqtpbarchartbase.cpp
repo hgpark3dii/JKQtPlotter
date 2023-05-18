@@ -25,8 +25,6 @@
 #include <QDebug>
 #include <iostream>
 #include "jkqtplotter/jkqtptools.h"
-#include "jkqtplotter/graphs/jkqtpimage.h"
-#include "jkqtplotter/jkqtpbaseelements.h"
 #include "jkqtplotter/jkqtplotter.h"
 
 #define SmallestGreaterZeroCompare_xvsgz() if ((xvsgz>10.0*DBL_MIN)&&((smallestGreaterZero<10.0*DBL_MIN) || (xvsgz<smallestGreaterZero))) smallestGreaterZero=xvsgz;
@@ -37,10 +35,22 @@
 
 
 JKQTPBarGraphBase::JKQTPBarGraphBase(JKQTBasePlotter* parent):
-    JKQTPXYBaselineGraph(parent), width(0.9), shift(0)
+    JKQTPXYBaselineGraph(parent),
+    width(0.9), shift(0),
+    m_fillMode(FillMode::SingleFilling),
+    m_useCustomDrawFunctor(false),
+    m_lineColorDerivationModeForSpecialFill(parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.graphColorDerivationMode),
+    rectRadiusAtBaseline(0),rectRadiusAtValue(0),
+    m_drawBaseline(parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.drawBaseline)
 {
     initFillStyle(parent, parentPlotStyle, JKQTPPlotStyleType::Barchart);
     initLineStyle(parent, parentPlotStyle, JKQTPPlotStyleType::Barchart);
+    m_fillStyleBelow.initFillStyleInvertedColor(this);
+    m_baselineStyle.setLineColor(parent->getCurrentPlotterStyle().xAxisStyle.colorZeroAxis);
+    m_baselineStyle.setLineStyle(Qt::SolidLine);
+    m_baselineStyle.setLineWidth(parent->getCurrentPlotterStyle().xAxisStyle.lineWidthZeroAxis);
+    rectRadiusAtBaseline= parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.defaultRectRadiusAtBaseline;
+    rectRadiusAtValue= parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.defaultRectRadiusAtValue;
 }
 
 
@@ -52,7 +62,6 @@ JKQTPBarGraphBase::JKQTPBarGraphBase(JKQTPlotter* parent):
 void JKQTPBarGraphBase::drawKeyMarker(JKQTPEnhancedPainter& painter, QRectF& rect) {
     painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
     QPen p=getLinePenForRects(painter, parent);
-    QPen np(Qt::NoPen);
     QBrush b=getFillBrush(painter, parent);
     //int y=rect.top()+rect.height()/2.0;
     painter.setPen(p);
@@ -108,10 +117,43 @@ void JKQTPBarGraphBase::autoscaleBarWidthAndShiftSeparatedGroups(double groupWid
 
 void JKQTPBarGraphBase::setColor(QColor c)
 {
-    setLineColor(c);
-    setFillColor(JKQTPGetDerivedColor(parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.fillColorDerivationMode, c));
+    setFillColor(c);
+    setLineColor(JKQTPGetDerivedColor(parent->getCurrentPlotterStyle().graphsStyle.barchartStyle.graphColorDerivationMode, c));
     c.setAlphaF(0.5);
     setHighlightingLineColor(c);
+    m_fillStyleBelow.initFillStyleInvertedColor(this);
+}
+
+void JKQTPBarGraphBase::setBarPositionColumn(int column)
+{
+    setKeyColumn(column);
+}
+
+void JKQTPBarGraphBase::setBarPositionColumn(size_t column)
+{
+    setKeyColumn(static_cast<int>(column));
+}
+
+void JKQTPBarGraphBase::setBarHeightColumn(int column)
+{
+    setValueColumn(column);
+}
+
+void JKQTPBarGraphBase::setBarHeightColumn(size_t column)
+{
+    setValueColumn(static_cast<int>(column));
+}
+
+JKQTPBarGraphBase::FillBrushFunctor JKQTPBarGraphBase::constructFillBrushFunctor() const
+{
+    if (m_fillMode==FillMode::FunctorFilling) return m_fillBrushFunctor;
+    if (m_fillMode==FillMode::TwoColorFilling) return [](double , double value, JKQTPEnhancedPainter &painter, JKQTPBarGraphBase* graph) {
+        if (value<graph->getBaseline()) return graph->fillStyleBelow().getFillBrush(painter, graph->getParent());
+        return graph->getFillBrush(painter, graph->getParent());
+    };
+    else return [](double, double, JKQTPEnhancedPainter &painter, JKQTPBarGraphBase* graph) {
+        return graph->getFillBrush(painter, graph->getParent());
+    };
 }
 
 void JKQTPBarGraphBase::setShift(double __value)
@@ -129,6 +171,26 @@ void JKQTPBarGraphBase::setWidth(double __value)
     this->width = __value;
 }
 
+void JKQTPBarGraphBase::setDrawBaseline(bool __value)
+{
+    m_drawBaseline=__value;
+}
+
+bool JKQTPBarGraphBase::getDrawBaseline() const
+{
+    return this->m_drawBaseline;
+}
+
+JKQTPGraphLineStyleMixin &JKQTPBarGraphBase::baselineStyle()
+{
+    return m_baselineStyle;
+}
+
+const JKQTPGraphLineStyleMixin &JKQTPBarGraphBase::baselineStyle() const
+{
+    return m_baselineStyle;
+}
+
 double JKQTPBarGraphBase::getWidth() const
 {
     return this->width;
@@ -138,6 +200,85 @@ void JKQTPBarGraphBase::setFillColor_and_darkenedColor(QColor fill, int colorDar
 {
     setFillColor(fill);
     setLineColor(fill.darker(colorDarker));
+}
+
+int JKQTPBarGraphBase::getBarPositionColumn() const
+{
+    return getKeyColumn();
+}
+
+int JKQTPBarGraphBase::getBarHeightColumn() const
+{
+    return getValueColumn();
+}
+
+JKQTPGraphFillStyleMixin &JKQTPBarGraphBase::fillStyleBelow()
+{
+    return m_fillStyleBelow;
+}
+
+const JKQTPGraphFillStyleMixin &JKQTPBarGraphBase::fillStyleBelow() const
+{
+    return m_fillStyleBelow;
+}
+
+JKQTPBarGraphBase::FillMode JKQTPBarGraphBase::getFillMode() const
+{
+    return m_fillMode;
+}
+
+double JKQTPBarGraphBase::getRectRadiusAtValue() const
+{
+    return rectRadiusAtValue;
+}
+
+double JKQTPBarGraphBase::getRectRadiusAtBaseline() const
+{
+    return rectRadiusAtBaseline;
+}
+
+JKQTPBarGraphBase::FillBrushFunctor &JKQTPBarGraphBase::getFillBrushFunctor() {
+    return m_fillBrushFunctor;
+}
+
+const JKQTPBarGraphBase::FillBrushFunctor &JKQTPBarGraphBase::getFillBrushFunctor() const {
+    return m_fillBrushFunctor;
+}
+
+void JKQTPBarGraphBase::setFillMode(FillMode mode)
+{
+    m_fillMode=mode;
+}
+
+void JKQTPBarGraphBase::setFillBrushFunctor(const FillBrushFunctor &f) {
+    m_fillBrushFunctor=f;
+}
+
+void JKQTPBarGraphBase::setFillBrushFunctor(FillBrushFunctor &&f) {
+    m_fillBrushFunctor=std::forward<FillBrushFunctor>(f);
+}
+
+void JKQTPBarGraphBase::setFillBrushFunctor(const SimpleFillBrushFunctor &f) {
+    m_fillBrushFunctor=SimpleFillBrushFunctorAdaptor(f);
+}
+
+void JKQTPBarGraphBase::setFillBrushFunctor(SimpleFillBrushFunctor &&f) {
+    m_fillBrushFunctor=SimpleFillBrushFunctorAdaptor(std::forward<SimpleFillBrushFunctor>(f));
+}
+
+void JKQTPBarGraphBase::setCustomDrawingFunctor(CustomDrawingFunctor &&f)
+{
+    m_customDrawFunctor=std::forward<CustomDrawingFunctor>(f);
+}
+
+void JKQTPBarGraphBase::setCustomDrawingFunctor(const CustomDrawingFunctor &f)
+{
+    m_customDrawFunctor=f;
+}
+
+void JKQTPBarGraphBase::setUseCustomDrawFunctor(bool enabled)
+{
+    m_useCustomDrawFunctor=enabled;
 }
 
 double JKQTPBarGraphBase::getParentStackedMax(int /*index*/) const
@@ -249,3 +390,40 @@ bool JKQTPBarGraphBase::getPositionsMinMax(double &mmin, double &mmax, double &s
     return false;
 }
 
+
+void JKQTPBarGraphBase::setRectRadiusAtValue(double __value)
+{
+    rectRadiusAtValue=__value;
+}
+
+void JKQTPBarGraphBase::setRectRadiusAtBaseline(double __value)
+{
+    rectRadiusAtBaseline=__value;
+}
+
+void JKQTPBarGraphBase::setRectRadius(double all)
+{
+    setRectRadiusAtValue(all);
+    setRectRadiusAtBaseline(all);
+}
+
+void JKQTPBarGraphBase::setRectRadius(double atValue, double atBaseline)
+{
+    setRectRadiusAtValue(atValue);
+    setRectRadiusAtBaseline(atBaseline);
+}
+
+void JKQTPBarGraphBase::setLineColorDerivationModeForSpecialFill(const JKQTPColorDerivationMode &m)
+{
+    m_lineColorDerivationModeForSpecialFill=m;
+}
+
+JKQTPColorDerivationMode JKQTPBarGraphBase::getLineColorDerivationModeForSpecialFill() const
+{
+    return m_lineColorDerivationModeForSpecialFill;
+}
+
+bool JKQTPBarGraphBase::usesCustomDrawFunctor() const
+{
+    return m_useCustomDrawFunctor;
+}

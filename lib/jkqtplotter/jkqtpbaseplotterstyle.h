@@ -40,7 +40,7 @@
 
 
 /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of a JKQTBasePlotter
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, \ref jkqtpplotter_styling
  */
@@ -160,6 +160,8 @@ class JKQTPLOTTER_LIB_EXPORT JKQTBasePlotterStyle {
         JKQTPCoordinateAxisStyle xAxisStyle;
         /** \brief style of the y-axis of the main coordinate system */
         JKQTPCoordinateAxisStyle yAxisStyle;
+        /** \brief separation between two seondary axes in pt */
+        double secondaryAxisSeparation;
         /** \brief style of the coordinate axes used to display colorbars in the right */
         JKQTPColorbarCoordinateAxisStyle rightColorbarAxisStyle;
         /** \brief style of the coordinate axes used to display colorbars at the top */
@@ -171,14 +173,14 @@ class JKQTPLOTTER_LIB_EXPORT JKQTBasePlotterStyle {
 };
 
 /** \brief returns the system-wide default JKQTPlotterStyle
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  * \see JKQTPGetSystemDefaultStyle(), JKQTPSetSystemDefaultStyle(), JKQTPSetSystemDefaultBaseStyle(), \ref jkqtpplotter_styling
  */
 JKQTPLOTTER_LIB_EXPORT JKQTBasePlotterStyle& JKQTPGetSystemDefaultBaseStyle();
 
 /** \brief replaces the system-wide default JKQTPlotterStyle with the given \a newStyle
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  * \see JKQTPGetSystemDefaultStyle(), JKQTPSetSystemDefaultStyle(), JKQTPGetSystemDefaultBaseStyle(), \ref jkqtpplotter_styling
  */

@@ -42,7 +42,7 @@
     The x position is given in posColumn. All other data are given in the medianColumn, minColumn, maxColumn,
     percentile25Column and percentile75Column.
 
-    \image html plot_boxplotvertical.png
+    \image html JKQTPBoxplotVerticalGraph.png
 
 
     The different features of a boxplot are:
@@ -136,7 +136,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPBoxplotVerticalGraph: public JKQTPBoxplotGraph
     the x position is given in posColumn. All other data are given in the medianColumn, minColumn, maxColumn,
     percentile25Column and percentile75Column.
 
-    \image html plot_boxplothoricontal.png
+    \image html JKQTPBoxplotHorizontalGraph.png
 
     \note See the documentation of JKQTPBoxplotVerticalGraph for details on the properties of this class!
 
@@ -178,7 +178,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPBoxplotHorizontalGraph: public JKQTPBoxplotGra
 /*! \brief This implements a single vertical <a href="http://en.wikipedia.org/wiki/Box_plot">(notched) boxplot</a> as a "geometric element",
            where the data is directly given to the object and not stored in a column, as in JKQTPBoxplotVerticalGraph
     \ingroup jkqtplotter_statgraphs
-    \ingroup jkqtplotter_diverse
+    \ingroup jkqtplotter_statgraphs
 
 
 
@@ -232,7 +232,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPBoxplotVerticalElement: public JKQTPBoxplotEle
 /*! \brief This implements a horizontal <a href="http://en.wikipedia.org/wiki/Box_plot">(notched) boxplot</a> where the data is directly given to the
            object and not stored in a column, as in JKQTPBoxplotVerticalGraph
     \ingroup jkqtplotter_statgraphs
-    \ingroup jkqtplotter_diverse
+    \ingroup jkqtplotter_statgraphs
 
     the x position is given in pos. All other data are given in the median, min, max,
     percentile25 and percentile75.

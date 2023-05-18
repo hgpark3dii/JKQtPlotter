@@ -194,13 +194,14 @@ void JKQTAnnotationsSpecificStyleProperties::saveSettings(QSettings &settings, c
 
 
 
+
 JKQTGraphsBaseStyle::JKQTGraphsBaseStyle(const JKQTBasePlotterStyle& parent):
     useAntiAliasingForGraphs(true),
     defaultGraphStyle(JKQTPPlotStyleType::Default, parent),
-    barchartStyle(JKQTPPlotStyleType::Barchart, parent),
+    barchartStyle(parent),
     boxplotStyle(JKQTPPlotStyleType::Boxplot, parent),
     filledStyle(JKQTPPlotStyleType::Filled, parent),
-    impulseStyle(JKQTPPlotStyleType::Impulses, parent),
+    impulseStyle(parent),
     geometricStyle(parent),
     annotationStyle(parent),
     defaultPalette(JKQTPMathImageColorPalette::JKQTPMathImageMATLAB)
@@ -286,10 +287,10 @@ void JKQTGraphsBaseStyle::loadSettings(const QSettings &settings, const QString 
 
 
     defaultGraphStyle.loadSettings(settings, group+"graphs_base/", JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Default, parent));
-    barchartStyle.loadSettings(settings, group+"graphs_barchart/", JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Barchart, defaultGraphStyle));
+    barchartStyle.loadSettings(settings, group+"graphs_barchart/", JKQTBarchartSpecificStyleProperties(parent, defaultGraphStyle));
     boxplotStyle.loadSettings(settings, group+"graphs_boxplot/", JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Boxplot, defaultGraphStyle));
     filledStyle.loadSettings(settings, group+"graphs_filled/", JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Filled, defaultGraphStyle));
-    impulseStyle.loadSettings(settings, group+"graphs_impulses/",JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Impulses,  defaultGraphStyle));
+    impulseStyle.loadSettings(settings, group+"graphs_impulses/", JKQTImpulseSpecificStyleProperties(parent,  defaultGraphStyle));
     geometricStyle.loadSettings(settings, group+"graphs_geometric/", JKQTGeometricSpecificStyleProperties(parent, defaultGraphStyle));
     annotationStyle.loadSettings(settings, group+"graphs_annotation/", JKQTAnnotationsSpecificStyleProperties(parent, defaultGraphStyle));
 
@@ -352,3 +353,69 @@ const JKQTGraphsSpecificStyleProperties &JKQTGraphsBaseStyle::getGraphStyleByTyp
     }
     return defaultGraphStyle;
 }
+
+
+JKQTBarchartSpecificStyleProperties::JKQTBarchartSpecificStyleProperties(const JKQTBasePlotterStyle& parent):
+    JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Barchart, parent),
+    defaultRectRadiusAtValue(0),
+    defaultRectRadiusAtBaseline(0),
+    drawBaseline(false)
+{
+
+}
+
+JKQTBarchartSpecificStyleProperties::JKQTBarchartSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties &other):
+    JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Barchart, other),
+    defaultRectRadiusAtValue(0),
+    defaultRectRadiusAtBaseline(0),
+    drawBaseline(false)
+{
+
+}
+
+void JKQTBarchartSpecificStyleProperties::loadSettings(const QSettings &settings, const QString &group, const JKQTBarchartSpecificStyleProperties &defaultStyle)
+{
+    JKQTGraphsSpecificStyleProperties::loadSettings(settings, group, defaultStyle);
+    defaultRectRadiusAtValue=settings.value(group+"radius_at_value", defaultStyle.defaultRectRadiusAtValue).toDouble();
+    defaultRectRadiusAtBaseline=settings.value(group+"radius_at_baseline", defaultStyle.defaultRectRadiusAtBaseline).toDouble();
+    drawBaseline=settings.value(group+"draw_baseline", defaultStyle.drawBaseline).toBool();
+}
+
+void JKQTBarchartSpecificStyleProperties::saveSettings(QSettings &settings, const QString &group) const
+{
+    JKQTGraphsSpecificStyleProperties::saveSettings(settings, group);
+    settings.setValue(group+"radius_at_value", defaultRectRadiusAtValue);
+    settings.setValue(group+"radius_at_baseline", defaultRectRadiusAtBaseline);
+    settings.setValue(group+"draw_baseline", drawBaseline);
+
+}
+
+
+JKQTImpulseSpecificStyleProperties::JKQTImpulseSpecificStyleProperties(const JKQTBasePlotterStyle& parent):
+    JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Impulses, parent),
+    drawBaseline(false)
+{
+
+}
+
+JKQTImpulseSpecificStyleProperties::JKQTImpulseSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties &other):
+    JKQTGraphsSpecificStyleProperties(JKQTPPlotStyleType::Impulses, other),
+    drawBaseline(false)
+{
+
+}
+
+void JKQTImpulseSpecificStyleProperties::loadSettings(const QSettings &settings, const QString &group, const JKQTImpulseSpecificStyleProperties &defaultStyle)
+{
+    JKQTGraphsSpecificStyleProperties::loadSettings(settings, group, defaultStyle);
+    drawBaseline=settings.value(group+"draw_baseline", defaultStyle.drawBaseline).toBool();
+}
+
+void JKQTImpulseSpecificStyleProperties::saveSettings(QSettings &settings, const QString &group) const
+{
+    JKQTGraphsSpecificStyleProperties::saveSettings(settings, group);
+    settings.setValue(group+"draw_baseline", drawBaseline);
+
+}
+
+

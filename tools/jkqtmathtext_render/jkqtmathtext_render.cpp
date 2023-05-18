@@ -24,6 +24,7 @@
 #include "jkqtmathtext/jkqtmathtextlabel.h"
 #include "jkqtcommon/jkqtpstringtools.h"
 #include "jkqtmathtext/nodes/jkqtmathtextsymbolnode.h"
+#include "jkqtmathtext/nodes/jkqtmathtextnodetools.h"
 #include <iostream>
 
 void processFont(const QString font, QStringList& fonts, QString& mathFont)
@@ -69,16 +70,18 @@ int main(int argc, char* argv[])
     parser.addOption(outputDirectoryOption);
     QCommandLineOption listsymbolsOption("listsymbols", "list all symbols in the given output file and generate images.", "listsymbols", "");
     parser.addOption(listsymbolsOption);
-    QCommandLineOption drawBoxesOption("drawboxes", "draw boxes.");
+    QCommandLineOption listsymbolsfontsOption("listsymbolsfonts", "fonts for listsymbols.", "listsymbolsfonts", "XITS");
+    parser.addOption(listsymbolsfontsOption);
+    QCommandLineOption drawBoxesOption(QStringList()<<"drawboxes"<<"showboxes", "draw boxes.");
     parser.addOption(drawBoxesOption);
     QCommandLineOption verboseOption("verbose", "verbose output.");
     parser.addOption(verboseOption);
+    QCommandLineOption guifontsOption("guifonts", "use GUI fonts.");
+    parser.addOption(guifontsOption);
     QCommandLineOption fontOption("font", "font( size)s) to use.", "font", "XITS");
     parser.addOption(fontOption);
     QCommandLineOption fontsizeOption("fontsize", "font size.", "fontsize", "12");
     parser.addOption(fontsizeOption);
-    QCommandLineOption fontBlackboardSimOption("fontblackboardsimulated", "set the blackboard font and activate simulated-mode.", "fontblackboardsimulated", "");
-    parser.addOption(fontBlackboardSimOption);
     QCommandLineOption fontRomanOption("fontroman", "set the text-mode roman font to use.", "fontroman", "");
     parser.addOption(fontRomanOption);
     QCommandLineOption fontSansOption("fontsans", "set the text-mode sans font to use.", "fontsans", "");
@@ -101,6 +104,8 @@ int main(int argc, char* argv[])
     parser.addOption(fontcaligraphicOption);
     QCommandLineOption fontblackboardOption("fontblackboard", "set the blackboard font to use.", "fontblackboard", "");
     parser.addOption(fontblackboardOption);
+    QCommandLineOption fontblackboardmodeOption("fontblackboardmode", "set the usage mode for the blackboard font.", "fontblackboardmode", "default");
+    parser.addOption(fontblackboardmodeOption);
     QCommandLineOption textcolorOption("textcolor", "set the color of the text.", "textcolor", "black");
     parser.addOption(textcolorOption);
     QCommandLineOption sizeincreaseOption("sizeincrease", "additional pixels around output.", "sizeincrease", "2");
@@ -117,6 +122,7 @@ int main(int argc, char* argv[])
     const QString outputFilename_cmdline=outputDir.absoluteFilePath(args.value(1, "output.png"));
     const QString inputfile=parser.value(inputfileOption);
     const QString listsymbols=parser.value(listsymbolsOption);
+    const QStringList listsymbolsfonts=parser.value(listsymbolsfontsOption).split(',');
     const bool verbose = parser.isSet(verboseOption);
 
     QStringList latex, outputFilename;
@@ -126,27 +132,241 @@ int main(int argc, char* argv[])
         QFile fileListF(outputDir.absoluteFilePath(listsymbols));
         if (fileListF.open(QFile::WriteOnly|QFile::Text)) {
             QTextStream fileList(&fileListF);
+            QStringList symbolsAll=JKQTMathTextSymbolNode::getSymbols();
+            QSet<QString> symbolsRemaining;
+            for (const QString& s: symbolsAll) symbolsRemaining.insert(s);
+            std::sort(symbolsAll.begin(), symbolsAll.end(), [](const QString& a, const QString& b) { const QString al=a.toLower(); const QString bl=b.toLower(); if (al==bl) { return a<b; } else return al<bl; });
+            static QStringList greekLetterNames=QStringList()<<"alpha"<<"beta"<<"gamma"<<"delta"<<"epsilon"<<"zeta"<<"eta"<<"theta"<<"iota"<<"kappa"<<"lambda"<<"mu"<<"nu"<<"xi"<<"pi"<<"rho"<<"sigma"<<"tau"<<"upsilon"<<"phi"<<"chi"<<"psi"<<"omega";
+            static QStringList arrowNames=QStringList()<<"arrow"<<"harpoon"<<"mapsto";
             int i=1;
             fileList<<"/*!\n"
                       "   \\defgroup jkqtmathtext_supportedlatexsymbols Supported LaTeX-Symbols\n"
-                      "   \\ingroup jkqtmathtext_general\n\n";
+                      "   \\ingroup jkqtmathtext_general_latex\n\n\\tableofcontents\n\n";
+            fileList<<"   Symbols are shown in these fonts:\n"
+                      "   <ul>\n";
+            for (const QString& fnt: listsymbolsfonts) {
+                fileList<<"     <li>"<<fnt<<"</li>\n";
+            }
+            fileList<<"   </ul>\n\n\n";
+            fileList<<"   \\section jkqtmathtext_supportedlatexsymbols_greek Greek Letters\n";
+            fileList<<"   The following table lists all greek letters and their variants available in JKQTMathParser. They are defined in the node-class JKQTMathTextSymbolNode:\n";
             fileList<<"   <table>\n";
             fileList<<"     <tr>\n";
-            QStringList symbols=JKQTMathTextSymbolNode::getSymbols();
-            std::sort(symbols.begin(), symbols.end(), [](const QString& a, const QString& b) { const QString al=a.toLower(); const QString bl=b.toLower(); if (al==bl) { return a<b; } else return al<bl; });
-            symbols.sort(Qt::CaseInsensitive);
-            for (const QString& symbol: symbols) {
+            for (const QString& gletter: greekLetterNames) {
+                QString code="";
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && (symbol.toLower()==gletter || symbol.toLower()=="var"+gletter) && symbol[0].isLetter()) {
+                        code+="\\"+symbol+"\\;";
+                        symbolsRemaining.remove(symbol);
+                    }
+                }
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && (symbol.toLower()=="up"+gletter || symbol.toLower()=="upvar"+gletter) && symbol[0].isLetter()) {
+                        code+="\\"+symbol+"\\;";
+                        symbolsRemaining.remove(symbol);
+                    }
+                }
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && (symbol.toLower()=="text"+gletter || symbol.toLower()=="textvar"+gletter) && symbol[0].isLetter()) {
+                        code+="\\"+symbol+"\\;";
+                        symbolsRemaining.remove(symbol);
+                    }
+                }
+                QString symbol_lower;
+                for (const QChar& ch: gletter) {
+                    if (ch.isUpper()) symbol_lower+=QString(2, ch).toLower();
+                    else symbol_lower+=ch;
+                }
+                for (const QString& fnt: listsymbolsfonts) {
+                    latex.append(code+"\\vphantom{Iq}");
+                    outputFilename.append("jkqtmathtext_greek_"+symbol_lower+"_"+fnt+".png");
+                    QMap<QString,QString> localoptions;
+                    localoptions["fontmathroman"]=fnt;
+                    cmdoptions.append(localoptions);
+                }
+                //std::cout<<"  - "<<latex.last().toStdString()<<": "<<outputFilename.last().toStdString()<<"\n";
+                code=code.replace("\\;", " ");
+                code=code.replace("\\", "\\\\");
+                fileList<<"       <td><code>"<<code<<"</code>:\n       <td> ";
+                for (int i=0; i< listsymbolsfonts.size(); i++) {
+                    if (i>0) fileList<<"            ";
+
+                    fileList<<"\\image html jkqtmathtext/symbols/"<<outputFilename[outputFilename.size()-listsymbolsfonts.size()+i]<<"\n";
+                }
+                //if (i%2==0) {
+                    fileList<<"     </tr>\n     <tr>\n";
+                //}
+                i++;
+            }
+            fileList<<"     </tr>";
+            fileList<<"   </table>\n\n\n";
+
+
+            fileList<<"   \\section jkqtmathtext_supportedlatexsymbols_arrows Arrows\n";
+            fileList<<"   The following table lists all arrow-typed symbols available in JKQTMathParser. They are defined in the node-class JKQTMathTextSymbolNode:\n";
+            fileList<<"   <table>\n";
+            fileList<<"     <tr>\n";
+            i=1;
+            std::sort(symbolsAll.begin(), symbolsAll.end(), [](const QString& a, const QString& b) {  if (a.contains("harpoon") && !b.contains("harpoon")) return false;
+                                                                                                else if (a.isLower() && b.isUpper()) return true;
+                                                                                                else if (a.isUpper() && b.isLower()) return false;
+                                                                                                else return a<b;
+                                                                                             });
+            for (const QString& arrow: arrowNames) {
+                QString code="";
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && symbol.toLower().contains(arrow) && symbol[0].isLetter()) {
+                        symbolsRemaining.remove(symbol);
+                        QString symbol_lower;
+                        for (const QChar& ch: symbol) {
+                            if (ch.isUpper()) symbol_lower+=QString(2, ch).toLower();
+                            else symbol_lower+=ch;
+                        }
+                        for (const QString& fnt: listsymbolsfonts) {
+                            latex.append("\\"+symbol+"\\vphantom{Iq}");
+                            outputFilename.append("jkqtmathtext_greek_"+symbol_lower+"_"+fnt+".png");
+                            QMap<QString,QString> localoptions;
+                            localoptions["fontmathroman"]=fnt;
+                            cmdoptions.append(localoptions);
+                        }
+                        fileList<<"       <td><code>\\\\"<<symbol<<"</code>:\n";
+                        fileList<<"       <td>";
+                        for (int i=0; i< listsymbolsfonts.size(); i++) {
+                            if (i>0) fileList<<"            ";
+
+                            fileList<<"\\image html jkqtmathtext/symbols/"<<outputFilename[outputFilename.size()-listsymbolsfonts.size()+i]<<"\n";
+                        }
+                        if (i%3==0) {
+                            fileList<<"     </tr>\n     <tr>\n";
+                        }
+                        i++;
+                    }
+                }
+            }
+            fileList<<"     </tr>";
+            fileList<<"   </table>\n\n\n";
+
+            std::sort(symbolsAll.begin(), symbolsAll.end(), [](const QString& a, const QString& b) { const QString al=a.toLower(); const QString bl=b.toLower(); if (al==bl) { return a<b; } else return al<bl; });
+            fileList<<"   \\section jkqtmathtext_supportedlatexsymbols_bigmathop Big Math Operators\n";
+            fileList<<"   The following table lists all math-operator symbols like \\c \\\\sum,\\\\int,\\\\lim... that allow to over/underset sub-/superscript using \\c \\\\limits (and \\c \\\\nolimits ) available in JKQTMathParser. They are defined in the node-class JKQTMathTextSymbolNode:\n";
+            fileList<<"   <table>\n";
+            fileList<<"     <tr>\n";
+            i=1;
+            {
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && JKQTMathTextSymbolNode::isSubSuperscriptBelowAboveSymbol(symbol) && symbol[0].isLetter()) {
+                        symbolsRemaining.remove(symbol);
+                        QString symbol_lower;
+                        for (const QChar& ch: symbol) {
+                            if (ch.isUpper()) symbol_lower+=QString(2, ch).toLower();
+                            else symbol_lower+=ch;
+                        }
+                        static QSet<QString> specialSymbols=QSet<QString>()<<"lim"<<"liminf"<<"limsup"<<"arg"<<"argmin"<<"argmax";
+                        QString code="";
+                        if (JKQTMathTextSymbolNode::getSymbolLength(symbol)>1 && !specialSymbols.contains(symbol)) {
+                            code="$\\"+symbol+"(\\cdot)$";
+                        } else {
+                            if (JKQTMathTextSymbolNode::getSymbolLength(symbol)>1) {
+                                code="$\\"+symbol+"\\limits_{x\\rightarrow\\infty}f(x)$";
+                            } else {
+                                code="$\\"+symbol+"\\limits_{x=0}^\\infty f(x)$";
+                            }
+                        }
+                        for (const QString& fnt: listsymbolsfonts) {
+                            latex.append(code+"\\vphantom{Iq}");
+                            outputFilename.append("jkqtmathtext_greek_"+symbol_lower+"_"+fnt+".png");
+                            QMap<QString,QString> localoptions;
+                            localoptions["fontmathroman"]=fnt;
+                            cmdoptions.append(localoptions);
+                        }
+                        fileList<<"       <td><code>\\\\"<<symbol<<"</code>:\n";
+                        fileList<<"       <td>";
+                        for (int i=0; i< listsymbolsfonts.size(); i++) {
+                            if (i>0) fileList<<"            ";
+
+                            fileList<<"\\image html jkqtmathtext/symbols/"<<outputFilename[outputFilename.size()-listsymbolsfonts.size()+i]<<"\n";
+                        }
+                        if (i%3==0) {
+                            fileList<<"     </tr>\n     <tr>\n";
+                        }
+                        i++;
+                    }
+                }
+            }
+            fileList<<"     </tr>";
+            fileList<<"   </table>\n\n\n";
+
+
+            fileList<<"   \\section jkqtmathtext_supportedlatexsymbols_mathspecialfunctions Math Special Functions\n";
+            fileList<<"   The following table lists all remaining math-operator symbols like available in JKQTMathParser. They are defined in the node-class JKQTMathTextSymbolNode:\n";
+            fileList<<"   <table>\n";
+            fileList<<"     <tr>\n";
+            i=1;
+            {
+                for (const QString& symbol: symbolsAll) {
+                    if (symbol.size()>0 && symbolsRemaining.contains(symbol) && JKQTMathTextSymbolNode::isExtendedWidthSymbol(symbol) && JKQTMathTextSymbolNode::getSymbolLength(symbol)>1 && symbol[0].isLetter()) {
+                        symbolsRemaining.remove(symbol);
+                        QString symbol_lower;
+                        for (const QChar& ch: symbol) {
+                            if (ch.isUpper()) symbol_lower+=QString(2, ch).toLower();
+                            else symbol_lower+=ch;
+                        }
+                        for (const QString& fnt: listsymbolsfonts) {
+                            latex.append("$\\"+symbol+"(\\cdot)$\\vphantom{Iq}");
+                            outputFilename.append("jkqtmathtext_greek_"+symbol_lower+"_"+fnt+".png");
+                            QMap<QString,QString> localoptions;
+                            localoptions["fontmathroman"]=fnt;
+                            cmdoptions.append(localoptions);
+                        }
+                        fileList<<"       <td><code>\\\\"<<symbol<<"</code>:\n";
+                        fileList<<"       <td>";
+                        for (int i=0; i< listsymbolsfonts.size(); i++) {
+                            if (i>0) fileList<<"            ";
+
+                            fileList<<"\\image html jkqtmathtext/symbols/"<<outputFilename[outputFilename.size()-listsymbolsfonts.size()+i]<<"\n";
+                        }
+                        if (i%3==0) {
+                            fileList<<"     </tr>\n     <tr>\n";
+                        }
+                        i++;
+                    }
+                }
+            }
+            fileList<<"     </tr>";
+            fileList<<"   </table>\n\n\n";
+
+
+            fileList<<"   \\section jkqtmathtext_supportedlatexsymbols_other Other Symbols\n";
+            fileList<<"   The following table lists all other symbols that are available in JKQTMathParser. They are defined in the node-class JKQTMathTextSymbolNode:\n";
+            fileList<<"   <table>\n";
+            fileList<<"     <tr>\n";
+            i=1;
+            QStringList symbolsRemainingL;
+            for (const QString& s: symbolsRemaining) symbolsRemainingL.append(s);
+
+            std::sort(symbolsRemainingL.begin(), symbolsRemainingL.end(), [](const QString& a, const QString& b) { const QString al=a.toLower(); const QString bl=b.toLower(); if (al==bl) { return a<b; } else return al<bl; });
+            for (const QString& symbol: symbolsRemainingL) {
                 if (symbol.size()>0 && symbol[0].isLetter()) {
                     QString symbol_lower;
                     for (const QChar& ch: symbol) {
                         if (ch.isUpper()) symbol_lower+=QString(2, ch).toLower();
                         else symbol_lower+=ch;
                     }
-                    latex.append("\\"+symbol);
-                    outputFilename.append("jkqtmathtext_symbols_"+symbol_lower+".png");
-                    cmdoptions.append(QMap<QString,QString>());
-                    //std::cout<<"  - "<<latex.last().toStdString()<<": "<<outputFilename.last().toStdString()<<"\n";
-                    fileList<<"       <td><code>\\\\"<<symbol<<"</code>:\n       <td> \\image html jkqtmathtext/symbols/"<<outputFilename.last()<<"\n";
+                    const QString code="\\"+symbol+"\\vphantom{Iq}";
+                    for (const QString& fnt: listsymbolsfonts) {
+                        latex.append(code+"\\vphantom{Iq}");
+                        outputFilename.append("jkqtmathtext_greek_"+symbol_lower+"_"+fnt+".png");
+                        QMap<QString,QString> localoptions;
+                        localoptions["fontmathroman"]=fnt;
+                        cmdoptions.append(localoptions);
+                    }
+                    fileList<<"       <td><code>\\\\"<<symbol<<"</code>:\n";
+                    fileList<<"       <td>";
+                    for (int i=0; i< listsymbolsfonts.size(); i++) {
+                        if (i>0) fileList<<"            ";
+
+                        fileList<<"\\image html jkqtmathtext/symbols/"<<outputFilename[outputFilename.size()-listsymbolsfonts.size()+i]<<"\n";
+                    }
                     if (i%3==0) {
                         fileList<<"     </tr>\n     <tr>\n";
                     }
@@ -154,8 +374,7 @@ int main(int argc, char* argv[])
                 }
             }
             fileList<<"     </tr>";
-            fileList<<"   </table>\n";
-            fileList<<"*/\n";
+            fileList<<"   </table>\n";            fileList<<"*/\n";
         }
     } else if (inputfile.size()>0){
         QFile f(inputfile);
@@ -166,8 +385,10 @@ int main(int argc, char* argv[])
             bool isFile=true;
             bool beforeLatex=true;
             while (!f.atEnd()) {
-                const QString line=f.readLine().trimmed();
-                const QString line_simple=line.simplified();
+                QString line=f.readLine();
+                while (line.endsWith('\n') || line.endsWith('\r') || line.endsWith(QChar(0x0))) line=line.left(line.size()-1);
+                const QString line_trimmed=line.trimmed();
+                const QString line_simple=line_trimmed.simplified();
                 if (line_simple=="---" || line_simple=="###") {
                     if (currentOutFile.size()>0) {
                         outputFilename.append(currentOutFile);
@@ -180,11 +401,11 @@ int main(int argc, char* argv[])
                         currentOptions.clear();
                     }
                 } else if (isFile) {
-                    currentOutFile=line;
+                    currentOutFile=line_trimmed;
                     isFile=false;
                 } else if (beforeLatex) {
-                    if (line.startsWith("--")) {
-                        QStringList commands=line.right(line.size()-2).split("--");
+                    if (line_trimmed.startsWith("--")) {
+                        QStringList commands=line_trimmed.right(line_trimmed.size()-2).split("--");
                         for (QString cmd: commands) {
                             cmd=cmd.trimmed();
                             QString cmdn="", param="";
@@ -260,7 +481,6 @@ int main(int argc, char* argv[])
         int resolution_dpi = parser.value(resolutionOption).toInt();
         QColor backgroundColor = jkqtp_String2QColor(parser.value(backgroundOption));
         QColor textColor = jkqtp_String2QColor(parser.value(textcolorOption));
-        QString fontBlackboardSim = parser.value(fontBlackboardSimOption);
         QString fontBlackboard=parser.value(fontblackboardOption);
         QString fontRoman=parser.value(fontRomanOption);
         QString fontSans=parser.value(fontSansOption);
@@ -272,15 +492,19 @@ int main(int argc, char* argv[])
         QString fontScript=parser.value(fontScriptOption);
         QString fontFraktur=parser.value(fontFrakturOption);
         QString fontCaligraphic=parser.value(fontcaligraphicOption);
+        JKQTMathTextBlackboradDrawingMode fontBlackboardMode=String2JKQTMathTextBlackboradDrawingMode(parser.value(fontblackboardmodeOption));
+        bool guiFonts=parser.isSet(guifontsOption);
 
         if (cmdoptions[i].size()>0) {
             for (const QString& key: cmdoptions[i].keys()) {
-                if (key=="drawboxes") drawBoxes=true;
+                if (key=="drawboxes" || key=="showboxes") drawBoxes=true;
+                else if (key=="nodrawboxes" || key=="noshowboxes") drawBoxes=false;
+                else if (key=="guifonts") guiFonts=true;
+                else if (key=="noguifonts") guiFonts=false;
                 else if (key=="fontsize") fontsize=cmdoptions[i].value(key).toDouble();
                 else if (key=="sizeincrease") sizeincrease=cmdoptions[i].value(key).toInt();
                 else if (key=="background") backgroundColor=jkqtp_String2QColor(cmdoptions[i].value(key));
                 else if (key=="textcolor") textColor=jkqtp_String2QColor(cmdoptions[i].value(key));
-                else if (key=="fontblackboardsimulated") fontBlackboardSim=cmdoptions[i].value(key);
                 else if (key=="fontblackboard") fontBlackboard=cmdoptions[i].value(key);
                 else if (key=="font") processFont(cmdoptions[i].value(key), fonts, mathFont);
                 else if (key=="fontroman") fontRoman=cmdoptions[i].value(key);
@@ -293,6 +517,10 @@ int main(int argc, char* argv[])
                 else if (key=="fontscript") fontScript=cmdoptions[i].value(key);
                 else if (key=="fontcaligraphic") fontCaligraphic=cmdoptions[i].value(key);
                 else if (key=="fontfraktur") fontFraktur=cmdoptions[i].value(key);
+                else if (key=="fontblackboardmode") fontBlackboardMode=String2JKQTMathTextBlackboradDrawingMode(cmdoptions[i].value(key));
+                else {
+                    std::cerr<<"unknown command-line option --"<<key.toStdString()<<" in inputfile\n";
+                }
             }
         }
 
@@ -312,12 +540,19 @@ int main(int argc, char* argv[])
         else if (mathFont.toUpper() == "STIX_MATHANDTEXT") mathText.useSTIX(false);
         if (mathFont.toUpper() == "ASANA") mathText.useASANA(true);
         else if (mathFont.toUpper() == "ASANA_MATHANDTEXT") mathText.useASANA(false);
+        if (mathFont.toUpper() == "FIRA") mathText.useFiraMath(true);
+        else if (mathFont.toUpper() == "FIRA_MATHANDTEXT") mathText.useFiraMath(false);
         if (fontRoman.size()>0) mathText.setFontRoman(fontRoman, MTFEUnicode);
         if (fontSans.size()>0) mathText.setFontSans(fontSans, MTFEUnicode);
         if (fontMathRoman.size()>0) {
             if (fontMathRoman.toUpper()=="XITS") mathText.useXITS(true);
             else if (fontMathRoman.toUpper()=="STIX") mathText.useSTIX(true);
             else if (fontMathRoman.toUpper()=="ASANA") mathText.useASANA(true);
+            else if (fontMathRoman.toUpper()=="FIRA") mathText.useFiraMath(true);
+            else if (fontMathRoman.toUpper()=="XITS_MATHANDTEXT") mathText.useXITS(false);
+            else if (fontMathRoman.toUpper()=="STIX_MATHANDTEXT") mathText.useSTIX(false);
+            else if (fontMathRoman.toUpper()=="ASANA_MATHANDTEXT") mathText.useASANA(false);
+            else if (fontMathRoman.toUpper()=="FIRA_MATHANDTEXT") mathText.useFiraMath(false);
             else mathText.setFontMathRoman(fontMathRoman, MTFEUnicode);
         }
         if (fontMathSans.size()>0) mathText.setFontMathSans(fontMathSans, MTFEUnicode);
@@ -328,16 +563,15 @@ int main(int argc, char* argv[])
         if (fontFallbackSymbol.size()>0) mathText.setFallbackFontSymbols(fontFallbackSymbol, MTFEUnicode);
         if (fontFallbackSymbol_symbolencoding.size()>0) mathText.setFallbackFontSymbols(fontFallbackSymbol_symbolencoding, MTFEWinSymbol);
 
-        if (fontBlackboardSim.size()>0) {
-            mathText.setFontBlackboard(fontBlackboardSim, MTFEUnicode);
-            mathText.setFontBlackboardSimulated(true);
-        }
         if (fontBlackboard.size()>0) {
             mathText.setFontBlackboard(fontBlackboard, MTFEUnicode);
-            mathText.setFontBlackboardSimulated(false);
         }
+        mathText.setFontBlackboradMode(fontBlackboardMode);
         mathText.setFontSize(fontsize);
         mathText.setFontColor(textColor);
+        if (guiFonts) {
+            mathText.useGuiFonts();
+        }
 
         // 3. now we parse some LaTeX code
         QElapsedTimer timer;
@@ -350,13 +584,17 @@ int main(int argc, char* argv[])
                     <<latex[i].toStdString()<<"\n"
                     <<"-----------------------------------------------------------\n"
                     <<mathText.getErrorList().join("\n").toStdString()<<"\n"
-                    <<"-----------------------------------------------------------\n"
+                   <<"-----------------------------------------------------------\n"
+                   <<"RENDERTREE:\n"<<JKQTMathTextNodeTree2String(mathText.getNodeTree()).toStdString()
+                   <<"-----------------------------------------------------------\n"
                     ;
         } else if (verbose) {
             std::cout<<"parsing LaTeX: OK\n"
                     <<"parsing duration: "<<durParseMS<<"ms\n"
                     <<"-----------------------------------------------------------\n"
                     <<latex[i].toStdString()<<"\n"
+                    <<"-----------------------------------------------------------\n"
+                    <<"RENDERTREE:\n"<<JKQTMathTextNodeTree2String(mathText.getNodeTree()).toStdString()
                     <<"-----------------------------------------------------------\n";
         }
 
@@ -374,7 +612,7 @@ int main(int argc, char* argv[])
         const QString outname=outputDir.absoluteFilePath(outputFilename[i]);
         if (QFileInfo::exists(outname)) QFile::remove(outname);
         if (!pix.save(outname)) {
-            std::cerr<<"ERROR storing to "<<outname.toStdString()<<"\n";
+            std::cerr<<"ERROR storing to "<<outname.toStdString()<<", fileExists="<<std::boolalpha<<QFileInfo::exists(outname)<<" permissions=0x"<<std::hex<<QFileInfo(outname).permissions()<<"\n";
         } else {
             if (verbose) std::cout<<"stored to "<<outname.toStdString()<<"\n"
                                   <<"     size "<<static_cast<double>(QFileInfo(outname).size())/1024.0<<"kBytes\n";

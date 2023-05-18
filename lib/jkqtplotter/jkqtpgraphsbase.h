@@ -165,22 +165,23 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPPlotElement: public QObject {
                     You can use JKQTPIsOKFloat() to check whether a valid distance was returned!
 
 
-            Since tha graph base class does not have any knowledge about how to perform a hit test on you specific graph, there is only a
+            Since the graph base class does not have any knowledge about how to perform a hit test on you specific graph, there is only a
             very general implementation in this class, which does not actually search through the graph itself, but searches through
             extra data that hs to be written during draw() and is stored in m_hitTestData. The implentation this base-class only searches this
             list of points+metadata to implement a basic hit-test. If the list is empty, of no close-by points are found (default), then
             hitTest() will simply return \a NAN.
 
             When writing a new graph, you can therefore implement hitTest() in one of these ways:
-               # You simply fill m_hitTestData with appropriate data and rely on the implementation in JKQTPPlotElement to do the work for you:
+            <ol>
+               <li> You simply fill m_hitTestData with appropriate data and rely on the implementation in JKQTPPlotElement to do the work for you:
                  You then need to call clearHitTestData() at the start of your draw() function and whenever you draw a datapoint, you add
                  its location and metadata to the internal storage with addHitTestData()
-               # You derive from a graph class that already has an implementation. JKQTPXYGraph is an example of this. That class searches
+               <li> You derive from a graph class that already has an implementation. JKQTPXYGraph is an example of this. That class searches
                  through all x-/y-coordinates in the internally known columns and even takes into account possible graph errors in the label,
                  when the graph is also derived from JKQTPXGraphErrorData or JKQTPYGraphErrorData. This implementation therefore covers
                  most graph types pre-packaged with JKQTPlotter
-               # You implement the function from scratch
-            .
+               <li> You implement the function from scratch
+            </ol>
 
             \see addHitTestData(), clearHitTestData(), m_hitTestData, HitTestLocation
 
@@ -207,16 +208,16 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPPlotElement: public QObject {
 
 
 
-        /** \brief tool routine that transforms an x-coordinate (plot coordinate --> pixels) for this plot element */
+        /** \brief tool routine that transforms an x-coordinate (plot coordinate --> pixels) for this plot element, uses the axis referenced in xAxisRef */
         double transformX(double x) const;
 
-        /** \brief tool routine that transforms a y-coordinate (plot coordinate --> pixels) for this plot element */
+        /** \brief tool routine that transforms a y-coordinate (plot coordinate --> pixels) for this plot element, uses the axis referenced in yAxisRef */
         double transformY(double y) const;
 
-        /** \brief tool routine that backtransforms an x-coordinate (pixels --> plot coordinate) for this plot element */
+        /** \brief tool routine that backtransforms an x-coordinate (pixels --> plot coordinate) for this plot element, uses the axis referenced in xAxisRef */
         double backtransformX(double x) const;
 
-        /** \brief tool routine that backtransforms a y-coordinate (pixels --> plot coordinate) for this plot element */
+        /** \brief tool routine that backtransforms a y-coordinate (pixels --> plot coordinate) for this plot element, uses the axis referenced in yAxisRef */
         double backtransformY(double y) const;
 
 
@@ -240,24 +241,44 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPPlotElement: public QObject {
         inline QPointF backTransform(double x, double y) const {
             return backTransform(QPointF(x,y));
         }
-        /** \brief tool routine that transforms a QVector<QPointF> according to the parent's transformation rules (plot coordinate --> pixels) */
-        QVector<QPointF> transform(const QVector<QPointF>& x) const;
+        /** \brief tool routine that transforms a QPolygonF according to the parent's transformation rules (plot coordinate --> pixels) */
+        QPolygonF transform(const QPolygonF& x) const;
 
-        /** \brief tool routine that transforms a QVector<QPointF> according to the parent's transformation rules
+        /** \brief tool routine that transforms a QPolygonF according to the parent's transformation rules
          *         and returns a (non-closed) path consisting of lines (plot coordinate --> pixels) */
-        QPainterPath transformToLinePath(const QVector<QPointF>& x) const;
+        QPainterPath transformToLinePath(const QPolygonF& x) const;
 
-        /** \brief tool routine that transforms a QVector<QPointF> according to the parent's transformation rules
-         *         and returns a polygon (plot coordinate --> pixels) */
-        inline QPolygonF transformToPolygon(const QVector<QPointF>& x) const {
-            return QPolygonF(transform(x));
-        }
 
         /** \brief transform all x-coordinates in a vector \a x */
         QVector<double> transformX(const QVector<double>& x) const;
         /** \brief transform all y-coordinates in a vector \a x */
         QVector<double> transformY(const QVector<double>& x) const;
 
+        /** \copydoc xAxisRef */
+        void setXAxis(JKQTPCoordinateAxisRef ref);
+        /** \copydoc xAxisRef */
+        JKQTPCoordinateAxisRef getXAxisRef() const;
+        /** \copydoc yAxisRef */
+        void setYAxis(JKQTPCoordinateAxisRef ref);
+        /** \copydoc yAxisRef */
+        JKQTPCoordinateAxisRef getYAxisRef() const;
+        /** \brief returns the actual x-Axis-object from the parent plotter, referenced in xAxisRef */
+        /** \brief returns the actual x-Axis-object from the parent plotter, referenced in xAxisRef */
+        inline const JKQTPCoordinateAxis* getXAxis() const {
+            return parent->getXAxis(xAxisRef);
+        }
+        /** \brief returns the actual y-Axis-object from the parent plotter, referenced in yAxisRef */
+        inline const JKQTPCoordinateAxis* getYAxis() const {
+            return parent->getYAxis(yAxisRef);
+        }
+        /** \brief set the coordinate axes to use for this plot element
+         *
+         *  \see xAxisRef, yAxisRef, transformX(), transformY()
+         */
+        void setAxes(JKQTPCoordinateAxisRef ref);
+
+        Q_PROPERTY(JKQTPCoordinateAxisRef xAxisRef READ getXAxisRef WRITE setXAxis)
+        Q_PROPERTY(JKQTPCoordinateAxisRef yAxisRef READ getYAxisRef WRITE setYAxis)
 
     protected:
 
@@ -360,6 +381,11 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPPlotElement: public QObject {
         bool highlighted;
         /** \brief internal storage for the used parent plot style */
         int parentPlotStyle;
+        /** \brief indicates which coordinate axis to use for coordinate transforms in x-direction */
+        JKQTPCoordinateAxisRef xAxisRef;
+        /** \brief indicates which coordinate axis to use for coordinate transforms in y-direction */
+        JKQTPCoordinateAxisRef yAxisRef;
+
 
 
         /** \brief dataset with graph-points and associated data fro the function hitTest()
@@ -584,6 +610,10 @@ public:
     int getYColumn() const;
     /** \copydoc sortData */
     DataSortOrder getDataSortOrder() const;
+    /** \brief returns the column used as "key" for the current graph (typically this call getXColumn(), but for horizontal graphs like filled curves or barcharts it may call getYColumn() ) */
+    virtual int getKeyColumn() const;
+    /** \brief returns the column used as "value" for the current graph (typically this call getXColumn(), but for horizontal graphs like filled curves or barcharts it may call getYColumn() ) */
+    virtual int getValueColumn() const;
 
     Q_PROPERTY(DataSortOrder sortData READ getDataSortOrder WRITE setDataSortOrder)
     Q_PROPERTY(int xColumn READ getXColumn WRITE setXColumn)
@@ -627,6 +657,10 @@ public slots:
     void setYColumn(int __value);
     /** \copydoc yColumn */
     void setYColumn (size_t __value);
+    /** \brief sets the column used as "key" for the current graph (typically this call setXColumn(), but for horizontal graphs like filled curves or barcharts it may call setYColumn() ) */
+    virtual void setKeyColumn(int __value);
+    /** \brief sets the column used as "value" for the current graph (typically this call setXColumn(), but for horizontal graphs like filled curves or barcharts it may call setYColumn() ) */
+    virtual void setValueColumn(int __value);
 protected:
 
     /** \brief the column that contains the x-component of the datapoints */
@@ -684,12 +718,24 @@ public slots:
     void setBaseline(double __value);
 
 protected:
+    /** \brief can be called by JKQTPGraph::getXMinMax() or JKQTPGraph::getYMinMax() calculates min/max/... for data from the given column, including the baseline */
+    bool getMinMaxWithBaseline(int dataColumn, double &minv, double &maxv, double &smallestGreaterZero);
+    /** \brief can be called by JKQTPGraph::getXMinMax() or JKQTPGraph::getYMinMax() calculates min/max/... for data from the given column, including the baseline and an optional error */
+    bool getMinMaxWithErrorsAndBaseline(int dataColumn, int errorColumn, int errorColumnLower, bool errorSymmetric, double &minv, double &maxv, double &smallestGreaterZero);
+
 
     /** \brief baseline of the plot (NOTE: 0 is interpreted as until plot border in log-mode!!!)
      *
      * \image html impulsesplot_baseline.png
      */
     double m_baseline;
+
+private:
+    /** \brief returns the upper error for the i-th datapoint, read from datastore \a ds */
+    double getErrorU(int i, const JKQTPDatastore* ds, int xErrorColumn) const;
+    /** \brief returns the lower error for the i-th datapoint, read from datastore \a ds */
+    double getErrorL(int i, const JKQTPDatastore *ds, int xErrorColumn, int xErrorColumnLower, bool xErrorSymmetric) const;
+
 };
 
 
@@ -717,6 +763,8 @@ public:
 
     /** \copydoc yColumn2 */
     int getYColumn2() const;
+    /** \brief returns the column used as secondary "value" for the current graph (typically this call getXColumn(), but for horizontal graphs like filled curves or barcharts it may call getYColumn() ) */
+    virtual int getValue2Column() const;
 
     /** \copydoc JKQTPXYGraph::hitTest() */
     virtual double hitTest(const QPointF &posSystem, QPointF* closestSpotSystem=nullptr, QString* label=nullptr, HitTestMode mode=HitTestXY) const override;
@@ -733,6 +781,8 @@ public slots:
     void setYColumn2(int __value);
     /** \copydoc yColumn2 */
     void setYColumn2(size_t __value);
+    /** \brief sets the column used as secondary "value" for the current graph (typically this call setXColumn(), but for horizontal graphs like filled curves or barcharts it may call setYColumn() ) */
+    virtual void setValue2Column(int __value);
 protected:
 
     /** \brief the column that contains the second y-component of the datapoints */
@@ -774,6 +824,8 @@ public:
 
     /** \copydoc xColumn2 */
     int getXColumn2() const;
+    /** \brief returns the column used as "key" for the current graph (typically this call getXColumn(), but for horizontal graphs like filled curves or barcharts it may call getYColumn() ) */
+    virtual int getKey2Column() const;
 
     /** \copydoc JKQTPXYGraph::hitTest() */
     virtual double hitTest(const QPointF &posSystem, QPointF* closestSpotSystem=nullptr, QString* label=nullptr, HitTestMode mode=HitTestXY) const override;
@@ -790,6 +842,8 @@ public slots:
     void setXColumn2(int __value);
     /** \copydoc xColumn2 */
     void setXColumn2(size_t __value);
+    /** \brief sets the column used as "key" for the current graph (typically this call setXColumn(), but for horizontal graphs like filled curves or barcharts it may call setYColumn() ) */
+    virtual void setKey2Column(int __value);
 protected:
 
     /** \brief the column that contains the second y-component of the datapoints */

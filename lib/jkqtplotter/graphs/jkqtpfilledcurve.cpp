@@ -25,8 +25,6 @@
 #include <QDebug>
 #include <iostream>
 #include "jkqtplotter/jkqtptools.h"
-#include "jkqtplotter/graphs/jkqtpimage.h"
-#include "jkqtplotter/jkqtpbaseelements.h"
 #include "jkqtplotter/jkqtplotter.h"
 #define SmallestGreaterZeroCompare_xvsgz() if ((xvsgz>10.0*DBL_MIN)&&((smallestGreaterZero<10.0*DBL_MIN) || (xvsgz<smallestGreaterZero))) smallestGreaterZero=xvsgz;
 
@@ -52,6 +50,7 @@ void JKQTPFilledCurveGraphBase::drawKeyMarker(JKQTPEnhancedPainter &painter, QRe
 {
     painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
     QPen p=getLinePen(painter, parent);
+    p.setWidthF(getKeyLineWidthPx(painter, rect, parent));
     QPen np(Qt::NoPen);
     QBrush b=getFillBrush(painter, parent);
     const double y=rect.top()+rect.height()/2.0;
@@ -89,6 +88,7 @@ JKQTPFilledCurveGraphBase::FillMode JKQTPFilledCurveGraphBase::getFillMode() con
 {
     return m_fillMode;
 }
+
 
 void JKQTPFilledCurveGraphBase::setColor(QColor c)
 {
@@ -146,10 +146,10 @@ void JKQTPFilledCurveXGraph::draw(JKQTPEnhancedPainter& painter) {
         double xold=-1;
         //double yold=-1;
         double y0=transformY(getBaseline());
-        if (parent->getYAxis()->isLogAxis()) {
-            y0=transformY(parent->getYAxis()->getMin());
-            if (getBaseline()>0 && getBaseline()>parent->getYAxis()->getMin()) y0=transformY(getBaseline());
-            else y0=transformY(parent->getYAxis()->getMin());
+        if (getYAxis()->isLogAxis()) {
+            y0=transformY(getYAxis()->getMin());
+            if (getBaseline()>0 && getBaseline()>getYAxis()->getMin()) y0=transformY(getBaseline());
+            else y0=transformY(getYAxis()->getMin());
         }
         bool subsequentItem=false;
         intSortData();
@@ -221,6 +221,11 @@ void JKQTPFilledCurveXGraph::draw(JKQTPEnhancedPainter& painter) {
     drawErrorsAfter(painter);
 }
 
+bool JKQTPFilledCurveXGraph::getYMinMax(double &miny, double &maxy, double &smallestGreaterZero)
+{
+    return getMinMaxWithBaseline(yColumn, miny,maxy,smallestGreaterZero);
+}
+
 JKQTPFilledCurveYGraph::JKQTPFilledCurveYGraph(JKQTBasePlotter* parent):
     JKQTPFilledCurveGraphBase(parent)
 {
@@ -230,6 +235,11 @@ JKQTPFilledCurveYGraph::JKQTPFilledCurveYGraph(JKQTPlotter *parent):
     JKQTPFilledCurveYGraph(parent->getPlotter())
 {
 
+}
+
+bool JKQTPFilledCurveYGraph::getXMinMax(double &minx, double &maxx, double &smallestGreaterZero)
+{
+    return getMinMaxWithBaseline(xColumn, minx, maxx, smallestGreaterZero);
 }
 
 void JKQTPFilledCurveYGraph::draw(JKQTPEnhancedPainter &painter)
@@ -260,9 +270,9 @@ void JKQTPFilledCurveYGraph::draw(JKQTPEnhancedPainter &painter)
         //double xold=-1;
         double yold=-1;
         double x0=transformX(getBaseline());
-        if (parent->getXAxis()->isLogAxis()) {
-            if (getBaseline()>0 && getBaseline()>parent->getXAxis()->getMin()) x0=transformX(getBaseline());
-            else x0=transformX(parent->getXAxis()->getMin());
+        if (getXAxis()->isLogAxis()) {
+            if (getBaseline()>0 && getBaseline()>getXAxis()->getMin()) x0=transformX(getBaseline());
+            else x0=transformX(getXAxis()->getMin());
         }
         bool first=false;
         intSortData();
@@ -332,6 +342,26 @@ void JKQTPFilledCurveYGraph::draw(JKQTPEnhancedPainter &painter)
     drawErrorsAfter(painter);
 }
 
+int JKQTPFilledCurveYGraph::getKeyColumn() const
+{
+    return getYColumn();
+}
+
+int JKQTPFilledCurveYGraph::getValueColumn() const
+{
+    return getXColumn();
+}
+
+void JKQTPFilledCurveYGraph::setKeyColumn(int __value)
+{
+    setYColumn(__value);
+}
+
+void JKQTPFilledCurveYGraph::setValueColumn(int __value)
+{
+    setXColumn(__value);
+}
+
 
 
 JKQTPFilledCurveXErrorGraph::JKQTPFilledCurveXErrorGraph(JKQTBasePlotter *parent):
@@ -359,6 +389,15 @@ void JKQTPFilledCurveXErrorGraph::drawErrorsAfter(JKQTPEnhancedPainter &painter)
 
 }
 
+bool JKQTPFilledCurveXErrorGraph::getYMinMax(double &miny, double &maxy, double &smallestGreaterZero)
+{
+    if (yErrorColumn<0 || yErrorStyle==JKQTPNoError) {
+        return getMinMaxWithBaseline(yColumn, miny, maxy, smallestGreaterZero);
+    } else {
+        return getMinMaxWithErrorsAndBaseline(yColumn, yErrorColumn, yErrorColumnLower, yErrorSymmetric, miny, maxy, smallestGreaterZero);
+    }
+}
+
 JKQTPFilledCurveYErrorGraph::JKQTPFilledCurveYErrorGraph(JKQTBasePlotter *parent):
     JKQTPFilledCurveYGraph(parent)
 {
@@ -376,6 +415,15 @@ JKQTPFilledCurveYErrorGraph::JKQTPFilledCurveYErrorGraph(JKQTPlotter *parent):
 bool JKQTPFilledCurveYErrorGraph::usesColumn(int c) const
 {
     return JKQTPFilledCurveYGraph::usesColumn(c)|| JKQTPXGraphErrors::errorUsesColumn(c);
+}
+
+bool JKQTPFilledCurveYErrorGraph::getXMinMax(double &minx, double &maxx, double &smallestGreaterZero)
+{
+    if (xErrorColumn<0 || xErrorStyle==JKQTPNoError) {
+        return getMinMaxWithBaseline(xColumn, minx, maxx, smallestGreaterZero);
+    } else {
+        return getMinMaxWithErrorsAndBaseline(xColumn, xErrorColumn, xErrorColumnLower, xErrorSymmetric, minx, maxx, smallestGreaterZero);
+    }
 }
 
 void JKQTPFilledCurveYErrorGraph::drawErrorsAfter(JKQTPEnhancedPainter &painter)
@@ -465,14 +513,14 @@ void JKQTPFilledVerticalRangeGraph::draw(JKQTPEnhancedPainter &painter)
                 if (isHighlighted()) {
 
                     painter.setPen(ps);
-                    painter.drawPolyline(phigh);
-                    painter.drawPolyline(plow);
+                    painter.drawPolylineFast(phigh);
+                    painter.drawPolylineFast(plow);
                 }
 
 
                 painter.setPen(p);
-                painter.drawPolyline(phigh);
-                painter.drawPolyline(plow);
+                painter.drawPolylineFast(phigh);
+                painter.drawPolylineFast(plow);
 
             }
         }
@@ -488,7 +536,7 @@ void JKQTPFilledVerticalRangeGraph::drawKeyMarker(JKQTPEnhancedPainter &painter,
     r.moveTo(r.x(), r.y()+r.height()-1);
     painter.fillRect(r, getFillBrush(painter, parent));
     if (getDrawLine()) {
-        painter.setPen(getLinePen(painter, parent));
+        painter.setPen(getKeyLinePen(painter, rect, parent));
         painter.drawLine(QLineF(r.topLeft(), r.topRight()));
     }
 
@@ -580,14 +628,14 @@ void JKQTPFilledHorizontalRangeGraph::draw(JKQTPEnhancedPainter &painter)
                 if (isHighlighted()) {
 
                     painter.setPen(ps);
-                    painter.drawPolyline(phigh);
-                    painter.drawPolyline(plow);
+                    painter.drawPolylineFast(phigh);
+                    painter.drawPolylineFast(plow);
                 }
 
 
                 painter.setPen(p);
-                painter.drawPolyline(phigh);
-                painter.drawPolyline(plow);
+                painter.drawPolylineFast(phigh);
+                painter.drawPolylineFast(plow);
 
             }
         }
@@ -603,7 +651,7 @@ void JKQTPFilledHorizontalRangeGraph::drawKeyMarker(JKQTPEnhancedPainter &painte
     r.moveTo(r.x(), r.y()+r.height()-1);
     painter.fillRect(r, getFillBrush(painter, parent));
     if (getDrawLine()) {
-        painter.setPen(getLinePen(painter, parent));
+        painter.setPen(getKeyLinePen(painter, rect, parent));
         painter.drawLine(QLineF(r.topLeft(), r.topRight()));
     }
 

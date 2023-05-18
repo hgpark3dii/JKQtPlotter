@@ -41,7 +41,7 @@ class JKQTBasePlotterStyle; // forward
 
 
 /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of graphs
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, \ref jkqtpplotter_styling
  */
@@ -104,7 +104,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTGraphsSpecificStyleProperties {
         JKQTPColorDerivationMode errorFillColorDerivationMode;
         /** \brief defines how to derive a symbol fill color for a new graph */
         JKQTPColorDerivationMode symbolFillColorDerivationMode;
-    protected:
+    private:
         /** \brief modifies some of the settings to match the defaults for the given JKQTPPlotStyleType (e.g. sets line-width for impulses ...) */
         void modifyForDefaultStyle(JKQTPPlotStyleType type);
 };
@@ -112,7 +112,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTGraphsSpecificStyleProperties {
 
 
  /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of geometric elements
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, \ref jkqtpplotter_styling
  */
@@ -121,7 +121,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTGeometricSpecificStyleProperties: public JKQTGr
       Q_GADGET
 #endif
 public:
-     JKQTGeometricSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
+     explicit JKQTGeometricSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
      JKQTGeometricSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties& other);
      JKQTGeometricSpecificStyleProperties(JKQTPPlotStyleType type, const JKQTBasePlotterStyle& parent);
      JKQTGeometricSpecificStyleProperties(JKQTPPlotStyleType type, const JKQTGraphsSpecificStyleProperties& other, const JKQTBasePlotterStyle &parent);
@@ -162,7 +162,7 @@ public:
 
 
  /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of annotation elements
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, \ref jkqtpplotter_styling
  */
@@ -171,7 +171,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTAnnotationsSpecificStyleProperties: public JKQT
       Q_GADGET
 #endif
 public:
-     JKQTAnnotationsSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
+     explicit JKQTAnnotationsSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
      JKQTAnnotationsSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties& other);
      JKQTAnnotationsSpecificStyleProperties(const JKQTAnnotationsSpecificStyleProperties& other)=default;
      JKQTAnnotationsSpecificStyleProperties(JKQTAnnotationsSpecificStyleProperties&& other)=default;
@@ -195,8 +195,6 @@ public:
          */
      void saveSettings(QSettings& settings, const QString& group) const;
 
-     /** \brief defines how to derive a text color for a new graph */
-     JKQTPColorDerivationMode textColorDerivationMode;
      /** \brief default text color in the plot */
      QColor defaultTextColor;
      /** \brief default font size in the plot [pt] */
@@ -208,9 +206,93 @@ public:
 };
 
 
+/** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of barchart elements
+*  \ingroup jkqtpplotter_styling_classes
+*
+*  \see JKQTBasePlotter, \ref jkqtpplotter_styling
+*/
+class JKQTPLOTTER_LIB_EXPORT JKQTBarchartSpecificStyleProperties: public JKQTGraphsSpecificStyleProperties {
+#ifndef JKQTPLOTTER_WORKAROUND_QGADGET_BUG
+     Q_GADGET
+#endif
+public:
+    explicit JKQTBarchartSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
+    JKQTBarchartSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties& other);
+    JKQTBarchartSpecificStyleProperties(const JKQTBarchartSpecificStyleProperties& other)=default;
+    JKQTBarchartSpecificStyleProperties(JKQTBarchartSpecificStyleProperties&& other)=default;
+    JKQTBarchartSpecificStyleProperties& operator=(const JKQTBarchartSpecificStyleProperties& other)=default;
+    JKQTBarchartSpecificStyleProperties& operator=(JKQTBarchartSpecificStyleProperties&& other)=default;
 
+
+    /** \brief loads the plot properties from a <a href="http://doc.qt.io/qt-5/qsettings.html")">QSettings</a> object
+        *
+        *  \param settings QSettings-object to read from
+        *  \param group Group in the QSettings-object to read from
+        *  \param defaultStyle If a setting cannot be found in \a settings, default values are taken from this object
+        *                      By default, this is a default-constructed object
+        */
+    void loadSettings(const QSettings &settings, const QString& group, const JKQTBarchartSpecificStyleProperties &defaultStyle);
+
+    /** \brief saves the plot properties into a <a href="http://doc.qt.io/qt-5/qsettings.html")">QSettings</a> object.
+        *
+        *  \param settings QSettings-object to save to
+        *  \param group Group in the QSettings-object to save to
+        */
+    void saveSettings(QSettings& settings, const QString& group) const;
+
+    /** \brief corner radius (in pt) for bars at the "value" end */
+    double defaultRectRadiusAtValue;
+    /** \brief corner radius (in pt) for bars at the "baseline" end */
+    double defaultRectRadiusAtBaseline;
+    /** \brief indicates whether to draw a baseline (style is derived from axis style) */
+    bool drawBaseline;
+
+
+};
+
+
+
+/** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of impulse/stick graph elements
+*  \ingroup jkqtpplotter_styling_classes
+*
+*  \see JKQTBasePlotter, \ref jkqtpplotter_styling
+*/
+class JKQTPLOTTER_LIB_EXPORT JKQTImpulseSpecificStyleProperties: public JKQTGraphsSpecificStyleProperties {
+#ifndef JKQTPLOTTER_WORKAROUND_QGADGET_BUG
+     Q_GADGET
+#endif
+public:
+    explicit JKQTImpulseSpecificStyleProperties(const JKQTBasePlotterStyle& parent);
+    JKQTImpulseSpecificStyleProperties(const JKQTBasePlotterStyle& parent, const JKQTGraphsSpecificStyleProperties& other);
+    JKQTImpulseSpecificStyleProperties(const JKQTImpulseSpecificStyleProperties& other)=default;
+    JKQTImpulseSpecificStyleProperties(JKQTImpulseSpecificStyleProperties&& other)=default;
+    JKQTImpulseSpecificStyleProperties& operator=(const JKQTImpulseSpecificStyleProperties& other)=default;
+    JKQTImpulseSpecificStyleProperties& operator=(JKQTImpulseSpecificStyleProperties&& other)=default;
+
+
+    /** \brief loads the plot properties from a <a href="http://doc.qt.io/qt-5/qsettings.html")">QSettings</a> object
+        *
+        *  \param settings QSettings-object to read from
+        *  \param group Group in the QSettings-object to read from
+        *  \param defaultStyle If a setting cannot be found in \a settings, default values are taken from this object
+        *                      By default, this is a default-constructed object
+        */
+    void loadSettings(const QSettings &settings, const QString& group, const JKQTImpulseSpecificStyleProperties &defaultStyle);
+
+    /** \brief saves the plot properties into a <a href="http://doc.qt.io/qt-5/qsettings.html")">QSettings</a> object.
+        *
+        *  \param settings QSettings-object to save to
+        *  \param group Group in the QSettings-object to save to
+        */
+    void saveSettings(QSettings& settings, const QString& group) const;
+
+    /** \brief indicates whether to draw a baseline (style is derived from axis style) */
+    bool drawBaseline;
+
+
+};
 /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of a JKQTBasePlotter
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, \ref jkqtpplotter_styling
  */
@@ -219,7 +301,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTGraphsBaseStyle {
       Q_GADGET
 #endif
     public:
-        JKQTGraphsBaseStyle(const JKQTBasePlotterStyle& parent);
+        explicit JKQTGraphsBaseStyle(const JKQTBasePlotterStyle& parent);
 
 
 
@@ -251,13 +333,13 @@ class JKQTPLOTTER_LIB_EXPORT JKQTGraphsBaseStyle {
 		/** \brief styling options for standard graphs */
         JKQTGraphsSpecificStyleProperties defaultGraphStyle;
         /** \brief styling options for bargraph graphs */
-        JKQTGraphsSpecificStyleProperties barchartStyle;
+        JKQTBarchartSpecificStyleProperties barchartStyle;
         /** \brief styling options for boxplots graphs */
         JKQTGraphsSpecificStyleProperties boxplotStyle;
         /** \brief styling options for filled graphs */
         JKQTGraphsSpecificStyleProperties filledStyle;
         /** \brief styling options for impulses graphs */
-        JKQTGraphsSpecificStyleProperties impulseStyle;
+        JKQTImpulseSpecificStyleProperties impulseStyle;
         /** \brief styling options for geometric elements */
         JKQTGeometricSpecificStyleProperties geometricStyle;
 		/** \brief styling options for annotation elements */

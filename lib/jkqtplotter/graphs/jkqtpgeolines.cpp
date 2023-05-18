@@ -104,7 +104,7 @@ void JKQTPGeoLine::draw(JKQTPEnhancedPainter& painter) {
     QPointF xx2(transformX(x2), transformY(y2));
     if ( QLineF(xx1, xx2).length()>0) {
 
-        if ((getDrawMode()==DrawAsGraphicElement) || (getParent()->getXAxis()->isLinearAxis() && getParent()->getYAxis()->isLinearAxis())) {
+        if ((getDrawMode()==DrawAsGraphicElement) || (getXAxis()->isLinearAxis() && getYAxis()->isLinearAxis())) {
             // for linear axes, we can simply draw a line
             const double angle1=atan2(xx2.y()-xx1.y(), xx2.x()-xx1.x());
             const double angle2=atan2(xx1.y()-xx2.y(), xx1.x()-xx2.x());
@@ -115,10 +115,10 @@ void JKQTPGeoLine::draw(JKQTPEnhancedPainter& painter) {
             painter.drawLine(QLineF(lx1, lx2));
         } else {
             QLineF line(QPointF(x1,y1), QPointF(x2,y2));
-            const double xmin=parent->getXAxis()->getMin();
-            const double xmax=parent->getXAxis()->getMax();
-            const double ymin=parent->getYAxis()->getMin();
-            const double ymax=parent->getYAxis()->getMax();
+            const double xmin=getXAxis()->getMin();
+            const double xmax=getXAxis()->getMax();
+            const double ymin=getYAxis()->getMin();
+            const double ymax=getYAxis()->getMax();
             const QRectF bbox(QPointF(xmin, ymin), QPointF(xmax, ymax));
             bool drawHead=bbox.contains(line.p2());
             bool drawTail=bbox.contains(line.p1());
@@ -142,10 +142,7 @@ void JKQTPGeoLine::draw(JKQTPEnhancedPainter& painter) {
                     if (drawHead) JKQTPPlotLineDecorator(painter, xx2.x(), xx2.y(), angle2, getHeadDecoratorStyle(), calcHeadDecoratorSize(getLinePen(painter, getParent()).widthF()));//, &lx2);
                     //points[0]=lx1;
                     //points[points.size()-1]=lx2;
-                    painter.drawPolyline(points.data(), points.size());
-                    /*for (auto& p: points) {
-                        JKQTPPlotSymbol(painter, p.x(), p.y(), JKQTPPlus, 5, 1, QColor("green"), QColor("darkgreen"));
-                    }*/
+                    painter.drawPolylineFast(points.data(), points.size());
                 }
             }
         }
@@ -286,10 +283,10 @@ void JKQTPGeoInfiniteLine::draw(JKQTPEnhancedPainter& painter) {
     clearHitTestData();
     reserveHitTestData(2);
 
-    double xmin=parent->getXAxis()->getMin();
-    double xmax=parent->getXAxis()->getMax();
-    double ymin=parent->getYAxis()->getMin();
-    double ymax=parent->getYAxis()->getMax();
+    double xmin=getXAxis()->getMin();
+    double xmax=getXAxis()->getMax();
+    double ymin=getYAxis()->getMin();
+    double ymax=getYAxis()->getMax();
     QRectF bbox(QPointF(xmin, ymin), QPointF(xmax, ymax));
     bool doDraw=false;
     double x2=x, y2=y;
@@ -407,7 +404,7 @@ void JKQTPGeoInfiniteLine::draw(JKQTPEnhancedPainter& painter) {
         if (line.length()>0) {
             QPointF xx1;
             double angle1=0;
-            if ((getDrawMode()==DrawAsGraphicElement) || (getParent()->getXAxis()->isLinearAxis() && getParent()->getYAxis()->isLinearAxis())) {
+            if ((getDrawMode()==DrawAsGraphicElement) || (getXAxis()->isLinearAxis() && getYAxis()->isLinearAxis())) {
                 painter.drawLine(line);
                 xx1=QPointF(transformX(x),transformY(y));
                 angle1=atan2(line.dy(), line.dx());
@@ -421,10 +418,7 @@ void JKQTPGeoInfiniteLine::draw(JKQTPEnhancedPainter& painter) {
                     xx1=points[0];
                     const QPointF xx1p=points[1];
                     angle1=atan2(xx1p.y()-xx1.y(), xx1p.x()-xx1.x());
-                    painter.drawPolyline(points.data(), points.size());
-                    /*for (auto& p: points) {
-                        JKQTPPlotSymbol(painter, p.x(), p.y(), JKQTPPlus, 5, 1, QColor("green"), QColor("darkgreen"));
-                    }*/
+                    painter.drawPolylineFast(points.data(), points.size());
                 }
             }
 
@@ -585,14 +579,14 @@ void JKQTPGeoPolyLines::draw(JKQTPEnhancedPainter& painter) {
         painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
         painter.setPen(getLinePen(painter, parent));
         painter.setBrush(getLineColor());
-        if ((getDrawMode()==DrawAsGraphicElement) || (getParent()->getXAxis()->isLinearAxis() && getParent()->getYAxis()->isLinearAxis())) {
+        if ((getDrawMode()==DrawAsGraphicElement) || (getXAxis()->isLinearAxis() && getYAxis()->isLinearAxis())) {
             QVector<QPointF> path=transform(points);
             angle1=atan2(path[1].y()-path[0].y(), path[1].x()-path[0].x());
             angle2=atan2(path[path.size()-2].y()-path[path.size()-1].y(), path[path.size()-2].x()-path[path.size()-1].x());
             xx1=path[0];
             xx2=path[path.size()-1];
             // draw corrected line
-            painter.drawPolyline(path.data(), path.size());
+            painter.drawPolylineFast(path.data(), path.size());
             doDrawDecorator=true;
         } else {
             // for non-linear axes, a line might not be drawn as a line, so we need to segment the line (i.e. linear function in coordinate space)
@@ -607,11 +601,8 @@ void JKQTPGeoPolyLines::draw(JKQTPEnhancedPainter& painter) {
                 xx2=points_poly[points_poly.size()-1];
                 const QPointF xx2p=points_poly[points_poly.size()-2];
                 angle2=atan2(xx2p.y()-xx2.y(), xx2p.x()-xx2.x());
-                painter.drawPolyline(points_poly.data(), points_poly.size());
+                painter.drawPolylineFast(points_poly.data(), points_poly.size());
                 doDrawDecorator=true;
-                /*for (auto& p: points_poly) {
-                    JKQTPPlotSymbol(painter, p.x(), p.y(), JKQTPPlus, 5, 1, QColor("green"), QColor("darkgreen"));
-                }*/
             }
 
         }
@@ -719,7 +710,7 @@ void JKQTPGeoArc::draw(JKQTPEnhancedPainter& painter) {
 
     painter.save(); auto __finalpaint=JKQTPFinally([&painter]() {painter.restore();});
     painter.setPen(getLinePen(painter, parent));
-    painter.drawPolyline(rect);
+    painter.drawPolylineFast(rect);
 }
 
 void JKQTPGeoArc::setAngleStart(double __value)

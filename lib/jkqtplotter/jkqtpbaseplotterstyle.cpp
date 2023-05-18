@@ -21,16 +21,17 @@ JKQTBasePlotterStyle::JKQTBasePlotterStyle():
     plotFrameWidth(2),
     plotFrameRounding(0),
     plotFrameVisible(false),
-    plotLabelFontName("application+XITS"),
+    plotLabelFontName("GUI"),
     plotLabelFontSize(12),
     useAntiAliasingForSystem(true),
     useAntiAliasingForText(true),
     defaultTextColor(QColor("black")),
     defaultFontSize(8),
-    defaultFontName("application+XITS"),
+    defaultFontName("GUI"),
     keyStyle(*this),
     xAxisStyle(*this),
     yAxisStyle(*this),
+    secondaryAxisSeparation(6),
     rightColorbarAxisStyle(*this),
     topColorbarAxisStyle(*this),
     graphsStyle(*this)
@@ -63,6 +64,7 @@ void JKQTBasePlotterStyle::loadSettings(const QSettings &settings, const QString
     defaultTextColor=jkqtp_String2QColor(settings.value(group+"text_default_color", jkqtp_QColor2String(defaultStyle.defaultTextColor)).toString());
     defaultFontSize=settings.value(group+"text_default_size", defaultStyle.defaultFontSize).toDouble();
     defaultFontName=settings.value(group+"text_default_font_name", defaultStyle.defaultFontName).toString();
+    secondaryAxisSeparation=settings.value(group+"secondary_axis_separation", defaultStyle.secondaryAxisSeparation).toDouble();
 
     keyStyle.loadSettings(settings, group+"key/", defaultStyle.keyStyle);
     xAxisStyle.loadSettings(settings, group+"axis_x/", defaultStyle.xAxisStyle);
@@ -101,6 +103,7 @@ void JKQTBasePlotterStyle::saveSettings(QSettings &settings, const QString &grou
     settings.setValue(group+"plot_frame_color", jkqtp_QColor2String(plotFrameColor));
     settings.setValue(group+"plot_frame_width", plotFrameWidth);
     settings.setValue(group+"plot_frame_rounded", plotFrameRounding);
+    settings.setValue(group+"secondary_axis_separation", secondaryAxisSeparation);
 
     keyStyle.saveSettings(settings, group+"key/");
     xAxisStyle.saveSettings(settings, group+"axis_x/");

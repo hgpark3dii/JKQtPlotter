@@ -32,7 +32,7 @@
 class JKQTBasePlotterStyle; // forward
 
 /** \brief Support Class for JKQTBasePlotter, which summarizes all properties that define the visual styling of the key in a JKQTBasePlotter
- *  \ingroup jkqtpplotter_styling
+ *  \ingroup jkqtpplotter_styling_classes
  *
  *  \see JKQTBasePlotter, JKQTBasePlotterStyle, \ref jkqtpplotter_styling
  */
@@ -40,7 +40,7 @@ class JKQTPLOTTER_LIB_EXPORT JKQTPKeyStyle  {
         Q_GADGET
     public:
         JKQTPKeyStyle();
-        JKQTPKeyStyle(const JKQTBasePlotterStyle& baseStyle);
+        explicit JKQTPKeyStyle(const JKQTBasePlotterStyle& baseStyle);
 
 
         /** \brief loads the plot properties from a <a href="http://doc.qt.io/qt-5/qsettings.html")">QSettings</a> object

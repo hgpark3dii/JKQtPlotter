@@ -1,4 +1,4 @@
-# Example (JKQTMathText): Command-Line Utility jkqtmathtext_render           {#JKQTMathTextRenderCmdLineTool}
+# Tool (JKQTMathText): Command-Line Utility jkqtmathtext_render           {#JKQTMathTextRenderCmdLineTool}
 JKQTMathText is a hand-written LaTeX-renderer for Qt (implemented in native C++, using Qt). It supports a large set of standard LaTeX markup and can render it to a QPainter.
 
 This project (see `./examples/jkqtmathtext_render/`) is a command-line utility that accepts a LaTeX markup string and a filename for the generated image.
@@ -68,7 +68,7 @@ The tool supports these command-line options:
     - `--fontmathroman=FONT`: set the math-mode roman font 
     - `--fontmathsans=FONT`: set the math-mode sans font 
     - `--fontblackboard=FONT`: use the given font as blackboard-font and de-activate the simulate-feature 
-    - `--fontblackboardsimulated=FONT`: use the given font as blackboard-font and activate the simulate-feature 
+    - `--fontblackboardmode=default|font_directly|simulate|unicode_or_font_directly|unicode_or_simulate`: use the given drawing mode for blackboard fonts
     - `--fonttypewriter=FONT`: set the typewriter font 
     - `--fontscript=FONT`: set the script font 
     - `--fontcaligraphic=FONT`: set the caligraphic font 
